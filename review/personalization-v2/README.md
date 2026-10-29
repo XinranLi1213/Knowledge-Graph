@@ -1,6 +1,6 @@
 # 个性化图谱审查包 v2
 
-本目录是下一阶段的契约、模拟数据与实施方案，未接入现有前端。
+本目录的公共图谱、个人评价和预置建议已接入个性化前端。教师/学生入口及阶段1–4已完成；LLM调用、候选Diff和发布服务仍是后续工作。当前验收记录见上级目录的个性化前端验收记录.md。
 
 建议阅读顺序：
 
@@ -24,4 +24,4 @@
 - contracts/recommendation-update.provider.schema.json：面向提供方输出子集的示例Schema（仅离线检查，未调用API）。
 - validation-report.json：本轮离线数据验证结果。
 
-在项目根目录可运行 `python tools/verify_personalization_review.py` 复核数据；依赖jsonschema。`tools/build_personalization_review.py` 只从已有JSON制作本包，不依赖原截图、不改旧文件、不是前端运行依赖。
+在项目根目录可运行 `python tools/verify_personalization_review.py --allow-frontend-changes` 复核数据；依赖jsonschema。该参数允许已授权的前端迁移，原班级成绩数据仍检查不变。`tools/build_personalization_review.py` 只从已有JSON制作本包，不依赖原截图、不改旧文件、不是前端运行依赖。

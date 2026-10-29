@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "browser": "Chrome headless",
+  "checks": [
+    "teacher class entry",
+    "personal identity entry",
+    "individual vs class scores",
+    "teacher/student same facts and isolated advice",
+    "subject/role switch preserves coordinates and zoom",
+    "risk stroke survives selection",
+    "12 ability profile",
+    "local resource viewer",
+    "subject switching",
+    "course total 108 null knowledge",
+    "not-started vs learning without assessment",
+    "390px no overflow",
+    "mobile panel toggle",
+    "failed request masks old facts and retry",
+    "no runtime errors"
+  ]
+}

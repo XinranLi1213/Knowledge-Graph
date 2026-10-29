@@ -1,7 +1,7 @@
 """Review-only validation and update-envelope checks. Never applies advice updates."""
 from pathlib import Path
 from collections import Counter, defaultdict
-import copy, hashlib, json
+import copy, hashlib, json, sys
 from jsonschema import Draft202012Validator, FormatChecker
 from jsonschema.exceptions import ValidationError
 
@@ -21,7 +21,12 @@ for n in graph['nodes']:
     check(not any(k in n for k in ['status','sidebar_info','remediation_advice','average_score']),'graph contains subject facts')
 check(len(profiles)==40 and len({s['student_number'] for s in profiles.values()})==40,'roster IDs')
 check(set(registry['classes'][0]['member_student_ids'])==set(profiles),'class membership')
-for k,h in manifest['baseline_files_sha256'].items():check(hashlib.sha256((ROOT/k).read_bytes()).hexdigest()==h,'application baseline changed: '+k)
+allow_frontend_changes='--allow-frontend-changes' in sys.argv
+changed_baseline=[]
+for k,h in manifest['baseline_files_sha256'].items():
+    if hashlib.sha256((ROOT/k).read_bytes()).hexdigest()!=h:
+        check(allow_frontend_changes and (k=='index.html' or k.startswith(('src/','styles/'))),'application baseline changed: '+k)
+        changed_baseline.append(k)
 incoming=defaultdict(list)
 for e in graph['edges']:
     check(e['source'] in nodes and e['target'] in nodes,'edge reference')
@@ -233,22 +238,23 @@ def wire_structure(value):
 wire_structure(wire_schema)
 check(wire_schema.get('type')=='object' and 'anyOf' not in wire_schema,'wire root object')
 
-report={'status':'passed','scope':'contracts/data only; frontend and LLM not executed',
+report={'status':'passed','scope':'offline contracts/data validation; frontend verification is separate; LLM not called',
     'counts':manifest['counts'],'schema_record_count':4+len(snapshots)+len(bundles)+len(contexts)+2,
     'checks':['schema types and date formats','public vs subject separation','stable node IDs','roster references',
     'complete snapshot coverage','independent learning progress','weighted score/coverage consistency',
     'all 40 students vs legacy class means','course-total fallback','dual-role advice/evidence references',
     'local resources exist','LLM context binding','task-specific one-hop and overview contexts',
     'context evidence omissions and count budgets','provider output schema offline shape',
-    'candidate-only update protocol','baseline application files unchanged'],
+    'candidate-only update protocol','baseline data unchanged; frontend changes explicitly allowed' if allow_frontend_changes else 'baseline application files unchanged'],
     'negative_update_cases_rejected':negative,'max_numeric_tolerance':.000002,
     'context_counts':[{ 'file':p.name,'mode':read(p)['selection']['mode'],
         'nodes':len(read(p)['selected_nodes']),'edges':len(read(p)['selected_edges']),'evidence':len(read(p)['evidence'])}
         for p in sorted((P/'examples').glob('llm-context-*.json'))],
-    'provider_schema_check':'offline subset and sample checks passed; API acceptance not tested'}
+    'provider_schema_check':'offline subset and sample checks passed; API acceptance not tested',
+    'allowed_frontend_changes':changed_baseline}
 (P/'validation-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 overview=['# 个性化图谱数据审查概览','',
-    '本包仅用于数据契约与方案审查，现有应用仍读取旧版JSON。','',
+    '本包已接入个性化前端；本报告仅校验契约与数据，界面结果另见个性化前端验收记录。' if allow_frontend_changes else '本包仅用于数据契约与方案审查，现有应用仍读取旧版JSON。','',
     '公共图谱138节点/285条边；40名模拟学生；120份学生快照、3份班级快照。DEMO001–DEMO003具备两个角色、三个场景的完整建议。','',
     '每个建议包包含教师和学生各139条建议（总体1条+节点138条），共2502条预置建议；没有调用LLM。','',
     '| 演示身份 | 姓名 | 模拟学号 | 阶段C05得分 | 学习进度 | 评价覆盖率 |','|---|---|---|---:|---:|---:|']
@@ -257,7 +263,7 @@ for sid in manifest['demo_student_ids']:
     overview.append(f"| {sid} | {p['display_name']} | {p['student_number']} | {st['achievement_rate']:.2f} | {st['learning_progress']:.0%} | {st['coverage_rate']:.0%} |")
 overview += ['', '班级C05仍为49.65（显示精度2位）；个人值直接来自自己的已评价知识点，不能复制班均分。', '',
     '阶段场景：C05学习进度60%，评价覆盖50%；C05.K04学习中但未评价；C05.K05/K06未开始；C07/C08/C10只有课程总评；六至八学期课程尚未开始。','',
-    '## 数据一致性','', '全部40人的各层均分与原班级预置值在0.000002容差内一致。旧图谱、旧场景JSON与前端文件哈希未改变。','',
+    '## 数据一致性','', '全部40人的各层均分与原班级预置值在0.000002容差内一致。原场景JSON保持不变；前端迁移已明确授权。' if allow_frontend_changes else '全部40人的各层均分与原班级预置值在0.000002容差内一致。旧图谱、旧场景JSON与前端文件哈希未改变。','',
     '## 文件入口','', '- manifest.json：按对象/场景定位快照和建议；仅前三名学生建议齐全，后续演示选择器默认启用这三人。',
     '- data/graph.json：唯一公共图谱；data/students.json：模拟名册与学习背景。',
     '- data/snapshots/student/DEMO001/mixed_evidence.json：重点审查的个人快照。',

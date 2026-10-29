@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "scope": "contracts/data only; frontend and LLM not executed",
+  "scope": "offline contracts/data validation; frontend verification is separate; LLM not called",
   "counts": {
     "graph_nodes": 138,
     "graph_edges": 285,
@@ -28,7 +28,7 @@
     "context evidence omissions and count budgets",
     "provider output schema offline shape",
     "candidate-only update protocol",
-    "baseline application files unchanged"
+    "baseline data unchanged; frontend changes explicitly allowed"
   ],
   "negative_update_cases_rejected": [
     "wrong student",
@@ -73,5 +73,10 @@
       "evidence": 3
     }
   ],
-  "provider_schema_check": "offline subset and sample checks passed; API acceptance not tested"
+  "provider_schema_check": "offline subset and sample checks passed; API acceptance not tested",
+  "allowed_frontend_changes": [
+    "index.html",
+    "src/app.js",
+    "styles/app.css"
+  ]
 }
