@@ -1,0 +1,3769 @@
+{
+  "schema_version": "2.0.0",
+  "record_type": "evaluation_snapshot",
+  "snapshot_id": "student-DEMO038-mixed_evidence",
+  "revision": 1,
+  "graph_ref": {
+    "graph_id": "communication-engineering-demo",
+    "graph_version": 1
+  },
+  "subject": {
+    "type": "student",
+    "id": "DEMO038"
+  },
+  "registry_version": 1,
+  "evaluation_context": {
+    "scenario_id": "mixed_evidence",
+    "period_id": "stage5-demo",
+    "as_of": "2026-10-29",
+    "simulation_note": "第五学期合成进度"
+  },
+  "policy_id": "demo-evaluation-v2",
+  "policy_version": 1,
+  "score_mode": "precomputed",
+  "node_results": {
+    "A01": {
+      "status": {
+        "achievement_rate": 74.37715,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C01.K01",
+        "EV-DEMO038-mixed_evidence-C01.K02",
+        "EV-DEMO038-mixed_evidence-C01.K03",
+        "EV-DEMO038-mixed_evidence-C01.K04",
+        "EV-DEMO038-mixed_evidence-C01.K05",
+        "EV-DEMO038-mixed_evidence-C01.K06",
+        "EV-DEMO038-mixed_evidence-C02.K01",
+        "EV-DEMO038-mixed_evidence-C02.K02",
+        "EV-DEMO038-mixed_evidence-C02.K03",
+        "EV-DEMO038-mixed_evidence-C02.K04",
+        "EV-DEMO038-mixed_evidence-C02.K05",
+        "EV-DEMO038-mixed_evidence-C02.K06",
+        "EV-DEMO038-mixed_evidence-C03.K01",
+        "EV-DEMO038-mixed_evidence-C03.K02",
+        "EV-DEMO038-mixed_evidence-C03.K03",
+        "EV-DEMO038-mixed_evidence-C03.K04",
+        "EV-DEMO038-mixed_evidence-C03.K05",
+        "EV-DEMO038-mixed_evidence-C03.K06",
+        "EV-DEMO038-mixed_evidence-C04.K01",
+        "EV-DEMO038-mixed_evidence-C04.K02",
+        "EV-DEMO038-mixed_evidence-C04.K03",
+        "EV-DEMO038-mixed_evidence-C04.K04",
+        "EV-DEMO038-mixed_evidence-C04.K05",
+        "EV-DEMO038-mixed_evidence-C04.K06",
+        "EV-DEMO038-mixed_evidence-C07"
+      ],
+      "input_node_ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C07"
+      ]
+    },
+    "A02": {
+      "status": {
+        "achievement_rate": 60.361556,
+        "health_color": "yellow",
+        "coverage_rate": 0.9,
+        "learning_state": "in_progress",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": true,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C04.K01",
+        "EV-DEMO038-mixed_evidence-C04.K02",
+        "EV-DEMO038-mixed_evidence-C04.K03",
+        "EV-DEMO038-mixed_evidence-C04.K04",
+        "EV-DEMO038-mixed_evidence-C04.K05",
+        "EV-DEMO038-mixed_evidence-C04.K06",
+        "EV-DEMO038-mixed_evidence-C05.K01",
+        "EV-DEMO038-mixed_evidence-C05.K02",
+        "EV-DEMO038-mixed_evidence-C05.K03",
+        "EV-DEMO038-mixed_evidence-C06.K01",
+        "EV-DEMO038-mixed_evidence-C06.K02",
+        "EV-DEMO038-mixed_evidence-C06.K03",
+        "EV-DEMO038-mixed_evidence-C06.K04",
+        "EV-DEMO038-mixed_evidence-C06.K05",
+        "EV-DEMO038-mixed_evidence-C06.K06",
+        "EV-DEMO038-mixed_evidence-C08"
+      ],
+      "input_node_ids": [
+        "C04",
+        "C05",
+        "C06",
+        "C08"
+      ]
+    },
+    "A03": {
+      "status": {
+        "achievement_rate": 67.194684,
+        "health_color": "grey",
+        "coverage_rate": 0.475,
+        "learning_state": "in_progress",
+        "grey_reason": "insufficient_coverage",
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": true,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C05.K01",
+        "EV-DEMO038-mixed_evidence-C05.K02",
+        "EV-DEMO038-mixed_evidence-C05.K03",
+        "EV-DEMO038-mixed_evidence-C08",
+        "EV-DEMO038-mixed_evidence-C11.K01",
+        "EV-DEMO038-mixed_evidence-C11.K02",
+        "EV-DEMO038-mixed_evidence-C11.K03",
+        "EV-DEMO038-mixed_evidence-C11.K04",
+        "EV-DEMO038-mixed_evidence-C11.K05",
+        "EV-DEMO038-mixed_evidence-C11.K06"
+      ],
+      "input_node_ids": [
+        "C05",
+        "C08",
+        "C11",
+        "C14",
+        "C15"
+      ]
+    },
+    "A04": {
+      "status": {
+        "achievement_rate": 56.497,
+        "health_color": "grey",
+        "coverage_rate": 0.4,
+        "learning_state": "in_progress",
+        "grey_reason": "insufficient_coverage",
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": true,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C06.K01",
+        "EV-DEMO038-mixed_evidence-C06.K02",
+        "EV-DEMO038-mixed_evidence-C06.K03",
+        "EV-DEMO038-mixed_evidence-C06.K04",
+        "EV-DEMO038-mixed_evidence-C06.K05",
+        "EV-DEMO038-mixed_evidence-C06.K06",
+        "EV-DEMO038-mixed_evidence-C08"
+      ],
+      "input_node_ids": [
+        "C06",
+        "C08",
+        "C16",
+        "C17"
+      ]
+    },
+    "A05": {
+      "status": {
+        "achievement_rate": 74.296533,
+        "health_color": "grey",
+        "coverage_rate": 0.75,
+        "learning_state": "in_progress",
+        "grey_reason": "insufficient_coverage",
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": true,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C06.K01",
+        "EV-DEMO038-mixed_evidence-C06.K02",
+        "EV-DEMO038-mixed_evidence-C06.K03",
+        "EV-DEMO038-mixed_evidence-C06.K04",
+        "EV-DEMO038-mixed_evidence-C06.K05",
+        "EV-DEMO038-mixed_evidence-C06.K06",
+        "EV-DEMO038-mixed_evidence-C09.K01",
+        "EV-DEMO038-mixed_evidence-C09.K02",
+        "EV-DEMO038-mixed_evidence-C09.K03",
+        "EV-DEMO038-mixed_evidence-C09.K04",
+        "EV-DEMO038-mixed_evidence-C09.K05",
+        "EV-DEMO038-mixed_evidence-C09.K06",
+        "EV-DEMO038-mixed_evidence-C10",
+        "EV-DEMO038-mixed_evidence-C11.K01",
+        "EV-DEMO038-mixed_evidence-C11.K02",
+        "EV-DEMO038-mixed_evidence-C11.K03",
+        "EV-DEMO038-mixed_evidence-C11.K04",
+        "EV-DEMO038-mixed_evidence-C11.K05",
+        "EV-DEMO038-mixed_evidence-C11.K06"
+      ],
+      "input_node_ids": [
+        "C06",
+        "C09",
+        "C10",
+        "C11",
+        "C13"
+      ]
+    },
+    "A06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [],
+      "input_node_ids": [
+        "C12",
+        "C15",
+        "C16"
+      ]
+    },
+    "A07": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [],
+      "input_node_ids": [
+        "C14",
+        "C16",
+        "C18"
+      ]
+    },
+    "A08": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [],
+      "input_node_ids": [
+        "C15",
+        "C16",
+        "C17"
+      ]
+    },
+    "A09": {
+      "status": {
+        "achievement_rate": 75.809,
+        "health_color": "grey",
+        "coverage_rate": 0.2,
+        "learning_state": "in_progress",
+        "grey_reason": "insufficient_coverage",
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": true,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C11.K01",
+        "EV-DEMO038-mixed_evidence-C11.K02",
+        "EV-DEMO038-mixed_evidence-C11.K03",
+        "EV-DEMO038-mixed_evidence-C11.K04",
+        "EV-DEMO038-mixed_evidence-C11.K05",
+        "EV-DEMO038-mixed_evidence-C11.K06"
+      ],
+      "input_node_ids": [
+        "C11",
+        "C15",
+        "C16"
+      ]
+    },
+    "A10": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [],
+      "input_node_ids": [
+        "C12",
+        "C15",
+        "C17"
+      ]
+    },
+    "A11": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [],
+      "input_node_ids": [
+        "C15",
+        "C16",
+        "C18"
+      ]
+    },
+    "A12": {
+      "status": {
+        "achievement_rate": 75.809,
+        "health_color": "grey",
+        "coverage_rate": 0.15,
+        "learning_state": "in_progress",
+        "grey_reason": "insufficient_coverage",
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": true,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C11.K01",
+        "EV-DEMO038-mixed_evidence-C11.K02",
+        "EV-DEMO038-mixed_evidence-C11.K03",
+        "EV-DEMO038-mixed_evidence-C11.K04",
+        "EV-DEMO038-mixed_evidence-C11.K05",
+        "EV-DEMO038-mixed_evidence-C11.K06"
+      ],
+      "input_node_ids": [
+        "C11",
+        "C12",
+        "C17",
+        "C18"
+      ]
+    },
+    "C01": {
+      "status": {
+        "achievement_rate": 80.6215,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C01.K01",
+        "EV-DEMO038-mixed_evidence-C01.K02",
+        "EV-DEMO038-mixed_evidence-C01.K03",
+        "EV-DEMO038-mixed_evidence-C01.K04",
+        "EV-DEMO038-mixed_evidence-C01.K05",
+        "EV-DEMO038-mixed_evidence-C01.K06"
+      ],
+      "input_node_ids": [
+        "C01.K01",
+        "C01.K02",
+        "C01.K03",
+        "C01.K04",
+        "C01.K05",
+        "C01.K06"
+      ]
+    },
+    "C01.K01": {
+      "status": {
+        "achievement_rate": 67.85,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C01.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C01.K02": {
+      "status": {
+        "achievement_rate": 100,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C01.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C01.K03": {
+      "status": {
+        "achievement_rate": 83.52,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C01.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C01.K04": {
+      "status": {
+        "achievement_rate": 79.19,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C01.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C01.K05": {
+      "status": {
+        "achievement_rate": 70.08,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C01.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C01.K06": {
+      "status": {
+        "achievement_rate": 82.6,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C01.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C02": {
+      "status": {
+        "achievement_rate": 69.282,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C02.K01",
+        "EV-DEMO038-mixed_evidence-C02.K02",
+        "EV-DEMO038-mixed_evidence-C02.K03",
+        "EV-DEMO038-mixed_evidence-C02.K04",
+        "EV-DEMO038-mixed_evidence-C02.K05",
+        "EV-DEMO038-mixed_evidence-C02.K06"
+      ],
+      "input_node_ids": [
+        "C02.K01",
+        "C02.K02",
+        "C02.K03",
+        "C02.K04",
+        "C02.K05",
+        "C02.K06"
+      ]
+    },
+    "C02.K01": {
+      "status": {
+        "achievement_rate": 73.62,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C02.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C02.K02": {
+      "status": {
+        "achievement_rate": 67.53,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C02.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C02.K03": {
+      "status": {
+        "achievement_rate": 67.69,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C02.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C02.K04": {
+      "status": {
+        "achievement_rate": 68.84,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C02.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C02.K05": {
+      "status": {
+        "achievement_rate": 65.81,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C02.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C02.K06": {
+      "status": {
+        "achievement_rate": 72.88,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C02.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C03": {
+      "status": {
+        "achievement_rate": 84.9565,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C03.K01",
+        "EV-DEMO038-mixed_evidence-C03.K02",
+        "EV-DEMO038-mixed_evidence-C03.K03",
+        "EV-DEMO038-mixed_evidence-C03.K04",
+        "EV-DEMO038-mixed_evidence-C03.K05",
+        "EV-DEMO038-mixed_evidence-C03.K06"
+      ],
+      "input_node_ids": [
+        "C03.K01",
+        "C03.K02",
+        "C03.K03",
+        "C03.K04",
+        "C03.K05",
+        "C03.K06"
+      ]
+    },
+    "C03.K01": {
+      "status": {
+        "achievement_rate": 76.38,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C03.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C03.K02": {
+      "status": {
+        "achievement_rate": 89.72,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C03.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C03.K03": {
+      "status": {
+        "achievement_rate": 84.56,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C03.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C03.K04": {
+      "status": {
+        "achievement_rate": 89.76,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C03.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C03.K05": {
+      "status": {
+        "achievement_rate": 85.08,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C03.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C03.K06": {
+      "status": {
+        "achievement_rate": 82.77,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C03.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C04": {
+      "status": {
+        "achievement_rate": 69.544,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C04.K01",
+        "EV-DEMO038-mixed_evidence-C04.K02",
+        "EV-DEMO038-mixed_evidence-C04.K03",
+        "EV-DEMO038-mixed_evidence-C04.K04",
+        "EV-DEMO038-mixed_evidence-C04.K05",
+        "EV-DEMO038-mixed_evidence-C04.K06"
+      ],
+      "input_node_ids": [
+        "C04.K01",
+        "C04.K02",
+        "C04.K03",
+        "C04.K04",
+        "C04.K05",
+        "C04.K06"
+      ]
+    },
+    "C04.K01": {
+      "status": {
+        "achievement_rate": 78.68,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C04.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C04.K02": {
+      "status": {
+        "achievement_rate": 79.45,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C04.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C04.K03": {
+      "status": {
+        "achievement_rate": 63.89,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C04.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C04.K04": {
+      "status": {
+        "achievement_rate": 62.34,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C04.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C04.K05": {
+      "status": {
+        "achievement_rate": 69.14,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C04.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C04.K06": {
+      "status": {
+        "achievement_rate": 68.05,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C04.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C05": {
+      "status": {
+        "achievement_rate": 55.409,
+        "health_color": "grey",
+        "coverage_rate": 0.5,
+        "learning_state": "in_progress",
+        "grey_reason": "insufficient_coverage",
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": true,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 0.6
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C05.K01",
+        "EV-DEMO038-mixed_evidence-C05.K02",
+        "EV-DEMO038-mixed_evidence-C05.K03"
+      ],
+      "input_node_ids": [
+        "C05.K01",
+        "C05.K02",
+        "C05.K03",
+        "C05.K04",
+        "C05.K05",
+        "C05.K06"
+      ]
+    },
+    "C05.K01": {
+      "status": {
+        "achievement_rate": 64.14,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C05.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C05.K02": {
+      "status": {
+        "achievement_rate": 54.69,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C05.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C05.K03": {
+      "status": {
+        "achievement_rate": 49.4,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C05.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C05.K04": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "in_progress",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.5
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C05.K05": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C05.K06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C06": {
+      "status": {
+        "achievement_rate": 49.994,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C06.K01",
+        "EV-DEMO038-mixed_evidence-C06.K02",
+        "EV-DEMO038-mixed_evidence-C06.K03",
+        "EV-DEMO038-mixed_evidence-C06.K04",
+        "EV-DEMO038-mixed_evidence-C06.K05",
+        "EV-DEMO038-mixed_evidence-C06.K06"
+      ],
+      "input_node_ids": [
+        "C06.K01",
+        "C06.K02",
+        "C06.K03",
+        "C06.K04",
+        "C06.K05",
+        "C06.K06"
+      ]
+    },
+    "C06.K01": {
+      "status": {
+        "achievement_rate": 60.08,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C06.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C06.K02": {
+      "status": {
+        "achievement_rate": 42.4,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C06.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C06.K03": {
+      "status": {
+        "achievement_rate": 33.07,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C06.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C06.K04": {
+      "status": {
+        "achievement_rate": 65.1,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C06.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C06.K05": {
+      "status": {
+        "achievement_rate": 48.44,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C06.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C06.K06": {
+      "status": {
+        "achievement_rate": 51.48,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C06.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C07": {
+      "status": {
+        "achievement_rate": 68.5,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_total",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "course_total",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C07"
+      ],
+      "input_node_ids": []
+    },
+    "C07.K01": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C07.K02": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C07.K03": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C07.K04": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C07.K05": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C07.K06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C08": {
+      "status": {
+        "achievement_rate": 63.0,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_total",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "course_total",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C08"
+      ],
+      "input_node_ids": []
+    },
+    "C08.K01": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C08.K02": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C08.K03": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C08.K04": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C08.K05": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C08.K06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C09": {
+      "status": {
+        "achievement_rate": 88.309,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C09.K01",
+        "EV-DEMO038-mixed_evidence-C09.K02",
+        "EV-DEMO038-mixed_evidence-C09.K03",
+        "EV-DEMO038-mixed_evidence-C09.K04",
+        "EV-DEMO038-mixed_evidence-C09.K05",
+        "EV-DEMO038-mixed_evidence-C09.K06"
+      ],
+      "input_node_ids": [
+        "C09.K01",
+        "C09.K02",
+        "C09.K03",
+        "C09.K04",
+        "C09.K05",
+        "C09.K06"
+      ]
+    },
+    "C09.K01": {
+      "status": {
+        "achievement_rate": 97.44,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C09.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C09.K02": {
+      "status": {
+        "achievement_rate": 90.39,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C09.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C09.K03": {
+      "status": {
+        "achievement_rate": 68.19,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C09.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C09.K04": {
+      "status": {
+        "achievement_rate": 99.65,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C09.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C09.K05": {
+      "status": {
+        "achievement_rate": 95.9,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C09.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C09.K06": {
+      "status": {
+        "achievement_rate": 81.21,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C09.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C10": {
+      "status": {
+        "achievement_rate": 86.0,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_total",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "course_total",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C10"
+      ],
+      "input_node_ids": []
+    },
+    "C10.K01": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C10.K02": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C10.K03": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C10.K04": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C10.K05": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C10.K06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "completed",
+        "grey_reason": "no_evidence",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C11": {
+      "status": {
+        "achievement_rate": 75.809,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C11.K01",
+        "EV-DEMO038-mixed_evidence-C11.K02",
+        "EV-DEMO038-mixed_evidence-C11.K03",
+        "EV-DEMO038-mixed_evidence-C11.K04",
+        "EV-DEMO038-mixed_evidence-C11.K05",
+        "EV-DEMO038-mixed_evidence-C11.K06"
+      ],
+      "input_node_ids": [
+        "C11.K01",
+        "C11.K02",
+        "C11.K03",
+        "C11.K04",
+        "C11.K05",
+        "C11.K06"
+      ]
+    },
+    "C11.K01": {
+      "status": {
+        "achievement_rate": 77.54,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C11.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C11.K02": {
+      "status": {
+        "achievement_rate": 81.86,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C11.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C11.K03": {
+      "status": {
+        "achievement_rate": 68.59,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C11.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C11.K04": {
+      "status": {
+        "achievement_rate": 71.94,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C11.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C11.K05": {
+      "status": {
+        "achievement_rate": 78.12,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C11.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C11.K06": {
+      "status": {
+        "achievement_rate": 80.5,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 1,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-DEMO038-mixed_evidence-C11.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C12": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C12.K01": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C12.K02": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C12.K03": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C12.K04": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C12.K05": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C12.K06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C13": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C13.K01": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C13.K02": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C13.K03": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C13.K04": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C13.K05": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C13.K06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C14": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C14.K01": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C14.K02": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C14.K03": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C14.K04": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C14.K05": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C14.K06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C15": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C15.K01": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C15.K02": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C15.K03": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C15.K04": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C15.K05": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C15.K06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C16": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C16.K01": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C16.K02": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C16.K03": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C16.K04": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C16.K05": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C16.K06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C17": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C17.K01": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C17.K02": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C17.K03": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C17.K04": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C17.K05": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C17.K06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C18": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C18.K01": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C18.K02": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C18.K03": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C18.K04": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C18.K05": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    },
+    "C18.K06": {
+      "status": {
+        "achievement_rate": null,
+        "health_color": "grey",
+        "coverage_rate": 0.0,
+        "learning_state": "not_started",
+        "grey_reason": "not_started",
+        "evidence_granularity": "none",
+        "sample_count": 0,
+        "expected_count": 1,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "none",
+        "learning_progress": 0.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [],
+      "input_node_ids": []
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C01.K01",
+      "node_id": "C01.K01",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 67.85,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C01.K01"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C01.K02",
+      "node_id": "C01.K02",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 100,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C01.K02"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C01.K03",
+      "node_id": "C01.K03",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 83.52,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C01.K03"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C01.K04",
+      "node_id": "C01.K04",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 79.19,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C01.K04"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C01.K05",
+      "node_id": "C01.K05",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 70.08,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C01.K05"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C01.K06",
+      "node_id": "C01.K06",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 82.6,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C01.K06"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C02.K01",
+      "node_id": "C02.K01",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 73.62,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C02.K01"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C02.K02",
+      "node_id": "C02.K02",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 67.53,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C02.K02"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C02.K03",
+      "node_id": "C02.K03",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 67.69,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C02.K03"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C02.K04",
+      "node_id": "C02.K04",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 68.84,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C02.K04"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C02.K05",
+      "node_id": "C02.K05",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 65.81,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C02.K05"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C02.K06",
+      "node_id": "C02.K06",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 72.88,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C02.K06"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C03.K01",
+      "node_id": "C03.K01",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 76.38,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C03.K01"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C03.K02",
+      "node_id": "C03.K02",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 89.72,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C03.K02"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C03.K03",
+      "node_id": "C03.K03",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 84.56,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C03.K03"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C03.K04",
+      "node_id": "C03.K04",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 89.76,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C03.K04"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C03.K05",
+      "node_id": "C03.K05",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 85.08,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C03.K05"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C03.K06",
+      "node_id": "C03.K06",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 82.77,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C03.K06"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C04.K01",
+      "node_id": "C04.K01",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 78.68,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C04.K01"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C04.K02",
+      "node_id": "C04.K02",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 79.45,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C04.K02"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C04.K03",
+      "node_id": "C04.K03",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 63.89,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C04.K03"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C04.K04",
+      "node_id": "C04.K04",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 62.34,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C04.K04"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C04.K05",
+      "node_id": "C04.K05",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 69.14,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C04.K05"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C04.K06",
+      "node_id": "C04.K06",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 68.05,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C04.K06"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C05.K01",
+      "node_id": "C05.K01",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 64.14,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C05.K01"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C05.K02",
+      "node_id": "C05.K02",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 54.69,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C05.K02"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C05.K03",
+      "node_id": "C05.K03",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 49.4,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C05.K03"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C06.K01",
+      "node_id": "C06.K01",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 60.08,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C06.K01"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C06.K02",
+      "node_id": "C06.K02",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 42.4,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C06.K02"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C06.K03",
+      "node_id": "C06.K03",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 33.07,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C06.K03"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C06.K04",
+      "node_id": "C06.K04",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 65.1,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C06.K04"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C06.K05",
+      "node_id": "C06.K05",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 48.44,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C06.K05"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C06.K06",
+      "node_id": "C06.K06",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 51.48,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C06.K06"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C07",
+      "node_id": "C07",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "course_total",
+      "title": "模拟课程总评",
+      "score": 68.5,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "balanced-course-total:DEMO038:C07"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C08",
+      "node_id": "C08",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "course_total",
+      "title": "模拟课程总评",
+      "score": 63.0,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "balanced-course-total:DEMO038:C08"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C09.K01",
+      "node_id": "C09.K01",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 97.44,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C09.K01"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C09.K02",
+      "node_id": "C09.K02",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 90.39,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C09.K02"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C09.K03",
+      "node_id": "C09.K03",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 68.19,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C09.K03"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C09.K04",
+      "node_id": "C09.K04",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 99.65,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C09.K04"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C09.K05",
+      "node_id": "C09.K05",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 95.9,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C09.K05"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C09.K06",
+      "node_id": "C09.K06",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 81.21,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C09.K06"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C10",
+      "node_id": "C10",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "course_total",
+      "title": "模拟课程总评",
+      "score": 86.0,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "balanced-course-total:DEMO038:C10"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C11.K01",
+      "node_id": "C11.K01",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 77.54,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C11.K01"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C11.K02",
+      "node_id": "C11.K02",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 81.86,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C11.K02"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C11.K03",
+      "node_id": "C11.K03",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 68.59,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C11.K03"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C11.K04",
+      "node_id": "C11.K04",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 71.94,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C11.K04"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C11.K05",
+      "node_id": "C11.K05",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 78.12,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C11.K05"
+    },
+    {
+      "evidence_id": "EV-DEMO038-mixed_evidence-C11.K06",
+      "node_id": "C11.K06",
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "kind": "knowledge_assessment",
+      "title": "模拟评价记录",
+      "score": 80.5,
+      "sample_count": 1,
+      "source": "synthetic_demo",
+      "original_record_ref": "fixture:DEMO038:C11.K06"
+    }
+  ],
+  "summary": {
+    "health_counts": {
+      "green": 19,
+      "yellow": 31,
+      "red": 7,
+      "grey": 81
+    },
+    "ability_profile": [
+      {
+        "node_id": "A01",
+        "score": 74.37715,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A02",
+        "score": 60.361556,
+        "coverage": 0.9
+      },
+      {
+        "node_id": "A03",
+        "score": 67.194684,
+        "coverage": 0.475
+      },
+      {
+        "node_id": "A04",
+        "score": 56.497,
+        "coverage": 0.4
+      },
+      {
+        "node_id": "A05",
+        "score": 74.296533,
+        "coverage": 0.75
+      },
+      {
+        "node_id": "A06",
+        "score": null,
+        "coverage": 0.0
+      },
+      {
+        "node_id": "A07",
+        "score": null,
+        "coverage": 0.0
+      },
+      {
+        "node_id": "A08",
+        "score": null,
+        "coverage": 0.0
+      },
+      {
+        "node_id": "A09",
+        "score": 75.809,
+        "coverage": 0.2
+      },
+      {
+        "node_id": "A10",
+        "score": null,
+        "coverage": 0.0
+      },
+      {
+        "node_id": "A11",
+        "score": null,
+        "coverage": 0.0
+      },
+      {
+        "node_id": "A12",
+        "score": 75.809,
+        "coverage": 0.15
+      }
+    ],
+    "strength_node_ids": [
+      "C01.K02",
+      "C09.K04",
+      "C09.K01",
+      "C09.K05",
+      "C09.K02"
+    ],
+    "weak_node_ids": [
+      "C06.K03",
+      "C06.K02",
+      "C06.K05",
+      "C05.K03",
+      "C06",
+      "C06.K06"
+    ],
+    "provisional_low_node_ids": [
+      "A04",
+      "C05"
+    ]
+  }
+}

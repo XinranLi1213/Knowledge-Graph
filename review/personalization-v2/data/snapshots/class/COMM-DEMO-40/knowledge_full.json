@@ -1,0 +1,5127 @@
+{
+  "schema_version": "2.0.0",
+  "record_type": "evaluation_snapshot",
+  "snapshot_id": "class-COMM-DEMO-40-knowledge_full",
+  "revision": 1,
+  "graph_ref": {
+    "graph_id": "communication-engineering-demo",
+    "graph_version": 1
+  },
+  "subject": {
+    "type": "class",
+    "id": "COMM-DEMO-40"
+  },
+  "registry_version": 1,
+  "evaluation_context": {
+    "scenario_id": "knowledge_full",
+    "period_id": "full-program-replay",
+    "as_of": "2026-10-29",
+    "simulation_note": "全培养周期合成回放，并非2026年实际学习进度"
+  },
+  "policy_id": "demo-evaluation-v2",
+  "policy_version": 1,
+  "score_mode": "precomputed",
+  "node_results": {
+    "A01": {
+      "status": {
+        "achievement_rate": 75.300107,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A01"
+      ],
+      "input_node_ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C07"
+      ]
+    },
+    "A02": {
+      "status": {
+        "achievement_rate": 59.691182,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A02"
+      ],
+      "input_node_ids": [
+        "C04",
+        "C05",
+        "C06",
+        "C08"
+      ]
+    },
+    "A03": {
+      "status": {
+        "achievement_rate": 67.472261,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A03"
+      ],
+      "input_node_ids": [
+        "C05",
+        "C08",
+        "C11",
+        "C14",
+        "C15"
+      ]
+    },
+    "A04": {
+      "status": {
+        "achievement_rate": 70.21529,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A04"
+      ],
+      "input_node_ids": [
+        "C06",
+        "C08",
+        "C16",
+        "C17"
+      ]
+    },
+    "A05": {
+      "status": {
+        "achievement_rate": 73.043643,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A05"
+      ],
+      "input_node_ids": [
+        "C06",
+        "C09",
+        "C10",
+        "C11",
+        "C13"
+      ]
+    },
+    "A06": {
+      "status": {
+        "achievement_rate": 74.139399,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A06"
+      ],
+      "input_node_ids": [
+        "C12",
+        "C15",
+        "C16"
+      ]
+    },
+    "A07": {
+      "status": {
+        "achievement_rate": 70.964296,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A07"
+      ],
+      "input_node_ids": [
+        "C14",
+        "C16",
+        "C18"
+      ]
+    },
+    "A08": {
+      "status": {
+        "achievement_rate": 79.392112,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A08"
+      ],
+      "input_node_ids": [
+        "C15",
+        "C16",
+        "C17"
+      ]
+    },
+    "A09": {
+      "status": {
+        "achievement_rate": 79.590627,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A09"
+      ],
+      "input_node_ids": [
+        "C11",
+        "C15",
+        "C16"
+      ]
+    },
+    "A10": {
+      "status": {
+        "achievement_rate": 77.816607,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A10"
+      ],
+      "input_node_ids": [
+        "C12",
+        "C15",
+        "C17"
+      ]
+    },
+    "A11": {
+      "status": {
+        "achievement_rate": 75.932252,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A11"
+      ],
+      "input_node_ids": [
+        "C15",
+        "C16",
+        "C18"
+      ]
+    },
+    "A12": {
+      "status": {
+        "achievement_rate": 74.825166,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "course_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": null
+      },
+      "progress_source": "not_applicable",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-A12"
+      ],
+      "input_node_ids": [
+        "C11",
+        "C12",
+        "C17",
+        "C18"
+      ]
+    },
+    "C01": {
+      "status": {
+        "achievement_rate": 83.632312,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C01"
+      ],
+      "input_node_ids": [
+        "C01.K01",
+        "C01.K02",
+        "C01.K03",
+        "C01.K04",
+        "C01.K05",
+        "C01.K06"
+      ]
+    },
+    "C01.K01": {
+      "status": {
+        "achievement_rate": 80.38125,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C01.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C01.K02": {
+      "status": {
+        "achievement_rate": 86.42225,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C01.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C01.K03": {
+      "status": {
+        "achievement_rate": 74.7545,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C01.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C01.K04": {
+      "status": {
+        "achievement_rate": 88.41925,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C01.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C01.K05": {
+      "status": {
+        "achievement_rate": 85.38575,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C01.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C01.K06": {
+      "status": {
+        "achievement_rate": 87.7945,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C01.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C02": {
+      "status": {
+        "achievement_rate": 71.280587,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C02"
+      ],
+      "input_node_ids": [
+        "C02.K01",
+        "C02.K02",
+        "C02.K03",
+        "C02.K04",
+        "C02.K05",
+        "C02.K06"
+      ]
+    },
+    "C02.K01": {
+      "status": {
+        "achievement_rate": 69.32325,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C02.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C02.K02": {
+      "status": {
+        "achievement_rate": 76.21575,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C02.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C02.K03": {
+      "status": {
+        "achievement_rate": 62.898,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C02.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C02.K04": {
+      "status": {
+        "achievement_rate": 75.55325,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C02.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C02.K05": {
+      "status": {
+        "achievement_rate": 71.936,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C02.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C02.K06": {
+      "status": {
+        "achievement_rate": 73.12725,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C02.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C03": {
+      "status": {
+        "achievement_rate": 82.05235,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C03"
+      ],
+      "input_node_ids": [
+        "C03.K01",
+        "C03.K02",
+        "C03.K03",
+        "C03.K04",
+        "C03.K05",
+        "C03.K06"
+      ]
+    },
+    "C03.K01": {
+      "status": {
+        "achievement_rate": 79.1445,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C03.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C03.K02": {
+      "status": {
+        "achievement_rate": 86.4365,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C03.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C03.K03": {
+      "status": {
+        "achievement_rate": 73.715,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C03.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C03.K04": {
+      "status": {
+        "achievement_rate": 87.77175,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C03.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C03.K05": {
+      "status": {
+        "achievement_rate": 81.9815,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C03.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C03.K06": {
+      "status": {
+        "achievement_rate": 84.1375,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C03.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C04": {
+      "status": {
+        "achievement_rate": 68.757675,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C04"
+      ],
+      "input_node_ids": [
+        "C04.K01",
+        "C04.K02",
+        "C04.K03",
+        "C04.K04",
+        "C04.K05",
+        "C04.K06"
+      ]
+    },
+    "C04.K01": {
+      "status": {
+        "achievement_rate": 66.85325,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C04.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C04.K02": {
+      "status": {
+        "achievement_rate": 69.81075,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C04.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C04.K03": {
+      "status": {
+        "achievement_rate": 60.7515,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C04.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C04.K04": {
+      "status": {
+        "achievement_rate": 74.925,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C04.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C04.K05": {
+      "status": {
+        "achievement_rate": 67.952,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C04.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C04.K06": {
+      "status": {
+        "achievement_rate": 72.8665,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C04.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C05": {
+      "status": {
+        "achievement_rate": 53.660575,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C05"
+      ],
+      "input_node_ids": [
+        "C05.K01",
+        "C05.K02",
+        "C05.K03",
+        "C05.K04",
+        "C05.K05",
+        "C05.K06"
+      ]
+    },
+    "C05.K01": {
+      "status": {
+        "achievement_rate": 47.4645,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C05.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C05.K02": {
+      "status": {
+        "achievement_rate": 56.13275,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C05.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C05.K03": {
+      "status": {
+        "achievement_rate": 46.4285,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C05.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C05.K04": {
+      "status": {
+        "achievement_rate": 57.8115,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C05.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C05.K05": {
+      "status": {
+        "achievement_rate": 57.20425,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C05.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C05.K06": {
+      "status": {
+        "achievement_rate": 57.949,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C05.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C06": {
+      "status": {
+        "achievement_rate": 52.414263,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C06"
+      ],
+      "input_node_ids": [
+        "C06.K01",
+        "C06.K02",
+        "C06.K03",
+        "C06.K04",
+        "C06.K05",
+        "C06.K06"
+      ]
+    },
+    "C06.K01": {
+      "status": {
+        "achievement_rate": 49.577,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C06.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C06.K02": {
+      "status": {
+        "achievement_rate": 53.67875,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C06.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C06.K03": {
+      "status": {
+        "achievement_rate": 44.9505,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C06.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C06.K04": {
+      "status": {
+        "achievement_rate": 56.1425,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C06.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C06.K05": {
+      "status": {
+        "achievement_rate": 54.85275,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C06.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C06.K06": {
+      "status": {
+        "achievement_rate": 56.52925,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C06.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C07": {
+      "status": {
+        "achievement_rate": 71.01335,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C07"
+      ],
+      "input_node_ids": [
+        "C07.K01",
+        "C07.K02",
+        "C07.K03",
+        "C07.K04",
+        "C07.K05",
+        "C07.K06"
+      ]
+    },
+    "C07.K01": {
+      "status": {
+        "achievement_rate": 67.874,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C07.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C07.K02": {
+      "status": {
+        "achievement_rate": 74.544,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C07.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C07.K03": {
+      "status": {
+        "achievement_rate": 61.88825,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C07.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C07.K04": {
+      "status": {
+        "achievement_rate": 76.6715,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C07.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C07.K05": {
+      "status": {
+        "achievement_rate": 72.57125,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C07.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C07.K06": {
+      "status": {
+        "achievement_rate": 73.68675,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C07.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C08": {
+      "status": {
+        "achievement_rate": 62.220275,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C08"
+      ],
+      "input_node_ids": [
+        "C08.K01",
+        "C08.K02",
+        "C08.K03",
+        "C08.K04",
+        "C08.K05",
+        "C08.K06"
+      ]
+    },
+    "C08.K01": {
+      "status": {
+        "achievement_rate": 58.46075,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C08.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C08.K02": {
+      "status": {
+        "achievement_rate": 66.32325,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C08.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C08.K03": {
+      "status": {
+        "achievement_rate": 53.60325,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C08.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C08.K04": {
+      "status": {
+        "achievement_rate": 66.2335,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C08.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C08.K05": {
+      "status": {
+        "achievement_rate": 62.648,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C08.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C08.K06": {
+      "status": {
+        "achievement_rate": 67.5875,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C08.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C09": {
+      "status": {
+        "achievement_rate": 85.12305,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C09"
+      ],
+      "input_node_ids": [
+        "C09.K01",
+        "C09.K02",
+        "C09.K03",
+        "C09.K04",
+        "C09.K05",
+        "C09.K06"
+      ]
+    },
+    "C09.K01": {
+      "status": {
+        "achievement_rate": 81.5425,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C09.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C09.K02": {
+      "status": {
+        "achievement_rate": 88.295,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C09.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C09.K03": {
+      "status": {
+        "achievement_rate": 76.033,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C09.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C09.K04": {
+      "status": {
+        "achievement_rate": 91.868,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C09.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C09.K05": {
+      "status": {
+        "achievement_rate": 84.209,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C09.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C09.K06": {
+      "status": {
+        "achievement_rate": 89.5725,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C09.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C10": {
+      "status": {
+        "achievement_rate": 78.931775,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C10"
+      ],
+      "input_node_ids": [
+        "C10.K01",
+        "C10.K02",
+        "C10.K03",
+        "C10.K04",
+        "C10.K05",
+        "C10.K06"
+      ]
+    },
+    "C10.K01": {
+      "status": {
+        "achievement_rate": 74.88625,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C10.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C10.K02": {
+      "status": {
+        "achievement_rate": 80.98525,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C10.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C10.K03": {
+      "status": {
+        "achievement_rate": 72.69225,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C10.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C10.K04": {
+      "status": {
+        "achievement_rate": 84.742,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C10.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C10.K05": {
+      "status": {
+        "achievement_rate": 76.57875,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C10.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C10.K06": {
+      "status": {
+        "achievement_rate": 83.84925,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C10.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C11": {
+      "status": {
+        "achievement_rate": 76.915837,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C11"
+      ],
+      "input_node_ids": [
+        "C11.K01",
+        "C11.K02",
+        "C11.K03",
+        "C11.K04",
+        "C11.K05",
+        "C11.K06"
+      ]
+    },
+    "C11.K01": {
+      "status": {
+        "achievement_rate": 73.48625,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C11.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C11.K02": {
+      "status": {
+        "achievement_rate": 78.66575,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C11.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C11.K03": {
+      "status": {
+        "achievement_rate": 69.722,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C11.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C11.K04": {
+      "status": {
+        "achievement_rate": 81.27475,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C11.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C11.K05": {
+      "status": {
+        "achievement_rate": 77.87925,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C11.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C11.K06": {
+      "status": {
+        "achievement_rate": 81.412,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C11.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C12": {
+      "status": {
+        "achievement_rate": 59.119837,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C12"
+      ],
+      "input_node_ids": [
+        "C12.K01",
+        "C12.K02",
+        "C12.K03",
+        "C12.K04",
+        "C12.K05",
+        "C12.K06"
+      ]
+    },
+    "C12.K01": {
+      "status": {
+        "achievement_rate": 53.1995,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C12.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C12.K02": {
+      "status": {
+        "achievement_rate": 61.31325,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C12.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C12.K03": {
+      "status": {
+        "achievement_rate": 51.40625,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C12.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C12.K04": {
+      "status": {
+        "achievement_rate": 64.1005,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C12.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C12.K05": {
+      "status": {
+        "achievement_rate": 60.9075,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C12.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C12.K06": {
+      "status": {
+        "achievement_rate": 64.703,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C12.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C13": {
+      "status": {
+        "achievement_rate": 73.252988,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C13"
+      ],
+      "input_node_ids": [
+        "C13.K01",
+        "C13.K02",
+        "C13.K03",
+        "C13.K04",
+        "C13.K05",
+        "C13.K06"
+      ]
+    },
+    "C13.K01": {
+      "status": {
+        "achievement_rate": 68.21425,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C13.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C13.K02": {
+      "status": {
+        "achievement_rate": 79.07625,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C13.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C13.K03": {
+      "status": {
+        "achievement_rate": 66.1725,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C13.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C13.K04": {
+      "status": {
+        "achievement_rate": 76.4835,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C13.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C13.K05": {
+      "status": {
+        "achievement_rate": 75.778,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C13.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C13.K06": {
+      "status": {
+        "achievement_rate": 75.07675,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C13.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C14": {
+      "status": {
+        "achievement_rate": 53.480338,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C14"
+      ],
+      "input_node_ids": [
+        "C14.K01",
+        "C14.K02",
+        "C14.K03",
+        "C14.K04",
+        "C14.K05",
+        "C14.K06"
+      ]
+    },
+    "C14.K01": {
+      "status": {
+        "achievement_rate": 48.7815,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C14.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C14.K02": {
+      "status": {
+        "achievement_rate": 58.43075,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C14.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C14.K03": {
+      "status": {
+        "achievement_rate": 45.216,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C14.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C14.K04": {
+      "status": {
+        "achievement_rate": 57.3925,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C14.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C14.K05": {
+      "status": {
+        "achievement_rate": 53.9045,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C14.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C14.K06": {
+      "status": {
+        "achievement_rate": 58.6075,
+        "health_color": "red",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C14.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C15": {
+      "status": {
+        "achievement_rate": 83.599537,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C15"
+      ],
+      "input_node_ids": [
+        "C15.K01",
+        "C15.K02",
+        "C15.K03",
+        "C15.K04",
+        "C15.K05",
+        "C15.K06"
+      ]
+    },
+    "C15.K01": {
+      "status": {
+        "achievement_rate": 79.82125,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C15.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C15.K02": {
+      "status": {
+        "achievement_rate": 88.9815,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C15.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C15.K03": {
+      "status": {
+        "achievement_rate": 74.591,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C15.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C15.K04": {
+      "status": {
+        "achievement_rate": 88.75675,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C15.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C15.K05": {
+      "status": {
+        "achievement_rate": 82.948,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C15.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C15.K06": {
+      "status": {
+        "achievement_rate": 87.7825,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C15.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C16": {
+      "status": {
+        "achievement_rate": 76.919112,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C16"
+      ],
+      "input_node_ids": [
+        "C16.K01",
+        "C16.K02",
+        "C16.K03",
+        "C16.K04",
+        "C16.K05",
+        "C16.K06"
+      ]
+    },
+    "C16.K01": {
+      "status": {
+        "achievement_rate": 74.26025,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C16.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C16.K02": {
+      "status": {
+        "achievement_rate": 83.1585,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C16.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C16.K03": {
+      "status": {
+        "achievement_rate": 69.4125,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C16.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C16.K04": {
+      "status": {
+        "achievement_rate": 79.999,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C16.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C16.K05": {
+      "status": {
+        "achievement_rate": 76.99625,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C16.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C16.K06": {
+      "status": {
+        "achievement_rate": 79.16375,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C16.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C17": {
+      "status": {
+        "achievement_rate": 79.7614,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C17"
+      ],
+      "input_node_ids": [
+        "C17.K01",
+        "C17.K02",
+        "C17.K03",
+        "C17.K04",
+        "C17.K05",
+        "C17.K06"
+      ]
+    },
+    "C17.K01": {
+      "status": {
+        "achievement_rate": 77.37675,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C17.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C17.K02": {
+      "status": {
+        "achievement_rate": 83.01575,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C17.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C17.K03": {
+      "status": {
+        "achievement_rate": 70.98675,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C17.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C17.K04": {
+      "status": {
+        "achievement_rate": 85.304,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C17.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C17.K05": {
+      "status": {
+        "achievement_rate": 78.349,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C17.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C17.K06": {
+      "status": {
+        "achievement_rate": 84.6135,
+        "health_color": "green",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C17.K06"
+      ],
+      "input_node_ids": []
+    },
+    "C18": {
+      "status": {
+        "achievement_rate": 72.695575,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_aggregate",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "weighted_inputs",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C18"
+      ],
+      "input_node_ids": [
+        "C18.K01",
+        "C18.K02",
+        "C18.K03",
+        "C18.K04",
+        "C18.K05",
+        "C18.K06"
+      ]
+    },
+    "C18.K01": {
+      "status": {
+        "achievement_rate": 69.85325,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C18.K01"
+      ],
+      "input_node_ids": []
+    },
+    "C18.K02": {
+      "status": {
+        "achievement_rate": 74.85375,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C18.K02"
+      ],
+      "input_node_ids": []
+    },
+    "C18.K03": {
+      "status": {
+        "achievement_rate": 61.4705,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C18.K03"
+      ],
+      "input_node_ids": []
+    },
+    "C18.K04": {
+      "status": {
+        "achievement_rate": 79.04625,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C18.K04"
+      ],
+      "input_node_ids": []
+    },
+    "C18.K05": {
+      "status": {
+        "achievement_rate": 73.1865,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C18.K05"
+      ],
+      "input_node_ids": []
+    },
+    "C18.K06": {
+      "status": {
+        "achievement_rate": 79.388,
+        "health_color": "yellow",
+        "coverage_rate": 1.0,
+        "learning_state": "completed",
+        "grey_reason": null,
+        "evidence_granularity": "knowledge_assessment",
+        "sample_count": 40,
+        "expected_count": 40,
+        "score_is_provisional": false,
+        "score_provenance": "simulated_precomputed",
+        "aggregation_basis": "knowledge_assessment",
+        "learning_progress": 1.0
+      },
+      "progress_source": "simulated_learning_record",
+      "evidence_refs": [
+        "EV-COMM-DEMO-40-knowledge_full-C18.K06"
+      ],
+      "input_node_ids": []
+    }
+  },
+  "evidence": [
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A01",
+      "node_id": "A01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 75.300107,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A02",
+      "node_id": "A02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 59.691182,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A03",
+      "node_id": "A03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 67.472261,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A04",
+      "node_id": "A04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 70.21529,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A05",
+      "node_id": "A05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 73.043643,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A06",
+      "node_id": "A06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 74.139399,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A07",
+      "node_id": "A07",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 70.964296,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A07"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A08",
+      "node_id": "A08",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 79.392112,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A08"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A09",
+      "node_id": "A09",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 79.590627,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A09"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A10",
+      "node_id": "A10",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 77.816607,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A10"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A11",
+      "node_id": "A11",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 75.932252,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A11"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-A12",
+      "node_id": "A12",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 74.825166,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:A12"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C01",
+      "node_id": "C01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 83.632312,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C01.K01",
+      "node_id": "C01.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 80.38125,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C01.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C01.K02",
+      "node_id": "C01.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 86.42225,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C01.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C01.K03",
+      "node_id": "C01.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 74.7545,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C01.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C01.K04",
+      "node_id": "C01.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 88.41925,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C01.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C01.K05",
+      "node_id": "C01.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 85.38575,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C01.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C01.K06",
+      "node_id": "C01.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 87.7945,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C01.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C02",
+      "node_id": "C02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 71.280587,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C02.K01",
+      "node_id": "C02.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 69.32325,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C02.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C02.K02",
+      "node_id": "C02.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 76.21575,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C02.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C02.K03",
+      "node_id": "C02.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 62.898,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C02.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C02.K04",
+      "node_id": "C02.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 75.55325,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C02.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C02.K05",
+      "node_id": "C02.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 71.936,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C02.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C02.K06",
+      "node_id": "C02.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 73.12725,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C02.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C03",
+      "node_id": "C03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 82.05235,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C03.K01",
+      "node_id": "C03.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 79.1445,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C03.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C03.K02",
+      "node_id": "C03.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 86.4365,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C03.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C03.K03",
+      "node_id": "C03.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 73.715,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C03.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C03.K04",
+      "node_id": "C03.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 87.77175,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C03.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C03.K05",
+      "node_id": "C03.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 81.9815,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C03.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C03.K06",
+      "node_id": "C03.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 84.1375,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C03.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C04",
+      "node_id": "C04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 68.757675,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C04.K01",
+      "node_id": "C04.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 66.85325,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C04.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C04.K02",
+      "node_id": "C04.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 69.81075,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C04.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C04.K03",
+      "node_id": "C04.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 60.7515,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C04.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C04.K04",
+      "node_id": "C04.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 74.925,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C04.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C04.K05",
+      "node_id": "C04.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 67.952,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C04.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C04.K06",
+      "node_id": "C04.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 72.8665,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C04.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C05",
+      "node_id": "C05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 53.660575,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C05.K01",
+      "node_id": "C05.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 47.4645,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C05.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C05.K02",
+      "node_id": "C05.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 56.13275,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C05.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C05.K03",
+      "node_id": "C05.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 46.4285,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C05.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C05.K04",
+      "node_id": "C05.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 57.8115,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C05.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C05.K05",
+      "node_id": "C05.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 57.20425,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C05.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C05.K06",
+      "node_id": "C05.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 57.949,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C05.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C06",
+      "node_id": "C06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 52.414263,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C06.K01",
+      "node_id": "C06.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 49.577,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C06.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C06.K02",
+      "node_id": "C06.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 53.67875,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C06.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C06.K03",
+      "node_id": "C06.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 44.9505,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C06.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C06.K04",
+      "node_id": "C06.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 56.1425,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C06.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C06.K05",
+      "node_id": "C06.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 54.85275,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C06.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C06.K06",
+      "node_id": "C06.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 56.52925,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C06.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C07",
+      "node_id": "C07",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 71.01335,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C07"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C07.K01",
+      "node_id": "C07.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 67.874,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C07.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C07.K02",
+      "node_id": "C07.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 74.544,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C07.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C07.K03",
+      "node_id": "C07.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 61.88825,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C07.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C07.K04",
+      "node_id": "C07.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 76.6715,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C07.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C07.K05",
+      "node_id": "C07.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 72.57125,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C07.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C07.K06",
+      "node_id": "C07.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 73.68675,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C07.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C08",
+      "node_id": "C08",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 62.220275,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C08"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C08.K01",
+      "node_id": "C08.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 58.46075,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C08.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C08.K02",
+      "node_id": "C08.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 66.32325,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C08.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C08.K03",
+      "node_id": "C08.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 53.60325,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C08.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C08.K04",
+      "node_id": "C08.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 66.2335,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C08.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C08.K05",
+      "node_id": "C08.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 62.648,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C08.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C08.K06",
+      "node_id": "C08.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 67.5875,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C08.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C09",
+      "node_id": "C09",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 85.12305,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C09"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C09.K01",
+      "node_id": "C09.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 81.5425,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C09.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C09.K02",
+      "node_id": "C09.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 88.295,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C09.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C09.K03",
+      "node_id": "C09.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 76.033,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C09.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C09.K04",
+      "node_id": "C09.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 91.868,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C09.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C09.K05",
+      "node_id": "C09.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 84.209,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C09.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C09.K06",
+      "node_id": "C09.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 89.5725,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C09.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C10",
+      "node_id": "C10",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 78.931775,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C10"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C10.K01",
+      "node_id": "C10.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 74.88625,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C10.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C10.K02",
+      "node_id": "C10.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 80.98525,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C10.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C10.K03",
+      "node_id": "C10.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 72.69225,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C10.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C10.K04",
+      "node_id": "C10.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 84.742,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C10.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C10.K05",
+      "node_id": "C10.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 76.57875,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C10.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C10.K06",
+      "node_id": "C10.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 83.84925,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C10.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C11",
+      "node_id": "C11",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 76.915837,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C11"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C11.K01",
+      "node_id": "C11.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 73.48625,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C11.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C11.K02",
+      "node_id": "C11.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 78.66575,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C11.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C11.K03",
+      "node_id": "C11.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 69.722,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C11.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C11.K04",
+      "node_id": "C11.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 81.27475,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C11.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C11.K05",
+      "node_id": "C11.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 77.87925,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C11.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C11.K06",
+      "node_id": "C11.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 81.412,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C11.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C12",
+      "node_id": "C12",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 59.119837,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C12"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C12.K01",
+      "node_id": "C12.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 53.1995,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C12.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C12.K02",
+      "node_id": "C12.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 61.31325,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C12.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C12.K03",
+      "node_id": "C12.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 51.40625,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C12.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C12.K04",
+      "node_id": "C12.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 64.1005,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C12.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C12.K05",
+      "node_id": "C12.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 60.9075,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C12.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C12.K06",
+      "node_id": "C12.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 64.703,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C12.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C13",
+      "node_id": "C13",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 73.252988,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C13"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C13.K01",
+      "node_id": "C13.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 68.21425,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C13.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C13.K02",
+      "node_id": "C13.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 79.07625,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C13.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C13.K03",
+      "node_id": "C13.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 66.1725,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C13.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C13.K04",
+      "node_id": "C13.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 76.4835,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C13.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C13.K05",
+      "node_id": "C13.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 75.778,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C13.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C13.K06",
+      "node_id": "C13.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 75.07675,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C13.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C14",
+      "node_id": "C14",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 53.480338,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C14"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C14.K01",
+      "node_id": "C14.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 48.7815,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C14.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C14.K02",
+      "node_id": "C14.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 58.43075,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C14.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C14.K03",
+      "node_id": "C14.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 45.216,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C14.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C14.K04",
+      "node_id": "C14.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 57.3925,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C14.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C14.K05",
+      "node_id": "C14.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 53.9045,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C14.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C14.K06",
+      "node_id": "C14.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 58.6075,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C14.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C15",
+      "node_id": "C15",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 83.599537,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C15"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C15.K01",
+      "node_id": "C15.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 79.82125,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C15.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C15.K02",
+      "node_id": "C15.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 88.9815,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C15.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C15.K03",
+      "node_id": "C15.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 74.591,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C15.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C15.K04",
+      "node_id": "C15.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 88.75675,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C15.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C15.K05",
+      "node_id": "C15.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 82.948,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C15.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C15.K06",
+      "node_id": "C15.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 87.7825,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C15.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C16",
+      "node_id": "C16",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 76.919112,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C16"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C16.K01",
+      "node_id": "C16.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 74.26025,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C16.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C16.K02",
+      "node_id": "C16.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 83.1585,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C16.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C16.K03",
+      "node_id": "C16.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 69.4125,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C16.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C16.K04",
+      "node_id": "C16.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 79.999,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C16.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C16.K05",
+      "node_id": "C16.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 76.99625,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C16.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C16.K06",
+      "node_id": "C16.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 79.16375,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C16.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C17",
+      "node_id": "C17",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 79.7614,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C17"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C17.K01",
+      "node_id": "C17.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 77.37675,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C17.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C17.K02",
+      "node_id": "C17.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 83.01575,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C17.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C17.K03",
+      "node_id": "C17.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 70.98675,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C17.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C17.K04",
+      "node_id": "C17.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 85.304,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C17.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C17.K05",
+      "node_id": "C17.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 78.349,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C17.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C17.K06",
+      "node_id": "C17.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 84.6135,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C17.K06"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C18",
+      "node_id": "C18",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 72.695575,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C18"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C18.K01",
+      "node_id": "C18.K01",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 69.85325,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C18.K01"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C18.K02",
+      "node_id": "C18.K02",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 74.85375,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C18.K02"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C18.K03",
+      "node_id": "C18.K03",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 61.4705,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C18.K03"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C18.K04",
+      "node_id": "C18.K04",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 79.04625,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C18.K04"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C18.K05",
+      "node_id": "C18.K05",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 73.1865,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C18.K05"
+    },
+    {
+      "evidence_id": "EV-COMM-DEMO-40-knowledge_full-C18.K06",
+      "node_id": "C18.K06",
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "kind": "legacy_class_aggregate",
+      "title": "模拟评价记录",
+      "score": 79.388,
+      "sample_count": 40,
+      "source": "synthetic_demo",
+      "original_record_ref": "legacy:knowledge_full:C18.K06"
+    }
+  ],
+  "summary": {
+    "health_counts": {
+      "green": 31,
+      "yellow": 80,
+      "red": 27,
+      "grey": 0
+    },
+    "ability_profile": [
+      {
+        "node_id": "A01",
+        "score": 75.300107,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A02",
+        "score": 59.691182,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A03",
+        "score": 67.472261,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A04",
+        "score": 70.21529,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A05",
+        "score": 73.043643,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A06",
+        "score": 74.139399,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A07",
+        "score": 70.964296,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A08",
+        "score": 79.392112,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A09",
+        "score": 79.590627,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A10",
+        "score": 77.816607,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A11",
+        "score": 75.932252,
+        "coverage": 1.0
+      },
+      {
+        "node_id": "A12",
+        "score": 74.825166,
+        "coverage": 1.0
+      }
+    ],
+    "strength_node_ids": [
+      "C09.K04",
+      "C09.K06",
+      "C15.K02",
+      "C15.K04",
+      "C01.K04"
+    ],
+    "weak_node_ids": [
+      "C06.K03",
+      "C14.K03",
+      "C05.K03",
+      "C05.K01",
+      "C14.K01",
+      "C06.K01"
+    ],
+    "provisional_low_node_ids": []
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "2.0.0",
+  "record_type": "recommendation_update",
+  "update_id": "UPDATE-DEMO001-overview-example",
+  "context_id": "CTX-DEMO001-mixed-student",
+  "subject": {
+    "type": "student",
+    "id": "DEMO001"
+  },
+  "audience": "student",
+  "graph_ref": {
+    "graph_id": "communication-engineering-demo",
+    "graph_version": 1
+  },
+  "basis_snapshot": {
+    "snapshot_id": "student-DEMO001-mixed_evidence",
+    "revision": 1
+  },
+  "profile_version": 1,
+  "base_bundle_id": "BUNDLE-DEMO001-mixed_evidence",
+  "base_bundle_version": 1,
+  "proposed_bundle_version": 2,
+  "resource_catalog_version": 1,
+  "lifecycle": "candidate",
+  "generated_by": {
+    "kind": "example",
+    "model": null
+  },
+  "operations": [
+    {
+      "op": "upsert",
+      "recommendation_id": "REC-DEMO001-mixed_evidence-student-overview",
+      "recommendation": {
+        "recommendation_id": "REC-DEMO001-mixed_evidence-student-overview",
+        "audience": "student",
+        "target_node_id": null,
+        "kind": "overview",
+        "priority": "medium",
+        "summary": "先复习已有评价中的薄弱环节，未学习内容按计划预习。",
+        "basis_node_ids": [
+          "C06.K03",
+          "C06.K01",
+          "C06",
+          "A04",
+          "C05"
+        ],
+        "actions": [
+          "本周从已有测评中的两个薄弱环节开始，完成任务单并保留解题记录，再向教师申请复核。"
+        ],
+        "review_node_ids": [
+          "C06.K03",
+          "C06.K01",
+          "C06",
+          "A04",
+          "C05"
+        ],
+        "prepare_node_ids": [],
+        "resource_ids": [
+          "RES-C06",
+          "RES-C08",
+          "RES-C05"
+        ],
+        "evidence_refs": [
+          "EV-DEMO001-mixed_evidence-C05.K01",
+          "EV-DEMO001-mixed_evidence-C05.K02",
+          "EV-DEMO001-mixed_evidence-C05.K03",
+          "EV-DEMO001-mixed_evidence-C06.K01",
+          "EV-DEMO001-mixed_evidence-C06.K02",
+          "EV-DEMO001-mixed_evidence-C06.K03",
+          "EV-DEMO001-mixed_evidence-C06.K04",
+          "EV-DEMO001-mixed_evidence-C06.K05",
+          "EV-DEMO001-mixed_evidence-C06.K06",
+          "EV-DEMO001-mixed_evidence-C08"
+        ],
+        "origin": "llm_candidate",
+        "lifecycle": "candidate"
+      }
+    }
+  ]
+}

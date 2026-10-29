@@ -1,0 +1,13 @@
+{
+  "schema_version": "2.0.0",
+  "record_type": "evaluation_policy",
+  "policy_id": "demo-evaluation-v2",
+  "policy_version": 1,
+  "green_min": 80,
+  "yellow_min": 60,
+  "min_coverage": 0.8,
+  "score_precision": 6,
+  "runtime_calculation": false,
+  "progress_definition": "0–1为模拟学习记录；能力层不以完成课程比例替代能力培养进度，取null。",
+  "coverage_definition": "按支撑权重累计的有效评价覆盖率，不是学习进度或参评比例。"
+}

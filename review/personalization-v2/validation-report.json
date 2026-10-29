@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "scope": "contracts/data only; frontend and LLM not executed",
+  "counts": {
+    "graph_nodes": 138,
+    "graph_edges": 285,
+    "student_snapshots": 120,
+    "class_snapshots": 3,
+    "recommendation_bundles": 9,
+    "recommendations": 2502,
+    "local_resources": 18
+  },
+  "schema_record_count": 140,
+  "checks": [
+    "schema types and date formats",
+    "public vs subject separation",
+    "stable node IDs",
+    "roster references",
+    "complete snapshot coverage",
+    "independent learning progress",
+    "weighted score/coverage consistency",
+    "all 40 students vs legacy class means",
+    "course-total fallback",
+    "dual-role advice/evidence references",
+    "local resources exist",
+    "LLM context binding",
+    "candidate-only update protocol",
+    "baseline application files unchanged"
+  ],
+  "negative_update_cases_rejected": [
+    "wrong student",
+    "unknown context",
+    "stale snapshot",
+    "stale advice version",
+    "stale profile",
+    "stale resource catalog",
+    "score overwrite prohibited",
+    "unknown node",
+    "foreign evidence",
+    "unknown resource",
+    "cross-role update",
+    "unknown removal",
+    "active LLM output prohibited",
+    "outside requested task scope"
+  ],
+  "max_numeric_tolerance": 2e-06
+}

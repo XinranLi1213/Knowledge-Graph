@@ -1,0 +1,1791 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "专业图谱与个人诊断分离契约 v2.0.0（审查草案）",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/graph"
+    },
+    {
+      "$ref": "#/$defs/registry"
+    },
+    {
+      "$ref": "#/$defs/policy"
+    },
+    {
+      "$ref": "#/$defs/snapshot"
+    },
+    {
+      "$ref": "#/$defs/resources"
+    },
+    {
+      "$ref": "#/$defs/bundle"
+    },
+    {
+      "$ref": "#/$defs/llm_context"
+    },
+    {
+      "$ref": "#/$defs/update"
+    }
+  ],
+  "$defs": {
+    "graph_ref": {
+      "type": "object",
+      "properties": {
+        "graph_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "graph_version": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "graph_id",
+        "graph_version"
+      ],
+      "additionalProperties": false
+    },
+    "subject": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": [
+            "student",
+            "class"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "student_subject": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "student"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot_ref": {
+      "type": "object",
+      "properties": {
+        "snapshot_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "revision"
+      ],
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+        "achievement_rate": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "health_color": {
+          "enum": [
+            "green",
+            "yellow",
+            "red",
+            "grey"
+          ]
+        },
+        "coverage_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "learning_state": {
+          "enum": [
+            "not_started",
+            "in_progress",
+            "completed"
+          ]
+        },
+        "learning_progress": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "grey_reason": {
+          "enum": [
+            null,
+            "not_started",
+            "no_evidence",
+            "insufficient_coverage"
+          ]
+        },
+        "evidence_granularity": {
+          "enum": [
+            "none",
+            "knowledge_assessment",
+            "knowledge_aggregate",
+            "course_total",
+            "course_aggregate"
+          ]
+        },
+        "aggregation_basis": {
+          "enum": [
+            "none",
+            "knowledge_assessment",
+            "weighted_inputs",
+            "course_total"
+          ]
+        },
+        "sample_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "expected_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "score_is_provisional": {
+          "type": "boolean"
+        },
+        "score_provenance": {
+          "enum": [
+            "simulated_precomputed",
+            "assessment_precomputed"
+          ]
+        }
+      },
+      "required": [
+        "achievement_rate",
+        "health_color",
+        "coverage_rate",
+        "learning_state",
+        "learning_progress",
+        "grey_reason",
+        "evidence_granularity",
+        "aggregation_basis",
+        "sample_count",
+        "expected_count",
+        "score_is_provisional",
+        "score_provenance"
+      ],
+      "additionalProperties": false
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "progress_source": {
+          "enum": [
+            "simulated_learning_record",
+            "learning_record",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "input_node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "status",
+        "progress_source",
+        "evidence_refs",
+        "input_node_ids"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "evidence_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "node_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "$ref": "#/$defs/subject"
+        },
+        "kind": {
+          "enum": [
+            "knowledge_assessment",
+            "course_total",
+            "legacy_class_aggregate"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "sample_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source": {
+          "enum": [
+            "synthetic_demo",
+            "assessment_record",
+            "imported_course_total"
+          ]
+        },
+        "original_record_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "evidence_id",
+        "node_id",
+        "subject",
+        "kind",
+        "title",
+        "score",
+        "sample_count",
+        "source",
+        "original_record_ref"
+      ],
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "health_counts": {
+          "type": "object",
+          "properties": {
+            "green": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "yellow": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "red": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "grey": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "green",
+            "yellow",
+            "red",
+            "grey"
+          ],
+          "additionalProperties": false
+        },
+        "ability_profile": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "node_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "score": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "coverage": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            },
+            "required": [
+              "node_id",
+              "score",
+              "coverage"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "strength_node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "weak_node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "provisional_low_node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "health_counts",
+        "ability_profile",
+        "strength_node_ids",
+        "weak_node_ids",
+        "provisional_low_node_ids"
+      ],
+      "additionalProperties": false
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "scenario_id": {
+          "enum": [
+            "knowledge_full",
+            "mixed_evidence",
+            "course_totals_only"
+          ]
+        },
+        "period_id": {
+          "enum": [
+            "stage5-demo",
+            "full-program-replay"
+          ]
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "simulation_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "scenario_id",
+        "period_id",
+        "as_of",
+        "simulation_note"
+      ],
+      "additionalProperties": false
+    },
+    "node": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "level": {
+          "enum": [
+            "L1_Ability",
+            "L2_Course",
+            "L3_Knowledge"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "display_weight": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "requirement_code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "indicator_code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "indicator_description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "credits": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "source_course_code": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "semester": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "course_group_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "course_nature": {
+          "enum": [
+            "必修",
+            "选修"
+          ]
+        },
+        "course_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "concept_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "knowledge_kind": {
+          "enum": [
+            "concept",
+            "experimental_skill"
+          ]
+        },
+        "course_objectives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              },
+              "knowledge_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "ability_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "provenance": {
+                "type": "string",
+                "minLength": 1
+              },
+              "participates_in_score_aggregation": {
+                "const": false
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "description",
+              "knowledge_ids",
+              "ability_ids",
+              "provenance",
+              "participates_in_score_aggregation"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "level",
+        "label",
+        "description",
+        "display_weight",
+        "source_refs",
+        "provenance"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "level": {
+                "const": "L1_Ability"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "requirement_code",
+              "indicator_code",
+              "indicator_description"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "level": {
+                "const": "L2_Course"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "credits",
+              "source_course_code",
+              "semester",
+              "course_group_ids",
+              "course_nature",
+              "course_objectives"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "level": {
+                "const": "L3_Knowledge"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "course_id",
+              "concept_id",
+              "knowledge_kind"
+            ]
+          }
+        }
+      ]
+    },
+    "edge": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relation_type": {
+          "enum": [
+            "supports",
+            "belongs_to",
+            "prerequisite",
+            "similar",
+            "parallel",
+            "contains"
+          ]
+        },
+        "relation_category": {
+          "enum": [
+            "hierarchical",
+            "peer"
+          ]
+        },
+        "directed": {
+          "type": "boolean"
+        },
+        "aggregation_weight": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "provenance": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "similarity_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "concept_family": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "source",
+        "target",
+        "relation_type",
+        "relation_category",
+        "directed",
+        "aggregation_weight",
+        "source_refs",
+        "provenance",
+        "review_status"
+      ],
+      "additionalProperties": false
+    },
+    "graph": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0.0"
+        },
+        "record_type": {
+          "const": "public_graph"
+        },
+        "graph_ref": {
+          "$ref": "#/$defs/graph_ref"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "program_plan": {
+          "type": "object"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "course_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "description"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/node"
+          },
+          "minItems": 1
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "record_type",
+        "graph_ref",
+        "title",
+        "program_plan",
+        "sources",
+        "course_groups",
+        "nodes",
+        "edges"
+      ],
+      "additionalProperties": false
+    },
+    "profile": {
+      "type": "object",
+      "properties": {
+        "student_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "student_number": {
+          "type": "string",
+          "minLength": 1
+        },
+        "class_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "enrollment_year": {
+          "type": "integer",
+          "minimum": 2000
+        },
+        "profile_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "is_simulated": {
+          "type": "boolean"
+        },
+        "learning_context": {
+          "type": "object",
+          "properties": {
+            "goals": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "available_minutes_per_week": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "preferred_resource_formats": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "reading",
+                  "practice",
+                  "video"
+                ]
+              }
+            },
+            "teacher_observations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "observation_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "as_of": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "source": {
+                    "enum": [
+                      "teacher_record",
+                      "simulated"
+                    ]
+                  }
+                },
+                "required": [
+                  "observation_id",
+                  "text",
+                  "as_of",
+                  "source"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "goals",
+            "available_minutes_per_week",
+            "preferred_resource_formats",
+            "teacher_observations"
+          ],
+          "additionalProperties": false
+        },
+        "context_provenance": {
+          "enum": [
+            "simulated_or_unknown",
+            "student_supplied",
+            "teacher_record",
+            "mixed",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "student_id",
+        "display_name",
+        "student_number",
+        "class_id",
+        "enrollment_year",
+        "profile_version",
+        "is_simulated",
+        "learning_context",
+        "context_provenance"
+      ],
+      "additionalProperties": false
+    },
+    "registry": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0.0"
+        },
+        "record_type": {
+          "const": "student_registry"
+        },
+        "registry_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "graph_ref": {
+          "$ref": "#/$defs/graph_ref"
+        },
+        "classes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "class_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "display_name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "member_student_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "class_id",
+              "display_name",
+              "member_student_ids"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "students": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/profile"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "record_type",
+        "registry_version",
+        "graph_ref",
+        "classes",
+        "students"
+      ],
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0.0"
+        },
+        "record_type": {
+          "const": "evaluation_policy"
+        },
+        "policy_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "policy_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "green_min": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "yellow_min": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "min_coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "progress_definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coverage_definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "score_precision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "runtime_calculation": {
+          "const": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "record_type",
+        "policy_id",
+        "policy_version",
+        "green_min",
+        "yellow_min",
+        "min_coverage",
+        "progress_definition",
+        "coverage_definition",
+        "score_precision",
+        "runtime_calculation"
+      ],
+      "additionalProperties": false
+    },
+    "snapshot": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0.0"
+        },
+        "record_type": {
+          "const": "evaluation_snapshot"
+        },
+        "snapshot_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "graph_ref": {
+          "$ref": "#/$defs/graph_ref"
+        },
+        "subject": {
+          "$ref": "#/$defs/subject"
+        },
+        "registry_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "evaluation_context": {
+          "$ref": "#/$defs/context"
+        },
+        "policy_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "policy_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "score_mode": {
+          "const": "precomputed"
+        },
+        "node_results": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/result"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "summary": {
+          "$ref": "#/$defs/summary"
+        }
+      },
+      "required": [
+        "schema_version",
+        "record_type",
+        "snapshot_id",
+        "revision",
+        "graph_ref",
+        "subject",
+        "registry_version",
+        "evaluation_context",
+        "policy_id",
+        "policy_version",
+        "score_mode",
+        "node_results",
+        "evidence",
+        "summary"
+      ],
+      "additionalProperties": false
+    },
+    "resource": {
+      "type": "object",
+      "properties": {
+        "resource_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "local_study_guide"
+        },
+        "format": {
+          "const": "reading"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "availability": {
+          "const": "available"
+        },
+        "provenance": {
+          "const": "preset_demo"
+        }
+      },
+      "required": [
+        "resource_id",
+        "title",
+        "node_ids",
+        "kind",
+        "format",
+        "path",
+        "availability",
+        "provenance"
+      ],
+      "additionalProperties": false
+    },
+    "resources": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0.0"
+        },
+        "record_type": {
+          "const": "resource_catalog"
+        },
+        "catalog_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "graph_ref": {
+          "$ref": "#/$defs/graph_ref"
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/resource"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "record_type",
+        "catalog_version",
+        "graph_ref",
+        "resources"
+      ],
+      "additionalProperties": false
+    },
+    "recommendation": {
+      "type": "object",
+      "properties": {
+        "recommendation_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audience": {
+          "enum": [
+            "teacher",
+            "student"
+          ]
+        },
+        "target_node_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "kind": {
+          "enum": [
+            "overview",
+            "strength",
+            "low_score",
+            "provisional_low",
+            "needs_practice",
+            "missing_evidence",
+            "not_started"
+          ]
+        },
+        "priority": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "info"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "basis_node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "review_node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "prepare_node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "resource_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "origin": {
+          "enum": [
+            "preset_demo",
+            "llm_candidate",
+            "llm_generated",
+            "teacher_authored"
+          ]
+        },
+        "lifecycle": {
+          "enum": [
+            "active",
+            "candidate",
+            "archived"
+          ]
+        }
+      },
+      "required": [
+        "recommendation_id",
+        "audience",
+        "target_node_id",
+        "kind",
+        "priority",
+        "summary",
+        "basis_node_ids",
+        "evidence_refs",
+        "actions",
+        "review_node_ids",
+        "prepare_node_ids",
+        "resource_ids",
+        "origin",
+        "lifecycle"
+      ],
+      "additionalProperties": false
+    },
+    "bundle": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0.0"
+        },
+        "record_type": {
+          "const": "recommendation_bundle"
+        },
+        "bundle_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "subject": {
+          "$ref": "#/$defs/student_subject"
+        },
+        "graph_ref": {
+          "$ref": "#/$defs/graph_ref"
+        },
+        "basis_snapshot": {
+          "$ref": "#/$defs/snapshot_ref"
+        },
+        "resource_catalog_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "basis_profile_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "recommendations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/recommendation"
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "record_type",
+        "bundle_id",
+        "version",
+        "subject",
+        "graph_ref",
+        "basis_snapshot",
+        "resource_catalog_version",
+        "basis_profile_version",
+        "recommendations"
+      ],
+      "additionalProperties": false
+    },
+    "llm_context": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0.0"
+        },
+        "record_type": {
+          "const": "llm_context"
+        },
+        "context_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "$ref": "#/$defs/student_subject"
+        },
+        "audience": {
+          "enum": [
+            "teacher",
+            "student"
+          ]
+        },
+        "graph_ref": {
+          "$ref": "#/$defs/graph_ref"
+        },
+        "basis_snapshot": {
+          "$ref": "#/$defs/snapshot_ref"
+        },
+        "base_bundle_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "profile_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "resource_catalog_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "learning_context": {
+          "type": "object",
+          "properties": {
+            "goals": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "available_minutes_per_week": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "preferred_resource_formats": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "reading",
+                  "practice",
+                  "video"
+                ]
+              }
+            },
+            "teacher_observations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "observation_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "as_of": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "source": {
+                    "enum": [
+                      "teacher_record",
+                      "simulated"
+                    ]
+                  }
+                },
+                "required": [
+                  "observation_id",
+                  "text",
+                  "as_of",
+                  "source"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "goals",
+            "available_minutes_per_week",
+            "preferred_resource_formats",
+            "teacher_observations"
+          ],
+          "additionalProperties": false
+        },
+        "evaluation_context": {
+          "$ref": "#/$defs/context"
+        },
+        "selected_nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/node"
+          }
+        },
+        "selected_edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          }
+        },
+        "selected_results": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/result"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/resource"
+          }
+        },
+        "current_recommendations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/recommendation"
+          }
+        },
+        "task": {
+          "type": "object",
+          "properties": {
+            "target_node_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "include_overview": {
+              "type": "boolean"
+            },
+            "output_record_type": {
+              "const": "recommendation_update"
+            },
+            "constraints": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "target_node_ids",
+            "include_overview",
+            "output_record_type",
+            "constraints"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "record_type",
+        "context_id",
+        "subject",
+        "audience",
+        "graph_ref",
+        "basis_snapshot",
+        "base_bundle_version",
+        "profile_version",
+        "resource_catalog_version",
+        "learning_context",
+        "evaluation_context",
+        "selected_nodes",
+        "selected_edges",
+        "selected_results",
+        "evidence",
+        "resources",
+        "current_recommendations",
+        "task"
+      ],
+      "additionalProperties": false
+    },
+    "operation": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "enum": [
+            "upsert",
+            "remove"
+          ]
+        },
+        "recommendation_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recommendation": {
+          "$ref": "#/$defs/recommendation"
+        }
+      },
+      "required": [
+        "op",
+        "recommendation_id"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "upsert"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "recommendation"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "remove"
+              }
+            }
+          },
+          "then": {
+            "not": {
+              "required": [
+                "recommendation"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "update": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0.0"
+        },
+        "record_type": {
+          "const": "recommendation_update"
+        },
+        "update_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "$ref": "#/$defs/student_subject"
+        },
+        "audience": {
+          "enum": [
+            "teacher",
+            "student"
+          ]
+        },
+        "graph_ref": {
+          "$ref": "#/$defs/graph_ref"
+        },
+        "basis_snapshot": {
+          "$ref": "#/$defs/snapshot_ref"
+        },
+        "profile_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "base_bundle_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "base_bundle_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "proposed_bundle_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "resource_catalog_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "lifecycle": {
+          "const": "candidate"
+        },
+        "generated_by": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "example",
+                "llm"
+              ]
+            },
+            "model": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "model"
+          ],
+          "additionalProperties": false
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/operation"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "schema_version",
+        "record_type",
+        "update_id",
+        "context_id",
+        "subject",
+        "audience",
+        "graph_ref",
+        "basis_snapshot",
+        "profile_version",
+        "base_bundle_id",
+        "base_bundle_version",
+        "proposed_bundle_version",
+        "resource_catalog_version",
+        "lifecycle",
+        "generated_by",
+        "operations"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

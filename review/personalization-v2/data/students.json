@@ -1,0 +1,714 @@
+{
+  "schema_version": "2.0.0",
+  "record_type": "student_registry",
+  "registry_version": 1,
+  "graph_ref": {
+    "graph_id": "communication-engineering-demo",
+    "graph_version": 1
+  },
+  "classes": [
+    {
+      "class_id": "COMM-DEMO-40",
+      "display_name": "电子信息工程演示班",
+      "member_student_ids": [
+        "DEMO001",
+        "DEMO002",
+        "DEMO003",
+        "DEMO004",
+        "DEMO005",
+        "DEMO006",
+        "DEMO007",
+        "DEMO008",
+        "DEMO009",
+        "DEMO010",
+        "DEMO011",
+        "DEMO012",
+        "DEMO013",
+        "DEMO014",
+        "DEMO015",
+        "DEMO016",
+        "DEMO017",
+        "DEMO018",
+        "DEMO019",
+        "DEMO020",
+        "DEMO021",
+        "DEMO022",
+        "DEMO023",
+        "DEMO024",
+        "DEMO025",
+        "DEMO026",
+        "DEMO027",
+        "DEMO028",
+        "DEMO029",
+        "DEMO030",
+        "DEMO031",
+        "DEMO032",
+        "DEMO033",
+        "DEMO034",
+        "DEMO035",
+        "DEMO036",
+        "DEMO037",
+        "DEMO038",
+        "DEMO039",
+        "DEMO040"
+      ]
+    }
+  ],
+  "students": [
+    {
+      "student_id": "DEMO001",
+      "display_name": "陈亦航（模拟）",
+      "student_number": "DEMO2024001",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [
+          "巩固电路与信号处理基础，完成阶段性复习。"
+        ],
+        "available_minutes_per_week": 90,
+        "preferred_resource_formats": [
+          "reading",
+          "practice"
+        ],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO002",
+      "display_name": "林知远（模拟）",
+      "student_number": "DEMO2024002",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [
+          "巩固电路与信号处理基础，完成阶段性复习。"
+        ],
+        "available_minutes_per_week": 90,
+        "preferred_resource_formats": [
+          "reading",
+          "practice"
+        ],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO003",
+      "display_name": "周思宁（模拟）",
+      "student_number": "DEMO2024003",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [
+          "巩固电路与信号处理基础，完成阶段性复习。"
+        ],
+        "available_minutes_per_week": 90,
+        "preferred_resource_formats": [
+          "reading",
+          "practice"
+        ],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO004",
+      "display_name": "王子涵（模拟）",
+      "student_number": "DEMO2024004",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO005",
+      "display_name": "李明轩（模拟）",
+      "student_number": "DEMO2024005",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO006",
+      "display_name": "张雨辰（模拟）",
+      "student_number": "DEMO2024006",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO007",
+      "display_name": "刘思源（模拟）",
+      "student_number": "DEMO2024007",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO008",
+      "display_name": "赵嘉禾（模拟）",
+      "student_number": "DEMO2024008",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO009",
+      "display_name": "杨沐阳（模拟）",
+      "student_number": "DEMO2024009",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO010",
+      "display_name": "黄梓晴（模拟）",
+      "student_number": "DEMO2024010",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO011",
+      "display_name": "吴书言（模拟）",
+      "student_number": "DEMO2024011",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO012",
+      "display_name": "徐景行（模拟）",
+      "student_number": "DEMO2024012",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO013",
+      "display_name": "孙予安（模拟）",
+      "student_number": "DEMO2024013",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO014",
+      "display_name": "胡星然（模拟）",
+      "student_number": "DEMO2024014",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO015",
+      "display_name": "朱若溪（模拟）",
+      "student_number": "DEMO2024015",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO016",
+      "display_name": "高云帆（模拟）",
+      "student_number": "DEMO2024016",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO017",
+      "display_name": "郭清越（模拟）",
+      "student_number": "DEMO2024017",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO018",
+      "display_name": "何嘉言（模拟）",
+      "student_number": "DEMO2024018",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO019",
+      "display_name": "罗奕辰（模拟）",
+      "student_number": "DEMO2024019",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO020",
+      "display_name": "郑舒然（模拟）",
+      "student_number": "DEMO2024020",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO021",
+      "display_name": "梁以宁（模拟）",
+      "student_number": "DEMO2024021",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO022",
+      "display_name": "谢文昊（模拟）",
+      "student_number": "DEMO2024022",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO023",
+      "display_name": "宋星野（模拟）",
+      "student_number": "DEMO2024023",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO024",
+      "display_name": "唐沐晨（模拟）",
+      "student_number": "DEMO2024024",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO025",
+      "display_name": "许致远（模拟）",
+      "student_number": "DEMO2024025",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO026",
+      "display_name": "韩予诺（模拟）",
+      "student_number": "DEMO2024026",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO027",
+      "display_name": "冯皓然（模拟）",
+      "student_number": "DEMO2024027",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO028",
+      "display_name": "邓知夏（模拟）",
+      "student_number": "DEMO2024028",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO029",
+      "display_name": "曹明哲（模拟）",
+      "student_number": "DEMO2024029",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO030",
+      "display_name": "彭语桐（模拟）",
+      "student_number": "DEMO2024030",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO031",
+      "display_name": "曾泽宇（模拟）",
+      "student_number": "DEMO2024031",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO032",
+      "display_name": "肖安然（模拟）",
+      "student_number": "DEMO2024032",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO033",
+      "display_name": "田宇航（模拟）",
+      "student_number": "DEMO2024033",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO034",
+      "display_name": "董诗涵（模拟）",
+      "student_number": "DEMO2024034",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO035",
+      "display_name": "袁博文（模拟）",
+      "student_number": "DEMO2024035",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO036",
+      "display_name": "潘思齐（模拟）",
+      "student_number": "DEMO2024036",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO037",
+      "display_name": "于景川（模拟）",
+      "student_number": "DEMO2024037",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO038",
+      "display_name": "蒋可欣（模拟）",
+      "student_number": "DEMO2024038",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO039",
+      "display_name": "蔡书涵（模拟）",
+      "student_number": "DEMO2024039",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    },
+    {
+      "student_id": "DEMO040",
+      "display_name": "余清和（模拟）",
+      "student_number": "DEMO2024040",
+      "class_id": "COMM-DEMO-40",
+      "enrollment_year": 2024,
+      "profile_version": 1,
+      "is_simulated": true,
+      "learning_context": {
+        "goals": [],
+        "available_minutes_per_week": null,
+        "preferred_resource_formats": [],
+        "teacher_observations": []
+      },
+      "context_provenance": "simulated_or_unknown"
+    }
+  ]
+}

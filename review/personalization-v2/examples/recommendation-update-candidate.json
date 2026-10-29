@@ -1,0 +1,65 @@
+{
+  "schema_version": "2.0.0",
+  "record_type": "recommendation_update",
+  "update_id": "UPDATE-DEMO001-C05-example",
+  "context_id": "CTX-DEMO001-mixed-teacher",
+  "subject": {
+    "type": "student",
+    "id": "DEMO001"
+  },
+  "audience": "teacher",
+  "graph_ref": {
+    "graph_id": "communication-engineering-demo",
+    "graph_version": 1
+  },
+  "basis_snapshot": {
+    "snapshot_id": "student-DEMO001-mixed_evidence",
+    "revision": 1
+  },
+  "profile_version": 1,
+  "base_bundle_id": "BUNDLE-DEMO001-mixed_evidence",
+  "base_bundle_version": 1,
+  "proposed_bundle_version": 2,
+  "resource_catalog_version": 1,
+  "lifecycle": "candidate",
+  "generated_by": {
+    "kind": "example",
+    "model": null
+  },
+  "operations": [
+    {
+      "op": "upsert",
+      "recommendation_id": "REC-DEMO001-mixed_evidence-teacher-C05",
+      "recommendation": {
+        "recommendation_id": "REC-DEMO001-mixed_evidence-teacher-C05",
+        "audience": "teacher",
+        "target_node_id": "C05",
+        "kind": "provisional_low",
+        "priority": "high",
+        "summary": "已评价部分掌握度 53.2，评价覆盖 50%。",
+        "basis_node_ids": [
+          "C05"
+        ],
+        "actions": [
+          "先依据已评价知识点核查薄弱步骤，再安排一轮针对性练习与复测；未评价内容另行补证。"
+        ],
+        "review_node_ids": [
+          "C05"
+        ],
+        "prepare_node_ids": [
+          "C14"
+        ],
+        "resource_ids": [
+          "RES-C05"
+        ],
+        "evidence_refs": [
+          "EV-DEMO001-mixed_evidence-C05.K01",
+          "EV-DEMO001-mixed_evidence-C05.K02",
+          "EV-DEMO001-mixed_evidence-C05.K03"
+        ],
+        "origin": "llm_candidate",
+        "lifecycle": "candidate"
+      }
+    }
+  ]
+}

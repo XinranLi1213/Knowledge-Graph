@@ -1,0 +1,335 @@
+{
+  "schema_version": "2.0.0",
+  "record_type": "resource_catalog",
+  "catalog_version": 1,
+  "graph_ref": {
+    "graph_id": "communication-engineering-demo",
+    "graph_version": 1
+  },
+  "resources": [
+    {
+      "resource_id": "RES-C01",
+      "title": "电路分析 · 复习任务单",
+      "node_ids": [
+        "C01",
+        "C01.K01",
+        "C01.K02",
+        "C01.K03",
+        "C01.K04",
+        "C01.K05",
+        "C01.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C01.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C02",
+      "title": "模拟电子技术 · 复习任务单",
+      "node_ids": [
+        "C02",
+        "C02.K01",
+        "C02.K02",
+        "C02.K03",
+        "C02.K04",
+        "C02.K05",
+        "C02.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C02.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C03",
+      "title": "数字电子技术 · 复习任务单",
+      "node_ids": [
+        "C03",
+        "C03.K01",
+        "C03.K02",
+        "C03.K03",
+        "C03.K04",
+        "C03.K05",
+        "C03.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C03.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C04",
+      "title": "信号与系统 · 复习任务单",
+      "node_ids": [
+        "C04",
+        "C04.K01",
+        "C04.K02",
+        "C04.K03",
+        "C04.K04",
+        "C04.K05",
+        "C04.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C04.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C05",
+      "title": "通信电子线路 · 复习任务单",
+      "node_ids": [
+        "C05",
+        "C05.K01",
+        "C05.K02",
+        "C05.K03",
+        "C05.K04",
+        "C05.K05",
+        "C05.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C05.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C06",
+      "title": "数字信号处理 · 复习任务单",
+      "node_ids": [
+        "C06",
+        "C06.K01",
+        "C06.K02",
+        "C06.K03",
+        "C06.K04",
+        "C06.K05",
+        "C06.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C06.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C07",
+      "title": "电磁场与电磁波 · 复习任务单",
+      "node_ids": [
+        "C07",
+        "C07.K01",
+        "C07.K02",
+        "C07.K03",
+        "C07.K04",
+        "C07.K05",
+        "C07.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C07.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C08",
+      "title": "通信原理 · 复习任务单",
+      "node_ids": [
+        "C08",
+        "C08.K01",
+        "C08.K02",
+        "C08.K03",
+        "C08.K04",
+        "C08.K05",
+        "C08.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C08.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C09",
+      "title": "C语言程序设计 · 复习任务单",
+      "node_ids": [
+        "C09",
+        "C09.K01",
+        "C09.K02",
+        "C09.K03",
+        "C09.K04",
+        "C09.K05",
+        "C09.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C09.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C10",
+      "title": "微机原理与接口技术 · 复习任务单",
+      "node_ids": [
+        "C10",
+        "C10.K01",
+        "C10.K02",
+        "C10.K03",
+        "C10.K04",
+        "C10.K05",
+        "C10.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C10.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C11",
+      "title": "嵌入式系统原理与应用 · 复习任务单",
+      "node_ids": [
+        "C11",
+        "C11.K01",
+        "C11.K02",
+        "C11.K03",
+        "C11.K04",
+        "C11.K05",
+        "C11.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C11.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C12",
+      "title": "计算机网络 · 复习任务单",
+      "node_ids": [
+        "C12",
+        "C12.K01",
+        "C12.K02",
+        "C12.K03",
+        "C12.K04",
+        "C12.K05",
+        "C12.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C12.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C13",
+      "title": "微波工程基础 · 复习任务单",
+      "node_ids": [
+        "C13",
+        "C13.K01",
+        "C13.K02",
+        "C13.K03",
+        "C13.K04",
+        "C13.K05",
+        "C13.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C13.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C14",
+      "title": "射频电路设计 · 复习任务单",
+      "node_ids": [
+        "C14",
+        "C14.K01",
+        "C14.K02",
+        "C14.K03",
+        "C14.K04",
+        "C14.K05",
+        "C14.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C14.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C15",
+      "title": "电子系统设计 · 复习任务单",
+      "node_ids": [
+        "C15",
+        "C15.K01",
+        "C15.K02",
+        "C15.K03",
+        "C15.K04",
+        "C15.K05",
+        "C15.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C15.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C16",
+      "title": "电子系统工程实践 · 复习任务单",
+      "node_ids": [
+        "C16",
+        "C16.K01",
+        "C16.K02",
+        "C16.K03",
+        "C16.K04",
+        "C16.K05",
+        "C16.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C16.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C17",
+      "title": "毕业设计 · 复习任务单",
+      "node_ids": [
+        "C17",
+        "C17.K01",
+        "C17.K02",
+        "C17.K03",
+        "C17.K04",
+        "C17.K05",
+        "C17.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C17.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    },
+    {
+      "resource_id": "RES-C18",
+      "title": "工程设计与管理 · 复习任务单",
+      "node_ids": [
+        "C18",
+        "C18.K01",
+        "C18.K02",
+        "C18.K03",
+        "C18.K04",
+        "C18.K05",
+        "C18.K06"
+      ],
+      "kind": "local_study_guide",
+      "format": "reading",
+      "path": "resources/C18.md",
+      "availability": "available",
+      "provenance": "preset_demo"
+    }
+  ]
+}

@@ -1,0 +1,1360 @@
+{
+  "package_version": "2.0.0-review",
+  "status": "proposal_only",
+  "default_student_id": "DEMO001",
+  "demo_student_ids": [
+    "DEMO001",
+    "DEMO002",
+    "DEMO003"
+  ],
+  "registry_student_count": 40,
+  "graph_path": "data/graph.json",
+  "registry_path": "data/students.json",
+  "policy_path": "data/evaluation-policy.json",
+  "resource_catalog_path": "data/resources.json",
+  "snapshot_entries": [
+    {
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "class-COMM-DEMO-40-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/class/COMM-DEMO-40/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO001"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO001-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO001/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO002"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO002-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO002/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO003"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO003-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO003/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO004"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO004-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO004/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO005"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO005-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO005/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO006"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO006-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO006/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO007"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO007-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO007/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO008"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO008-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO008/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO009"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO009-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO009/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO010"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO010-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO010/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO011"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO011-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO011/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO012"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO012-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO012/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO013"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO013-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO013/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO014"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO014-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO014/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO015"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO015-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO015/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO016"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO016-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO016/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO017"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO017-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO017/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO018"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO018-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO018/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO019"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO019-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO019/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO020"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO020-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO020/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO021"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO021-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO021/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO022"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO022-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO022/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO023"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO023-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO023/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO024"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO024-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO024/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO025"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO025-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO025/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO026"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO026-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO026/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO027"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO027-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO027/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO028"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO028-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO028/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO029"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO029-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO029/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO030"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO030-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO030/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO031"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO031-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO031/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO032"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO032-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO032/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO033"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO033-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO033/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO034"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO034-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO034/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO035"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO035-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO035/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO036"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO036-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO036/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO037"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO037-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO037/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO038-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO038/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO039"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO039-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO039/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO040"
+      },
+      "scenario_id": "knowledge_full",
+      "snapshot_id": "student-DEMO040-knowledge_full",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO040/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/class/COMM-DEMO-40/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO001"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO001-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO001/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO002"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO002-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO002/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO003"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO003-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO003/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO004"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO004-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO004/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO005"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO005-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO005/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO006"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO006-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO006/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO007"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO007-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO007/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO008"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO008-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO008/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO009"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO009-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO009/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO010"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO010-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO010/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO011"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO011-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO011/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO012"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO012-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO012/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO013"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO013-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO013/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO014"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO014-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO014/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO015"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO015-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO015/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO016"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO016-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO016/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO017"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO017-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO017/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO018"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO018-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO018/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO019"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO019-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO019/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO020"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO020-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO020/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO021"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO021-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO021/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO022"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO022-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO022/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO023"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO023-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO023/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO024"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO024-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO024/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO025"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO025-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO025/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO026"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO026-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO026/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO027"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO027-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO027/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO028"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO028-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO028/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO029"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO029-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO029/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO030"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO030-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO030/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO031"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO031-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO031/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO032"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO032-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO032/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO033"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO033-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO033/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO034"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO034-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO034/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO035"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO035-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO035/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO036"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO036-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO036/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO037"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO037-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO037/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO038-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO038/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO039"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO039-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO039/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO040"
+      },
+      "scenario_id": "mixed_evidence",
+      "snapshot_id": "student-DEMO040-mixed_evidence",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO040/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "class-COMM-DEMO-40-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/class/COMM-DEMO-40/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO001"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO001-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO001/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO002"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO002-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO002/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO003"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO003-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO003/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO004"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO004-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO004/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO005"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO005-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO005/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO006"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO006-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO006/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO007"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO007-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO007/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO008"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO008-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO008/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO009"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO009-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO009/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO010"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO010-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO010/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO011"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO011-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO011/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO012"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO012-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO012/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO013"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO013-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO013/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO014"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO014-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO014/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO015"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO015-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO015/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO016"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO016-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO016/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO017"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO017-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO017/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO018"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO018-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO018/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO019"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO019-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO019/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO020"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO020-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO020/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO021"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO021-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO021/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO022"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO022-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO022/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO023"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO023-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO023/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO024"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO024-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO024/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO025"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO025-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO025/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO026"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO026-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO026/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO027"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO027-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO027/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO028"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO028-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO028/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO029"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO029-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO029/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO030"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO030-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO030/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO031"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO031-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO031/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO032"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO032-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO032/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO033"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO033-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO033/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO034"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO034-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO034/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO035"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO035-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO035/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO036"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO036-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO036/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO037"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO037-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO037/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO038"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO038-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO038/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO039"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO039-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO039/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO040"
+      },
+      "scenario_id": "course_totals_only",
+      "snapshot_id": "student-DEMO040-course_totals_only",
+      "revision": 1,
+      "path": "data/snapshots/student/DEMO040/course_totals_only.json"
+    }
+  ],
+  "recommendation_entries": [
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO001"
+      },
+      "scenario_id": "knowledge_full",
+      "bundle_id": "BUNDLE-DEMO001-knowledge_full",
+      "version": 1,
+      "path": "data/recommendations/DEMO001/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO001"
+      },
+      "scenario_id": "mixed_evidence",
+      "bundle_id": "BUNDLE-DEMO001-mixed_evidence",
+      "version": 1,
+      "path": "data/recommendations/DEMO001/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO001"
+      },
+      "scenario_id": "course_totals_only",
+      "bundle_id": "BUNDLE-DEMO001-course_totals_only",
+      "version": 1,
+      "path": "data/recommendations/DEMO001/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO002"
+      },
+      "scenario_id": "knowledge_full",
+      "bundle_id": "BUNDLE-DEMO002-knowledge_full",
+      "version": 1,
+      "path": "data/recommendations/DEMO002/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO002"
+      },
+      "scenario_id": "mixed_evidence",
+      "bundle_id": "BUNDLE-DEMO002-mixed_evidence",
+      "version": 1,
+      "path": "data/recommendations/DEMO002/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO002"
+      },
+      "scenario_id": "course_totals_only",
+      "bundle_id": "BUNDLE-DEMO002-course_totals_only",
+      "version": 1,
+      "path": "data/recommendations/DEMO002/course_totals_only.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO003"
+      },
+      "scenario_id": "knowledge_full",
+      "bundle_id": "BUNDLE-DEMO003-knowledge_full",
+      "version": 1,
+      "path": "data/recommendations/DEMO003/knowledge_full.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO003"
+      },
+      "scenario_id": "mixed_evidence",
+      "bundle_id": "BUNDLE-DEMO003-mixed_evidence",
+      "version": 1,
+      "path": "data/recommendations/DEMO003/mixed_evidence.json"
+    },
+    {
+      "subject": {
+        "type": "student",
+        "id": "DEMO003"
+      },
+      "scenario_id": "course_totals_only",
+      "bundle_id": "BUNDLE-DEMO003-course_totals_only",
+      "version": 1,
+      "path": "data/recommendations/DEMO003/course_totals_only.json"
+    }
+  ],
+  "selection_rule": "仅DEMO001–DEMO003建议齐全，后续演示身份选择器只启用这3人；其他37人为班均一致性准备数据。",
+  "missing_recommendation_rule": "显示当前评价事实及暂无个性化建议，不借用班级或其他学生的建议。",
+  "baseline_files_sha256": {
+    "index.html": "e7f0c3bd5a1044569194165b72260424f9fe12ec0e94b23ed3d988a6f42f9f36",
+    "src/app.js": "1e935a46c5ffbd9a041e6afa6dd48a505868b0ed221d6800496aff7740337a6f",
+    "src/graph-index.js": "1b2e9fe8fe4e37fb34f1b711d41b8bac7ea999d5d25c5f2fbafb6b74b63a500e",
+    "styles/app.css": "03b9b8c8d1e86a39ed643f456b8f53c38407c2ed63e97f9012f4e0667f4c4100",
+    "review/data/knowledge_full.json": "a9268c9e3b9e7cd49c43757f63517068c10eef00444fca5611b983855a188f4d",
+    "review/data/mixed_evidence.json": "1deb0ac9df5b120efe2091bef2ee015be2f4327d9c762abc37c67c82553beb18",
+    "review/data/course_totals_only.json": "19312f17e5f8a027128f472a1ab4e9ba05627ff2a54e3893b64b86bbfefceaf9"
+  },
+  "counts": {
+    "graph_nodes": 138,
+    "graph_edges": 285,
+    "student_snapshots": 120,
+    "class_snapshots": 3,
+    "recommendation_bundles": 9,
+    "recommendations": 2502,
+    "local_resources": 18
+  },
+  "generation_note": "仅离线制作/核验新契约和数据；未修改前端、旧场景JSON或应用入口，未调用LLM。"
+}

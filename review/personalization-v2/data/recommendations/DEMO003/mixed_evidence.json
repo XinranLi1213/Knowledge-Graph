@@ -1,0 +1,7324 @@
+{
+  "schema_version": "2.0.0",
+  "record_type": "recommendation_bundle",
+  "bundle_id": "BUNDLE-DEMO003-mixed_evidence",
+  "version": 1,
+  "subject": {
+    "type": "student",
+    "id": "DEMO003"
+  },
+  "graph_ref": {
+    "graph_id": "communication-engineering-demo",
+    "graph_version": 1
+  },
+  "basis_snapshot": {
+    "snapshot_id": "student-DEMO003-mixed_evidence",
+    "revision": 1
+  },
+  "resource_catalog_version": 1,
+  "basis_profile_version": 1,
+  "recommendations": [
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-overview",
+      "audience": "teacher",
+      "target_node_id": null,
+      "kind": "overview",
+      "priority": "medium",
+      "summary": "优先帮扶当前有低分证据的节点，未评价部分另行补测。",
+      "basis_node_ids": [
+        "C05.K01",
+        "C06.K05",
+        "C06.K03",
+        "A02",
+        "A04"
+      ],
+      "actions": [
+        "结合下列评价依据安排一轮针对性练习，再用复测确认效果。"
+      ],
+      "review_node_ids": [
+        "C05.K01",
+        "C06.K05",
+        "C06.K03",
+        "A02",
+        "A04"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C05",
+        "RES-C06",
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03",
+        "EV-DEMO003-mixed_evidence-C04.K04",
+        "EV-DEMO003-mixed_evidence-C04.K05",
+        "EV-DEMO003-mixed_evidence-C04.K06",
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02",
+        "EV-DEMO003-mixed_evidence-C05.K03",
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06",
+        "EV-DEMO003-mixed_evidence-C08"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A01",
+      "audience": "teacher",
+      "target_node_id": "A01",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前达成估计 79.3，评价覆盖 100%。",
+      "basis_node_ids": [
+        "A01"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "A01"
+      ],
+      "prepare_node_ids": [
+        "A02"
+      ],
+      "resource_ids": [
+        "RES-C01",
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K01",
+        "EV-DEMO003-mixed_evidence-C01.K02",
+        "EV-DEMO003-mixed_evidence-C01.K03",
+        "EV-DEMO003-mixed_evidence-C01.K04",
+        "EV-DEMO003-mixed_evidence-C01.K05",
+        "EV-DEMO003-mixed_evidence-C01.K06",
+        "EV-DEMO003-mixed_evidence-C02.K01",
+        "EV-DEMO003-mixed_evidence-C02.K02",
+        "EV-DEMO003-mixed_evidence-C02.K03",
+        "EV-DEMO003-mixed_evidence-C02.K04",
+        "EV-DEMO003-mixed_evidence-C02.K05",
+        "EV-DEMO003-mixed_evidence-C02.K06",
+        "EV-DEMO003-mixed_evidence-C03.K01",
+        "EV-DEMO003-mixed_evidence-C03.K02",
+        "EV-DEMO003-mixed_evidence-C03.K03",
+        "EV-DEMO003-mixed_evidence-C03.K04",
+        "EV-DEMO003-mixed_evidence-C03.K05",
+        "EV-DEMO003-mixed_evidence-C03.K06",
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03",
+        "EV-DEMO003-mixed_evidence-C04.K04",
+        "EV-DEMO003-mixed_evidence-C04.K05",
+        "EV-DEMO003-mixed_evidence-C04.K06",
+        "EV-DEMO003-mixed_evidence-C07"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A02",
+      "audience": "teacher",
+      "target_node_id": "A02",
+      "kind": "provisional_low",
+      "priority": "high",
+      "summary": "已评价部分掌握度 57.7，评价覆盖 90%。",
+      "basis_node_ids": [
+        "A02"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "A02"
+      ],
+      "prepare_node_ids": [
+        "A03"
+      ],
+      "resource_ids": [
+        "RES-C04",
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03",
+        "EV-DEMO003-mixed_evidence-C04.K04",
+        "EV-DEMO003-mixed_evidence-C04.K05",
+        "EV-DEMO003-mixed_evidence-C04.K06",
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02",
+        "EV-DEMO003-mixed_evidence-C05.K03",
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06",
+        "EV-DEMO003-mixed_evidence-C08"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A03",
+      "audience": "teacher",
+      "target_node_id": "A03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "已评价部分掌握度 65.8，评价覆盖 48%。",
+      "basis_node_ids": [
+        "A03",
+        "A02"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "优先帮扶已测薄弱先修项：问题分析。"
+      ],
+      "review_node_ids": [
+        "A03",
+        "A02"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C05",
+        "RES-C08"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03",
+        "EV-DEMO003-mixed_evidence-C04.K04",
+        "EV-DEMO003-mixed_evidence-C04.K05",
+        "EV-DEMO003-mixed_evidence-C04.K06",
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02",
+        "EV-DEMO003-mixed_evidence-C05.K03",
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06",
+        "EV-DEMO003-mixed_evidence-C08",
+        "EV-DEMO003-mixed_evidence-C11.K01",
+        "EV-DEMO003-mixed_evidence-C11.K02",
+        "EV-DEMO003-mixed_evidence-C11.K03",
+        "EV-DEMO003-mixed_evidence-C11.K04",
+        "EV-DEMO003-mixed_evidence-C11.K05",
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A04",
+      "audience": "teacher",
+      "target_node_id": "A04",
+      "kind": "provisional_low",
+      "priority": "high",
+      "summary": "已评价部分掌握度 52.0，评价覆盖 40%。",
+      "basis_node_ids": [
+        "A04"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。"
+      ],
+      "review_node_ids": [
+        "A04"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C06",
+        "RES-C08"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06",
+        "EV-DEMO003-mixed_evidence-C08"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A05",
+      "audience": "teacher",
+      "target_node_id": "A05",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "已评价部分掌握度 72.7，评价覆盖 75%。",
+      "basis_node_ids": [
+        "A05"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。"
+      ],
+      "review_node_ids": [
+        "A05"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C06",
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06",
+        "EV-DEMO003-mixed_evidence-C09.K01",
+        "EV-DEMO003-mixed_evidence-C09.K02",
+        "EV-DEMO003-mixed_evidence-C09.K03",
+        "EV-DEMO003-mixed_evidence-C09.K04",
+        "EV-DEMO003-mixed_evidence-C09.K05",
+        "EV-DEMO003-mixed_evidence-C09.K06",
+        "EV-DEMO003-mixed_evidence-C10",
+        "EV-DEMO003-mixed_evidence-C11.K01",
+        "EV-DEMO003-mixed_evidence-C11.K02",
+        "EV-DEMO003-mixed_evidence-C11.K03",
+        "EV-DEMO003-mixed_evidence-C11.K04",
+        "EV-DEMO003-mixed_evidence-C11.K05",
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A06",
+      "audience": "teacher",
+      "target_node_id": "A06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "A06"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12",
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A07",
+      "audience": "teacher",
+      "target_node_id": "A07",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "A07"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14",
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A08",
+      "audience": "teacher",
+      "target_node_id": "A08",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "A08"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15",
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A09",
+      "audience": "teacher",
+      "target_node_id": "A09",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "已评价部分掌握度 80.8，评价覆盖 20%。",
+      "basis_node_ids": [
+        "A09"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C11",
+        "RES-C15"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K01",
+        "EV-DEMO003-mixed_evidence-C11.K02",
+        "EV-DEMO003-mixed_evidence-C11.K03",
+        "EV-DEMO003-mixed_evidence-C11.K04",
+        "EV-DEMO003-mixed_evidence-C11.K05",
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A10",
+      "audience": "teacher",
+      "target_node_id": "A10",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "A10"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12",
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A11",
+      "audience": "teacher",
+      "target_node_id": "A11",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "A11"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15",
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-A12",
+      "audience": "teacher",
+      "target_node_id": "A12",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "已评价部分掌握度 80.8，评价覆盖 15%。",
+      "basis_node_ids": [
+        "A12"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C11",
+        "RES-C12"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K01",
+        "EV-DEMO003-mixed_evidence-C11.K02",
+        "EV-DEMO003-mixed_evidence-C11.K03",
+        "EV-DEMO003-mixed_evidence-C11.K04",
+        "EV-DEMO003-mixed_evidence-C11.K05",
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C01",
+      "audience": "teacher",
+      "target_node_id": "C01",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 90.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C02",
+        "C04"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K01",
+        "EV-DEMO003-mixed_evidence-C01.K02",
+        "EV-DEMO003-mixed_evidence-C01.K03",
+        "EV-DEMO003-mixed_evidence-C01.K04",
+        "EV-DEMO003-mixed_evidence-C01.K05",
+        "EV-DEMO003-mixed_evidence-C01.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C01.K01",
+      "audience": "teacher",
+      "target_node_id": "C01.K01",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 88.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K01"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C01.K02"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C01.K02",
+      "audience": "teacher",
+      "target_node_id": "C01.K02",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 100.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K02"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C01.K03"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C01.K03",
+      "audience": "teacher",
+      "target_node_id": "C01.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 75.4，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K03"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C01.K03"
+      ],
+      "prepare_node_ids": [
+        "C01.K04"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C01.K04",
+      "audience": "teacher",
+      "target_node_id": "C01.K04",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 96.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K04"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C01.K05",
+        "C02.K03"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C01.K05",
+      "audience": "teacher",
+      "target_node_id": "C01.K05",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 95.3，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K05"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C01.K06"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C01.K06",
+      "audience": "teacher",
+      "target_node_id": "C01.K06",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 86.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K06"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C02",
+      "audience": "teacher",
+      "target_node_id": "C02",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 74.9，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C02"
+      ],
+      "prepare_node_ids": [
+        "C05"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K01",
+        "EV-DEMO003-mixed_evidence-C02.K02",
+        "EV-DEMO003-mixed_evidence-C02.K03",
+        "EV-DEMO003-mixed_evidence-C02.K04",
+        "EV-DEMO003-mixed_evidence-C02.K05",
+        "EV-DEMO003-mixed_evidence-C02.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C02.K01",
+      "audience": "teacher",
+      "target_node_id": "C02.K01",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 83.3，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K01"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C02.K02"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C02.K02",
+      "audience": "teacher",
+      "target_node_id": "C02.K02",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 53.5，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K02"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C02.K02"
+      ],
+      "prepare_node_ids": [
+        "C02.K03"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C02.K03",
+      "audience": "teacher",
+      "target_node_id": "C02.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 70.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K03",
+        "C02.K02"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "优先帮扶已测薄弱先修项：晶体管偏置。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C02.K03",
+        "C02.K02"
+      ],
+      "prepare_node_ids": [
+        "C02.K04"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K02",
+        "EV-DEMO003-mixed_evidence-C02.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C02.K04",
+      "audience": "teacher",
+      "target_node_id": "C02.K04",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 93.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K04"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C02.K05"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C02.K05",
+      "audience": "teacher",
+      "target_node_id": "C02.K05",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 70.2，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K05"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C02.K05"
+      ],
+      "prepare_node_ids": [
+        "C02.K06"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C02.K06",
+      "audience": "teacher",
+      "target_node_id": "C02.K06",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 75.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K06"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。"
+      ],
+      "review_node_ids": [
+        "C02.K06"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C03",
+      "audience": "teacher",
+      "target_node_id": "C03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 76.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C03"
+      ],
+      "prepare_node_ids": [
+        "C10"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K01",
+        "EV-DEMO003-mixed_evidence-C03.K02",
+        "EV-DEMO003-mixed_evidence-C03.K03",
+        "EV-DEMO003-mixed_evidence-C03.K04",
+        "EV-DEMO003-mixed_evidence-C03.K05",
+        "EV-DEMO003-mixed_evidence-C03.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C03.K01",
+      "audience": "teacher",
+      "target_node_id": "C03.K01",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 87.4，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K01"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C03.K02"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C03.K02",
+      "audience": "teacher",
+      "target_node_id": "C03.K02",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 87.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K02"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C03.K03"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C03.K03",
+      "audience": "teacher",
+      "target_node_id": "C03.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 62.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K03"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C03.K03"
+      ],
+      "prepare_node_ids": [
+        "C03.K04"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C03.K04",
+      "audience": "teacher",
+      "target_node_id": "C03.K04",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 77.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K04"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C03.K04"
+      ],
+      "prepare_node_ids": [
+        "C03.K05"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C03.K05",
+      "audience": "teacher",
+      "target_node_id": "C03.K05",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 77.7，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K05"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C03.K05"
+      ],
+      "prepare_node_ids": [
+        "C03.K06"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C03.K06",
+      "audience": "teacher",
+      "target_node_id": "C03.K06",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 71.5，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K06"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。"
+      ],
+      "review_node_ids": [
+        "C03.K06"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C04",
+      "audience": "teacher",
+      "target_node_id": "C04",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 71.4，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C04"
+      ],
+      "prepare_node_ids": [
+        "C06",
+        "C08"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03",
+        "EV-DEMO003-mixed_evidence-C04.K04",
+        "EV-DEMO003-mixed_evidence-C04.K05",
+        "EV-DEMO003-mixed_evidence-C04.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C04.K01",
+      "audience": "teacher",
+      "target_node_id": "C04.K01",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 54.5，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K01"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C04.K01"
+      ],
+      "prepare_node_ids": [
+        "C04.K02"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C04.K02",
+      "audience": "teacher",
+      "target_node_id": "C04.K02",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 57.9，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K02",
+        "C04.K01"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "优先帮扶已测薄弱先修项：信号分类。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C04.K02",
+        "C04.K01"
+      ],
+      "prepare_node_ids": [
+        "C04.K03"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C04.K03",
+      "audience": "teacher",
+      "target_node_id": "C04.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 62.3，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K03",
+        "C04.K02"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "优先帮扶已测薄弱先修项：线性时不变系统。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C04.K03",
+        "C04.K02"
+      ],
+      "prepare_node_ids": [
+        "C04.K04"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C04.K04",
+      "audience": "teacher",
+      "target_node_id": "C04.K04",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 86.7，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K04"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C04.K05",
+        "C06.K03"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C04.K05",
+      "audience": "teacher",
+      "target_node_id": "C04.K05",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 68.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K05"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C04.K05"
+      ],
+      "prepare_node_ids": [
+        "C04.K06",
+        "C08.K03"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C04.K06",
+      "audience": "teacher",
+      "target_node_id": "C04.K06",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 97.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K06"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C05",
+      "audience": "teacher",
+      "target_node_id": "C05",
+      "kind": "provisional_low",
+      "priority": "high",
+      "summary": "已评价部分掌握度 53.1，评价覆盖 50%。",
+      "basis_node_ids": [
+        "C05"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C05"
+      ],
+      "prepare_node_ids": [
+        "C14"
+      ],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02",
+        "EV-DEMO003-mixed_evidence-C05.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C05.K01",
+      "audience": "teacher",
+      "target_node_id": "C05.K01",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 35.7，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C05.K01"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C05.K01"
+      ],
+      "prepare_node_ids": [
+        "C05.K02",
+        "C13.K04"
+      ],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C05.K02",
+      "audience": "teacher",
+      "target_node_id": "C05.K02",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 62.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C05.K02",
+        "C05.K01"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "优先帮扶已测薄弱先修项：LC谐振。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C05.K02",
+        "C05.K01"
+      ],
+      "prepare_node_ids": [
+        "C05.K03"
+      ],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C05.K03",
+      "audience": "teacher",
+      "target_node_id": "C05.K03",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 58.9，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C05.K03"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C05.K03"
+      ],
+      "prepare_node_ids": [
+        "C05.K04"
+      ],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C05.K04",
+      "audience": "teacher",
+      "target_node_id": "C05.K04",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C05.K04",
+        "C05.K03"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。",
+        "优先帮扶已测薄弱先修项：功率放大。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C05.K05",
+      "audience": "teacher",
+      "target_node_id": "C05.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C05.K05"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C05.K06",
+      "audience": "teacher",
+      "target_node_id": "C05.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C05.K06"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C06",
+      "audience": "teacher",
+      "target_node_id": "C06",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 48.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。"
+      ],
+      "review_node_ids": [
+        "C06"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C06.K01",
+      "audience": "teacher",
+      "target_node_id": "C06.K01",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 48.4，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K01"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C06.K01"
+      ],
+      "prepare_node_ids": [
+        "C06.K02"
+      ],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C06.K02",
+      "audience": "teacher",
+      "target_node_id": "C06.K02",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 48.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K02",
+        "C06.K01"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "优先帮扶已测薄弱先修项：离散时间信号。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C06.K02",
+        "C06.K01"
+      ],
+      "prepare_node_ids": [
+        "C06.K03"
+      ],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C06.K03",
+      "audience": "teacher",
+      "target_node_id": "C06.K03",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 44.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K03",
+        "C06.K02"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "优先帮扶已测薄弱先修项：Z变换。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C06.K03",
+        "C06.K02"
+      ],
+      "prepare_node_ids": [
+        "C06.K04"
+      ],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C06.K04",
+      "audience": "teacher",
+      "target_node_id": "C06.K04",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 52.2，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K04",
+        "C06.K03"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "优先帮扶已测薄弱先修项：离散傅里叶变换。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C06.K04",
+        "C06.K03"
+      ],
+      "prepare_node_ids": [
+        "C06.K05"
+      ],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C06.K05",
+      "audience": "teacher",
+      "target_node_id": "C06.K05",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 41.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K05",
+        "C06.K04"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "优先帮扶已测薄弱先修项：快速傅里叶变换。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C06.K05",
+        "C06.K04"
+      ],
+      "prepare_node_ids": [
+        "C06.K06",
+        "C08.K06"
+      ],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C06.K06",
+      "audience": "teacher",
+      "target_node_id": "C06.K06",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 57.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K06",
+        "C06.K05"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "优先帮扶已测薄弱先修项：数字滤波器。"
+      ],
+      "review_node_ids": [
+        "C06.K06",
+        "C06.K05"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C07",
+      "audience": "teacher",
+      "target_node_id": "C07",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 81.0，评价覆盖 100%。仅有课程总分，不能定位具体知识点薄弱项。",
+      "basis_node_ids": [
+        "C07"
+      ],
+      "actions": [
+        "增加知识点诊断题后再决定帮扶重点。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C13"
+      ],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C07"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C07.K01",
+      "audience": "teacher",
+      "target_node_id": "C07.K01",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K01"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C07.K02",
+      "audience": "teacher",
+      "target_node_id": "C07.K02",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K02"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C07.K03",
+      "audience": "teacher",
+      "target_node_id": "C07.K03",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K03"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C07.K04",
+      "audience": "teacher",
+      "target_node_id": "C07.K04",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K04"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C07.K05",
+      "audience": "teacher",
+      "target_node_id": "C07.K05",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K05"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C07.K06",
+      "audience": "teacher",
+      "target_node_id": "C07.K06",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K06"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C08",
+      "audience": "teacher",
+      "target_node_id": "C08",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 55.5，评价覆盖 100%。仅有课程总分，不能定位具体知识点薄弱项。",
+      "basis_node_ids": [
+        "C08"
+      ],
+      "actions": [
+        "增加知识点诊断题后再决定帮扶重点。"
+      ],
+      "review_node_ids": [
+        "C08"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C08"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C08.K01",
+      "audience": "teacher",
+      "target_node_id": "C08.K01",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K01"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C08.K02",
+      "audience": "teacher",
+      "target_node_id": "C08.K02",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K02"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C08.K03",
+      "audience": "teacher",
+      "target_node_id": "C08.K03",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K03"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C08.K04",
+      "audience": "teacher",
+      "target_node_id": "C08.K04",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K04"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C08.K05",
+      "audience": "teacher",
+      "target_node_id": "C08.K05",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K05"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C08.K06",
+      "audience": "teacher",
+      "target_node_id": "C08.K06",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K06",
+        "C06.K05"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。",
+        "优先帮扶已测薄弱先修项：数字滤波器。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C09",
+      "audience": "teacher",
+      "target_node_id": "C09",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 84.3，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C10",
+        "C11"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K01",
+        "EV-DEMO003-mixed_evidence-C09.K02",
+        "EV-DEMO003-mixed_evidence-C09.K03",
+        "EV-DEMO003-mixed_evidence-C09.K04",
+        "EV-DEMO003-mixed_evidence-C09.K05",
+        "EV-DEMO003-mixed_evidence-C09.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C09.K01",
+      "audience": "teacher",
+      "target_node_id": "C09.K01",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 76.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K01"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C09.K01"
+      ],
+      "prepare_node_ids": [
+        "C09.K02"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C09.K02",
+      "audience": "teacher",
+      "target_node_id": "C09.K02",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 84.9，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K02"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C09.K03"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C09.K03",
+      "audience": "teacher",
+      "target_node_id": "C09.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 68.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K03"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C09.K03"
+      ],
+      "prepare_node_ids": [
+        "C09.K04"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C09.K04",
+      "audience": "teacher",
+      "target_node_id": "C09.K04",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 97.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K04"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C09.K05"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C09.K05",
+      "audience": "teacher",
+      "target_node_id": "C09.K05",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 100.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K05"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C09.K06",
+        "C11.K02"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C09.K06",
+      "audience": "teacher",
+      "target_node_id": "C09.K06",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 78.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K06"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。"
+      ],
+      "review_node_ids": [
+        "C09.K06"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C10",
+      "audience": "teacher",
+      "target_node_id": "C10",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 78.5，评价覆盖 100%。仅有课程总分，不能定位具体知识点薄弱项。",
+      "basis_node_ids": [
+        "C10"
+      ],
+      "actions": [
+        "增加知识点诊断题后再决定帮扶重点。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C10"
+      ],
+      "prepare_node_ids": [
+        "C11"
+      ],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C10"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C10.K01",
+      "audience": "teacher",
+      "target_node_id": "C10.K01",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K01"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C10.K02",
+      "audience": "teacher",
+      "target_node_id": "C10.K02",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K02"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C10.K03",
+      "audience": "teacher",
+      "target_node_id": "C10.K03",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K03"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C10.K04",
+      "audience": "teacher",
+      "target_node_id": "C10.K04",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K04"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C10.K05",
+      "audience": "teacher",
+      "target_node_id": "C10.K05",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K05"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C10.K06",
+      "audience": "teacher",
+      "target_node_id": "C10.K06",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K06"
+      ],
+      "actions": [
+        "补充诊断性测评，保留当前课程总分口径。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C11",
+      "audience": "teacher",
+      "target_node_id": "C11",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 80.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C15"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K01",
+        "EV-DEMO003-mixed_evidence-C11.K02",
+        "EV-DEMO003-mixed_evidence-C11.K03",
+        "EV-DEMO003-mixed_evidence-C11.K04",
+        "EV-DEMO003-mixed_evidence-C11.K05",
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C11.K01",
+      "audience": "teacher",
+      "target_node_id": "C11.K01",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 65.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K01"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C11.K01"
+      ],
+      "prepare_node_ids": [
+        "C11.K02"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C11.K02",
+      "audience": "teacher",
+      "target_node_id": "C11.K02",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 78.4，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K02"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C11.K02"
+      ],
+      "prepare_node_ids": [
+        "C11.K03"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C11.K03",
+      "audience": "teacher",
+      "target_node_id": "C11.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 68.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K03"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C11.K03"
+      ],
+      "prepare_node_ids": [
+        "C11.K04"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C11.K04",
+      "audience": "teacher",
+      "target_node_id": "C11.K04",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 100.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K04"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C11.K05"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C11.K05",
+      "audience": "teacher",
+      "target_node_id": "C11.K05",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 70.2，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K05"
+      ],
+      "actions": [
+        "使用评价依据定位错误步骤，安排练习并复测。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C11.K05"
+      ],
+      "prepare_node_ids": [
+        "C11.K06"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C11.K06",
+      "audience": "teacher",
+      "target_node_id": "C11.K06",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 100.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K06"
+      ],
+      "actions": [
+        "安排一个迁移任务检验掌握的稳定性。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C12",
+      "audience": "teacher",
+      "target_node_id": "C12",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C12.K01",
+      "audience": "teacher",
+      "target_node_id": "C12.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K01"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C12.K02",
+      "audience": "teacher",
+      "target_node_id": "C12.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K02"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C12.K03",
+      "audience": "teacher",
+      "target_node_id": "C12.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K03"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C12.K04",
+      "audience": "teacher",
+      "target_node_id": "C12.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K04"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C12.K05",
+      "audience": "teacher",
+      "target_node_id": "C12.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K05"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C12.K06",
+      "audience": "teacher",
+      "target_node_id": "C12.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K06"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C13",
+      "audience": "teacher",
+      "target_node_id": "C13",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C13.K01",
+      "audience": "teacher",
+      "target_node_id": "C13.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K01"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C13.K02",
+      "audience": "teacher",
+      "target_node_id": "C13.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K02"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C13.K03",
+      "audience": "teacher",
+      "target_node_id": "C13.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K03"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C13.K04",
+      "audience": "teacher",
+      "target_node_id": "C13.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K04",
+        "C05.K01"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。",
+        "优先帮扶已测薄弱先修项：LC谐振。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C13.K05",
+      "audience": "teacher",
+      "target_node_id": "C13.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K05"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C13.K06",
+      "audience": "teacher",
+      "target_node_id": "C13.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K06"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C14",
+      "audience": "teacher",
+      "target_node_id": "C14",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14",
+        "C05"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。",
+        "优先帮扶已测薄弱先修项：通信电子线路。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02",
+        "EV-DEMO003-mixed_evidence-C05.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C14.K01",
+      "audience": "teacher",
+      "target_node_id": "C14.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K01"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C14.K02",
+      "audience": "teacher",
+      "target_node_id": "C14.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K02"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C14.K03",
+      "audience": "teacher",
+      "target_node_id": "C14.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K03"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C14.K04",
+      "audience": "teacher",
+      "target_node_id": "C14.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K04"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C14.K05",
+      "audience": "teacher",
+      "target_node_id": "C14.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K05"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C14.K06",
+      "audience": "teacher",
+      "target_node_id": "C14.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K06"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C15",
+      "audience": "teacher",
+      "target_node_id": "C15",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C15.K01",
+      "audience": "teacher",
+      "target_node_id": "C15.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K01"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C15.K02",
+      "audience": "teacher",
+      "target_node_id": "C15.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K02"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C15.K03",
+      "audience": "teacher",
+      "target_node_id": "C15.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K03"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C15.K04",
+      "audience": "teacher",
+      "target_node_id": "C15.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K04"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C15.K05",
+      "audience": "teacher",
+      "target_node_id": "C15.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K05"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C15.K06",
+      "audience": "teacher",
+      "target_node_id": "C15.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K06"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C16",
+      "audience": "teacher",
+      "target_node_id": "C16",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C16.K01",
+      "audience": "teacher",
+      "target_node_id": "C16.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K01"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C16.K02",
+      "audience": "teacher",
+      "target_node_id": "C16.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K02"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C16.K03",
+      "audience": "teacher",
+      "target_node_id": "C16.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K03"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C16.K04",
+      "audience": "teacher",
+      "target_node_id": "C16.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K04"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C16.K05",
+      "audience": "teacher",
+      "target_node_id": "C16.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K05"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C16.K06",
+      "audience": "teacher",
+      "target_node_id": "C16.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K06"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C17",
+      "audience": "teacher",
+      "target_node_id": "C17",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C17.K01",
+      "audience": "teacher",
+      "target_node_id": "C17.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K01"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C17.K02",
+      "audience": "teacher",
+      "target_node_id": "C17.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K02"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C17.K03",
+      "audience": "teacher",
+      "target_node_id": "C17.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K03"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C17.K04",
+      "audience": "teacher",
+      "target_node_id": "C17.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K04"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C17.K05",
+      "audience": "teacher",
+      "target_node_id": "C17.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K05"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C17.K06",
+      "audience": "teacher",
+      "target_node_id": "C17.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K06"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C18",
+      "audience": "teacher",
+      "target_node_id": "C18",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C18.K01",
+      "audience": "teacher",
+      "target_node_id": "C18.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K01"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C18.K02",
+      "audience": "teacher",
+      "target_node_id": "C18.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K02"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C18.K03",
+      "audience": "teacher",
+      "target_node_id": "C18.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K03"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C18.K04",
+      "audience": "teacher",
+      "target_node_id": "C18.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K04"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C18.K05",
+      "audience": "teacher",
+      "target_node_id": "C18.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K05"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-teacher-C18.K06",
+      "audience": "teacher",
+      "target_node_id": "C18.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K06"
+      ],
+      "actions": [
+        "安排开课前准备，不作补差评价。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-overview",
+      "audience": "student",
+      "target_node_id": null,
+      "kind": "overview",
+      "priority": "medium",
+      "summary": "先复习已有评价中的薄弱环节，未学习内容按计划预习。",
+      "basis_node_ids": [
+        "C05.K01",
+        "C06.K05",
+        "C06.K03",
+        "A02",
+        "A04"
+      ],
+      "actions": [
+        "从一到两个薄弱节点开始，完成任务单并记录仍不会的步骤。"
+      ],
+      "review_node_ids": [
+        "C05.K01",
+        "C06.K05",
+        "C06.K03",
+        "A02",
+        "A04"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C05",
+        "RES-C06",
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03",
+        "EV-DEMO003-mixed_evidence-C04.K04",
+        "EV-DEMO003-mixed_evidence-C04.K05",
+        "EV-DEMO003-mixed_evidence-C04.K06",
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02",
+        "EV-DEMO003-mixed_evidence-C05.K03",
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06",
+        "EV-DEMO003-mixed_evidence-C08"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A01",
+      "audience": "student",
+      "target_node_id": "A01",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前达成估计 79.3，评价覆盖 100%。",
+      "basis_node_ids": [
+        "A01"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "A01"
+      ],
+      "prepare_node_ids": [
+        "A02"
+      ],
+      "resource_ids": [
+        "RES-C01",
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K01",
+        "EV-DEMO003-mixed_evidence-C01.K02",
+        "EV-DEMO003-mixed_evidence-C01.K03",
+        "EV-DEMO003-mixed_evidence-C01.K04",
+        "EV-DEMO003-mixed_evidence-C01.K05",
+        "EV-DEMO003-mixed_evidence-C01.K06",
+        "EV-DEMO003-mixed_evidence-C02.K01",
+        "EV-DEMO003-mixed_evidence-C02.K02",
+        "EV-DEMO003-mixed_evidence-C02.K03",
+        "EV-DEMO003-mixed_evidence-C02.K04",
+        "EV-DEMO003-mixed_evidence-C02.K05",
+        "EV-DEMO003-mixed_evidence-C02.K06",
+        "EV-DEMO003-mixed_evidence-C03.K01",
+        "EV-DEMO003-mixed_evidence-C03.K02",
+        "EV-DEMO003-mixed_evidence-C03.K03",
+        "EV-DEMO003-mixed_evidence-C03.K04",
+        "EV-DEMO003-mixed_evidence-C03.K05",
+        "EV-DEMO003-mixed_evidence-C03.K06",
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03",
+        "EV-DEMO003-mixed_evidence-C04.K04",
+        "EV-DEMO003-mixed_evidence-C04.K05",
+        "EV-DEMO003-mixed_evidence-C04.K06",
+        "EV-DEMO003-mixed_evidence-C07"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A02",
+      "audience": "student",
+      "target_node_id": "A02",
+      "kind": "provisional_low",
+      "priority": "high",
+      "summary": "已评价部分掌握度 57.7，评价覆盖 90%。",
+      "basis_node_ids": [
+        "A02"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "A02"
+      ],
+      "prepare_node_ids": [
+        "A03"
+      ],
+      "resource_ids": [
+        "RES-C04",
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03",
+        "EV-DEMO003-mixed_evidence-C04.K04",
+        "EV-DEMO003-mixed_evidence-C04.K05",
+        "EV-DEMO003-mixed_evidence-C04.K06",
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02",
+        "EV-DEMO003-mixed_evidence-C05.K03",
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06",
+        "EV-DEMO003-mixed_evidence-C08"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A03",
+      "audience": "student",
+      "target_node_id": "A03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "已评价部分掌握度 65.8，评价覆盖 48%。",
+      "basis_node_ids": [
+        "A03",
+        "A02"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "先复习：问题分析。"
+      ],
+      "review_node_ids": [
+        "A03",
+        "A02"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C05",
+        "RES-C08"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03",
+        "EV-DEMO003-mixed_evidence-C04.K04",
+        "EV-DEMO003-mixed_evidence-C04.K05",
+        "EV-DEMO003-mixed_evidence-C04.K06",
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02",
+        "EV-DEMO003-mixed_evidence-C05.K03",
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06",
+        "EV-DEMO003-mixed_evidence-C08",
+        "EV-DEMO003-mixed_evidence-C11.K01",
+        "EV-DEMO003-mixed_evidence-C11.K02",
+        "EV-DEMO003-mixed_evidence-C11.K03",
+        "EV-DEMO003-mixed_evidence-C11.K04",
+        "EV-DEMO003-mixed_evidence-C11.K05",
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A04",
+      "audience": "student",
+      "target_node_id": "A04",
+      "kind": "provisional_low",
+      "priority": "high",
+      "summary": "已评价部分掌握度 52.0，评价覆盖 40%。",
+      "basis_node_ids": [
+        "A04"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。"
+      ],
+      "review_node_ids": [
+        "A04"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C06",
+        "RES-C08"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06",
+        "EV-DEMO003-mixed_evidence-C08"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A05",
+      "audience": "student",
+      "target_node_id": "A05",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "已评价部分掌握度 72.7，评价覆盖 75%。",
+      "basis_node_ids": [
+        "A05"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。"
+      ],
+      "review_node_ids": [
+        "A05"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C06",
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06",
+        "EV-DEMO003-mixed_evidence-C09.K01",
+        "EV-DEMO003-mixed_evidence-C09.K02",
+        "EV-DEMO003-mixed_evidence-C09.K03",
+        "EV-DEMO003-mixed_evidence-C09.K04",
+        "EV-DEMO003-mixed_evidence-C09.K05",
+        "EV-DEMO003-mixed_evidence-C09.K06",
+        "EV-DEMO003-mixed_evidence-C10",
+        "EV-DEMO003-mixed_evidence-C11.K01",
+        "EV-DEMO003-mixed_evidence-C11.K02",
+        "EV-DEMO003-mixed_evidence-C11.K03",
+        "EV-DEMO003-mixed_evidence-C11.K04",
+        "EV-DEMO003-mixed_evidence-C11.K05",
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A06",
+      "audience": "student",
+      "target_node_id": "A06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "A06"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12",
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A07",
+      "audience": "student",
+      "target_node_id": "A07",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "A07"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14",
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A08",
+      "audience": "student",
+      "target_node_id": "A08",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "A08"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15",
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A09",
+      "audience": "student",
+      "target_node_id": "A09",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "已评价部分掌握度 80.8，评价覆盖 20%。",
+      "basis_node_ids": [
+        "A09"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C11",
+        "RES-C15"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K01",
+        "EV-DEMO003-mixed_evidence-C11.K02",
+        "EV-DEMO003-mixed_evidence-C11.K03",
+        "EV-DEMO003-mixed_evidence-C11.K04",
+        "EV-DEMO003-mixed_evidence-C11.K05",
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A10",
+      "audience": "student",
+      "target_node_id": "A10",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "A10"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12",
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A11",
+      "audience": "student",
+      "target_node_id": "A11",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "A11"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15",
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-A12",
+      "audience": "student",
+      "target_node_id": "A12",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "已评价部分掌握度 80.8，评价覆盖 15%。",
+      "basis_node_ids": [
+        "A12"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C11",
+        "RES-C12"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K01",
+        "EV-DEMO003-mixed_evidence-C11.K02",
+        "EV-DEMO003-mixed_evidence-C11.K03",
+        "EV-DEMO003-mixed_evidence-C11.K04",
+        "EV-DEMO003-mixed_evidence-C11.K05",
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C01",
+      "audience": "student",
+      "target_node_id": "C01",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 90.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C02",
+        "C04"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K01",
+        "EV-DEMO003-mixed_evidence-C01.K02",
+        "EV-DEMO003-mixed_evidence-C01.K03",
+        "EV-DEMO003-mixed_evidence-C01.K04",
+        "EV-DEMO003-mixed_evidence-C01.K05",
+        "EV-DEMO003-mixed_evidence-C01.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C01.K01",
+      "audience": "student",
+      "target_node_id": "C01.K01",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 88.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K01"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C01.K02"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C01.K02",
+      "audience": "student",
+      "target_node_id": "C01.K02",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 100.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K02"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C01.K03"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C01.K03",
+      "audience": "student",
+      "target_node_id": "C01.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 75.4，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K03"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C01.K03"
+      ],
+      "prepare_node_ids": [
+        "C01.K04"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C01.K04",
+      "audience": "student",
+      "target_node_id": "C01.K04",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 96.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K04"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C01.K05",
+        "C02.K03"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C01.K05",
+      "audience": "student",
+      "target_node_id": "C01.K05",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 95.3，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K05"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C01.K06"
+      ],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C01.K06",
+      "audience": "student",
+      "target_node_id": "C01.K06",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 86.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C01.K06"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C01"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C01.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C02",
+      "audience": "student",
+      "target_node_id": "C02",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 74.9，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C02"
+      ],
+      "prepare_node_ids": [
+        "C05"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K01",
+        "EV-DEMO003-mixed_evidence-C02.K02",
+        "EV-DEMO003-mixed_evidence-C02.K03",
+        "EV-DEMO003-mixed_evidence-C02.K04",
+        "EV-DEMO003-mixed_evidence-C02.K05",
+        "EV-DEMO003-mixed_evidence-C02.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C02.K01",
+      "audience": "student",
+      "target_node_id": "C02.K01",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 83.3，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K01"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C02.K02"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C02.K02",
+      "audience": "student",
+      "target_node_id": "C02.K02",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 53.5，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K02"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C02.K02"
+      ],
+      "prepare_node_ids": [
+        "C02.K03"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C02.K03",
+      "audience": "student",
+      "target_node_id": "C02.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 70.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K03",
+        "C02.K02"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "先复习：晶体管偏置。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C02.K03",
+        "C02.K02"
+      ],
+      "prepare_node_ids": [
+        "C02.K04"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K02",
+        "EV-DEMO003-mixed_evidence-C02.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C02.K04",
+      "audience": "student",
+      "target_node_id": "C02.K04",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 93.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K04"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C02.K05"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C02.K05",
+      "audience": "student",
+      "target_node_id": "C02.K05",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 70.2，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K05"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C02.K05"
+      ],
+      "prepare_node_ids": [
+        "C02.K06"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C02.K06",
+      "audience": "student",
+      "target_node_id": "C02.K06",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 75.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C02.K06"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。"
+      ],
+      "review_node_ids": [
+        "C02.K06"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C02.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C03",
+      "audience": "student",
+      "target_node_id": "C03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 76.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C03"
+      ],
+      "prepare_node_ids": [
+        "C10"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K01",
+        "EV-DEMO003-mixed_evidence-C03.K02",
+        "EV-DEMO003-mixed_evidence-C03.K03",
+        "EV-DEMO003-mixed_evidence-C03.K04",
+        "EV-DEMO003-mixed_evidence-C03.K05",
+        "EV-DEMO003-mixed_evidence-C03.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C03.K01",
+      "audience": "student",
+      "target_node_id": "C03.K01",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 87.4，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K01"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C03.K02"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C03.K02",
+      "audience": "student",
+      "target_node_id": "C03.K02",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 87.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K02"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C03.K03"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C03.K03",
+      "audience": "student",
+      "target_node_id": "C03.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 62.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K03"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C03.K03"
+      ],
+      "prepare_node_ids": [
+        "C03.K04"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C03.K04",
+      "audience": "student",
+      "target_node_id": "C03.K04",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 77.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K04"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C03.K04"
+      ],
+      "prepare_node_ids": [
+        "C03.K05"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C03.K05",
+      "audience": "student",
+      "target_node_id": "C03.K05",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 77.7，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K05"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C03.K05"
+      ],
+      "prepare_node_ids": [
+        "C03.K06"
+      ],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C03.K06",
+      "audience": "student",
+      "target_node_id": "C03.K06",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 71.5，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C03.K06"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。"
+      ],
+      "review_node_ids": [
+        "C03.K06"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C03"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C03.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C04",
+      "audience": "student",
+      "target_node_id": "C04",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 71.4，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C04"
+      ],
+      "prepare_node_ids": [
+        "C06",
+        "C08"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03",
+        "EV-DEMO003-mixed_evidence-C04.K04",
+        "EV-DEMO003-mixed_evidence-C04.K05",
+        "EV-DEMO003-mixed_evidence-C04.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C04.K01",
+      "audience": "student",
+      "target_node_id": "C04.K01",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 54.5，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K01"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C04.K01"
+      ],
+      "prepare_node_ids": [
+        "C04.K02"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C04.K02",
+      "audience": "student",
+      "target_node_id": "C04.K02",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 57.9，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K02",
+        "C04.K01"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "先复习：信号分类。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C04.K02",
+        "C04.K01"
+      ],
+      "prepare_node_ids": [
+        "C04.K03"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K01",
+        "EV-DEMO003-mixed_evidence-C04.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C04.K03",
+      "audience": "student",
+      "target_node_id": "C04.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 62.3，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K03",
+        "C04.K02"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "先复习：线性时不变系统。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C04.K03",
+        "C04.K02"
+      ],
+      "prepare_node_ids": [
+        "C04.K04"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K02",
+        "EV-DEMO003-mixed_evidence-C04.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C04.K04",
+      "audience": "student",
+      "target_node_id": "C04.K04",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 86.7，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K04"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C04.K05",
+        "C06.K03"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C04.K05",
+      "audience": "student",
+      "target_node_id": "C04.K05",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 68.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K05"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C04.K05"
+      ],
+      "prepare_node_ids": [
+        "C04.K06",
+        "C08.K03"
+      ],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C04.K06",
+      "audience": "student",
+      "target_node_id": "C04.K06",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 97.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C04.K06"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C04"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C04.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C05",
+      "audience": "student",
+      "target_node_id": "C05",
+      "kind": "provisional_low",
+      "priority": "high",
+      "summary": "已评价部分掌握度 53.1，评价覆盖 50%。",
+      "basis_node_ids": [
+        "C05"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C05"
+      ],
+      "prepare_node_ids": [
+        "C14"
+      ],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02",
+        "EV-DEMO003-mixed_evidence-C05.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C05.K01",
+      "audience": "student",
+      "target_node_id": "C05.K01",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 35.7，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C05.K01"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C05.K01"
+      ],
+      "prepare_node_ids": [
+        "C05.K02",
+        "C13.K04"
+      ],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C05.K02",
+      "audience": "student",
+      "target_node_id": "C05.K02",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 62.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C05.K02",
+        "C05.K01"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "先复习：LC谐振。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C05.K02",
+        "C05.K01"
+      ],
+      "prepare_node_ids": [
+        "C05.K03"
+      ],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C05.K03",
+      "audience": "student",
+      "target_node_id": "C05.K03",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 58.9，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C05.K03"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C05.K03"
+      ],
+      "prepare_node_ids": [
+        "C05.K04"
+      ],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C05.K04",
+      "audience": "student",
+      "target_node_id": "C05.K04",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C05.K04",
+        "C05.K03"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。",
+        "先复习：功率放大。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C05.K05",
+      "audience": "student",
+      "target_node_id": "C05.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C05.K05"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C05.K06",
+      "audience": "student",
+      "target_node_id": "C05.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C05.K06"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C05"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C06",
+      "audience": "student",
+      "target_node_id": "C06",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 48.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。"
+      ],
+      "review_node_ids": [
+        "C06"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C06.K01",
+      "audience": "student",
+      "target_node_id": "C06.K01",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 48.4，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K01"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C06.K01"
+      ],
+      "prepare_node_ids": [
+        "C06.K02"
+      ],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C06.K02",
+      "audience": "student",
+      "target_node_id": "C06.K02",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 48.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K02",
+        "C06.K01"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "先复习：离散时间信号。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C06.K02",
+        "C06.K01"
+      ],
+      "prepare_node_ids": [
+        "C06.K03"
+      ],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K01",
+        "EV-DEMO003-mixed_evidence-C06.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C06.K03",
+      "audience": "student",
+      "target_node_id": "C06.K03",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 44.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K03",
+        "C06.K02"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "先复习：Z变换。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C06.K03",
+        "C06.K02"
+      ],
+      "prepare_node_ids": [
+        "C06.K04"
+      ],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K02",
+        "EV-DEMO003-mixed_evidence-C06.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C06.K04",
+      "audience": "student",
+      "target_node_id": "C06.K04",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 52.2，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K04",
+        "C06.K03"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "先复习：离散傅里叶变换。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C06.K04",
+        "C06.K03"
+      ],
+      "prepare_node_ids": [
+        "C06.K05"
+      ],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K03",
+        "EV-DEMO003-mixed_evidence-C06.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C06.K05",
+      "audience": "student",
+      "target_node_id": "C06.K05",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 41.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K05",
+        "C06.K04"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "先复习：快速傅里叶变换。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C06.K05",
+        "C06.K04"
+      ],
+      "prepare_node_ids": [
+        "C06.K06",
+        "C08.K06"
+      ],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K04",
+        "EV-DEMO003-mixed_evidence-C06.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C06.K06",
+      "audience": "student",
+      "target_node_id": "C06.K06",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 57.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C06.K06",
+        "C06.K05"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "先复习：数字滤波器。"
+      ],
+      "review_node_ids": [
+        "C06.K06",
+        "C06.K05"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C06"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K05",
+        "EV-DEMO003-mixed_evidence-C06.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C07",
+      "audience": "student",
+      "target_node_id": "C07",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 81.0，评价覆盖 100%。仅有课程总分，不能定位具体知识点薄弱项。",
+      "basis_node_ids": [
+        "C07"
+      ],
+      "actions": [
+        "先完成课程自测，确认需要复习的章节。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C13"
+      ],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C07"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C07.K01",
+      "audience": "student",
+      "target_node_id": "C07.K01",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K01"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C07.K02",
+      "audience": "student",
+      "target_node_id": "C07.K02",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K02"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C07.K03",
+      "audience": "student",
+      "target_node_id": "C07.K03",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K03"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C07.K04",
+      "audience": "student",
+      "target_node_id": "C07.K04",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K04"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C07.K05",
+      "audience": "student",
+      "target_node_id": "C07.K05",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K05"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C07.K06",
+      "audience": "student",
+      "target_node_id": "C07.K06",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C07.K06"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C07"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C08",
+      "audience": "student",
+      "target_node_id": "C08",
+      "kind": "low_score",
+      "priority": "high",
+      "summary": "当前得分 55.5，评价覆盖 100%。仅有课程总分，不能定位具体知识点薄弱项。",
+      "basis_node_ids": [
+        "C08"
+      ],
+      "actions": [
+        "先完成课程自测，确认需要复习的章节。"
+      ],
+      "review_node_ids": [
+        "C08"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C08"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C08.K01",
+      "audience": "student",
+      "target_node_id": "C08.K01",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K01"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C08.K02",
+      "audience": "student",
+      "target_node_id": "C08.K02",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K02"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C08.K03",
+      "audience": "student",
+      "target_node_id": "C08.K03",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K03"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C08.K04",
+      "audience": "student",
+      "target_node_id": "C08.K04",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K04"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C08.K05",
+      "audience": "student",
+      "target_node_id": "C08.K05",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K05"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C08.K06",
+      "audience": "student",
+      "target_node_id": "C08.K06",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C08.K06",
+        "C06.K05"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。",
+        "先复习：数字滤波器。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C08"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C06.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C09",
+      "audience": "student",
+      "target_node_id": "C09",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 84.3，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C10",
+        "C11"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K01",
+        "EV-DEMO003-mixed_evidence-C09.K02",
+        "EV-DEMO003-mixed_evidence-C09.K03",
+        "EV-DEMO003-mixed_evidence-C09.K04",
+        "EV-DEMO003-mixed_evidence-C09.K05",
+        "EV-DEMO003-mixed_evidence-C09.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C09.K01",
+      "audience": "student",
+      "target_node_id": "C09.K01",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 76.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K01"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C09.K01"
+      ],
+      "prepare_node_ids": [
+        "C09.K02"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C09.K02",
+      "audience": "student",
+      "target_node_id": "C09.K02",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 84.9，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K02"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C09.K03"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C09.K03",
+      "audience": "student",
+      "target_node_id": "C09.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 68.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K03"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C09.K03"
+      ],
+      "prepare_node_ids": [
+        "C09.K04"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C09.K04",
+      "audience": "student",
+      "target_node_id": "C09.K04",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 97.6，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K04"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C09.K05"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C09.K05",
+      "audience": "student",
+      "target_node_id": "C09.K05",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 100.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K05"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C09.K06",
+        "C11.K02"
+      ],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C09.K06",
+      "audience": "student",
+      "target_node_id": "C09.K06",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 78.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C09.K06"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。"
+      ],
+      "review_node_ids": [
+        "C09.K06"
+      ],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C09"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C09.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C10",
+      "audience": "student",
+      "target_node_id": "C10",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 78.5，评价覆盖 100%。仅有课程总分，不能定位具体知识点薄弱项。",
+      "basis_node_ids": [
+        "C10"
+      ],
+      "actions": [
+        "先完成课程自测，确认需要复习的章节。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C10"
+      ],
+      "prepare_node_ids": [
+        "C11"
+      ],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C10"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C10.K01",
+      "audience": "student",
+      "target_node_id": "C10.K01",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K01"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C10.K02",
+      "audience": "student",
+      "target_node_id": "C10.K02",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K02"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C10.K03",
+      "audience": "student",
+      "target_node_id": "C10.K03",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K03"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C10.K04",
+      "audience": "student",
+      "target_node_id": "C10.K04",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K04"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C10.K05",
+      "audience": "student",
+      "target_node_id": "C10.K05",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K05"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C10.K06",
+      "audience": "student",
+      "target_node_id": "C10.K06",
+      "kind": "missing_evidence",
+      "priority": "info",
+      "summary": "已学习但缺少当前粒度的评价证据，不能判断具体薄弱项。",
+      "basis_node_ids": [
+        "C10.K06"
+      ],
+      "actions": [
+        "完成自测并向教师反馈；不要把灰色理解为不及格。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C10"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C11",
+      "audience": "student",
+      "target_node_id": "C11",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 80.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C15"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K01",
+        "EV-DEMO003-mixed_evidence-C11.K02",
+        "EV-DEMO003-mixed_evidence-C11.K03",
+        "EV-DEMO003-mixed_evidence-C11.K04",
+        "EV-DEMO003-mixed_evidence-C11.K05",
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C11.K01",
+      "audience": "student",
+      "target_node_id": "C11.K01",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 65.8，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K01"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C11.K01"
+      ],
+      "prepare_node_ids": [
+        "C11.K02"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C11.K02",
+      "audience": "student",
+      "target_node_id": "C11.K02",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 78.4，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K02"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C11.K02"
+      ],
+      "prepare_node_ids": [
+        "C11.K03"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K02"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C11.K03",
+      "audience": "student",
+      "target_node_id": "C11.K03",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 68.1，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K03"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C11.K03"
+      ],
+      "prepare_node_ids": [
+        "C11.K04"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C11.K04",
+      "audience": "student",
+      "target_node_id": "C11.K04",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 100.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K04"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [
+        "C11.K05"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K04"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C11.K05",
+      "audience": "student",
+      "target_node_id": "C11.K05",
+      "kind": "needs_practice",
+      "priority": "medium",
+      "summary": "当前得分 70.2，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K05"
+      ],
+      "actions": [
+        "对照任务单重做一道题，记录错因后向教师确认。",
+        "后继节点仅作学习顺序提醒，不由当前分数推定其成绩。"
+      ],
+      "review_node_ids": [
+        "C11.K05"
+      ],
+      "prepare_node_ids": [
+        "C11.K06"
+      ],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K05"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C11.K06",
+      "audience": "student",
+      "target_node_id": "C11.K06",
+      "kind": "strength",
+      "priority": "low",
+      "summary": "当前得分 100.0，评价覆盖 100%。",
+      "basis_node_ids": [
+        "C11.K06"
+      ],
+      "actions": [
+        "尝试一个综合应用题，再进入后继内容。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C11"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C11.K06"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C12",
+      "audience": "student",
+      "target_node_id": "C12",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C12.K01",
+      "audience": "student",
+      "target_node_id": "C12.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K01"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C12.K02",
+      "audience": "student",
+      "target_node_id": "C12.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K02"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C12.K03",
+      "audience": "student",
+      "target_node_id": "C12.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K03"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C12.K04",
+      "audience": "student",
+      "target_node_id": "C12.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K04"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C12.K05",
+      "audience": "student",
+      "target_node_id": "C12.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K05"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C12.K06",
+      "audience": "student",
+      "target_node_id": "C12.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C12.K06"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C12"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C13",
+      "audience": "student",
+      "target_node_id": "C13",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C13.K01",
+      "audience": "student",
+      "target_node_id": "C13.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K01"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C13.K02",
+      "audience": "student",
+      "target_node_id": "C13.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K02"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C13.K03",
+      "audience": "student",
+      "target_node_id": "C13.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K03"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C13.K04",
+      "audience": "student",
+      "target_node_id": "C13.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K04",
+        "C05.K01"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。",
+        "先复习：LC谐振。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K01"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C13.K05",
+      "audience": "student",
+      "target_node_id": "C13.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K05"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C13.K06",
+      "audience": "student",
+      "target_node_id": "C13.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C13.K06"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C13"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C14",
+      "audience": "student",
+      "target_node_id": "C14",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14",
+        "C05"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。",
+        "先复习：通信电子线路。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [
+        "EV-DEMO003-mixed_evidence-C05.K01",
+        "EV-DEMO003-mixed_evidence-C05.K02",
+        "EV-DEMO003-mixed_evidence-C05.K03"
+      ],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C14.K01",
+      "audience": "student",
+      "target_node_id": "C14.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K01"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C14.K02",
+      "audience": "student",
+      "target_node_id": "C14.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K02"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C14.K03",
+      "audience": "student",
+      "target_node_id": "C14.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K03"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C14.K04",
+      "audience": "student",
+      "target_node_id": "C14.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K04"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C14.K05",
+      "audience": "student",
+      "target_node_id": "C14.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K05"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C14.K06",
+      "audience": "student",
+      "target_node_id": "C14.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C14.K06"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C14"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C15",
+      "audience": "student",
+      "target_node_id": "C15",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C15.K01",
+      "audience": "student",
+      "target_node_id": "C15.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K01"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C15.K02",
+      "audience": "student",
+      "target_node_id": "C15.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K02"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C15.K03",
+      "audience": "student",
+      "target_node_id": "C15.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K03"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C15.K04",
+      "audience": "student",
+      "target_node_id": "C15.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K04"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C15.K05",
+      "audience": "student",
+      "target_node_id": "C15.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K05"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C15.K06",
+      "audience": "student",
+      "target_node_id": "C15.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C15.K06"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C15"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C16",
+      "audience": "student",
+      "target_node_id": "C16",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C16.K01",
+      "audience": "student",
+      "target_node_id": "C16.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K01"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C16.K02",
+      "audience": "student",
+      "target_node_id": "C16.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K02"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C16.K03",
+      "audience": "student",
+      "target_node_id": "C16.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K03"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C16.K04",
+      "audience": "student",
+      "target_node_id": "C16.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K04"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C16.K05",
+      "audience": "student",
+      "target_node_id": "C16.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K05"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C16.K06",
+      "audience": "student",
+      "target_node_id": "C16.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C16.K06"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C16"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C17",
+      "audience": "student",
+      "target_node_id": "C17",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C17.K01",
+      "audience": "student",
+      "target_node_id": "C17.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K01"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C17.K02",
+      "audience": "student",
+      "target_node_id": "C17.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K02"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C17.K03",
+      "audience": "student",
+      "target_node_id": "C17.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K03"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C17.K04",
+      "audience": "student",
+      "target_node_id": "C17.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K04"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C17.K05",
+      "audience": "student",
+      "target_node_id": "C17.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K05"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C17.K06",
+      "audience": "student",
+      "target_node_id": "C17.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C17.K06"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C17"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C18",
+      "audience": "student",
+      "target_node_id": "C18",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C18.K01",
+      "audience": "student",
+      "target_node_id": "C18.K01",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K01"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C18.K02",
+      "audience": "student",
+      "target_node_id": "C18.K02",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K02"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C18.K03",
+      "audience": "student",
+      "target_node_id": "C18.K03",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K03"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C18.K04",
+      "audience": "student",
+      "target_node_id": "C18.K04",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K04"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C18.K05",
+      "audience": "student",
+      "target_node_id": "C18.K05",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K05"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    },
+    {
+      "recommendation_id": "REC-DEMO003-mixed_evidence-student-C18.K06",
+      "audience": "student",
+      "target_node_id": "C18.K06",
+      "kind": "not_started",
+      "priority": "info",
+      "summary": "尚未开始，暂不判断薄弱。",
+      "basis_node_ids": [
+        "C18.K06"
+      ],
+      "actions": [
+        "按课程计划预习基础概念。"
+      ],
+      "review_node_ids": [],
+      "prepare_node_ids": [],
+      "resource_ids": [
+        "RES-C18"
+      ],
+      "evidence_refs": [],
+      "origin": "preset_demo",
+      "lifecycle": "active"
+    }
+  ]
+}
