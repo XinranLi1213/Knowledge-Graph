@@ -1,0 +1,38 @@
+{
+  "schema_version": "3.0.0",
+  "record_type": "agent_run",
+  "run_id": "run-a686e6dc10c347918af720fa30d358c3",
+  "scope": {
+    "subject": {
+      "type": "student",
+      "id": "DEMO001"
+    },
+    "scenario_id": "mixed_evidence"
+  },
+  "audience": "teacher",
+  "target_node_id": "C05",
+  "snapshot_ref": {
+    "snapshot_id": "student-DEMO001-mixed_evidence",
+    "revision": 2
+  },
+  "trigger": "question",
+  "state": "succeeded",
+  "mode": "question",
+  "artifact_id": null,
+  "turn_id": "turn-08b9c5deffaa4c8b95bd6483702bb461",
+  "error": null,
+  "tool_trace": [
+    {
+      "tool": "compare_previous",
+      "arguments": {},
+      "node_count": 11
+    }
+  ],
+  "usage": {
+    "model_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "created_at": "2026-10-29T17:12:56.561183+00:00",
+  "updated_at": "2026-10-29T17:12:56.586743+00:00"
+}

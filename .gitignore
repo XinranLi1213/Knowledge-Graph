@@ -19,6 +19,7 @@ __pycache__/
 .venv/
 venv/
 .pytest_cache/
+.runtime/
 
 # Editor, OS and temporary files
 .idea/

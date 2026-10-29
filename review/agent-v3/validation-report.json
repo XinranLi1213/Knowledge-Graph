@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-30",
+  "status": "passed",
+  "backend_unittest_count": 18,
+  "frontend_node_test_count": 13,
+  "runtime_contract_examples_validated": 4,
+  "baseline_data_validation": "passed",
+  "personalization_v2_validation": "passed_with_authorized_frontend_changes",
+  "negative_v2_recommendation_cases_rejected": 17,
+  "agent_browser": "../agent-browser-check.json",
+  "personalization_browser_regression": "passed",
+  "model_transport_mock_tests": "passed",
+  "real_model_called": false,
+  "real_model_api_acceptance_tested": false,
+  "default_provider": "rules_demo",
+  "online_deployed": false
+}

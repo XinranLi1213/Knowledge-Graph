@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "provider": "rules_demo",
+  "real_model_called": false,
+  "checks": [
+    "automatic diagnosis on node selection",
+    "context-bound follow-up",
+    "demo assessment publishes r2 facts",
+    "automatic new diagnosis",
+    "historical r1 answer label",
+    "next question binds r2",
+    "unrelated evidence revalidates without regeneration",
+    "diagnosis updates preserve graph coordinates and zoom",
+    "teacher/student conversation isolation",
+    "student cannot use demo update button",
+    "390px drawer/no overflow",
+    "no page errors"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "3.0.0",
+  "record_type": "conversation_turn",
+  "turn_id": "turn-08b9c5deffaa4c8b95bd6483702bb461",
+  "session_id": "c5e294218780fa9172af939597a96208e081796ce75c035058b0608f2babb67a",
+  "scope": {
+    "subject": {
+      "type": "student",
+      "id": "DEMO001"
+    },
+    "scenario_id": "mixed_evidence"
+  },
+  "audience": "teacher",
+  "target_node_id": "C05",
+  "snapshot_ref": {
+    "snapshot_id": "student-DEMO001-mixed_evidence",
+    "revision": 2
+  },
+  "discussed_artifact_id": "diag-752fbe58d15a4ff2a84bf6b9ff1c47ae",
+  "question": "与之前相比发生了什么变化？",
+  "state": "succeeded",
+  "answer": {
+    "explanation": "通信电子线路：当前已评价部分掌握度 59.12，评价覆盖 70%。已考部分低于达标线，应优先复核。学习进度为 70%，与评价覆盖分别统计。与前一版比较，本次可见范围有4个节点结果变化。",
+    "cited_node_ids": [
+      "C05"
+    ],
+    "cited_evidence_ids": [],
+    "resource_ids": [
+      "RES-C02",
+      "RES-C05"
+    ],
+    "limitations": [
+      "规则演示：未调用大模型。",
+      "未评价、未学习与已测薄弱分开判断。"
+    ]
+  },
+  "origin": "rules_demo",
+  "created_at": "2026-10-29T17:12:56.561183+00:00"
+}

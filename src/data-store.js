@@ -9,6 +9,8 @@ export class DataStore {
     if(!same(this.graph.graph_ref,this.registry.graph_ref)||!same(this.graph.graph_ref,this.resources.graph_ref))throw Error('公共数据版本不一致');
     const ids=new Set(this.graph.nodes.map(n=>n.id));if(ids.size!==this.graph.nodes.length||this.graph.edges.some(e=>!ids.has(e.source)||!ids.has(e.target)))throw Error('公共图谱引用无效');
     this.students=this.registry.students.filter(s=>this.manifest.demo_student_ids.includes(s.student_id));
+    this.agentAvailable=false;
+    if(typeof window!=='undefined')try{const r=await this.fetcher('/api/agent/health');const info=await r.json();this.agentAvailable=r.ok&&info.available===true;this.agentProvider=info.provider;}catch{}
   }
   invalidateSelected({subject,scenario}){
     for(const rows of [this.manifest.snapshot_entries,this.manifest.recommendation_entries]){
@@ -25,16 +27,21 @@ export class DataStore {
     const row=this.manifest.snapshot_entries.find(r=>same(r.subject,subject)&&r.scenario_id===scenario);
     if(!row)throw Error('暂无该对象的评价快照');
     const adviceRow=this.manifest.recommendation_entries.find(r=>same(r.subject,subject)&&r.scenario_id===scenario);
-    const [snapshot,bundle,legacy]=await Promise.all([this.get(ROOT+row.path),adviceRow?this.get(ROOT+adviceRow.path):null,
+    const [baseline,bundle,legacy]=await Promise.all([this.get(ROOT+row.path),adviceRow?this.get(ROOT+adviceRow.path):null,
       subject.type==='class'?this.get(`review/data/${scenario}.json`):null]);
+    let snapshot=baseline;
+    if(this.agentAvailable){const query=new URLSearchParams({subject_type:subject.type,subject_id:subject.id,scenario});
+      const response=await this.fetcher('/api/agent/snapshot?'+query,{cache:'no-store'});if(!response.ok)throw Error('最新评价读取失败');snapshot=freeze(await response.json());}
     if(seq!==this.sequence)return null;
-    if(!same(snapshot.subject,subject)||!same(snapshot.graph_ref,this.graph.graph_ref)||snapshot.snapshot_id!==row.snapshot_id||snapshot.revision!==row.revision||snapshot.registry_version!==this.registry.registry_version||snapshot.evaluation_context.scenario_id!==scenario||snapshot.policy_id!==this.policy.policy_id||snapshot.policy_version!==this.policy.policy_version)throw Error('评价对象或版本不一致');
-    if(bundle&&(!same(bundle.subject,subject)||!same(bundle.graph_ref,this.graph.graph_ref)||bundle.basis_snapshot.snapshot_id!==snapshot.snapshot_id||bundle.basis_snapshot.revision!==snapshot.revision||bundle.version!==adviceRow.version||bundle.basis_profile_version!==profile.profile_version||bundle.resource_catalog_version!==this.resources.catalog_version))throw Error('建议依据已过期');
+    if(!same(snapshot.subject,subject)||!same(snapshot.graph_ref,this.graph.graph_ref)||snapshot.snapshot_id!==row.snapshot_id||(this.agentAvailable?snapshot.revision<row.revision:snapshot.revision!==row.revision)||snapshot.registry_version!==this.registry.registry_version||snapshot.evaluation_context.scenario_id!==scenario||snapshot.policy_id!==this.policy.policy_id||snapshot.policy_version!==this.policy.policy_version)throw Error('评价对象或版本不一致');
+    if(bundle&&(!same(bundle.subject,subject)||!same(bundle.graph_ref,this.graph.graph_ref)||bundle.basis_snapshot.snapshot_id!==snapshot.snapshot_id||bundle.version!==adviceRow.version||bundle.basis_profile_version!==profile.profile_version||bundle.resource_catalog_version!==this.resources.catalog_version))throw Error('建议依据已过期');
+    const staleAdvice=bundle&&bundle.basis_snapshot.revision!==snapshot.revision;
+    if(staleAdvice&&!this.agentAvailable)throw Error('建议依据已过期');
     const nodeIds=new Set(this.graph.nodes.map(n=>n.id)),evIds=new Set(snapshot.evidence.map(e=>e.evidence_id));
     if(snapshot.evidence.some(e=>!same(e.subject,subject)))throw Error('评价证据对象不一致');
     for(const [id,result] of Object.entries(snapshot.node_results))if(!nodeIds.has(id)||result.evidence_refs.some(e=>!evIds.has(e)))throw Error('节点结果或证据引用无效');
     const resources=new Set(this.resources.resources.map(r=>r.resource_id));
-    const active=(bundle?.recommendations||[]).filter(r=>r.audience===role&&r.lifecycle==='active'&&r.basis_node_ids.every(id=>snapshot.node_results[id]));
+    const active=(staleAdvice?[]:bundle?.recommendations||[]).filter(r=>r.audience===role&&r.lifecycle==='active'&&r.basis_node_ids.every(id=>snapshot.node_results[id]));
     const byNode=new Map();for(const r of active){if(r.target_node_id!==null&&!nodeIds.has(r.target_node_id))throw Error('建议节点无效');
       if(r.evidence_refs.some(id=>!evIds.has(id)))throw Error('建议证据无效');
       if([...r.basis_node_ids,...r.review_node_ids,...r.prepare_node_ids].some(id=>!nodeIds.has(id))||r.resource_ids.some(id=>!resources.has(id)))throw Error('建议依据或资源无效');
@@ -47,11 +54,11 @@ export class DataStore {
       return {...n,status,sidebar_info:{description:n.description,display_score:status.achievement_rate,
         score_label:n.level==='L1_Ability'?'能力达成估计':status.score_is_provisional?'已评价部分掌握度':subject.type==='student'?'个人得分':'班级平均',
         assessment_sources:result?.evidence_refs.map(id=>snapshot.evidence.find(e=>e.evidence_id===id)).filter(Boolean)||[],
-        recommendations:result?byNode.get(n.id)||[]:[],remediation_advice:subject.type==='class'&&result?legacyNodes.get(n.id)?.sidebar_info.remediation_advice||[]:[]}};});
+        recommendations:result?byNode.get(n.id)||[]:[],remediation_advice:subject.type==='class'&&result&&snapshot.revision===row.revision?legacyNodes.get(n.id)?.sidebar_info.remediation_advice||[]:[]}};});
     const projected=new Map(nodes.map(n=>[n.id,n.status]));
     const summary={...snapshot.summary,ability_profile:snapshot.summary.ability_profile.map(a=>({...a,score:projected.get(a.node_id)?.achievement_rate??null,coverage:projected.get(a.node_id)?.coverage_rate??0}))};
     for(const key of ['weak_node_ids','strength_node_ids','provisional_low_node_ids'])summary[key]=snapshot.summary[key].filter(id=>projected.get(id)?.achievement_rate!=null);
-    const view={...this.graph,nodes,summary,overview:byNode.get(null)||[],snapshot,profile,role,subject,scenario,
+    const view={...this.graph,nodes,summary,overview:byNode.get(null)||[],snapshot,profile,role,subject,scenario,staleAdvice,agentAvailable:this.agentAvailable,agentProvider:this.agentProvider,
       resourceMap:new Map(this.resources.resources.map(r=>[r.resource_id,{...r,url:ROOT+r.path}])),policy:this.policy,
       displayName:profile?`${profile.display_name} · ${profile.student_number}`:this.registry.classes.find(c=>c.class_id===subject.id)?.display_name||subject.id};
     this.current=view;return view;

@@ -1,0 +1,238 @@
+{
+  "schema_version": "3.0.0",
+  "record_type": "evaluation_changed",
+  "event_id": "example-C05-supplement-1",
+  "scope": {
+    "subject": {
+      "type": "student",
+      "id": "DEMO001"
+    },
+    "scenario_id": "mixed_evidence"
+  },
+  "before": {
+    "snapshot_id": "student-DEMO001-mixed_evidence",
+    "revision": 1
+  },
+  "after": {
+    "snapshot_id": "student-DEMO001-mixed_evidence",
+    "revision": 2
+  },
+  "request_hash": "4a1a1c5d9e0fb0816a32c26906c706f5bdc82ff139edbe6e23345183e76cdaa7",
+  "changes": [
+    {
+      "node_id": "A02",
+      "field": "status.achievement_rate",
+      "before": 60.395139,
+      "after": 60.974069
+    },
+    {
+      "node_id": "A02",
+      "field": "status.coverage_rate",
+      "before": 0.9,
+      "after": 0.94
+    },
+    {
+      "node_id": "A02",
+      "field": "evidence_refs",
+      "before": [
+        "EV-DEMO001-mixed_evidence-C04.K01",
+        "EV-DEMO001-mixed_evidence-C04.K02",
+        "EV-DEMO001-mixed_evidence-C04.K03",
+        "EV-DEMO001-mixed_evidence-C04.K04",
+        "EV-DEMO001-mixed_evidence-C04.K05",
+        "EV-DEMO001-mixed_evidence-C04.K06",
+        "EV-DEMO001-mixed_evidence-C05.K01",
+        "EV-DEMO001-mixed_evidence-C05.K02",
+        "EV-DEMO001-mixed_evidence-C05.K03",
+        "EV-DEMO001-mixed_evidence-C06.K01",
+        "EV-DEMO001-mixed_evidence-C06.K02",
+        "EV-DEMO001-mixed_evidence-C06.K03",
+        "EV-DEMO001-mixed_evidence-C06.K04",
+        "EV-DEMO001-mixed_evidence-C06.K05",
+        "EV-DEMO001-mixed_evidence-C06.K06",
+        "EV-DEMO001-mixed_evidence-C08"
+      ],
+      "after": [
+        "EV-DEMO001-mixed_evidence-C04.K01",
+        "EV-DEMO001-mixed_evidence-C04.K02",
+        "EV-DEMO001-mixed_evidence-C04.K03",
+        "EV-DEMO001-mixed_evidence-C04.K04",
+        "EV-DEMO001-mixed_evidence-C04.K05",
+        "EV-DEMO001-mixed_evidence-C04.K06",
+        "EV-DEMO001-mixed_evidence-C05.K01",
+        "EV-DEMO001-mixed_evidence-C05.K02",
+        "EV-DEMO001-mixed_evidence-C05.K03",
+        "EV-DEMO001-mixed_evidence-C06.K01",
+        "EV-DEMO001-mixed_evidence-C06.K02",
+        "EV-DEMO001-mixed_evidence-C06.K03",
+        "EV-DEMO001-mixed_evidence-C06.K04",
+        "EV-DEMO001-mixed_evidence-C06.K05",
+        "EV-DEMO001-mixed_evidence-C06.K06",
+        "EV-DEMO001-mixed_evidence-C08",
+        "demo-assessment-74f6ae2641554bf383734cebc6b55d46"
+      ]
+    },
+    {
+      "node_id": "A03",
+      "field": "status.achievement_rate",
+      "before": 67.606,
+      "after": 67.985842
+    },
+    {
+      "node_id": "A03",
+      "field": "status.coverage_rate",
+      "before": 0.475,
+      "after": 0.505
+    },
+    {
+      "node_id": "A03",
+      "field": "evidence_refs",
+      "before": [
+        "EV-DEMO001-mixed_evidence-C05.K01",
+        "EV-DEMO001-mixed_evidence-C05.K02",
+        "EV-DEMO001-mixed_evidence-C05.K03",
+        "EV-DEMO001-mixed_evidence-C08",
+        "EV-DEMO001-mixed_evidence-C11.K01",
+        "EV-DEMO001-mixed_evidence-C11.K02",
+        "EV-DEMO001-mixed_evidence-C11.K03",
+        "EV-DEMO001-mixed_evidence-C11.K04",
+        "EV-DEMO001-mixed_evidence-C11.K05",
+        "EV-DEMO001-mixed_evidence-C11.K06"
+      ],
+      "after": [
+        "EV-DEMO001-mixed_evidence-C05.K01",
+        "EV-DEMO001-mixed_evidence-C05.K02",
+        "EV-DEMO001-mixed_evidence-C05.K03",
+        "EV-DEMO001-mixed_evidence-C08",
+        "EV-DEMO001-mixed_evidence-C11.K01",
+        "EV-DEMO001-mixed_evidence-C11.K02",
+        "EV-DEMO001-mixed_evidence-C11.K03",
+        "EV-DEMO001-mixed_evidence-C11.K04",
+        "EV-DEMO001-mixed_evidence-C11.K05",
+        "EV-DEMO001-mixed_evidence-C11.K06",
+        "demo-assessment-74f6ae2641554bf383734cebc6b55d46"
+      ]
+    },
+    {
+      "node_id": "C05",
+      "field": "status.achievement_rate",
+      "before": 53.17,
+      "after": 59.121429
+    },
+    {
+      "node_id": "C05",
+      "field": "status.coverage_rate",
+      "before": 0.5,
+      "after": 0.7
+    },
+    {
+      "node_id": "C05",
+      "field": "status.learning_progress",
+      "before": 0.6,
+      "after": 0.7
+    },
+    {
+      "node_id": "C05",
+      "field": "evidence_refs",
+      "before": [
+        "EV-DEMO001-mixed_evidence-C05.K01",
+        "EV-DEMO001-mixed_evidence-C05.K02",
+        "EV-DEMO001-mixed_evidence-C05.K03"
+      ],
+      "after": [
+        "EV-DEMO001-mixed_evidence-C05.K01",
+        "EV-DEMO001-mixed_evidence-C05.K02",
+        "EV-DEMO001-mixed_evidence-C05.K03",
+        "demo-assessment-74f6ae2641554bf383734cebc6b55d46"
+      ]
+    },
+    {
+      "node_id": "C05.K04",
+      "field": "status.achievement_rate",
+      "before": null,
+      "after": 74.0
+    },
+    {
+      "node_id": "C05.K04",
+      "field": "status.health_color",
+      "before": "grey",
+      "after": "yellow"
+    },
+    {
+      "node_id": "C05.K04",
+      "field": "status.coverage_rate",
+      "before": 0.0,
+      "after": 1.0
+    },
+    {
+      "node_id": "C05.K04",
+      "field": "status.learning_state",
+      "before": "in_progress",
+      "after": "completed"
+    },
+    {
+      "node_id": "C05.K04",
+      "field": "status.grey_reason",
+      "before": "no_evidence",
+      "after": null
+    },
+    {
+      "node_id": "C05.K04",
+      "field": "status.evidence_granularity",
+      "before": "none",
+      "after": "knowledge_assessment"
+    },
+    {
+      "node_id": "C05.K04",
+      "field": "status.sample_count",
+      "before": 0,
+      "after": 1
+    },
+    {
+      "node_id": "C05.K04",
+      "field": "status.aggregation_basis",
+      "before": "none",
+      "after": "knowledge_assessment"
+    },
+    {
+      "node_id": "C05.K04",
+      "field": "status.learning_progress",
+      "before": 0.5,
+      "after": 1.0
+    },
+    {
+      "node_id": "C05.K04",
+      "field": "evidence_refs",
+      "before": [],
+      "after": [
+        "demo-assessment-74f6ae2641554bf383734cebc6b55d46"
+      ]
+    },
+    {
+      "node_id": "C05.K04",
+      "field": "evidence",
+      "before": null,
+      "after": {
+        "evidence_id": "demo-assessment-74f6ae2641554bf383734cebc6b55d46",
+        "node_id": "C05.K04",
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "kind": "knowledge_assessment",
+        "title": "模拟补测",
+        "score": 74.0,
+        "sample_count": 1,
+        "source": "synthetic_demo",
+        "original_record_ref": "runtime-demo:example-C05-supplement-1"
+      }
+    }
+  ],
+  "affected_node_ids": [
+    "A02",
+    "A03",
+    "C05",
+    "C05.K04"
+  ],
+  "created_at": "2026-10-29T17:12:56.370132+00:00"
+}
