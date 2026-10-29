@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "browser": "Chrome headless",
+  "checks": [
+    "overview",
+    "risk outline",
+    "C05 score/coverage",
+    "stable mode layout",
+    "all nodes",
+    "course total null knowledge",
+    "search",
+    "empty filters/reset",
+    "indirect successors",
+    "chain",
+    "mobile width",
+    "no runtime errors"
+  ]
+}

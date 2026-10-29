@@ -1,0 +1,11 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {indexGraph,chain,successors,filterNodes,isRisk} from '../src/graph-index.js';
+const data=JSON.parse(fs.readFileSync(new URL('../review/data/mixed_evidence.json',import.meta.url)));
+const graph=indexGraph(data);
+test('provisional low score remains grey and is flagged; missing evidence is not a low score',()=>{assert.ok(isRisk(graph.nodes.get('C05')));assert.equal(graph.nodes.get('C05').status.health_color,'grey');assert.ok(!isRisk(graph.nodes.get('C14')));});
+test('ability support chain spans courses and knowledge without lateral contamination',()=>{const ids=chain(graph,'A02');assert.ok(ids.has('C05.K01'));assert.ok(!ids.has('C17'));});
+test('successors follow only directed prerequisites with recorded paths',()=>{const result=successors(graph,'C01');assert.ok(result.some(n=>n.id==='C02'&&n.path.length===2));assert.ok(result.some(n=>n.id==='C14'&&n.path.length>2));assert.ok(!result.some(n=>n.id==='C03'));});
+test('filters preserve parent context and never mutate node scores',()=>{const before=JSON.stringify(data);const result=filterNodes(data,graph,{course:['C05'],health:['red']});assert.ok(result.primary.has('C05.K01'));assert.ok(result.visible.has('C05'));assert.ok(result.visible.has('A02'));assert.equal(JSON.stringify(data),before);});
+test('same dimension OR and cross dimension AND',()=>{const result=filterNodes(data,graph,{course:['C01','C05'],health:['red']});assert.ok(result.primary.has('C05.K01'));assert.ok(!result.primary.has('C01.K01'));});

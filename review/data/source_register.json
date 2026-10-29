@@ -1,0 +1,104 @@
+{
+  "sources": [
+    {
+      "id": "S01",
+      "filename": "屏幕截图 2026-10-28 014347.png",
+      "local_path": "C:\\Users\\27725\\Desktop\\培养方案\\屏幕截图 2026-10-28 014347.png",
+      "sha256": "65e9e0780873a3e780d525c4528d3061f7ae8d7313818447959f901e9ee01c82",
+      "source_program": "电子信息工程",
+      "source_cohort": "2024",
+      "extraction_method": "人工逐图阅读",
+      "document_role": "reference_only"
+    },
+    {
+      "id": "S02",
+      "filename": "屏幕截图 2026-10-28 014400.png",
+      "local_path": "C:\\Users\\27725\\Desktop\\培养方案\\屏幕截图 2026-10-28 014400.png",
+      "sha256": "401edded00c5a88535f63aa4a25df86be32a694e7b2d970e8649fc68b9a6c4b7",
+      "source_program": "电子信息工程",
+      "source_cohort": "2024",
+      "extraction_method": "人工逐图阅读",
+      "document_role": "reference_only"
+    },
+    {
+      "id": "S03",
+      "filename": "屏幕截图 2026-10-28 014410.png",
+      "local_path": "C:\\Users\\27725\\Desktop\\培养方案\\屏幕截图 2026-10-28 014410.png",
+      "sha256": "2f715f1e528270e36a10312244e7838a16425fa312d710261d4957124709cf6f",
+      "source_program": "电子信息工程",
+      "source_cohort": "2024",
+      "extraction_method": "人工逐图阅读",
+      "document_role": "reference_only"
+    },
+    {
+      "id": "S04",
+      "filename": "屏幕截图 2026-10-28 014419.png",
+      "local_path": "C:\\Users\\27725\\Desktop\\培养方案\\屏幕截图 2026-10-28 014419.png",
+      "sha256": "0eafb5c568d6099a7c073831d9a2e768f124c70cf735e56c162a33ccc144c6ee",
+      "source_program": "电子信息工程",
+      "source_cohort": "2024",
+      "extraction_method": "人工逐图阅读",
+      "document_role": "reference_only"
+    },
+    {
+      "id": "S05",
+      "filename": "屏幕截图 2026-10-28 014428.png",
+      "local_path": "C:\\Users\\27725\\Desktop\\培养方案\\屏幕截图 2026-10-28 014428.png",
+      "sha256": "a30777954f0afa744b7a192f606180f3e360c51a83d6e0a5fc8a65e741779e89",
+      "source_program": "电子信息工程",
+      "source_cohort": "2024",
+      "extraction_method": "人工逐图阅读",
+      "document_role": "reference_only"
+    },
+    {
+      "id": "S06",
+      "filename": "屏幕截图 2026-10-28 014442.png",
+      "local_path": "C:\\Users\\27725\\Desktop\\培养方案\\屏幕截图 2026-10-28 014442.png",
+      "sha256": "b96dd35fa6c657e7fd482b0e3e2e165476a05e85bc8aca27aa9ffeb926192a1c",
+      "source_program": "电子信息工程",
+      "source_cohort": "2024",
+      "extraction_method": "人工逐图阅读",
+      "document_role": "reference_only"
+    },
+    {
+      "id": "S07",
+      "filename": "屏幕截图 2026-10-28 014456.png",
+      "local_path": "C:\\Users\\27725\\Desktop\\培养方案\\屏幕截图 2026-10-28 014456.png",
+      "sha256": "224ea6092a12d81171a760429c5db6c44c96cc33eb933b2a243226e812d70f18",
+      "source_program": "电子信息工程",
+      "source_cohort": "2024",
+      "extraction_method": "人工逐图阅读",
+      "document_role": "reference_only"
+    },
+    {
+      "id": "S08",
+      "filename": "屏幕截图 2026-10-28 014518.png",
+      "local_path": "C:\\Users\\27725\\Desktop\\培养方案\\屏幕截图 2026-10-28 014518.png",
+      "sha256": "597d1eb1b9ff43a622651ad28bbeb34d0a9b556c8dfca5fb51161c92e558669e",
+      "source_program": "电子信息工程",
+      "source_cohort": "2024",
+      "extraction_method": "人工逐图阅读",
+      "document_role": "reference_only"
+    },
+    {
+      "id": "SIM",
+      "title": "电子信息工程MVP合成教学数据",
+      "kind": "simulation",
+      "note": "知识点、目标、映射、关系、支撑权重、班级和全部成绩为模拟，不代表学校正式结论。"
+    }
+  ],
+  "source_confirmation": "全部截图为2024级电子信息工程培养方案。",
+  "transcription_scope": "转录12项要求名称与所选18门课程的可见字段；并未转录全部课程。",
+  "simulated_fields": [
+    "通信工程培养目标改写",
+    "每项要求的具体指标描述",
+    "课程群",
+    "课程目标",
+    "知识点与技能",
+    "所有边",
+    "所有权重",
+    "所有学情",
+    "第18门课程学分及学期"
+  ],
+  "course18_note": "截图S02实践环节列有工程设计与管理，但未见课程表代码/学分/学期；这些字段为模拟，课程代码保持null。"
+}

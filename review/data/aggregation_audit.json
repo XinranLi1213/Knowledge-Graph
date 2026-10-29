@@ -1,0 +1,2623 @@
+{
+  "runtime_required": false,
+  "rows": [
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A01",
+      "label": "工程知识",
+      "score": 75.300107,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C01",
+          "weight": 0.25,
+          "score": 83.632312,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02",
+          "weight": 0.15,
+          "score": 71.280587,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03",
+          "weight": 0.15,
+          "score": 82.05235,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04",
+          "weight": 0.25,
+          "score": 68.757675,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C07",
+          "weight": 0.2,
+          "score": 71.01335,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A02",
+      "label": "问题分析",
+      "score": 59.691182,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C04",
+          "weight": 0.25,
+          "score": 68.757675,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C05",
+          "weight": 0.2,
+          "score": 53.660575,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06",
+          "weight": 0.25,
+          "score": 52.414263,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08",
+          "weight": 0.3,
+          "score": 62.220275,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A03",
+      "label": "设计/开发解决方案",
+      "score": 67.472261,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C05",
+          "weight": 0.15,
+          "score": 53.660575,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08",
+          "weight": 0.2,
+          "score": 62.220275,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11",
+          "weight": 0.2,
+          "score": 76.915837,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C14",
+          "weight": 0.2,
+          "score": 53.480338,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.25,
+          "score": 83.599537,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A04",
+      "label": "复杂工程问题研究能力",
+      "score": 70.21529,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C06",
+          "weight": 0.2,
+          "score": 52.414263,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08",
+          "weight": 0.2,
+          "score": 62.220275,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.2,
+          "score": 76.919112,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.4,
+          "score": 79.7614,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A05",
+      "label": "选择和使用现代工具能力",
+      "score": 73.043643,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C06",
+          "weight": 0.2,
+          "score": 52.414263,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09",
+          "weight": 0.2,
+          "score": 85.12305,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C10",
+          "weight": 0.15,
+          "score": 78.931775,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11",
+          "weight": 0.2,
+          "score": 76.915837,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C13",
+          "weight": 0.25,
+          "score": 73.252988,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A06",
+      "label": "工程与社会",
+      "score": 74.139399,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C12",
+          "weight": 0.25,
+          "score": 59.119837,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.25,
+          "score": 83.599537,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.5,
+          "score": 76.919112,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A07",
+      "label": "环境和可持续发展",
+      "score": 70.964296,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C14",
+          "weight": 0.2,
+          "score": 53.480338,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.5,
+          "score": 76.919112,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C18",
+          "weight": 0.3,
+          "score": 72.695575,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A08",
+      "label": "职业规范",
+      "score": 79.392112,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C15",
+          "weight": 0.2,
+          "score": 83.599537,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.4,
+          "score": 76.919112,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.4,
+          "score": 79.7614,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A09",
+      "label": "个人和团队",
+      "score": 79.590627,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C11",
+          "weight": 0.2,
+          "score": 76.915837,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.4,
+          "score": 83.599537,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.4,
+          "score": 76.919112,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A10",
+      "label": "沟通与交流",
+      "score": 77.816607,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C12",
+          "weight": 0.15,
+          "score": 59.119837,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.3,
+          "score": 83.599537,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.55,
+          "score": 79.7614,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A11",
+      "label": "项目管理能力",
+      "score": 75.932252,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C15",
+          "weight": 0.2,
+          "score": 83.599537,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.25,
+          "score": 76.919112,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C18",
+          "weight": 0.55,
+          "score": 72.695575,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "A12",
+      "label": "自主学习与终身学习",
+      "score": 74.825166,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C11",
+          "weight": 0.15,
+          "score": 76.915837,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C12",
+          "weight": 0.15,
+          "score": 59.119837,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.5,
+          "score": 79.7614,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C18",
+          "weight": 0.2,
+          "score": 72.695575,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C01",
+      "label": "电路分析",
+      "score": 83.632312,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C01.K01",
+          "weight": 0.15,
+          "score": 80.38125,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C01.K02",
+          "weight": 0.15,
+          "score": 86.42225,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C01.K03",
+          "weight": 0.2,
+          "score": 74.7545,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C01.K04",
+          "weight": 0.2,
+          "score": 88.41925,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C01.K05",
+          "weight": 0.15,
+          "score": 85.38575,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C01.K06",
+          "weight": 0.15,
+          "score": 87.7945,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C02",
+      "label": "模拟电子技术",
+      "score": 71.280587,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C02.K01",
+          "weight": 0.15,
+          "score": 69.32325,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02.K02",
+          "weight": 0.15,
+          "score": 76.21575,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02.K03",
+          "weight": 0.2,
+          "score": 62.898,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02.K04",
+          "weight": 0.2,
+          "score": 75.55325,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02.K05",
+          "weight": 0.15,
+          "score": 71.936,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02.K06",
+          "weight": 0.15,
+          "score": 73.12725,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C03",
+      "label": "数字电子技术",
+      "score": 82.05235,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C03.K01",
+          "weight": 0.15,
+          "score": 79.1445,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03.K02",
+          "weight": 0.15,
+          "score": 86.4365,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03.K03",
+          "weight": 0.2,
+          "score": 73.715,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03.K04",
+          "weight": 0.2,
+          "score": 87.77175,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03.K05",
+          "weight": 0.15,
+          "score": 81.9815,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03.K06",
+          "weight": 0.15,
+          "score": 84.1375,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C04",
+      "label": "信号与系统",
+      "score": 68.757675,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C04.K01",
+          "weight": 0.15,
+          "score": 66.85325,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04.K02",
+          "weight": 0.15,
+          "score": 69.81075,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04.K03",
+          "weight": 0.2,
+          "score": 60.7515,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04.K04",
+          "weight": 0.2,
+          "score": 74.925,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04.K05",
+          "weight": 0.15,
+          "score": 67.952,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04.K06",
+          "weight": 0.15,
+          "score": 72.8665,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C05",
+      "label": "通信电子线路",
+      "score": 53.660575,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C05.K01",
+          "weight": 0.15,
+          "score": 47.4645,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C05.K02",
+          "weight": 0.15,
+          "score": 56.13275,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C05.K03",
+          "weight": 0.2,
+          "score": 46.4285,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C05.K04",
+          "weight": 0.2,
+          "score": 57.8115,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C05.K05",
+          "weight": 0.15,
+          "score": 57.20425,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C05.K06",
+          "weight": 0.15,
+          "score": 57.949,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C06",
+      "label": "数字信号处理",
+      "score": 52.414263,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C06.K01",
+          "weight": 0.15,
+          "score": 49.577,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06.K02",
+          "weight": 0.15,
+          "score": 53.67875,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06.K03",
+          "weight": 0.2,
+          "score": 44.9505,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06.K04",
+          "weight": 0.2,
+          "score": 56.1425,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06.K05",
+          "weight": 0.15,
+          "score": 54.85275,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06.K06",
+          "weight": 0.15,
+          "score": 56.52925,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C07",
+      "label": "电磁场与电磁波",
+      "score": 71.01335,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C07.K01",
+          "weight": 0.15,
+          "score": 67.874,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C07.K02",
+          "weight": 0.15,
+          "score": 74.544,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C07.K03",
+          "weight": 0.2,
+          "score": 61.88825,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C07.K04",
+          "weight": 0.2,
+          "score": 76.6715,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C07.K05",
+          "weight": 0.15,
+          "score": 72.57125,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C07.K06",
+          "weight": 0.15,
+          "score": 73.68675,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C08",
+      "label": "通信原理",
+      "score": 62.220275,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C08.K01",
+          "weight": 0.15,
+          "score": 58.46075,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08.K02",
+          "weight": 0.15,
+          "score": 66.32325,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08.K03",
+          "weight": 0.2,
+          "score": 53.60325,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08.K04",
+          "weight": 0.2,
+          "score": 66.2335,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08.K05",
+          "weight": 0.15,
+          "score": 62.648,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08.K06",
+          "weight": 0.15,
+          "score": 67.5875,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C09",
+      "label": "C语言程序设计",
+      "score": 85.12305,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C09.K01",
+          "weight": 0.15,
+          "score": 81.5425,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09.K02",
+          "weight": 0.15,
+          "score": 88.295,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09.K03",
+          "weight": 0.2,
+          "score": 76.033,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09.K04",
+          "weight": 0.2,
+          "score": 91.868,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09.K05",
+          "weight": 0.15,
+          "score": 84.209,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09.K06",
+          "weight": 0.15,
+          "score": 89.5725,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C10",
+      "label": "微机原理与接口技术",
+      "score": 78.931775,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C10.K01",
+          "weight": 0.15,
+          "score": 74.88625,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C10.K02",
+          "weight": 0.15,
+          "score": 80.98525,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C10.K03",
+          "weight": 0.2,
+          "score": 72.69225,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C10.K04",
+          "weight": 0.2,
+          "score": 84.742,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C10.K05",
+          "weight": 0.15,
+          "score": 76.57875,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C10.K06",
+          "weight": 0.15,
+          "score": 83.84925,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C11",
+      "label": "嵌入式系统原理与应用",
+      "score": 76.915837,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C11.K01",
+          "weight": 0.15,
+          "score": 73.48625,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11.K02",
+          "weight": 0.15,
+          "score": 78.66575,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11.K03",
+          "weight": 0.2,
+          "score": 69.722,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11.K04",
+          "weight": 0.2,
+          "score": 81.27475,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11.K05",
+          "weight": 0.15,
+          "score": 77.87925,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11.K06",
+          "weight": 0.15,
+          "score": 81.412,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C12",
+      "label": "计算机网络",
+      "score": 59.119837,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C12.K01",
+          "weight": 0.15,
+          "score": 53.1995,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C12.K02",
+          "weight": 0.15,
+          "score": 61.31325,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C12.K03",
+          "weight": 0.2,
+          "score": 51.40625,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C12.K04",
+          "weight": 0.2,
+          "score": 64.1005,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C12.K05",
+          "weight": 0.15,
+          "score": 60.9075,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C12.K06",
+          "weight": 0.15,
+          "score": 64.703,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C13",
+      "label": "微波工程基础",
+      "score": 73.252988,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C13.K01",
+          "weight": 0.15,
+          "score": 68.21425,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C13.K02",
+          "weight": 0.15,
+          "score": 79.07625,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C13.K03",
+          "weight": 0.2,
+          "score": 66.1725,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C13.K04",
+          "weight": 0.2,
+          "score": 76.4835,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C13.K05",
+          "weight": 0.15,
+          "score": 75.778,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C13.K06",
+          "weight": 0.15,
+          "score": 75.07675,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C14",
+      "label": "射频电路设计",
+      "score": 53.480338,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C14.K01",
+          "weight": 0.15,
+          "score": 48.7815,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C14.K02",
+          "weight": 0.15,
+          "score": 58.43075,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C14.K03",
+          "weight": 0.2,
+          "score": 45.216,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C14.K04",
+          "weight": 0.2,
+          "score": 57.3925,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C14.K05",
+          "weight": 0.15,
+          "score": 53.9045,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C14.K06",
+          "weight": 0.15,
+          "score": 58.6075,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C15",
+      "label": "电子系统设计",
+      "score": 83.599537,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C15.K01",
+          "weight": 0.15,
+          "score": 79.82125,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15.K02",
+          "weight": 0.15,
+          "score": 88.9815,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15.K03",
+          "weight": 0.2,
+          "score": 74.591,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15.K04",
+          "weight": 0.2,
+          "score": 88.75675,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15.K05",
+          "weight": 0.15,
+          "score": 82.948,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15.K06",
+          "weight": 0.15,
+          "score": 87.7825,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C16",
+      "label": "电子系统工程实践",
+      "score": 76.919112,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C16.K01",
+          "weight": 0.15,
+          "score": 74.26025,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16.K02",
+          "weight": 0.15,
+          "score": 83.1585,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16.K03",
+          "weight": 0.2,
+          "score": 69.4125,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16.K04",
+          "weight": 0.2,
+          "score": 79.999,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16.K05",
+          "weight": 0.15,
+          "score": 76.99625,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16.K06",
+          "weight": 0.15,
+          "score": 79.16375,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C17",
+      "label": "毕业设计",
+      "score": 79.7614,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C17.K01",
+          "weight": 0.15,
+          "score": 77.37675,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17.K02",
+          "weight": 0.15,
+          "score": 83.01575,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17.K03",
+          "weight": 0.2,
+          "score": 70.98675,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17.K04",
+          "weight": 0.2,
+          "score": 85.304,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17.K05",
+          "weight": 0.15,
+          "score": 78.349,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17.K06",
+          "weight": 0.15,
+          "score": 84.6135,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge_full",
+      "node_id": "C18",
+      "label": "工程设计与管理",
+      "score": 72.695575,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C18.K01",
+          "weight": 0.15,
+          "score": 69.85325,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C18.K02",
+          "weight": 0.15,
+          "score": 74.85375,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C18.K03",
+          "weight": 0.2,
+          "score": 61.4705,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C18.K04",
+          "weight": 0.2,
+          "score": 79.04625,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C18.K05",
+          "weight": 0.15,
+          "score": 73.1865,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C18.K06",
+          "weight": 0.15,
+          "score": 79.388,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A01",
+      "label": "工程知识",
+      "score": 75.747437,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C01",
+          "weight": 0.25,
+          "score": 83.632312,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02",
+          "weight": 0.15,
+          "score": 71.280587,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03",
+          "weight": 0.15,
+          "score": 82.05235,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04",
+          "weight": 0.25,
+          "score": 68.757675,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C07",
+          "weight": 0.2,
+          "score": 73.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A02",
+      "label": "问题分析",
+      "score": 60.592269,
+      "coverage": 0.9,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C04",
+          "weight": 0.25,
+          "score": 68.757675,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C05",
+          "weight": 0.2,
+          "score": 49.650575,
+          "coverage": 0.5
+        },
+        {
+          "node_id": "C06",
+          "weight": 0.25,
+          "score": 52.414263,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08",
+          "weight": 0.3,
+          "score": 64.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A03",
+      "label": "设计/开发解决方案",
+      "score": 67.277812,
+      "coverage": 0.475,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C05",
+          "weight": 0.15,
+          "score": 49.650575,
+          "coverage": 0.5
+        },
+        {
+          "node_id": "C08",
+          "weight": 0.2,
+          "score": 64.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11",
+          "weight": 0.2,
+          "score": 76.915837,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C14",
+          "weight": 0.2,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.25,
+          "score": null,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A04",
+      "label": "复杂工程问题研究能力",
+      "score": 58.332132,
+      "coverage": 0.4,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C06",
+          "weight": 0.2,
+          "score": 52.414263,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08",
+          "weight": 0.2,
+          "score": 64.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.2,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.4,
+          "score": null,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A05",
+      "label": "选择和使用现代工具能力",
+      "score": 73.237507,
+      "coverage": 0.75,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C06",
+          "weight": 0.2,
+          "score": 52.414263,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09",
+          "weight": 0.2,
+          "score": 85.12305,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C10",
+          "weight": 0.15,
+          "score": 80.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11",
+          "weight": 0.2,
+          "score": 76.915837,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C13",
+          "weight": 0.25,
+          "score": null,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A06",
+      "label": "工程与社会",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C12",
+          "weight": 0.25,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.25,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.5,
+          "score": null,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A07",
+      "label": "环境和可持续发展",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C14",
+          "weight": 0.2,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.5,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C18",
+          "weight": 0.3,
+          "score": null,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A08",
+      "label": "职业规范",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C15",
+          "weight": 0.2,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.4,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.4,
+          "score": null,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A09",
+      "label": "个人和团队",
+      "score": 76.915837,
+      "coverage": 0.2,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C11",
+          "weight": 0.2,
+          "score": 76.915837,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.4,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.4,
+          "score": null,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A10",
+      "label": "沟通与交流",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C12",
+          "weight": 0.15,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.3,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.55,
+          "score": null,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A11",
+      "label": "项目管理能力",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C15",
+          "weight": 0.2,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.25,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C18",
+          "weight": 0.55,
+          "score": null,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "A12",
+      "label": "自主学习与终身学习",
+      "score": 76.915837,
+      "coverage": 0.15,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C11",
+          "weight": 0.15,
+          "score": 76.915837,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C12",
+          "weight": 0.15,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.5,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C18",
+          "weight": 0.2,
+          "score": null,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C01",
+      "label": "电路分析",
+      "score": 83.632312,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C01.K01",
+          "weight": 0.15,
+          "score": 80.38125,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C01.K02",
+          "weight": 0.15,
+          "score": 86.42225,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C01.K03",
+          "weight": 0.2,
+          "score": 74.7545,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C01.K04",
+          "weight": 0.2,
+          "score": 88.41925,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C01.K05",
+          "weight": 0.15,
+          "score": 85.38575,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C01.K06",
+          "weight": 0.15,
+          "score": 87.7945,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C02",
+      "label": "模拟电子技术",
+      "score": 71.280587,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C02.K01",
+          "weight": 0.15,
+          "score": 69.32325,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02.K02",
+          "weight": 0.15,
+          "score": 76.21575,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02.K03",
+          "weight": 0.2,
+          "score": 62.898,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02.K04",
+          "weight": 0.2,
+          "score": 75.55325,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02.K05",
+          "weight": 0.15,
+          "score": 71.936,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02.K06",
+          "weight": 0.15,
+          "score": 73.12725,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C03",
+      "label": "数字电子技术",
+      "score": 82.05235,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C03.K01",
+          "weight": 0.15,
+          "score": 79.1445,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03.K02",
+          "weight": 0.15,
+          "score": 86.4365,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03.K03",
+          "weight": 0.2,
+          "score": 73.715,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03.K04",
+          "weight": 0.2,
+          "score": 87.77175,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03.K05",
+          "weight": 0.15,
+          "score": 81.9815,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03.K06",
+          "weight": 0.15,
+          "score": 84.1375,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C04",
+      "label": "信号与系统",
+      "score": 68.757675,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C04.K01",
+          "weight": 0.15,
+          "score": 66.85325,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04.K02",
+          "weight": 0.15,
+          "score": 69.81075,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04.K03",
+          "weight": 0.2,
+          "score": 60.7515,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04.K04",
+          "weight": 0.2,
+          "score": 74.925,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04.K05",
+          "weight": 0.15,
+          "score": 67.952,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04.K06",
+          "weight": 0.15,
+          "score": 72.8665,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C05",
+      "label": "通信电子线路",
+      "score": 49.650575,
+      "coverage": 0.5,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C05.K01",
+          "weight": 0.15,
+          "score": 47.4645,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C05.K02",
+          "weight": 0.15,
+          "score": 56.13275,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C05.K03",
+          "weight": 0.2,
+          "score": 46.4285,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C05.K04",
+          "weight": 0.2,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C05.K05",
+          "weight": 0.15,
+          "score": null,
+          "coverage": 0.0
+        },
+        {
+          "node_id": "C05.K06",
+          "weight": 0.15,
+          "score": null,
+          "coverage": 0.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C06",
+      "label": "数字信号处理",
+      "score": 52.414263,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C06.K01",
+          "weight": 0.15,
+          "score": 49.577,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06.K02",
+          "weight": 0.15,
+          "score": 53.67875,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06.K03",
+          "weight": 0.2,
+          "score": 44.9505,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06.K04",
+          "weight": 0.2,
+          "score": 56.1425,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06.K05",
+          "weight": 0.15,
+          "score": 54.85275,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06.K06",
+          "weight": 0.15,
+          "score": 56.52925,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C07",
+      "label": "电磁场与电磁波",
+      "score": 73.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C08",
+      "label": "通信原理",
+      "score": 64.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C09",
+      "label": "C语言程序设计",
+      "score": 85.12305,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C09.K01",
+          "weight": 0.15,
+          "score": 81.5425,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09.K02",
+          "weight": 0.15,
+          "score": 88.295,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09.K03",
+          "weight": 0.2,
+          "score": 76.033,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09.K04",
+          "weight": 0.2,
+          "score": 91.868,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09.K05",
+          "weight": 0.15,
+          "score": 84.209,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09.K06",
+          "weight": 0.15,
+          "score": 89.5725,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C10",
+      "label": "微机原理与接口技术",
+      "score": 80.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C11",
+      "label": "嵌入式系统原理与应用",
+      "score": 76.915837,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C11.K01",
+          "weight": 0.15,
+          "score": 73.48625,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11.K02",
+          "weight": 0.15,
+          "score": 78.66575,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11.K03",
+          "weight": 0.2,
+          "score": 69.722,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11.K04",
+          "weight": 0.2,
+          "score": 81.27475,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11.K05",
+          "weight": 0.15,
+          "score": 77.87925,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11.K06",
+          "weight": 0.15,
+          "score": 81.412,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C12",
+      "label": "计算机网络",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "none",
+      "inputs": []
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C13",
+      "label": "微波工程基础",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "none",
+      "inputs": []
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C14",
+      "label": "射频电路设计",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "none",
+      "inputs": []
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C15",
+      "label": "电子系统设计",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "none",
+      "inputs": []
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C16",
+      "label": "电子系统工程实践",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "none",
+      "inputs": []
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C17",
+      "label": "毕业设计",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "none",
+      "inputs": []
+    },
+    {
+      "scenario": "mixed_evidence",
+      "node_id": "C18",
+      "label": "工程设计与管理",
+      "score": null,
+      "coverage": 0.0,
+      "basis": "none",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A01",
+      "label": "工程知识",
+      "score": 77.3,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C01",
+          "weight": 0.25,
+          "score": 85.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C02",
+          "weight": 0.15,
+          "score": 74.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C03",
+          "weight": 0.15,
+          "score": 84.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C04",
+          "weight": 0.25,
+          "score": 70.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C07",
+          "weight": 0.2,
+          "score": 73.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A02",
+      "label": "问题分析",
+      "score": 61.65,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C04",
+          "weight": 0.25,
+          "score": 70.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C05",
+          "weight": 0.2,
+          "score": 56.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C06",
+          "weight": 0.25,
+          "score": 54.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08",
+          "weight": 0.3,
+          "score": 64.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A03",
+      "label": "设计/开发解决方案",
+      "score": 69.3,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C05",
+          "weight": 0.15,
+          "score": 56.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08",
+          "weight": 0.2,
+          "score": 64.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11",
+          "weight": 0.2,
+          "score": 78.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C14",
+          "weight": 0.2,
+          "score": 55.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.25,
+          "score": 85.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A04",
+      "label": "复杂工程问题研究能力",
+      "score": 72.45,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C06",
+          "weight": 0.2,
+          "score": 54.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C08",
+          "weight": 0.2,
+          "score": 64.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.2,
+          "score": 79.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.4,
+          "score": 82.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A05",
+      "label": "选择和使用现代工具能力",
+      "score": 75.05,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C06",
+          "weight": 0.2,
+          "score": 54.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C09",
+          "weight": 0.2,
+          "score": 87.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C10",
+          "weight": 0.15,
+          "score": 80.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C11",
+          "weight": 0.2,
+          "score": 78.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C13",
+          "weight": 0.25,
+          "score": 76.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A06",
+      "label": "工程与社会",
+      "score": 76.0,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C12",
+          "weight": 0.25,
+          "score": 60.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.25,
+          "score": 85.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.5,
+          "score": 79.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A07",
+      "label": "环境和可持续发展",
+      "score": 73.25,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C14",
+          "weight": 0.2,
+          "score": 55.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.5,
+          "score": 79.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C18",
+          "weight": 0.3,
+          "score": 75.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A08",
+      "label": "职业规范",
+      "score": 81.65,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C15",
+          "weight": 0.2,
+          "score": 85.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.4,
+          "score": 79.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.4,
+          "score": 82.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A09",
+      "label": "个人和团队",
+      "score": 81.45,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C11",
+          "weight": 0.2,
+          "score": 78.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.4,
+          "score": 85.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.4,
+          "score": 79.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A10",
+      "label": "沟通与交流",
+      "score": 79.85,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C12",
+          "weight": 0.15,
+          "score": 60.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C15",
+          "weight": 0.3,
+          "score": 85.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.55,
+          "score": 82.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A11",
+      "label": "项目管理能力",
+      "score": 78.25,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C15",
+          "weight": 0.2,
+          "score": 85.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C16",
+          "weight": 0.25,
+          "score": 79.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C18",
+          "weight": 0.55,
+          "score": 75.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "A12",
+      "label": "自主学习与终身学习",
+      "score": 76.95,
+      "coverage": 1.0,
+      "basis": "weighted_inputs",
+      "inputs": [
+        {
+          "node_id": "C11",
+          "weight": 0.15,
+          "score": 78.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C12",
+          "weight": 0.15,
+          "score": 60.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C17",
+          "weight": 0.5,
+          "score": 82.25,
+          "coverage": 1.0
+        },
+        {
+          "node_id": "C18",
+          "weight": 0.2,
+          "score": 75.25,
+          "coverage": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C01",
+      "label": "电路分析",
+      "score": 85.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C02",
+      "label": "模拟电子技术",
+      "score": 74.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C03",
+      "label": "数字电子技术",
+      "score": 84.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C04",
+      "label": "信号与系统",
+      "score": 70.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C05",
+      "label": "通信电子线路",
+      "score": 56.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C06",
+      "label": "数字信号处理",
+      "score": 54.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C07",
+      "label": "电磁场与电磁波",
+      "score": 73.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C08",
+      "label": "通信原理",
+      "score": 64.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C09",
+      "label": "C语言程序设计",
+      "score": 87.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C10",
+      "label": "微机原理与接口技术",
+      "score": 80.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C11",
+      "label": "嵌入式系统原理与应用",
+      "score": 78.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C12",
+      "label": "计算机网络",
+      "score": 60.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C13",
+      "label": "微波工程基础",
+      "score": 76.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C14",
+      "label": "射频电路设计",
+      "score": 55.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C15",
+      "label": "电子系统设计",
+      "score": 85.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C16",
+      "label": "电子系统工程实践",
+      "score": 79.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C17",
+      "label": "毕业设计",
+      "score": 82.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    },
+    {
+      "scenario": "course_totals_only",
+      "node_id": "C18",
+      "label": "工程设计与管理",
+      "score": 75.25,
+      "coverage": 1.0,
+      "basis": "course_total",
+      "inputs": []
+    }
+  ]
+}

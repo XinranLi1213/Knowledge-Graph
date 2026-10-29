@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "scope": "offline data review only; UI not implemented or tested",
+  "checks": [
+    "JSON Schema",
+    "unique IDs",
+    "valid endpoints and provenance",
+    "edge direction and category",
+    "prerequisite DAG",
+    "aggregation weights",
+    "weighted scores and coverage",
+    "health labels",
+    "objective links",
+    "student means",
+    "course-total fallback",
+    "scenario structural identity"
+  ],
+  "scenarios": [
+    {
+      "scenario": "knowledge_full",
+      "schema": "passed",
+      "semantic_checks": "passed",
+      "node_count": 138,
+      "edge_count": 285,
+      "max_score_error_tolerance": 2e-06,
+      "health_counts": {
+        "yellow": 80,
+        "red": 27,
+        "green": 31
+      }
+    },
+    {
+      "scenario": "mixed_evidence",
+      "schema": "passed",
+      "semantic_checks": "passed",
+      "node_count": 138,
+      "edge_count": 285,
+      "max_score_error_tolerance": 2e-06,
+      "health_counts": {
+        "yellow": 27,
+        "grey": 81,
+        "green": 20,
+        "red": 10
+      }
+    },
+    {
+      "scenario": "course_totals_only",
+      "schema": "passed",
+      "semantic_checks": "passed",
+      "node_count": 138,
+      "edge_count": 285,
+      "max_score_error_tolerance": 2e-06,
+      "health_counts": {
+        "yellow": 19,
+        "green": 8,
+        "grey": 108,
+        "red": 3
+      }
+    }
+  ],
+  "synthetic_students": 40,
+  "synthetic_student_observations": 4320
+}

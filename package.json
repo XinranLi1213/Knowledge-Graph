@@ -1,0 +1,1 @@
+{"name":"teaching-knowledge-graph","private":true,"type":"module","scripts":{"start":"python tools/serve.py","test":"node --test tests/graph.test.js"}}

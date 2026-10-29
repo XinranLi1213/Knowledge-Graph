@@ -1,0 +1,484 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "电子信息工程预置图谱展示契约1.1.0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "metadata",
+    "program_plan",
+    "policy",
+    "sources",
+    "course_groups",
+    "nodes",
+    "edges",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "graph_id",
+        "graph_version",
+        "program_name",
+        "source_program_name",
+        "scenario_id",
+        "class_size",
+        "score_mode",
+        "requires_runtime_score_calculation"
+      ],
+      "properties": {
+        "graph_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "class_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "score_mode": {
+          "const": "precomputed_node_values"
+        },
+        "requires_runtime_score_calculation": {
+          "const": false
+        },
+        "scenario_id": {
+          "enum": [
+            "knowledge_full",
+            "mixed_evidence",
+            "course_totals_only"
+          ]
+        }
+      }
+    },
+    "program_plan": {
+      "type": "object",
+      "required": [
+        "name",
+        "training_goals",
+        "scope"
+      ]
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "green_min",
+        "yellow_min",
+        "min_coverage"
+      ],
+      "properties": {
+        "green_min": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "yellow_min": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "min_coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "course_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ]
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/node"
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/edge"
+      }
+    },
+    "summary": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "achievement_rate",
+        "health_color",
+        "coverage_rate",
+        "learning_state",
+        "grey_reason",
+        "evidence_granularity",
+        "sample_count",
+        "expected_count",
+        "score_is_provisional",
+        "score_provenance",
+        "aggregation_basis"
+      ],
+      "properties": {
+        "achievement_rate": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "health_color": {
+          "enum": [
+            "green",
+            "yellow",
+            "red",
+            "grey"
+          ]
+        },
+        "coverage_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "learning_state": {
+          "enum": [
+            "not_started",
+            "in_progress",
+            "completed"
+          ]
+        },
+        "grey_reason": {
+          "enum": [
+            null,
+            "not_started",
+            "no_evidence",
+            "insufficient_coverage"
+          ]
+        },
+        "evidence_granularity": {
+          "enum": [
+            "none",
+            "knowledge_assessment",
+            "knowledge_aggregate",
+            "course_total",
+            "course_aggregate"
+          ]
+        },
+        "sample_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "expected_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "score_is_provisional": {
+          "type": "boolean"
+        },
+        "score_provenance": {
+          "const": "simulated_precomputed"
+        },
+        "aggregation_basis": {
+          "enum": [
+            "none",
+            "knowledge_assessment",
+            "weighted_inputs",
+            "course_total"
+          ]
+        }
+      }
+    },
+    "node": {
+      "type": "object",
+      "required": [
+        "id",
+        "label",
+        "level",
+        "display_weight",
+        "source_refs",
+        "provenance",
+        "status",
+        "sidebar_info"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "level": {
+          "enum": [
+            "L1_Ability",
+            "L2_Course",
+            "L3_Knowledge"
+          ]
+        },
+        "display_weight": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "source_refs": {
+          "$ref": "#/$defs/refs"
+        },
+        "provenance": {
+          "type": "object"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "sidebar_info": {
+          "type": "object",
+          "required": [
+            "description",
+            "assessment_sources",
+            "remediation_advice",
+            "average_score",
+            "diagnosis_scope"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "assessment_sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "title",
+                  "kind",
+                  "is_simulated",
+                  "sample_count"
+                ]
+              }
+            },
+            "remediation_advice": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "average_score": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "diagnosis_scope": {
+              "const": "teacher_class_only"
+            }
+          }
+        },
+        "credits": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "semester": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "course_group_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "course_objectives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "description",
+              "knowledge_ids",
+              "ability_ids",
+              "provenance",
+              "participates_in_score_aggregation"
+            ],
+            "properties": {
+              "knowledge_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ability_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "participates_in_score_aggregation": {
+                "const": false
+              }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "level": {
+                "const": "L1_Ability"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "requirement_code",
+              "indicator_code",
+              "indicator_description"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "level": {
+                "const": "L2_Course"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "credits",
+              "semester",
+              "source_course_code",
+              "course_objectives",
+              "course_group_ids",
+              "course_nature"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "level": {
+                "const": "L3_Knowledge"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "course_id",
+              "concept_id",
+              "knowledge_kind"
+            ]
+          }
+        }
+      ]
+    },
+    "edge": {
+      "type": "object",
+      "required": [
+        "id",
+        "source",
+        "target",
+        "relation_type",
+        "relation_category",
+        "directed",
+        "aggregation_weight",
+        "source_refs",
+        "provenance",
+        "review_status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "relation_type": {
+          "enum": [
+            "supports",
+            "belongs_to",
+            "prerequisite",
+            "similar",
+            "parallel",
+            "contains"
+          ]
+        },
+        "relation_category": {
+          "enum": [
+            "hierarchical",
+            "peer"
+          ]
+        },
+        "directed": {
+          "type": "boolean"
+        },
+        "aggregation_weight": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "similarity_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/refs"
+        },
+        "provenance": {
+          "const": "simulated"
+        },
+        "review_status": {
+          "const": "demo_unreviewed"
+        }
+      }
+    }
+  }
+}
