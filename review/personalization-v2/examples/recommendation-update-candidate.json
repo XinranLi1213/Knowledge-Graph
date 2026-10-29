@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "record_type": "recommendation_update",
   "update_id": "UPDATE-DEMO001-C05-example",
-  "context_id": "CTX-DEMO001-mixed-teacher",
+  "context_id": "CTX-DEMO001-mixed-teacher-C05-v2",
   "subject": {
     "type": "student",
     "id": "DEMO001"

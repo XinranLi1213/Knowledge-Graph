@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "record_type": "recommendation_update",
   "update_id": "UPDATE-DEMO001-overview-example",
-  "context_id": "CTX-DEMO001-mixed-student",
+  "context_id": "CTX-DEMO001-mixed-student-overview-v2",
   "subject": {
     "type": "student",
     "id": "DEMO001"
@@ -56,21 +56,12 @@
         ],
         "prepare_node_ids": [],
         "resource_ids": [
-          "RES-C06",
-          "RES-C08",
-          "RES-C05"
+          "RES-C05",
+          "RES-C06"
         ],
         "evidence_refs": [
-          "EV-DEMO001-mixed_evidence-C05.K01",
-          "EV-DEMO001-mixed_evidence-C05.K02",
-          "EV-DEMO001-mixed_evidence-C05.K03",
           "EV-DEMO001-mixed_evidence-C06.K01",
-          "EV-DEMO001-mixed_evidence-C06.K02",
-          "EV-DEMO001-mixed_evidence-C06.K03",
-          "EV-DEMO001-mixed_evidence-C06.K04",
-          "EV-DEMO001-mixed_evidence-C06.K05",
-          "EV-DEMO001-mixed_evidence-C06.K06",
-          "EV-DEMO001-mixed_evidence-C08"
+          "EV-DEMO001-mixed_evidence-C06.K03"
         ],
         "origin": "llm_candidate",
         "lifecycle": "candidate"

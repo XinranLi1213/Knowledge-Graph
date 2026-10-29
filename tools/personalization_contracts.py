@@ -100,13 +100,26 @@ def make_schema():
         'graph_ref':ref('graph_ref'),'basis_snapshot':ref('snapshot_ref'),'resource_catalog_version':I,
         'basis_profile_version':I,
         'recommendations':arr(ref('recommendation'))})
+    d['context_node'] = obj({'id':S,'level':en('L1_Ability','L2_Course','L3_Knowledge'),'label':S,'description':S})
+    d['context_result'] = obj({'status':ref('status'),'progress_source':d['result']['properties']['progress_source'],
+        'evidence_refs':ids(),'detail_scope':en('complete','selected_evidence','summary_only'),
+        'omitted_evidence_count':{'type':'integer','minimum':0},'omitted_input_count':{'type':'integer','minimum':0}})
+    d['context_recommendation'] = obj({'recommendation_id':S,'audience':en('teacher','student'),
+        'target_node_id':nullable(S),'summary':S,'actions':arr(S),'basis_node_ids':ids(),'evidence_refs':ids(),
+        'omitted_basis_count':{'type':'integer','minimum':0},'omitted_evidence_count':{'type':'integer','minimum':0}})
+    d['context_selection'] = obj({'mode':en('node_neighborhood','overview_summary'),'seed_node_ids':ids(),
+        'max_hops':{'const':1},'omitted_node_count':{'type':'integer','minimum':0},
+        'limits':obj({'max_nodes':I,'max_edges':I,'max_evidence':I,'max_resources':I,'max_characters':I}),
+        'limitations':arr(S)})
+    d['focus_summary'] = obj({'weak_node_ids':ids(),'strength_node_ids':ids(),'provisional_low_node_ids':ids()})
     d['llm_context'] = record('llm_context', {'context_id':S,'subject':ref('student_subject'),'audience':en('teacher','student'),
         'graph_ref':ref('graph_ref'),'basis_snapshot':ref('snapshot_ref'),'base_bundle_version':I,
         'profile_version':I,'resource_catalog_version':I,'learning_context':d['profile']['properties']['learning_context'],
-        'evaluation_context':ref('context'),'selected_nodes':arr(ref('node')),
-        'selected_edges':arr(ref('edge')),'selected_results':{'type':'object','additionalProperties':ref('result')},
+        'evaluation_context':ref('context'),'selection':ref('context_selection'),'focus_summary':ref('focus_summary'),
+        'selected_nodes':arr(ref('context_node')),
+        'selected_edges':arr(ref('edge')),'selected_results':{'type':'object','additionalProperties':ref('context_result')},
         'evidence':arr(ref('evidence')),'resources':arr(ref('resource')),
-        'current_recommendations':arr(ref('recommendation')),
+        'current_recommendations':arr(ref('context_recommendation')),
         'task':obj({'target_node_ids':ids(),'include_overview':{'type':'boolean'},'output_record_type':{'const':'recommendation_update'},
             'constraints':arr(S,minItems=1)})})
     d['operation'] = obj({'op':en('upsert','remove'),'recommendation_id':S,'recommendation':ref('recommendation')},optional=('recommendation',))

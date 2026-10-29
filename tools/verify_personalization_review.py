@@ -145,6 +145,10 @@ def validate_update(update):
             if rid in existing:check(r['target_node_id']==existing[rid]['target_node_id'],'retargeted stable recommendation ID')
             check(r['origin']=='llm_candidate' and r['lifecycle']=='candidate','candidate lifecycle')
             recommendation_checks(r,snap)
+            for field in ['basis_node_ids','review_node_ids','prepare_node_ids']:
+                check(set(r[field])<=set(context['selected_results']),'node absent from supplied context')
+            check(set(r['evidence_refs'])<={e['evidence_id'] for e in context['evidence']},'evidence absent from supplied context')
+            check(set(r['resource_ids'])<={e['resource_id'] for e in context['resources']},'resource absent from supplied context')
         target=existing[rid]['target_node_id'] if op['op']=='remove' else op['recommendation']['target_node_id']
         check((target is None and context['task']['include_overview']) or target in context['task']['target_node_ids'],'outside requested node scope')
     return True
@@ -157,12 +161,33 @@ for path in sorted((P/'examples').glob('llm-context-*.json')):
     check(c['graph_ref']==snap['graph_ref'] and c['profile_version']==profiles[c['subject']['id']]['profile_version'],'context revision')
     check('display_name' not in c and 'student_number' not in c,'unnecessary identity export')
     check(set(c['selected_results'])=={n['id'] for n in c['selected_nodes']},'selected result alignment')
-    for k,v in c['selected_results'].items():check(v==snap['node_results'][k],'modified context facts')
-    for n in c['selected_nodes']:check(n==nodes[n['id']],'modified context graph')
+    evidence_ids={e['evidence_id'] for e in c['evidence']};selected=set(c['selected_results'])
+    for k,v in c['selected_results'].items():
+        original=snap['node_results'][k]
+        check(v['status']==original['status'] and v['progress_source']==original['progress_source'],'modified context facts')
+        check(set(v['evidence_refs'])==set(original['evidence_refs'])&evidence_ids,'context evidence selection')
+        check(v['omitted_evidence_count']==len(original['evidence_refs'])-len(v['evidence_refs']),'unlabelled evidence omission')
+        check(v['omitted_input_count']==len(set(original['input_node_ids'])-selected),'unlabelled input omission')
+    for n in c['selected_nodes']:check(n=={k:nodes[n['id']][k] for k in ['id','level','label','description']},'modified context graph')
     original_evidence={e['evidence_id']:e for e in snap['evidence']}
     for e in c['evidence']:check(e==original_evidence[e['evidence_id']],'modified context evidence')
     check({e for r in c['selected_results'].values() for e in r['evidence_refs']}<={e['evidence_id'] for e in c['evidence']},'incomplete context evidence')
     for r in c['current_recommendations']:check(r['audience']==c['audience'],'context role contamination')
+    check(all(e['source'] in selected and e['target'] in selected and e in graph['edges'] for e in c['selected_edges']),'context graph closure')
+    check(all(e['node_id'] in selected for e in c['evidence']),'recursive evidence spill')
+    limits=c['selection']['limits']
+    for field,limit in [('selected_nodes','max_nodes'),('selected_edges','max_edges'),('evidence','max_evidence'),('resources','max_resources')]:
+        check(len(c[field])<=limits[limit],'context count budget')
+    check(len(json.dumps(c,ensure_ascii=False))<=limits['max_characters'],'context character budget')
+    if c['selection']['mode']=='node_neighborhood':
+        expected={'C05'}
+        for edge in graph['edges']:
+            if edge['source']=='C05' or edge['target']=='C05':expected.update([edge['source'],edge['target']])
+        check(selected==expected and 'C02' in selected and 'C04' not in selected,'true one-hop selection')
+        check(not c['task']['include_overview'],'local request should not edit global overview')
+    else:
+        check(all(k in selected for k in nodes if nodes[k]['level']=='L1_Ability'),'overview lacks ability profile')
+        check(c['task']['include_overview'] and not c['task']['target_node_ids'],'overview write scope')
 
 candidate=read(P/'examples/recommendation-update-candidate.json');validate_update(candidate)
 validate_update(read(P/'examples/recommendation-update-overview-candidate.json'))
@@ -188,14 +213,39 @@ reject('cross-role update',lambda x:x.update(audience='student'))
 reject('unknown removal',lambda x:x.update(operations=[{'op':'remove','recommendation_id':'MISSING'}]))
 reject('active LLM output prohibited',lambda x:x['operations'][0]['recommendation'].update(lifecycle='active'))
 reject('outside requested task scope',lambda x:x['operations'][0].update(recommendation_id='NEW-OUTSIDE',recommendation={**x['operations'][0]['recommendation'],'recommendation_id':'NEW-OUTSIDE','target_node_id':'C01'}))
+reject('known node absent from context',lambda x:x['operations'][0]['recommendation'].update(basis_node_ids=['C05','C17']))
+reject('same student evidence absent from context',lambda x:x['operations'][0]['recommendation'].update(
+    basis_node_ids=['C05','C02'],evidence_refs=['EV-DEMO001-mixed_evidence-C02.K01']))
+reject('known resource absent from context',lambda x:x['operations'][0]['recommendation'].update(resource_ids=['RES-C09']))
+
+wire_schema=read(P/'contracts/recommendation-update.provider.schema.json')
+Draft202012Validator.check_schema(wire_schema);wire=Draft202012Validator(wire_schema)
+wire.validate(candidate);wire.validate(read(P/'examples/recommendation-update-overview-candidate.json'))
+def wire_structure(value):
+    if isinstance(value,dict):
+        check(not set(value)&{'allOf','oneOf','not','if','then','else'},'unsupported wire composition')
+        if value.get('type')=='object':
+            check(value.get('additionalProperties') is False,'wire object must be closed')
+            check(set(value['required'])==set(value['properties']),'wire fields must be required')
+        for child in value.values():wire_structure(child)
+    elif isinstance(value,list):
+        for child in value:wire_structure(child)
+wire_structure(wire_schema)
+check(wire_schema.get('type')=='object' and 'anyOf' not in wire_schema,'wire root object')
 
 report={'status':'passed','scope':'contracts/data only; frontend and LLM not executed',
     'counts':manifest['counts'],'schema_record_count':4+len(snapshots)+len(bundles)+len(contexts)+2,
     'checks':['schema types and date formats','public vs subject separation','stable node IDs','roster references',
     'complete snapshot coverage','independent learning progress','weighted score/coverage consistency',
     'all 40 students vs legacy class means','course-total fallback','dual-role advice/evidence references',
-    'local resources exist','LLM context binding','candidate-only update protocol','baseline application files unchanged'],
-    'negative_update_cases_rejected':negative,'max_numeric_tolerance':.000002}
+    'local resources exist','LLM context binding','task-specific one-hop and overview contexts',
+    'context evidence omissions and count budgets','provider output schema offline shape',
+    'candidate-only update protocol','baseline application files unchanged'],
+    'negative_update_cases_rejected':negative,'max_numeric_tolerance':.000002,
+    'context_counts':[{ 'file':p.name,'mode':read(p)['selection']['mode'],
+        'nodes':len(read(p)['selected_nodes']),'edges':len(read(p)['selected_edges']),'evidence':len(read(p)['evidence'])}
+        for p in sorted((P/'examples').glob('llm-context-*.json'))],
+    'provider_schema_check':'offline subset and sample checks passed; API acceptance not tested'}
 (P/'validation-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 overview=['# 个性化图谱数据审查概览','',
     '本包仅用于数据契约与方案审查，现有应用仍读取旧版JSON。','',
@@ -212,7 +262,7 @@ overview += ['', '班级C05仍为49.65（显示精度2位）；个人值直接�
     '- data/graph.json：唯一公共图谱；data/students.json：模拟名册与学习背景。',
     '- data/snapshots/student/DEMO001/mixed_evidence.json：重点审查的个人快照。',
     '- data/recommendations/DEMO001/mixed_evidence.json：教师/学生的总体与节点建议。',
-    '- examples/：两个角色的LLM输入示例，以及节点建议、总体建议两个未应用的更新候选。',
+    '- examples/：教师/学生局部诊断、学生总体画像三份LLM输入，以及两个未应用的更新候选。',
     '- resources/：18份实际存在的本地复习任务单，不是虚构外链。',
     '- contracts/contract.schema.json：8类记录与共享字段定义。','',
     '建议候选只通过校验，未写回任何现有建议包、图谱、侧栏或页面。','']

@@ -10,7 +10,7 @@
     "recommendations": 2502,
     "local_resources": 18
   },
-  "schema_record_count": 140,
+  "schema_record_count": 141,
   "checks": [
     "schema types and date formats",
     "public vs subject separation",
@@ -24,6 +24,9 @@
     "dual-role advice/evidence references",
     "local resources exist",
     "LLM context binding",
+    "task-specific one-hop and overview contexts",
+    "context evidence omissions and count budgets",
+    "provider output schema offline shape",
     "candidate-only update protocol",
     "baseline application files unchanged"
   ],
@@ -41,7 +44,34 @@
     "cross-role update",
     "unknown removal",
     "active LLM output prohibited",
-    "outside requested task scope"
+    "outside requested task scope",
+    "known node absent from context",
+    "same student evidence absent from context",
+    "known resource absent from context"
   ],
-  "max_numeric_tolerance": 2e-06
+  "max_numeric_tolerance": 2e-06,
+  "context_counts": [
+    {
+      "file": "llm-context-student-C05.json",
+      "mode": "node_neighborhood",
+      "nodes": 11,
+      "edges": 17,
+      "evidence": 3
+    },
+    {
+      "file": "llm-context-student.json",
+      "mode": "overview_summary",
+      "nodes": 20,
+      "edges": 17,
+      "evidence": 4
+    },
+    {
+      "file": "llm-context-teacher.json",
+      "mode": "node_neighborhood",
+      "nodes": 11,
+      "edges": 17,
+      "evidence": 3
+    }
+  ],
+  "provider_schema_check": "offline subset and sample checks passed; API acceptance not tested"
 }
