@@ -1,0 +1,949 @@
+{
+  "source": "real_configured_service",
+  "cases": [
+    {
+      "case": 0,
+      "binding": {
+        "subject_type": "class",
+        "subject_id": "COMM-DEMO-40",
+        "audience": "teacher",
+        "scenario": "mixed_evidence",
+        "node_id": "C02"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-5f47b693c8484888be8db69aae86c413",
+        "session_id": "9b1216885264b5b88e63b8ad1f203567b6a9633c930e1da97930fbd12a044298",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-efb57872c83e4654943a2b728f0f2533",
+        "question": "这门课需要关注什么？请给出教师可以实际采取的教学措施。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "结论先行：本班「模拟电子技术」达成度71.28分、评价覆盖100%，六个知识点均已有评价，可直接在知识点层面比较，不必停在课程总分。相对靠后的两项是「小信号放大」62.90分与「半导体器件模型」69.32分；结合课内前置链（器件模型→偏置→小信号放大→负反馈→运放→调试），本轮优先项就锁定这一对，先补前置、再攻最低项。支撑课程「电路分析」83.63分，前置基础相对稳定；「通信电子线路」学习中、覆盖50%，其阶段性分数不参与本课判断。分数只提示排查顺序，不能证明具体错因，也不能推断某个学生。\n\n一、先关注什么\n把复习时间集中在前置链“器件模型→偏置→小信号放大”，不平均用力六个知识点。「晶体管偏置」76.22分虽不是最低，但是小信号放大的直接前置，不能跳过。\n\n二、用短测定位（不计分，记录到知识点层面用于分组）\n可沿用此前已核验参数的算例：器件模型题——5V源经1kΩ接二极管阳极（恒压降模型0.7V），求导通状态与电流，再按VE=0V、VB=0.7V、VC=6V判断NPN工作区，变式把电源改为0.4V；评分看回路方向、导通假设、单位与工作区理由。小信号题——固定偏置共射电路（VCC=12V、RB=560kΩ、RC=2kΩ、RL=10kΩ经耦合电容接入、β=100、VBE=0.7V、VT=26mV，忽略基区体电阻与输出电阻），先求静态点（IBQ≈20.2µA、ICQ≈2.02mA、VCEQ≈7.96V）并核对放大区，再按rπ≈1288Ω求中频增益Av≈-129；变式仅把RL改为5kΩ，直流点不变、Av≈-111。评分看是否“先静态后动态”、受控源方向与耦合/旁路电容处理、增益符号与量级。注意此前历史答复中300kΩ/3kΩ的旧例题参数条件已不适用，请以560kΩ/2kΩ为准，不要混用。\n\n三、分层讲解\n基础层：模型适用条件与工作区判定，同一电路只改一个偏置参数复做；中间层：固定“先定静态工作点、再画等效电路”的流程，讲清每步依据；较好层：讨论RL等条件变化对增益的代价，并标出负反馈的取样与混合位置，向负反馈、运放迁移。\n\n四、复测与巩固\n一两周后用同结构换数值的题复测上述两点，比较过程记录与变条件解释的完整度；若小信号项仍低而模型回升，问题可能在等效电路或增益计算环节，再调下一轮重点，复测只作教学调整依据、不直接改分。相对靠前的「负反馈」「晶体管偏置」不必重讲，改为安排与小信号放大、运放相关的综合迁移任务，可用「模拟电子技术·复习任务单」的自查步骤引导学生自检（任务单不含现成题目）。",
+          "cited_node_ids": [
+            "C02",
+            "C02.K01",
+            "C02.K02",
+            "C02.K03",
+            "C01"
+          ],
+          "cited_evidence_ids": [
+            "EV-COMM-DEMO-40-mixed_evidence-C02",
+            "EV-COMM-DEMO-40-mixed_evidence-C02.K01",
+            "EV-COMM-DEMO-40-mixed_evidence-C02.K03"
+          ],
+          "resource_ids": [
+            "RES-C02"
+          ],
+          "limitations": [
+            "所有评价为演示数据，缺少具体作答过程，分数不能用于认定错因。",
+            "班级统计不能用于判断单个学生的表现。",
+            "「通信电子线路」尚在学习中、覆盖50%，其分数为阶段性，不参与本课判断。",
+            "短测题为按通用学科知识与教学参考自行设计，非复习任务单中的现成题目；此前历史答复中300kΩ/3kΩ旧例题参数不适用，已被核验算例取代。"
+          ]
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:25:44.839941+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-eec385bc967b4413bee2588878fefae9",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-5f47b693c8484888be8db69aae86c413",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 10247,
+          "output_tokens": 946
+        },
+        "created_at": "2026-10-30T02:25:44.839941+00:00",
+        "updated_at": "2026-10-30T02:25:50.778225+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-4",
+          "elapsed_ms": 5905,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 1,
+      "binding": {
+        "subject_type": "class",
+        "subject_id": "COMM-DEMO-40",
+        "audience": "teacher",
+        "scenario": "mixed_evidence",
+        "node_id": "C02"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-69d62216ca464884be8ccde3ee5d2ab7",
+        "session_id": "9b1216885264b5b88e63b8ad1f203567b6a9633c930e1da97930fbd12a044298",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-efb57872c83e4654943a2b728f0f2533",
+        "question": "把刚才建议的短测具体写成两道建议题，给出评分要点，暂不提供完整答案。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "承接上一轮，优先项与顺序不变：先「半导体器件模型」（69.32分，是小信号放大的前置），再「小信号放大」（62.90分，本课已评价知识点中最低）。以下两题由我按通用学科知识与教学参考自行设计，不是「模拟电子技术·复习任务单」中的现成题目（该任务单只提供自主检查步骤）；按要求本轮只给题面、任务与评分要点，不给完整解答。评分要点用于课堂过程核验与分组，不是学校正式评分标准，也不能据此认定错因。\n\n【建议题1 · 半导体器件模型】（约8分钟，不计分）\n题面：5V直流源正端经1kΩ电阻接硅二极管阳极，阴极回电源负端；采用正向导通压降0.7V、反向截止的恒压降模型。另有一只NPN三极管，测得 VE=0V、VB=0.7V、VC=6V。变式：仅把电源由5V改为0.4V，其余不变。\n任务：(1) 判断二极管是否导通并算出电流；(2) 写明所用模型的适用条件，并说明改用理想模型时结果相差多少、量级如何；(3) 按两个结的偏置方向判断三极管工作区并给理由；(4) 说明在该状态下为何不能直接套用小信号增益公式。\n评分要点：回路方向与“先假设导通再校验”的步骤约25%；电流数值与单位约20%；模型适用条件及两种模型差异量级约25%；工作区判断必须以两个结偏置为理由，只写结论不给分约20%；第(4)问点出“小信号分析以合适静态工作点为前提”约10%。变式（0.4V低于导通压降，二极管截止、电流为零）作为附加观察点，不计入主分。\n\n【建议题2 · 小信号放大】（约15分钟，不计分）\n题面：NPN固定偏置共射电路：发射极接地，VCC=12V，RB=560kΩ由VCC接基极，RC=2kΩ由VCC接集电极，RL=10kΩ经耦合电容接输出（直流开路、中频交流短路）；β=100，VBE=0.7V，VT=26mV，忽略基区体电阻与输出电阻；输入为基极对地峰值0.5mV的小信号。变式：仅把RL改为5kΩ，其余全部不变。\n任务：(1) 求IBQ、ICQ、VCEQ 并核对是否在放大区；(2) 静态点确定后画小信号等效电路并标出 rπ；(3) 写出中频电压增益表达式（含符号）；(4) 说明变式中直流工作点是否变化、增益如何变化及原因；(5) 检验输入幅度是否满足小信号近似的条件。\n评分要点：必须“先静态后动态”，未定静态点直接画等效电路的扣过程分约30%；等效电路中受控源方向、rπ接入位置、耦合电容在交流通路中的处理约30%；增益为负、量级合理、量纲正确约20%；变式能说明“RL经耦合电容接入，只改变交流负载、不改变直流工作点，故增益幅值下降”约15%；第(5)问以输入幅度远小于VT判断近似成立约5%。\n\n【使用方式】按“先1后2”顺序完成，结果记录到知识点层面用于分组和下一轮复习排序；一两周后用同结构换数值的题复测，比较过程记录（推导步骤、图、条件说明）而不只看数值。\n\n【关于历史旧例】此前一份答复中的共射例题使用了300kΩ/3kΩ参数，那组参数下的条件已不适用于本轮核验算例，请以本题2的560kΩ/2kΩ为准，不要混用或沿用旧结论。",
+          "cited_node_ids": [
+            "C02",
+            "C02.K01",
+            "C02.K03"
+          ],
+          "cited_evidence_ids": [
+            "EV-COMM-DEMO-40-mixed_evidence-C02",
+            "EV-COMM-DEMO-40-mixed_evidence-C02.K01",
+            "EV-COMM-DEMO-40-mixed_evidence-C02.K03"
+          ],
+          "resource_ids": [
+            "RES-C02"
+          ],
+          "limitations": [
+            "两题为按通用学科知识与教学参考自行设计的建议题，不是复习任务单中的现成题目；本轮按要求不提供完整答案。",
+            "仅有班级层面演示评价分数，缺少具体作答记录，评分要点不能用于认定错因或推断某个学生。",
+            "历史答复中300kΩ/3kΩ的旧例题参数与当前核验算例不一致，旧例条件不适用，已由560kΩ/2kΩ替代。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:25:51.216244+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-9e6cf4a51fea45fe86717fa02c49e321",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-69d62216ca464884be8ccde3ee5d2ab7",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 10299,
+          "output_tokens": 1072
+        },
+        "created_at": "2026-10-30T02:25:51.216244+00:00",
+        "updated_at": "2026-10-30T02:25:57.213554+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-4",
+          "elapsed_ms": 5968,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 2,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C09.K01"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-8044d33e800c4358ab9d743ea0089dad",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-b02bbe9dc12440b394f7736158c832c6",
+        "question": "给我一道C语言整数除法与浮点转换的自测题，写出完整代码和两个要比较的表达式。先不给答案。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "按你的要求，只给题面，不给答案与结果。下面这道题只围绕「整数除法与浮点转换」设计，代码可直接编译运行。\n\n题面：在 C99 及之后的规则下（int 至少 16 位，本机 int 为 32 位，b 恒非零，全为正数，不涉及除零与有符号溢出），阅读并运行下面代码：\n\n#include <stdio.h>\nint main(void) {\n    int a = 9, b = 4;\n    int p = a / b;\n    double q = a / b;\n    double r = (double)a / b;\n    double s = a / (double)b;\n    double t = (double)(a / b);\n    printf(\"%d %.2f %.2f %.2f %.2f\\n\", p, q, r, s, t);\n    return 0;\n}\n\n你要完成的任务（先写在纸上预测，再运行核对，并保留记录）：\n1. 两个核心要比较的表达式：a / b 与 (double)a / b。分别写出它们执行除法那一刻，/ 两侧操作数的类型，以及结果的类型。\n2. 预测 p、q、r、s、t 五个输出值（保留两位小数形式），并说明 q 与 r 为什么不相等，而 r 与 s 相等。\n3. 说明 t 与 r 的差别来自哪一步运算顺序。\n4. 判断这五个表达式里，哪些项属于「先做整数除法再转换」，哪些项属于「除法本身就是浮点运算」，各列出变量名。\n5. 只改一个条件做变式：把 b 由 4 改为 5（a、类型、其余代码都不动），重新预测 p、q、r、s、t 五个值，再运行核对，记下哪一项预测与输出不符及原因。\n6. 迁移一问：若把变量 a、b 声明为 int，sum、n 也为 int，要得到平均值 3.50，转换应写在什么位置？给出正确写法并说明写在整体结果外面（如 (double)(sum / n)）为何不行。\n\n写法要求：每一步都写明「除法执行时 / 两侧各是什么类型」，这是本题的判分核心；不要求写解释性长文，但类型判断与运算顺序的判断必须逐项写出。保留纸笔稿与运行输出交教师核验。需要注意的是，浮点类型在本机为 double，printf 中使用 %f 打印，若用 float 变量参与 printf 需注意默认实参提升规则，本题不必涉及。",
+          "cited_node_ids": [
+            "C09.K01",
+            "C09.K02"
+          ],
+          "cited_evidence_ids": [],
+          "resource_ids": [
+            "RES-C09"
+          ],
+          "limitations": [
+            "本题与变式由我按通用 C 语言规则设计，未逐项核对你的作答结果，因此不含答案与结论。",
+            "复习任务单只提供自主检查步骤，不含具体试题与标准答案；本题目不是任务单中的内容。",
+            "现有评价只有知识点级达成度，缺少你的具体作答与运行记录，不能据此认定你会卡在哪一步。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:25:57.564027+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-967fc90f3aaa41139e4073273f3e1875",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-8044d33e800c4358ab9d743ea0089dad",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6680,
+          "output_tokens": 724
+        },
+        "created_at": "2026-10-30T02:25:57.564027+00:00",
+        "updated_at": "2026-10-30T02:26:02.955615+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-4",
+          "elapsed_ms": 5375,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 3,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C09.K02"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-1661c15ca19744828157c51b8a62dd7f",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K02",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-d6e5453a738d498a94f2bdd236d9a569",
+        "question": "给出刚才那道题的答案，尤其解释第二个表达式为什么会不同。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "直接回答：那道题里第一个表达式是 a / b，两个操作数都是 int，所以进行的是整数除法，结果类型也是 int，9/4 得到 2，丢弃小数部分。第二个表达式是 (double)a / b，强制转换先作用在 a 上，于是 / 左侧是 double、右侧 int 被提升为 double，执行的是浮点除法，得到 2.25。差别不在赋值，而在「除法执行那一刻，/ 两侧是什么类型」。\n\n逐项对照题目要求：\n\np = a / b：int 除 int，得 int 2，赋给 int，仍为 2。\nq = a / b：右边依旧先做整数除法得 int 2，然后才隐式转换成 double 赋给 q，所以是 2.0，而不是 2.25。这正是最容易错的一处：变量类型是 double，但除法发生时两边都是 int。\nr = (double)a / b：先转换为 9.0，再与 4（被提升为 4.0）相除，得 2.25。\ns = a / (double)b：转换作用在 b 上，同样得 2.25。所以 r 与 s 相等，因为二者都保证「除法本身是浮点运算」。\nt = (double)(a / b)：括号先算 a/b，得到 int 2，之后才转 double，得 2.0。\n\n所以五个输出为 p=2，q=2.00，r=2.25，s=2.25，t=2.00。分类：属于「先整数除法再转换」的是 p、q、t；属于「除法本身就是浮点运算」的是 r、s。q 与 r 不相等，就是因为 q 的转换发生在除法之后；t 与 r 的差别来自转换写在括号外还是先作用于操作数。\n\n只改 b=5 的变式：p=1（9/5 整数除法舍去 0.8），q=1.00（同理，转换在除法后），r=1.80，s=1.80，t=1.00。若你预测 q 为 1.8 而与输出不符，原因就是忽略了「除法表达式先按 int 计算，再赋值转换」。\n\n迁移一问：sum、n 都是 int，要得到 3.50，应把转换写在除法之前，例如 (double)sum / n 或 sum / (double)n；写成 (double)(sum / n) 只是把已经截断的整数结果转成 double，小数部分在整数除法时就已经丢了，无法找回。\n\n一步可执行的自检：合上答案，自己在纸上写清每个表达式中 / 两侧的操作数类型，再运行核对；然后把 b 改成 7 复做一次（p=1、q=1.00、r≈1.29、s≈1.29、t=1.00），看你的类型判断是否稳定。保留纸笔稿与运行输出，可交教师核验。",
+          "cited_node_ids": [
+            "C09.K01",
+            "C09.K02"
+          ],
+          "cited_evidence_ids": [],
+          "resource_ids": [
+            "RES-C09"
+          ],
+          "limitations": [
+            "本题答案依据 C 语言通用规则与上一轮已给出的题面推出，属通用知识讲解，不是对你作答的评分记录。",
+            "复习任务单只提供自主检查步骤，不含具体试题与标准答案；本答案不来自任务单。",
+            "变式中的数值是我按同一规则推算的，尚未核对你的实际运行输出。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:26:03.889823+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-bbb6fe45c89f4f888e9f9210af85f965",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K02",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-1661c15ca19744828157c51b8a62dd7f",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6542,
+          "output_tokens": 797
+        },
+        "created_at": "2026-10-30T02:26:03.889823+00:00",
+        "updated_at": "2026-10-30T02:26:09.750564+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-4",
+          "elapsed_ms": 5828,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 4,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "teacher",
+        "scenario": "course_totals_only",
+        "node_id": "C07"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-79f80c8a989f4e019b06cf66f4326493",
+        "session_id": "c1a875adffcc37c561a547ed5123913e2c5904e8b73873b041497ec62bbf3b87",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "course_totals_only"
+        },
+        "audience": "teacher",
+        "target_node_id": "C07",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-course_totals_only",
+          "revision": 1
+        },
+        "discussed_artifact_id": null,
+        "question": "根据当前证据，能断定哪个具体知识点薄弱吗？下一步应补什么测评？",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "结论与前几轮一致：不能断定哪个具体知识点薄弱。本轮没有新增作答、错题、课堂观察或知识点级记录。可核实的仍是课程层证据——电磁场与电磁波68分（100分制达成度，覆盖100%），微波工程基础72分，工程知识能力项75.45分（共5条证据，展示1条、其余4条未展示）；C07下六个知识点（矢量场、静电场、麦克斯韦方程组、平面电磁波、传输线、驻波测量）无分数、覆盖率为0，状态是“已完成但未测”。因此68分只提示整门课需要排查，只能用来定排查顺序，不能指向具体节点，也不能当错因证据。\n\n下一步仍以定位测评为先，两个优先节点及顺序不变：第一优先C07.K03麦克斯韦方程组（课程内权重0.2，前置为静电场、后接平面电磁波，位于链条中段）；第二优先C07.K05传输线（后接驻波测量，且是微波工程基础C13的先修）。\n\n短测建议（教师自行命制，任务单不含试题）：①麦克斯韦方程组4小题，各为一种给定现象写出对应方程并解释其中各物理量的意义（变化磁场生电场、位移电流、磁通连续性、电荷激发电场），限时15分钟；②传输线3小题，画出终端短路、开路、匹配三种情况下入射波与反射波叠加后的电压分布示意，并说明终端阻抗变化对反射与驻波的影响，限时15分钟。合计约30分钟，远低于每周90分钟可用时间，为复测留出余量。\n\n实施与核验：每题保留推导与示意图；测后改变一个条件复做（如短路改开路、正入射改斜入射），首测与复测分别记录，比较推导完整性与单位、边界检查是否到位，差异由教师核验；不以完成建议直接改动分数。只有形成知识点级记录后才谈补强重点。若两项短测均未暴露困难，再按先修顺序抽查C07.K01矢量场（它是静电场的前置，先查更经济）与C07.K02静电场。RES-C07为复习任务单，仅提供自主检查步骤。",
+          "sections": null,
+          "cited_node_ids": [
+            "C07",
+            "C07.K03",
+            "C07.K05",
+            "C07.K01",
+            "C07.K02",
+            "C07.K04",
+            "C07.K06",
+            "C13",
+            "A01"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-course_totals_only-C07",
+            "EV-DEMO001-course_totals_only-C13"
+          ],
+          "resource_ids": [
+            "RES-C07"
+          ],
+          "limitations": [
+            "演示评价缺少学生具体作答过程，分数只能提示排查顺序，不能据此认定错因。",
+            "C07与C13目前只有课程总分，知识点层面须先测评才能定位；六个知识点覆盖率为0。",
+            "工程知识能力项共5条证据、本轮展示1条，其余4条未展示，因此不能断言证据唯一或不存在知识点评价。",
+            "教学参考为通用建议，不是学生错误记录；上述短测题需教师自行命制或另行选用。"
+          ]
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:26:10.525296+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-e91675ae70284fdca48eae5d2a5952f8",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "course_totals_only"
+        },
+        "audience": "teacher",
+        "target_node_id": "C07",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-course_totals_only",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-79f80c8a989f4e019b06cf66f4326493",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6812,
+          "output_tokens": 708
+        },
+        "created_at": "2026-10-30T02:26:10.527296+00:00",
+        "updated_at": "2026-10-30T02:26:15.195022+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-4",
+          "elapsed_ms": 4577,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 5,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C05.K05"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-857abb1a362f49b2880b798c00f05a45",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C05.K05",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-9d768f956ae1421490cd9ec4f5ccf97e",
+        "question": "我还没学这个内容，应该怎么预习？请给一个具体的小任务。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "你当前的目标节点是「调幅与检波」，学习状态是尚未开始、也没有任何该知识点的测评记录，所以现在给的是预习准备，不是补错。它的直接先修是「振荡器」，再往前是功率放大、高频小信号放大、LC谐振；这几项你已有评价、达成度在 48.7–57.56 之间，说明载波与谐振这些基础你接触过但还不算稳，预习时可以顺手回看。\n\n预习分两步走，本周 90 分钟够用：\n\n第一步（约 40 分钟）打概念底子。合上资料，用自己的话写清三件事：调幅是把低频信息搬到高频载波上，载波的幅度随调制信号变化；描述它只需要三个量——载波频率、调制信号频率、调制度 m；m 的定义是「包络最大幅度与最小幅度之差的一半除以二者之和的一半」，并写明 m>1 会出现过调制、包络交叉、普通包络检波无法恢复原信号。再画一张图：同一载波下 m=0.3 与 m=0.9 的包络形状对比。\n\n第二步（约 50 分钟）动手小任务，直接对应本知识点的检查要求——用同一载波完成调制与检波仿真并比较包络和频谱。具体做法：取载波 fc=100 kHz、幅度 1 V，调制信号 fm=1 kHz、幅度分别取 0.3 V 与 0.9 V；用示波器看包络与调制信号是否一致，用频谱看载波与上下边频（fc±fm）三根谱线，记录两个边频相对载波的幅度关系；然后接二极管包络检波器，观察输出波形，再把时间常数 RC 改大（例如加大到使 RC·fm 明显大于 1 的量级），记录出现的对角切割失真，说明为什么检波器的时间常数需要「足够大又不过大」。全部保留波形截图、频谱截图和一段推导笔记。由于还没有你的任何作答，这个任务只作预习检查路径，不预设你会卡在哪。\n\n最后做一次条件自检：改变一个条件（比如把 fm 从 1 kHz 改成 5 kHz）重做一遍，解释包络疏密与频谱间距如何变化。做完把记录交教师核验——这是教学参考里的检查方式，不是我给你的打分。",
+          "cited_node_ids": [
+            "C05.K05",
+            "C05.K04",
+            "C05.K03",
+            "C05.K02",
+            "C05.K01",
+            "C08.K02"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C05.K01",
+            "EV-DEMO001-mixed_evidence-C05.K02",
+            "EV-DEMO001-mixed_evidence-C05.K03"
+          ],
+          "resource_ids": [
+            "RES-C05",
+            "RES-C08"
+          ],
+          "limitations": [
+            "该知识点目前没有任何测评记录，无法判断你可能的具体困难，上述任务是预习路径而非针对性纠错。",
+            "任务中的参数与仿真设置由我按通用学科知识设计，不是复习任务单内容；任务单只提供自主检查步骤，不含具体题目与标准答案。",
+            "先修知识点的达成度来自演示评价，只能提示回看顺序，不能作为错因结论。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:26:16.235935+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-b333d259f2164b3fa0f9aedd83f5bc8d",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C05.K05",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-857abb1a362f49b2880b798c00f05a45",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 7283,
+          "output_tokens": 732
+        },
+        "created_at": "2026-10-30T02:26:16.236933+00:00",
+        "updated_at": "2026-10-30T02:26:22.802352+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-4",
+          "elapsed_ms": 6485,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 6,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "teacher",
+        "scenario": "mixed_evidence",
+        "node_id": "A04"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-23cb0ac60b864e209b542ed0f3a058ee",
+        "session_id": "9648ae2137e5458aa8fd4f5d2c1093da752876c915cb5494c9ece7ce99f24c34",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "A04",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-4521680b10d54220af1fcde3a1d08625",
+        "question": "这个分数现在能说明能力不合格吗？请说明依据和下一步如何补充证据。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "不能。A04「复杂工程问题研究能力」当前达成度55.44分（100分制），覆盖率40%，状态为学习中、待继续测评，证据粒度仍是课程聚合，因此这个分数只反映已评价部分，是阶段性提示，不能作为“能力不合格”的判断依据。A04下共7条证据，本轮仅展示1条，另有6条未展示；A04下已评价知识点数为0，能力层尚未拆到知识点。支撑课程方面：C16「电子系统工程实践」（权重0.2，覆盖率0，尚未开始）与C17「毕业设计」（权重0.4，覆盖率0，尚未开始）合计贡献六成支撑，而这两门恰是研究能力最直接的可观察载体，目前完全空缺；C06「数字信号处理」已完整评价（覆盖100%），达成度48.38分，有6个知识点评价，可提示排查顺序；C08「通信原理」已完整评价但只有一个课程总评62.5分，属课程总分，无法定位知识点；另A03与A04为并列关系，A03同样覆盖不足，不能反过来为A04提供定位依据。\n\n补充证据分三步。第一步，把C06已有的知识点评价转成A04可观察的过程证据：从6个已评价知识点中取表现最低的2个作为优先项，做一次20分钟级短测，重点记录过程而非重算分数——学生能否自己界定问题、选择方法并说明理由、用仿真或手算验证、对偏差作出解释。复习任务单只提供自主检查步骤，不含具体试题，题目需自行设计。第二步，对C08先测评再定位：用一份短测或任务中的过程记录，把62.5分拆成“问题表述—方法选择—验证”三类可观察表现，再判断它能否支撑A04。第三步，以C16一个自设的综合小任务作为A04的主证据。该任务可设计为：给定具体通信或信号处理场景（例如在给定采样率下检测某频段干扰并给出抑制方案，须写明信号形式、采样参数、干扰频段与性能要求），要求学生完成需求拆解、技术调研、指标设定、方案对比、实验或仿真设计、数据验证、结果反思的完整链条；用量规分四维评分——问题界定（是否识别约束与隐含前提）、方法选择理由（是否比较备选并说明取舍）、验证充分性（是否有对照、多条件测试、误差说明）、反思深度（是否指出方案失效边界与改进路径），每维给出可观察的行为等级，保留草稿、记录、汇报材料，不只看最终结果。C17毕业设计尚未开始，可作为后续高权重证据来源纳入规划，本轮不评价。每周90分钟可安排：一次短测或任务单自查约30分钟，加一次综合任务的阶段汇报与整改约60分钟。\n\n需区分两点：上述短测与量规属于通用教学建议，不是已记录的学生错误，也不代表学校规定；补测只作为新证据加入，不能直接改写现有分数。局限在于本轮为演示评价、缺少具体作答过程，A04的6条证据未展示，不能断言学生只有一条证据或没有知识点评价；C06、C08的课程分数只能提示排查顺序，不能证明A04的具体错因。",
+          "cited_node_ids": [
+            "A04",
+            "A03",
+            "C06",
+            "C08",
+            "C16",
+            "C17"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C08"
+          ],
+          "resource_ids": [
+            "RES-C06",
+            "RES-C08",
+            "RES-C16",
+            "RES-C17"
+          ],
+          "limitations": [
+            "所有评价为演示数据，缺少具体作答过程，不能据分数认定具体错因。",
+            "A04仅评价40%覆盖，分数为阶段性；其下6条证据未展示，不能声称证据唯一或无知识点评价。",
+            "C06有6个知识点评价但均为课程层证据，不等于A04已定位薄弱知识点；C08仅有课程总评，只能提示排查顺序。",
+            "C16、C17尚未开始、覆盖率为0，属证据缺口，不等于能力缺失。",
+            "任务设计与量规为通用教学建议，不是学生错误记录或学校规定，补测不直接改分。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:26:23.183876+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-2e171458541c4920867a817e8a0fc1dd",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "A04",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-23cb0ac60b864e209b542ed0f3a058ee",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6796,
+          "output_tokens": 930
+        },
+        "created_at": "2026-10-30T02:26:23.184879+00:00",
+        "updated_at": "2026-10-30T02:26:28.611294+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-4",
+          "elapsed_ms": 5343,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 7,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C02.K03"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-c78ea2d8c5434bcd8fa993cdf6f96deb",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-6a7c268229a54999a4c72bcdef465971",
+        "question": "用一个具体简单例子解释小信号等效分析的步骤，不要复述我的全部得分。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "小信号等效分析的核心思路：先把直流和交流分开——直流用来定静态工作点，交流只用来算增益；交流通路里把晶体管换成一个受控源加一个电阻（rπ），于是放大电路就变成一个纯线性电路。步骤是：定Q点 → 求rπ → 画交流等效 → 用欧姆定律算增益。\n\n用一个已核验过的算例走一遍：NPN 固定偏置共射电路，发射极接地，VCC=12V，RB=560kΩ 从 VCC 接基极，RC=2kΩ 从 VCC 接集电极，RL=10kΩ 经耦合电容接输出，β=100，VBE=0.7V，VT=26mV，忽略基区体电阻 rbb' 与输出电阻 ro。\n\n第一步，直流通路（电容按开路，输入信号置零）。\nIBQ=(VCC−VBE)/RB=(12−0.7)/560k≈20.2μA；ICQ=βIBQ≈2.02mA；VCEQ=VCC−ICQ·RC≈12−4.04≈7.96V。检查 VC=7.96V > VB=0.7V，集电结反偏，晶体管确在放大区——若检查不通过，后面线性等效就不成立，必须先修正偏置。\n\n第二步，求 rπ。rπ=βVT/ICQ=100×26mV/2.02mA≈1288Ω。它代表基极看进去的小信号电阻，随ICQ增大而变小。\n\n第三步，画交流等效。直流电源对交流是地，耦合电容中频短路，于是 RB 从基极接地、RC 从集电极接电源地、RL 并从集电极接地；晶体管替换为 b-e 之间的 rπ 和 c-e 之间的受控电流源 βib。注意 RB 只出现在直流通路，不进增益公式。\n\n第四步，算增益。RC∥RL=2k∥10k≈1.667kΩ，Av=−β(RC∥RL)/rπ≈−100×1667/1288≈−129.3。负号表示中频时输出与输入反相。\n\n第五步，验算近似条件。输入基极对地峰值0.5mV，远小于VT=26mV，小信号线性化成立；再核对|Av|×0.5mV≈65mV的摆幅不超出静态裕量（VCEQ≈7.96V），输出不削顶。\n\n一次可执行的自检：只把RL由10k改为5kΩ，其余参数全不动。RL经耦合电容接入，不改变直流，所以IBQ、ICQ、VCEQ、rπ都不变；只有并联值变为2k∥5k≈1.429kΩ，Av≈−100×1429/1288≈−110.9，|Av|从约129降到约111。如果你算出直流也变了，说明把RL误算进了直流通路。做完把推导交教师核验。",
+          "cited_node_ids": [
+            "C02.K03",
+            "C02.K02",
+            "C01.K04"
+          ],
+          "cited_evidence_ids": [],
+          "resource_ids": [
+            "RES-C02"
+          ],
+          "limitations": [
+            "讲解中的数值来自已核验的参考算例，不是对你具体作答的评价；你的知识点级达成度不能说明你卡在哪一步。",
+            "电路工作在给定理想模型下（忽略 rbb'、ro，运放外晶体管热电压取26mV），实际器件参数不同需重新核对近似条件。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:26:29.160437+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-73039fbda87a465f98cf5f64b21699ed",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-c78ea2d8c5434bcd8fa993cdf6f96deb",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 8018,
+          "output_tokens": 806
+        },
+        "created_at": "2026-10-30T02:26:29.162438+00:00",
+        "updated_at": "2026-10-30T02:26:35.599766+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-4",
+          "elapsed_ms": 6360,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 8,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C02.K03"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-adf395a7a3a0489db7ed5d0ce402c043",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-6a7c268229a54999a4c72bcdef465971",
+        "question": "给刚才的例子出一道只改变一个条件的变式题，我先自己算，不要给答案。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "变式只改一个条件：把静态工作点相关的偏置电阻 RB 由 560kΩ 改为 1MΩ，其余全部保持原样。题目如下，先自己算，不附答案。\n\n【题面】NPN 固定偏置共射放大电路：发射极接地，VCC=12V，RB=1MΩ 从 VCC 接基极，RC=2kΩ 从 VCC 接集电极；RL=10kΩ 经耦合电容接输出（直流开路、中频交流短路）。β=100，VBE=0.7V，VT=26mV，忽略基区体电阻 rbb' 与输出电阻 ro。输入为基极对地峰值 0.5mV 的小信号。\n\n【题目要求的六步，逐条写出】\n1. 直流通路：把耦合电容视为开路、输入信号置零，写出 IBQ=(VCC−VBE)/RB，求 IBQ、ICQ=βIBQ、VCEQ=VCC−ICQ·RC。\n2. 工作区检查：判断 VC 与 VB 的大小关系，说明集电结是否反偏、晶体管是否在放大区。若不在放大区，明确写出“线性小信号等效不适用”，并说明需要怎样改偏置才能回到放大区（这一步必须答，不能跳过继续套公式）。\n3. 求 rπ=βVT/ICQ，写出单位。\n4. 画交流等效：说明直流电源、耦合电容、RB、RC、RL 各自如何处理，晶体管替换成哪两部分。要写清 RB 是否出现在增益公式里。\n5. 算中频电压增益 Av=−β(RC∥RL)/rπ，先算并联值 RC∥RL，再代公式，保留负号并解释负号含义。\n6. 验算近似条件：用输入峰值 0.5mV 与 VT=26mV 比较，说明小信号线性化是否成立；再用 |Av|×0.5mV 与静态裕量比较，说明输出是否可能削顶。\n\n【变式后的对比一问】与原来 RB=560kΩ 的情形相比，IBQ、ICQ、VCEQ、rπ、|Av| 各是变大、变小还是不变？逐项给出理由，并把两组的 Av 数值都写出来对照。\n\n【格式要求】每一步先写所用公式，再代入数值，最后写结果与单位；工作区检查与近似条件验算各单独成段，不允许只给最终增益。保留纸笔稿，交教师核验——这是检查方式，不是打分标准。\n\n提示（不含答案）：注意 RB 增大后 IBQ 变化的方向，以及 ICQ 对 rπ 与增益的连锁影响；同时留意 ICQ 过小时 0.5mV 的小信号条件是否仍然宽松。这两处是本题的判分核心。",
+          "cited_node_ids": [
+            "C02.K03",
+            "C02.K02",
+            "C01.K04"
+          ],
+          "cited_evidence_ids": [],
+          "resource_ids": [
+            "RES-C02"
+          ],
+          "limitations": [
+            "本题与变式按上一轮已核验算例的结构由我设计，仅改动一个条件，不含答案与结果，尚未核对你的实际作答。",
+            "复习任务单只提供自主检查步骤，不含具体试题与标准答案；本题不是任务单中的内容。",
+            "按你的要求本轮不涉及成绩判断。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:26:36.158733+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-1f95f522f199477ba5f85020fb3df72a",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-adf395a7a3a0489db7ed5d0ce402c043",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6671,
+          "output_tokens": 776
+        },
+        "created_at": "2026-10-30T02:26:36.160189+00:00",
+        "updated_at": "2026-10-30T02:26:42.144717+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-4",
+          "elapsed_ms": 5906,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -19,17 +19,19 @@ def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
 class Conflict(ValueError):pass
 
 class Engine:
-    def __init__(self,root,db_path,provider=None,start_worker=True,allow_rules=False):
-        self.allow_rules=allow_rules;self.seed_artifacts=[]
+    def __init__(self,root,db_path,provider=None,start_worker=True,allow_rules=False,load_seed=True):
+        self.allow_rules=allow_rules;self.seed_artifacts=[];self.model_slots=threading.BoundedSemaphore(2)
         self.root=Path(root);self.data=self.root/'review'/'personalization-v2';self.provider=provider or Provider()
         self.graph=read(self.data/'data/graph.json');self.registry=read(self.data/'data/students.json');self.resources=read(self.data/'data/resources.json');self.policy=read(self.data/'data/evaluation-policy.json')
         self.manifest=read(self.data/'manifest.json');self.nodes={n['id']:n for n in self.graph['nodes']}
+        self.teaching=read(self.root/'review/teaching-reference/reference.json')
         self.profiles={p['student_id']:p for p in self.registry['students'] if p['student_id'] in self.manifest['demo_student_ids']}
         self.incoming={k:[e for e in self.graph['edges'] if e['target']==k and e['aggregation_weight'] is not None] for k in self.nodes}
         self.snapshot_schema=read(self.data/'contracts/contract.schema.json');self.snapshot_validator=Draft202012Validator({'$ref':'#/$defs/snapshot','$defs':self.snapshot_schema['$defs']})
         self.store=Store(db_path);self.lock=self.store.lock;self.wake=threading.Event();self.stopping=False
         from .bundles import load_bundle
-        self.seed_artifacts=load_bundle(self,self.root/'review/model-diagnostics/bundle.json',bootstrap=True)
+        try:self.seed_artifacts=load_bundle(self,self.root/'review/model-diagnostics/bundle.json',bootstrap=True) if load_seed else []
+        except Exception:self.store.close();raise
         for run in self.store.all('agent_run'):
             if run['state']=='running':run['state']='queued';run['updated_at']=now();self.store.put('agent_run',run['run_id'],run)
         self.worker=threading.Thread(target=self._worker,daemon=True,name='teaching-agent')
@@ -50,23 +52,26 @@ class Engine:
                     self.store.put('snapshot',snap['snapshot_id'],snap,snap['revision']);self.store.pointer('snapshot:'+self.key(scope),ref(snap))
             else:snap=self.store.get('snapshot',pointer['snapshot_id'],pointer['revision'])
             return snap
-    def context(self,scope,audience,target,snapshot=None,dependencies=None):
+    def context(self,scope,audience,target,snapshot=None,dependencies=None,context_version=3):
         if audience not in ('teacher','student') or (scope['subject']['type']=='class' and audience!='teacher'):raise ValueError('角色无效')
         if target is not None and target not in self.nodes:raise ValueError('节点不存在')
         snap=snapshot or self.ensure(scope);previous=self.store.get('snapshot',snap['snapshot_id'],snap['revision']-1) if snap['revision']>1 else None
-        return Context(self.graph,snap,self.profiles.get(scope['subject']['id'],{}),self.resources,self.policy,audience,target,previous,dependencies)
+        return Context(self.graph,snap,self.profiles.get(scope['subject']['id'],{}),self.resources,self.policy,audience,target,previous,dependencies,self.teaching,context_version)
+    def artifact_context_version(self,artifact):
+        version=artifact.get('context_version',1)
+        return 3 if version==2 and artifact.get('generation',{}).get('prompt_version') in ('teaching-agent-4','teaching-agent-5','teaching-agent-6') else version
     def dkey(self,scope,audience,target):return 'diagnosis:'+self.key(scope)+':'+audience+':'+(target or '@overview')
     def artifact(self,scope,audience,target):
         pointer=self.store.pointer(self.dkey(scope,audience,target))
         runtime=self.store.get('diagnostic_artifact',pointer['id']) if pointer else None
-        candidates=([runtime] if runtime else [])+[a for a in reversed(self.seed_artifacts) if a['scope']==scope and a['audience']==audience and a['target_node_id']==target]
+        candidates=([runtime] if runtime else [])+[a for a in sorted(self.seed_artifacts,key=lambda x:x['created_at'],reverse=True) if a['scope']==scope and a['audience']==audience and a['target_node_id']==target]
         for a in candidates:
             if self.matches(a,self.ensure(scope)):return a
         return candidates[0] if candidates else None
     def matches(self,artifact,snapshot):
         try:
-            ctx=self.context(artifact['scope'],artifact['audience'],artifact['target_node_id'],snapshot,artifact['dependencies'])
-            if artifact.get('facts_fingerprint'):return ctx.fingerprint(None)==artifact['facts_fingerprint']
+            ctx=self.context(artifact['scope'],artifact['audience'],artifact['target_node_id'],snapshot,artifact['dependencies'],self.artifact_context_version(artifact))
+            if artifact.get('facts_fingerprint'):return ctx.fingerprint(None,artifact.get('context_version',1)>=2)==artifact['facts_fingerprint']
             return ctx.fingerprint(self.provider.identity)==artifact['fingerprint']
         except (ValueError,KeyError):return False
     def capabilities(self):
@@ -113,7 +118,7 @@ class Engine:
                 snap=self.store.get('snapshot',latest['snapshot_id'],requested_ref.get('revision'))
                 if not snap:raise ValueError('指定评价版本不存在')
             self.context(scope,audience,target,snap)
-            session=digest({'scope':scope,'audience':audience,'target':target});old=self.artifact(scope,audience,target)
+            session=digest({'scope':scope,'audience':audience});old=self.artifact(scope,audience,target)
             turn=record('conversation_turn',turn_id=uid('turn'),session_id=session,scope=scope,audience=audience,target_node_id=target,snapshot_ref=ref(snap),discussed_artifact_id=old['artifact_id'] if old else None,question=question.strip(),state='queued',answer=None,origin=self.provider.origin,created_at=now())
             with self.store.transaction():
                 self.store.put('conversation_turn',turn['turn_id'],turn);run=self._new_run(scope,audience,target,snap,'question','question',turn['turn_id'])
@@ -278,32 +283,32 @@ class Engine:
                 if discussed and discussed['scope']==run['scope'] and discussed['audience']==run['audience'] and discussed['target_node_id']==run['target_node_id']:
                     ctx.discussion={'artifact_id':discussed['artifact_id'],'generated_against':discussed['generated_against'],'validated_against':discussed['validated_against'],
                         'matches_answer_version':discussed['validated_against']==ref(snap),'origin':discussed['origin'],'explanation':discussed['output']['explanation'][:2000]}
-            history=[{'question':t['question'][:400],'answer':t['answer']['explanation'][:800],'snapshot_ref':t['snapshot_ref']} for t in self.store.all('conversation_turn') if turn and t['session_id']==turn['session_id'] and t['state']=='succeeded'][-4:]
+            history=[{'question':t['question'],'answer':t['answer'],'target_node_id':t['target_node_id'],'target_label':self.nodes[t['target_node_id']]['label'] if t['target_node_id'] else '总体','snapshot_ref':t['snapshot_ref']} for t in self.store.all('conversation_turn') if turn and t['scope']==turn['scope'] and t['audience']==turn['audience'] and t['state']=='succeeded'][-4:]
             run.update(state='running',updated_at=now());self.store.put('agent_run',run['run_id'],run)
             if turn:turn['state']='running';self.store.put('conversation_turn',turn['turn_id'],turn)
         started=time.monotonic()
-        def generation():return {'provider':provider.mode,'model':provider.model if provider.origin=='model' else 'rules-v1','prompt_version':'agent-1','elapsed_ms':int((time.monotonic()-started)*1000),'request_ids':getattr(ctx,'request_ids',[])}
+        def generation():return {'provider':provider.mode,'model':provider.model if provider.origin=='model' else 'rules-v1','prompt_version':getattr(provider,'question_prompt_version' if turn else 'prompt_version','agent-1'),'elapsed_ms':int((time.monotonic()-started)*1000),'request_ids':getattr(ctx,'request_ids',[])}
         try:
-            output,usage=provider.generate(ctx,turn['question'] if turn else None,history)
+            with self.model_slots:output,usage=provider.generate(ctx,turn['question'] if turn else None,history)
             ctx.validate_output(output)
             generation_info=generation()
             with self.lock:
                 if self.stopping:return True
                 latest=self.ensure(run['scope']);current_ctx=self.context(run['scope'],run['audience'],run['target_node_id'],latest,ctx.dependencies())
                 ctx.discussion=None
-                valid=ctx.fingerprint(None)==current_ctx.fingerprint(None)
-                run.update(state='succeeded' if turn or valid else 'superseded',usage=usage,tool_trace=ctx.trace,updated_at=now(),generation=generation_info)
+                valid=ctx.fingerprint(None,True)==current_ctx.fingerprint(None,True)
+                run.update(state='succeeded' if turn or valid else 'superseded',usage=usage,tool_trace=ctx.trace,updated_at=now(),generation=generation_info,attempts=getattr(ctx,'attempts',[]))
                 if turn:
                     turn.update(state='succeeded',answer=output,origin=provider.origin,generator=provider.identity);self.store.put('conversation_turn',turn['turn_id'],turn)
                 else:
-                    artifact=record('diagnostic_artifact',artifact_id=uid('diag'),scope=run['scope'],audience=run['audience'],target_node_id=run['target_node_id'],generated_against=ref(snap),validated_against=ref(latest) if valid else ref(snap),fingerprint=ctx.fingerprint(provider.identity),facts_fingerprint=ctx.fingerprint(None),generation=generation_info,dependencies=ctx.dependencies(),validity='fresh' if valid else 'historical',publication='active',origin=provider.origin,output=output,created_at=now())
+                    artifact=record('diagnostic_artifact',artifact_id=uid('diag'),scope=run['scope'],audience=run['audience'],target_node_id=run['target_node_id'],generated_against=ref(snap),validated_against=ref(latest) if valid else ref(snap),fingerprint=ctx.fingerprint(provider.identity),facts_fingerprint=ctx.fingerprint(None,True),context_version=3,quality={'structure_valid':bool(output.get('sections')),'human_review':'pending'},generation=generation_info,dependencies=ctx.dependencies(),validity='fresh' if valid else 'historical',publication='active',origin=provider.origin,output=output,created_at=now())
                     self.store.put('diagnostic_artifact',artifact['artifact_id'],artifact);run['artifact_id']=artifact['artifact_id']
                     if valid:self.store.pointer(self.dkey(run['scope'],run['audience'],run['target_node_id']),{'id':artifact['artifact_id']})
                 self.store.put('agent_run',run['run_id'],run)
         except Exception as error:
             with self.lock:
                 if self.stopping:return True
-                run.update(state='failed',error=str(error)[:240],error_code=getattr(error,'code','invalid_output'),generation=generation(),tool_trace=ctx.trace,usage=getattr(ctx,'usage',run['usage']),updated_at=now());self.store.put('agent_run',run['run_id'],run)
+                run.update(state='failed',error=str(error)[:240],error_code=getattr(error,'code','invalid_output'),generation=generation(),attempts=getattr(ctx,'attempts',[]),tool_trace=ctx.trace,usage=getattr(ctx,'usage',run['usage']),updated_at=now());self.store.put('agent_run',run['run_id'],run)
                 if turn:turn.update(state='failed');self.store.put('conversation_turn',turn['turn_id'],turn)
         return True
     def _worker(self):

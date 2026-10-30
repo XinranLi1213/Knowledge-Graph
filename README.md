@@ -23,9 +23,15 @@ python tools/serve.py
 
 未配置时可以看原静态数据和已有模型诊断，不能继续追问或重新生成。配置后可点击“生成诊断”与发送问题。浏览已有结果或点击新节点本身不产生模型费用。选中节点自动绑定对象、角色、节点和评价版本；评价更新时，有API才按依赖异步刷新。旧回答保留历史版本标记；移除密钥或换模型不会使仍匹配事实的诊断失效。教师个人mixed_evidence场景可“模拟C05补测”，无API时只更新事实并将受影响诊断标旧。
 
-运行快照、事件、解释、任务和对话保存在.runtime/agent.sqlite3；重启保留，原预置JSON不被修改。API设置中的“保存为静态成果”将有效模型诊断及必要评价/来源记录导出到review/model-diagnostics，供无密钥的其他本地安装浏览，不含私人对话或密钥。个人补测不自动重写预置班均。当前接口见[运行协议](review/agent-v4/运行协议与验收.md)。服务仅监听本机；演示角色选择不能充当正式多用户鉴权。
+运行快照、事件、解释、任务和对话保存在.runtime/agent.sqlite3；重启保留，原预置JSON不被修改。API设置中的“保存为静态成果”将有效模型诊断及必要评价/来源记录导出到review/model-diagnostics，供无密钥的其他本地安装浏览，不含私人对话或密钥。个人补测不自动重写预置班均。当前接口与验收见[运行协议](review/agent-v5/运行协议与真实验收.md)。服务仅监听本机；演示角色选择不能充当正式多用户鉴权。
 
-也可将.env.example复制为.env：DeepSeek配置AGENT_PROVIDER=deepseek、DEEPSEEK_API_KEY、AGENT_MODEL=deepseek-flash；OpenAI配置AGENT_PROVIDER=openai、OPENAI_API_KEY和可用的AGENT_MODEL。重启后界面标为“尚未测试”，可留空密钥测试同一供应商的现有配置。本次环境没有密钥，未发起真实模型请求、未制作真实模型成果；成果清单如实为空。已验证的是完整模拟传输与只读闭环。真实调用失败会显示错误，不切换成规则回答。供应商适配细节见[多供应商配置](review/多供应商API配置.md)。
+也可将.env.example复制为.env：DeepSeek配置AGENT_PROVIDER=deepseek、DEEPSEEK_API_KEY、AGENT_MODEL=deepseek-flash；OpenAI配置AGENT_PROVIDER=openai、OPENAI_API_KEY和可用的AGENT_MODEL。重启后界面标为“尚未测试”，可留空密钥测试同一供应商的现有配置。真实调用失败会显示错误，不切换成规则回答。供应商适配细节见[多供应商配置](review/多供应商API配置.md)。
+
+v0.5.0 已通过本地8766服务配置的真实DeepSeek生成首批417项诊断：mixed_evidence场景下的班级教师、DEMO001教师、DEMO001学生，各138节点及总体画像。成绩、覆盖率和进度结论由程序核验生成，具体行动与复测建议来自模型；其他学生和场景仍保留原静态演示。无密钥的新安装可直接读取这417项成果。当前验证服务为 http://127.0.0.1:8766 ，旧8765服务保留；正常启动命令仍默认8765。
+
+智能助手继续使用现有抽屉，诊断分为结论、行动和复测；追问支持完整题目、代码及跨节点承接。API设置内“批量诊断与验收”可做24项代表样本、当前范围139项或首批417项，支持暂停、续做和停止阈值。完整批次前要求当前策略/模型样本通过并逐项审核。最多2个模型任务并行，每任务最多4次调用、6次工具；token阈值是停止派发阈值，进行中的请求可能产生少量超额。连续网络失败会暂停，不会无限重试。
+
+真实样本24/24完成，开发助手逐项复核均分4.15/5，教师专家审核待进行。首批初次395/417成功，22项网络失败定向补做后达到417/417；这不是全节点专家质量认证。追问经过数轮真实样例修正，保留失败记录与质量局限，详见运行协议。教学参考和少量核验算例为演示编写内容，不能代替官方教材或真实作答证据。
 
 校验：
 
@@ -36,17 +42,19 @@ python tools/verify_review_data.py
 python tools/verify_personalization_review.py --allow-frontend-changes
 node tools/browser_api_config.cjs
 python tools/model_diagnostics.py validate
+python tools/verify_packaged_diagnostics.py
+node tools/browser_real_diagnostics.cjs
 ```
 
 Python数据校验需要jsonschema。离线重新制作数据可运行tools/build_review_data.py（依赖原截图目录），仅用于维护预设文件，不是应用运行步骤。
 
 tools/browser_api_config.cjs自启隔离服务和临时数据库，使用模拟模型传输，验证设置、追问、补测、断开与手机界面；结束后关闭服务，不调用外部模型。tools/browser_agent.cjs保留为同一检查的兼容入口，v0.3规则追问脚本可从Git旧版本查看。tools/browser_personalization.cjs覆盖既有个性化界面，运行前先启动本地服务。浏览器检查依赖本机Codex运行时的Playwright及本机Chrome；其他机器需相应调整路径。
 
-API配置、契约扩展和验收见[agent-v4](review/agent-v4/运行协议与验收.md)；先前四类契约见[agent-v3](review/agent-v3/README.md)。D3许可证见vendor/D3-LICENSE。本轮未部署线上站点。
+当前实现与真实验收见[agent-v5](review/agent-v5/运行协议与真实验收.md)；历史API配置见[agent-v4](review/agent-v4/运行协议与验收.md)，先前四类契约见[agent-v3](review/agent-v3/README.md)。D3许可证见vendor/D3-LICENSE。本轮未部署线上站点。
 
 ## Git 版本管理
 
-当前项目使用本地Git管理，班级基线 `v0.1.0`，个性化图谱 `v0.2.0`，事件诊断 `v0.3.0`，API设置与静态成果 `v0.4.0`，DeepSeek/OpenAI多供应商配置 `v0.4.1`。运行库、依赖目录、缓存和环境密钥文件不纳入版本。
+当前项目使用本地Git管理，班级基线 `v0.1.0`，个性化图谱 `v0.2.0`，事件诊断 `v0.3.0`，API设置与静态成果 `v0.4.0`，多供应商配置 `v0.4.1`，真实全节点诊断与追问改进 `v0.5.0`。运行库、依赖目录、缓存和环境密钥文件不纳入版本。
 
 每次修改后，可检查差异并保存一个版本：
 

@@ -1,0 +1,221 @@
+{
+  "source": "real_configured_service",
+  "cases": [
+    {
+      "case": 1,
+      "binding": {
+        "subject_type": "class",
+        "subject_id": "COMM-DEMO-40",
+        "audience": "teacher",
+        "scenario": "mixed_evidence",
+        "node_id": "C02"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-68513bd31ce741368c6c15117cec408e",
+        "session_id": "9b1216885264b5b88e63b8ad1f203567b6a9633c930e1da97930fbd12a044298",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-efb57872c83e4654943a2b728f0f2533",
+        "question": "把刚才建议的短测具体写成两道建议题，给出评分要点，暂不提供完整答案。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "承接上一轮，优先项与顺序不变：先「半导体器件模型」（班级达成度69.32分，是小信号放大的前置；先假设二极管导通、求出电流后再校验的步骤也在这里练），再攻「小信号放大」（62.90分，是本课六个已评价知识点中最低的）。（69.32/62.90为班级层面100分制达成度，仅提示排查顺序。）下面两题由我按通用学科知识与教学参考自行设计，不是「模拟电子技术·复习任务单」中的现成题目（该任务单只有自主检查步骤）；按要求本轮只给题面、任务与评分要点，不给完整解答。\n\n【建议题1 · 半导体器件模型】（约8分钟，不计分）\n题面：5V直流源正端经1kΩ电阻接硅二极管阳极，阴极回电源负端；采用正向导通压降0.7V、反向截止的恒压降模型。另有一只NPN三极管，测得 VE=0V、VB=0.7V、VC=6V。变式：仅把电源由5V改为0.4V，其余不变。\n任务：(1) 判断二极管是否导通并算出电流；(2) 写明所用模型的适用条件，并说明改用理想模型时结果相差多少、量级如何；(3) 按两个结的偏置方向判断三极管工作区并给理由；(4) 说明在该状态下为何不能直接套用小信号增益公式。\n评分要点：回路方向与“先假设导通再校验”的步骤约25%；电流数值与单位约20%；模型适用条件及两种模型差异量级约25%；工作区判断必须以两个结偏置为理由，只写结论不给分约20%；第(4)问点出“小信号分析以合适静态工作点为前提”约10%。变式（0.4V低于导通压降，二极管截止、电流为零）作为附加观察点，不计入主分。\n\n【建议题2 · 小信号放大】（约15分钟，不计分）\n题面：NPN固定偏置共射电路：发射极接地，VCC=12V，RB=560kΩ由VCC接基极，RC=2kΩ由VCC接集电极，RL=10kΩ经耦合电容接输出（直流开路、中频交流短路）；β=100，VBE=0.7V，VT=26mV，忽略基区体电阻与输出电阻；输入为基极对地峰值0.5mV的小信号。变式：仅把RL改为5kΩ，其余全部不变。\n任务：(1) 求IBQ、ICQ、VCEQ 并核对是否在放大区；(2) 静态点确定后画小信号等效电路并标出 rπ；(3) 写出中频电压增益表达式（含符号）；(4) 说明变式中直流工作点是否变化、增益如何变化及原因；(5) 检验输入幅度是否满足小信号近似的条件。\n评分要点：必须先静态后动态，未定静态点就直接画等效电路的，扣过程分约30%；等效电路中受控源方向、rπ接入位置、耦合电容在交流通路中的处理约30%；增益为负、量级合理、量纲正确约20%；变式能说明“RL经耦合电容接入，只改变交流负载、不改变直流工作点，故增益幅值下降”约15%；第(5)问以输入幅度远小于VT判断近似成立约5%。\n\n【使用方式】按“先1后2”的顺序完成，结果记录到知识点层面用于分组和下一轮复习排序；一两周后用同结构换数值的题复测，比较过程记录（推导步骤、图、条件说明），而不只是看数值。评分要点用于课堂过程核验，不是学校正式评分标准，也不能据此认定错因或推断某个学生。\n\n【关于历史旧例】此前一份答复中的共射例题使用了300kΩ/3kΩ参数，那组参数下的条件已不适用于本轮核验算例，请以本题2的560kΩ/2kΩ为准，不要混用或沿用旧结论。",
+          "cited_node_ids": [
+            "C02",
+            "C02.K01",
+            "C02.K03"
+          ],
+          "cited_evidence_ids": [
+            "EV-COMM-DEMO-40-mixed_evidence-C02",
+            "EV-COMM-DEMO-40-mixed_evidence-C02.K01",
+            "EV-COMM-DEMO-40-mixed_evidence-C02.K03"
+          ],
+          "resource_ids": [
+            "RES-C02"
+          ],
+          "limitations": [
+            "两题为按通用学科知识与教学参考自行设计的建议题，不是复习任务单中的现成题目；本轮按要求不提供完整答案。",
+            "仅有班级层面演示评价分数，缺少具体作答记录，评分要点不能用于认定错因或推断某个学生。",
+            "历史答复中300kΩ/3kΩ的旧例题参数与当前核验算例不一致，旧例条件不适用，已由560kΩ/2kΩ替代。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:43:58.680151+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-b493ecf2a99d42cfbc1c9eb397827111",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-68513bd31ce741368c6c15117cec408e",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 10657,
+          "output_tokens": 1116
+        },
+        "created_at": "2026-10-30T02:43:58.681235+00:00",
+        "updated_at": "2026-10-30T02:44:04.941708+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-6",
+          "elapsed_ms": 6157,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 6,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "teacher",
+        "scenario": "mixed_evidence",
+        "node_id": "A04"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-9c163fbb0cd647e0892e530e41bedad2",
+        "session_id": "9648ae2137e5458aa8fd4f5d2c1093da752876c915cb5494c9ece7ce99f24c34",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "A04",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-4521680b10d54220af1fcde3a1d08625",
+        "question": "这个分数现在能说明能力不合格吗？请说明依据和下一步如何补充证据。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "不能。A04「复杂工程问题研究能力」当前达成度55.44分（100分制），覆盖率40%，学习状态是在进行中、待测评，证据粒度仍为课程聚合。因此，这个分数只反映已评价的部分，属于阶段性提示，不足以支持“能力不合格”的结论。证据缺口更为关键：A04下共7条证据，本轮只展示了1条，另有6条未展示；能力层下已评价知识点数为0，尚未拆到知识点层。支撑课程中，C16「电子系统工程实践」（权重0.2、覆盖率0、尚未开始）与C17「毕业设计」（权重0.4、覆盖率0、尚未开始）合计贡献A04支撑权重六成，而这两门课程恰是研究能力最直接的可观察载体，目前完全空缺。C06「数字信号处理」已完整评价，达成度48.38分，有6个知识点评价，可提示排查顺序；C08「通信原理」同样已完整评价，但只有一条课程总评62.5分，属于课程总分，无法定位知识点；A03与A04为并列关系，A03本身覆盖也不足，不能反过来为A04提供定位依据。所以，现有证据既不支持“合格”，也不支持“不合格”，应先补充过程性证据再判断。\n\n补证据建议按三步走。第一步，把C06已有的知识点评价转成A04可观察的过程证据：从已评价的6个知识点中取表现最低的2个作为优先项，做一次20分钟级短测，重点记录过程，而不是重算分数，观察学生能否自行界定问题、选择方法并说明理由、用仿真或手算验证、对偏差作出解释。复习任务单只提供自主检查步骤，不含具体试题，题目需自行设计。第二步，对C08先测评再定位：用一份短测或任务中的过程记录，把62.5分拆成“问题表述—方法选择—验证”三类可观察表现，再判断它能否支撑A04。第三步，以C16中一个自设的综合小任务作为A04的主证据：例如给定具体通信或信号处理场景（写明信号形式、采样参数、干扰频段与性能要求），要求完成需求拆解、技术调研、指标设定、方案对比、实验或仿真设计、数据验证、结果反思的完整链条；量规分四维——问题界定（是否识别约束与隐含前提）、方法选择理由（是否比较备选并说明取舍）、验证充分性（是否有对照、多条件测试、误差说明）、反思深度（是否指出失效边界与改进路径），每维给出可观察行为等级，保留草稿、记录与汇报材料，不只看最终结果。C17毕业设计尚未开始，可作为后续高权重证据来源纳入规划，本轮不评价。每周90分钟可安排：一次短测或任务单自查约30分钟，加一次综合任务的阶段汇报与整改约60分钟。\n\n需区分：上述短测与量规属于通用教学建议，不是已记录的学生错误，也不代表学校规定；补测只作为新证据加入，不能直接改写现有分数。局限在于本轮为演示评价、缺少具体作答过程，A04的6条证据未展示，因此不能断言只有一条证据或无知识点评价；C06、C08的分数只能提示排查顺序，不能证明A04的具体错因。",
+          "cited_node_ids": [
+            "A04",
+            "A03",
+            "C06",
+            "C08",
+            "C16",
+            "C17"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C08"
+          ],
+          "resource_ids": [
+            "RES-C06",
+            "RES-C08",
+            "RES-C16",
+            "RES-C17"
+          ],
+          "limitations": [
+            "所有评价为演示数据，缺少具体作答过程，不能据分数认定具体错因。",
+            "A04仅评价40%覆盖，分数为阶段性；其下6条证据未展示，不能声称证据唯一或无知识点评价。",
+            "C06的6个知识点评价属课程层证据，不等于A04已定位薄弱知识点；C08仅有课程总评，只能提示排查顺序。",
+            "C16、C17尚未开始、覆盖率为0，属证据缺口，不等于能力缺失。",
+            "任务设计与量规为通用教学建议，不是学生错误记录或学校规定，补测不直接改分。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:44:05.474210+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-70949178ca0f47449bc5fa2941477449",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "A04",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-9c163fbb0cd647e0892e530e41bedad2",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 7933,
+          "output_tokens": 940
+        },
+        "created_at": "2026-10-30T02:44:05.475254+00:00",
+        "updated_at": "2026-10-30T02:44:10.701578+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-6",
+          "elapsed_ms": 5139,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    }
+  ]
+}

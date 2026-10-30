@@ -19,7 +19,7 @@ def main():
     parser.add_argument('--max-tasks',type=int,default=4)
     args=parser.parse_args()
     if args.action=='schemas':
-        folder=ROOT/'review/agent-v4/contracts';write_schemas(folder)
+        folder=ROOT/'review/agent-v5/contracts';write_schemas(folder)
         (folder/'bundle.schema.json').write_text(json.dumps(BUNDLE_SCHEMA,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');return
     load_env(ROOT/'.env');Path(args.db).parent.mkdir(parents=True,exist_ok=True)
     provider=Provider() if args.action=='generate' else Provider('rules')
@@ -44,8 +44,6 @@ def main():
                 if run['state']!='succeeded':raise SystemExit('本批停止：'+str(run.get('error')))
         if args.action in ('generate','export'):
             count=export_bundle(engine,args.bundle)
-            manifest={'bundle_version':'1.0','bundle_file':'bundle.json','entries':count,'real_model_results_available':count>0}
-            Path(args.bundle).with_name('manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
             print(json.dumps({'exported_model_diagnoses':count}))
         if args.action=='validate':print(json.dumps({'valid_model_diagnoses':len(load_bundle(engine,args.bundle))}))
     finally:engine.close()

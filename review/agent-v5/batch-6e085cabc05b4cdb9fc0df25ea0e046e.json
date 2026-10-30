@@ -1,0 +1,618 @@
+{
+  "batch_id": "batch-6e085cabc05b4cdb9fc0df25ea0e046e",
+  "mode": "sample",
+  "state": "completed",
+  "prompt_version": "teaching-agent-3",
+  "provider": "deepseek:deepseek-flash",
+  "cursor": 24,
+  "results": [
+    {
+      "scope": {
+        "subject": {
+          "type": "class",
+          "id": "COMM-DEMO-40"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": null,
+      "snapshot_ref": {
+        "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-7fb9e4c991734db48d4d21b13669adcb",
+      "run_id": "run-478deb4d4fbd4051b7ef05c9d0bb9c21",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 6637,
+        "output_tokens": 438
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "class",
+          "id": "COMM-DEMO-40"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "A01",
+      "snapshot_ref": {
+        "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-8916da0d0f8f43e085cc5c11155cfefc",
+      "run_id": "run-44d4cb8c30014dff86bd3b2af5b3dcea",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 4060,
+        "output_tokens": 244
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "class",
+          "id": "COMM-DEMO-40"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C01",
+      "snapshot_ref": {
+        "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-374f66916bb64c1da4b7a4424ec9d281",
+      "run_id": "run-be61dcd5dc12481f89d1532179f7a7eb",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 5283,
+        "output_tokens": 252
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "class",
+          "id": "COMM-DEMO-40"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C02",
+      "snapshot_ref": {
+        "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-e5c3da9a97a340c88c1b175d5671eb97",
+      "run_id": "run-b97771d085364837a1f69b7caed6e65d",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 5569,
+        "output_tokens": 297
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "class",
+          "id": "COMM-DEMO-40"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C05",
+      "snapshot_ref": {
+        "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-9cfbe88740b641eca57b14c97b5e1d5c",
+      "run_id": "run-87a634cdac3a448d89791a34399cff00",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 5177,
+        "output_tokens": 222
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "class",
+          "id": "COMM-DEMO-40"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C02.K03",
+      "snapshot_ref": {
+        "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-2130757a8ab64ac289888d7d786866de",
+      "run_id": "run-480768406d0d49319a15ac36e6bdefc3",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 3140,
+        "output_tokens": 363
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "class",
+          "id": "COMM-DEMO-40"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C05.K04",
+      "snapshot_ref": {
+        "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-0db209f607ae4db38ca89108ab908b74",
+      "run_id": "run-83432583d20c49e6ae38b24e9bf326ad",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 2659,
+        "output_tokens": 279
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "class",
+          "id": "COMM-DEMO-40"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C09.K01",
+      "snapshot_ref": {
+        "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-83a7aa07eaf948eca2c1f940a3ed694a",
+      "run_id": "run-34ce99df787a4cb1a5f39e0cef3f6781",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 2542,
+        "output_tokens": 218
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": null,
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-f7a9753359ee47d5bebc8efbe3d46a86",
+      "run_id": "run-8aae337b390e4dba8366ba50fdbdabcc",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 6141,
+        "output_tokens": 398
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "A01",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-5704db38fc4c403a89027380cb86e9aa",
+      "run_id": "run-b638986f19c24c7ca586022f2a9210cb",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 3634,
+        "output_tokens": 252
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C01",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-e0ecc85562e7459b9c81b0f8bd8521c6",
+      "run_id": "run-e6efa9ca08b54efdb1f3306862a13deb",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 5119,
+        "output_tokens": 306
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C02",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-88e236e9e98d41fcb9a431b711bfb60a",
+      "run_id": "run-8b03fc3d03404db8a566ec2ad99d3c65",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 5334,
+        "output_tokens": 310
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C05",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-105bc3b1750b40728a35df2542d22d38",
+      "run_id": "run-d5c5f8224f564553bc47c2ec9f6288dd",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 5002,
+        "output_tokens": 310
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C02.K03",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-5180e0737da546f1b70485966585269a",
+      "run_id": "run-354708b27c7b498b8ab8af5d2740f96c",
+      "usage": {
+        "model_calls": 2,
+        "input_tokens": 7250,
+        "output_tokens": 438
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C05.K04",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-4ad8dbba9e474ce79130956d19eee75b",
+      "run_id": "run-8cfb6e7f45a64a4ab6b8d1bfa723e43b",
+      "usage": {
+        "model_calls": 2,
+        "input_tokens": 5798,
+        "output_tokens": 425
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "teacher",
+      "node_id": "C09.K01",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-1fa449725248474984079674d3ae79a2",
+      "run_id": "run-f572a66210b849d6a6cae43813faeb90",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 2514,
+        "output_tokens": 265
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "student",
+      "node_id": null,
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-67eac622e26a468c9bfb0e6327863768",
+      "run_id": "run-944e013e63d34c14944a2dacb2997f36",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 6140,
+        "output_tokens": 279
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "student",
+      "node_id": "A01",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-ced5949f46334987a96e28df1880054b",
+      "run_id": "run-cbdfa671baa24f859f4e30dc1694113a",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 3633,
+        "output_tokens": 262
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "student",
+      "node_id": "C01",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-b14ec9e9c69b4bf7bc553d1bba80829b",
+      "run_id": "run-f4f2530a859242c8a23b6956df23fe18",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 5118,
+        "output_tokens": 297
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "student",
+      "node_id": "C02",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-d2a3b064e9fc40ae86b5d6e0073d5185",
+      "run_id": "run-bcb318b608744ca38025b893c4d300d8",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 5333,
+        "output_tokens": 281
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "student",
+      "node_id": "C05",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-0e9587fb166c4552b89d877a7008c48b",
+      "run_id": "run-7a2148138525462db81a95d9c58e6d18",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 5001,
+        "output_tokens": 297
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "student",
+      "node_id": "C02.K03",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-9e29ae1e1302423b9da9bd87d99201cf",
+      "run_id": "run-51b394c3dbf348c9bb5eab532818e3a3",
+      "usage": {
+        "model_calls": 2,
+        "input_tokens": 6430,
+        "output_tokens": 347
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "student",
+      "node_id": "C05.K04",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-5ff37fd61cf643bea4f97389b644735c",
+      "run_id": "run-5dc303fd6abb4527b3338c19f1b703cd",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 2623,
+        "output_tokens": 296
+      },
+      "error_code": null,
+      "error": null
+    },
+    {
+      "scope": {
+        "subject": {
+          "type": "student",
+          "id": "DEMO001"
+        },
+        "scenario_id": "mixed_evidence"
+      },
+      "audience": "student",
+      "node_id": "C09.K01",
+      "snapshot_ref": {
+        "snapshot_id": "student-DEMO001-mixed_evidence",
+        "revision": 1
+      },
+      "state": "succeeded",
+      "artifact_id": "diag-a3a654204e384c49915f6718e2ff2605",
+      "run_id": "run-e61b262445694539b331cdd67155ea48",
+      "usage": {
+        "model_calls": 1,
+        "input_tokens": 2513,
+        "output_tokens": 266
+      },
+      "error_code": null,
+      "error": null
+    }
+  ],
+  "max_tasks": 24,
+  "token_budget": 500000,
+  "tokens_used": 119992,
+  "calls_used": 27,
+  "reason": null,
+  "created_at": "2026-10-30T01:16:03.169451+00:00",
+  "updated_at": "2026-10-30T01:17:18.830741+00:00",
+  "total_tasks": 24
+}

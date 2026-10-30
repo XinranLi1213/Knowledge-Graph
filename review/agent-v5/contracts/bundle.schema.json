@@ -1,0 +1,1179 @@
+{
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "bundle_version",
+        "entries"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "bundle_version": {
+          "const": "1.0"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "artifact",
+              "snapshot",
+              "previous",
+              "run"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "artifact": {
+                "type": "object",
+                "properties": {
+                  "schema_version": {
+                    "const": "3.0.0"
+                  },
+                  "record_type": {
+                    "const": "diagnostic_artifact"
+                  },
+                  "artifact_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "scope": {
+                    "type": "object",
+                    "properties": {
+                      "subject": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "enum": [
+                              "student",
+                              "class"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "id"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "scenario_id": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "subject",
+                      "scenario_id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "audience": {
+                    "enum": [
+                      "teacher",
+                      "student"
+                    ]
+                  },
+                  "target_node_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "generated_against": {
+                    "type": "object",
+                    "properties": {
+                      "snapshot_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "revision": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    },
+                    "required": [
+                      "snapshot_id",
+                      "revision"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "validated_against": {
+                    "type": "object",
+                    "properties": {
+                      "snapshot_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "revision": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    },
+                    "required": [
+                      "snapshot_id",
+                      "revision"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "fingerprint": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "dependencies": {
+                    "type": "object",
+                    "properties": {
+                      "read_nodes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "tool": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "arguments": {
+                              "type": "object"
+                            }
+                          },
+                          "required": [
+                            "tool",
+                            "arguments"
+                          ],
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "required": [
+                      "read_nodes",
+                      "queries"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "validity": {
+                    "enum": [
+                      "fresh",
+                      "historical"
+                    ]
+                  },
+                  "publication": {
+                    "const": "active"
+                  },
+                  "origin": {
+                    "enum": [
+                      "rules_demo",
+                      "model"
+                    ]
+                  },
+                  "output": {
+                    "type": "object",
+                    "properties": {
+                      "explanation": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "cited_node_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "cited_evidence_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "resource_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "sections": {
+                        "anyOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "conclusion": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "actions": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              },
+                              "verification": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "required": [
+                              "conclusion",
+                              "actions",
+                              "verification"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "explanation",
+                      "cited_node_ids",
+                      "cited_evidence_ids",
+                      "resource_ids",
+                      "limitations"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "facts_fingerprint": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "generation": {
+                    "type": "object",
+                    "properties": {
+                      "provider": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "model": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "prompt_version": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "elapsed_ms": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "request_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    },
+                    "required": [
+                      "provider",
+                      "model",
+                      "prompt_version",
+                      "elapsed_ms",
+                      "request_ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "context_version": {
+                    "enum": [
+                      1,
+                      2,
+                      3
+                    ]
+                  },
+                  "quality": {
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "schema_version",
+                  "record_type",
+                  "artifact_id",
+                  "scope",
+                  "audience",
+                  "target_node_id",
+                  "generated_against",
+                  "validated_against",
+                  "fingerprint",
+                  "dependencies",
+                  "validity",
+                  "publication",
+                  "origin",
+                  "output",
+                  "created_at"
+                ],
+                "additionalProperties": false
+              },
+              "snapshot": {
+                "type": "object"
+              },
+              "previous": {
+                "type": [
+                  "object",
+                  "null"
+                ]
+              },
+              "run": {
+                "type": "object",
+                "properties": {
+                  "schema_version": {
+                    "const": "3.0.0"
+                  },
+                  "record_type": {
+                    "const": "agent_run"
+                  },
+                  "run_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "scope": {
+                    "type": "object",
+                    "properties": {
+                      "subject": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "enum": [
+                              "student",
+                              "class"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "id"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "scenario_id": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "subject",
+                      "scenario_id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "audience": {
+                    "enum": [
+                      "teacher",
+                      "student"
+                    ]
+                  },
+                  "target_node_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "snapshot_ref": {
+                    "type": "object",
+                    "properties": {
+                      "snapshot_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "revision": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    },
+                    "required": [
+                      "snapshot_id",
+                      "revision"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "trigger": {
+                    "enum": [
+                      "view",
+                      "evaluation_changed",
+                      "question",
+                      "retry"
+                    ]
+                  },
+                  "state": {
+                    "enum": [
+                      "queued",
+                      "running",
+                      "succeeded",
+                      "failed",
+                      "superseded"
+                    ]
+                  },
+                  "mode": {
+                    "enum": [
+                      "diagnosis",
+                      "question"
+                    ]
+                  },
+                  "artifact_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "turn_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "error": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "tool_trace": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "tool": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "arguments": {
+                          "type": "object"
+                        },
+                        "node_count": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      },
+                      "required": [
+                        "tool",
+                        "arguments",
+                        "node_count"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "usage": {
+                    "type": "object",
+                    "properties": {
+                      "model_calls": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "input_tokens": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "output_tokens": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "model_calls",
+                      "input_tokens",
+                      "output_tokens"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "updated_at": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "generation": {
+                    "type": "object",
+                    "properties": {
+                      "provider": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "model": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "prompt_version": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "elapsed_ms": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "request_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    },
+                    "required": [
+                      "provider",
+                      "model",
+                      "prompt_version",
+                      "elapsed_ms",
+                      "request_ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "error_code": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "attempts": {
+                    "type": "array",
+                    "items": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "required": [
+                  "schema_version",
+                  "record_type",
+                  "run_id",
+                  "scope",
+                  "audience",
+                  "target_node_id",
+                  "snapshot_ref",
+                  "trigger",
+                  "state",
+                  "mode",
+                  "artifact_id",
+                  "turn_id",
+                  "error",
+                  "tool_trace",
+                  "usage",
+                  "created_at",
+                  "updated_at"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "bundle_version",
+        "snapshots",
+        "entries"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "bundle_version": {
+          "const": "2.0"
+        },
+        "snapshots": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "artifact",
+              "snapshot_key",
+              "previous_key",
+              "run"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "artifact": {
+                "type": "object",
+                "properties": {
+                  "schema_version": {
+                    "const": "3.0.0"
+                  },
+                  "record_type": {
+                    "const": "diagnostic_artifact"
+                  },
+                  "artifact_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "scope": {
+                    "type": "object",
+                    "properties": {
+                      "subject": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "enum": [
+                              "student",
+                              "class"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "id"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "scenario_id": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "subject",
+                      "scenario_id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "audience": {
+                    "enum": [
+                      "teacher",
+                      "student"
+                    ]
+                  },
+                  "target_node_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "generated_against": {
+                    "type": "object",
+                    "properties": {
+                      "snapshot_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "revision": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    },
+                    "required": [
+                      "snapshot_id",
+                      "revision"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "validated_against": {
+                    "type": "object",
+                    "properties": {
+                      "snapshot_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "revision": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    },
+                    "required": [
+                      "snapshot_id",
+                      "revision"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "fingerprint": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "dependencies": {
+                    "type": "object",
+                    "properties": {
+                      "read_nodes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "queries": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "tool": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "arguments": {
+                              "type": "object"
+                            }
+                          },
+                          "required": [
+                            "tool",
+                            "arguments"
+                          ],
+                          "additionalProperties": false
+                        }
+                      }
+                    },
+                    "required": [
+                      "read_nodes",
+                      "queries"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "validity": {
+                    "enum": [
+                      "fresh",
+                      "historical"
+                    ]
+                  },
+                  "publication": {
+                    "const": "active"
+                  },
+                  "origin": {
+                    "enum": [
+                      "rules_demo",
+                      "model"
+                    ]
+                  },
+                  "output": {
+                    "type": "object",
+                    "properties": {
+                      "explanation": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "cited_node_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "cited_evidence_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "resource_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "sections": {
+                        "anyOf": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "conclusion": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "actions": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              },
+                              "verification": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "required": [
+                              "conclusion",
+                              "actions",
+                              "verification"
+                            ],
+                            "additionalProperties": false
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "explanation",
+                      "cited_node_ids",
+                      "cited_evidence_ids",
+                      "resource_ids",
+                      "limitations"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "facts_fingerprint": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "generation": {
+                    "type": "object",
+                    "properties": {
+                      "provider": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "model": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "prompt_version": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "elapsed_ms": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "request_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    },
+                    "required": [
+                      "provider",
+                      "model",
+                      "prompt_version",
+                      "elapsed_ms",
+                      "request_ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "context_version": {
+                    "enum": [
+                      1,
+                      2,
+                      3
+                    ]
+                  },
+                  "quality": {
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "schema_version",
+                  "record_type",
+                  "artifact_id",
+                  "scope",
+                  "audience",
+                  "target_node_id",
+                  "generated_against",
+                  "validated_against",
+                  "fingerprint",
+                  "dependencies",
+                  "validity",
+                  "publication",
+                  "origin",
+                  "output",
+                  "created_at"
+                ],
+                "additionalProperties": false
+              },
+              "snapshot_key": {
+                "type": "string"
+              },
+              "previous_key": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "run": {
+                "type": "object",
+                "properties": {
+                  "schema_version": {
+                    "const": "3.0.0"
+                  },
+                  "record_type": {
+                    "const": "agent_run"
+                  },
+                  "run_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "scope": {
+                    "type": "object",
+                    "properties": {
+                      "subject": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "enum": [
+                              "student",
+                              "class"
+                            ]
+                          },
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "id"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "scenario_id": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "subject",
+                      "scenario_id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "audience": {
+                    "enum": [
+                      "teacher",
+                      "student"
+                    ]
+                  },
+                  "target_node_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "snapshot_ref": {
+                    "type": "object",
+                    "properties": {
+                      "snapshot_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "revision": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    },
+                    "required": [
+                      "snapshot_id",
+                      "revision"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "trigger": {
+                    "enum": [
+                      "view",
+                      "evaluation_changed",
+                      "question",
+                      "retry"
+                    ]
+                  },
+                  "state": {
+                    "enum": [
+                      "queued",
+                      "running",
+                      "succeeded",
+                      "failed",
+                      "superseded"
+                    ]
+                  },
+                  "mode": {
+                    "enum": [
+                      "diagnosis",
+                      "question"
+                    ]
+                  },
+                  "artifact_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "turn_id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "error": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "tool_trace": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "tool": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "arguments": {
+                          "type": "object"
+                        },
+                        "node_count": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      },
+                      "required": [
+                        "tool",
+                        "arguments",
+                        "node_count"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "usage": {
+                    "type": "object",
+                    "properties": {
+                      "model_calls": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "input_tokens": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "output_tokens": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "model_calls",
+                      "input_tokens",
+                      "output_tokens"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "updated_at": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "generation": {
+                    "type": "object",
+                    "properties": {
+                      "provider": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "model": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "prompt_version": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "elapsed_ms": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "request_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    },
+                    "required": [
+                      "provider",
+                      "model",
+                      "prompt_version",
+                      "elapsed_ms",
+                      "request_ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "error_code": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "attempts": {
+                    "type": "array",
+                    "items": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "required": [
+                  "schema_version",
+                  "record_type",
+                  "run_id",
+                  "scope",
+                  "audience",
+                  "target_node_id",
+                  "snapshot_ref",
+                  "trigger",
+                  "state",
+                  "mode",
+                  "artifact_id",
+                  "turn_id",
+                  "error",
+                  "tool_trace",
+                  "usage",
+                  "created_at",
+                  "updated_at"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -19,6 +19,7 @@ def transport(payload):
     context=json.loads(payload['messages'][1]['content'])['context']
     node=context['target_node_id'] or next(iter(context['nodes']))
     output={'explanation':'测试传输生成的诊断：仅用于自动化测试。','cited_node_ids':[node],'cited_evidence_ids':[],'resource_ids':[],'limitations':['自动化测试数据，不是真实外部模型成果。']}
+    output['sections']={'conclusion':output['explanation'],'actions':['对目标知识安排一次短测并记录完整解题过程。'],'verification':'独立复做同类任务并由教师核验步骤与结论。'}
     return {'_request_id':'mock-request-1','choices':[{'finish_reason':'stop','message':{'content':json.dumps(output,ensure_ascii=False)}}],'usage':{'prompt_tokens':100,'completion_tokens':30}}
 
 def factory(key,model,supplier='openai'):
@@ -29,7 +30,7 @@ def factory(key,model,supplier='openai'):
 
 class ConfigurationTests(unittest.TestCase):
     def setUp(self):
-        self.tmp=tempfile.TemporaryDirectory();self.engine=Engine(ROOT,Path(self.tmp.name)/'agent.sqlite',Provider('rules'),False)
+        self.tmp=tempfile.TemporaryDirectory();self.engine=Engine(ROOT,Path(self.tmp.name)/'agent.sqlite',Provider('rules'),False,load_seed=False)
         self.scope=self.engine.scope({'type':'student','id':'DEMO001'},'mixed_evidence');self.settings=Settings(self.engine,factory)
     def tearDown(self):self.engine.close();self.tmp.cleanup()
     def generate(self):
@@ -73,7 +74,7 @@ class ConfigurationTests(unittest.TestCase):
     def test_bundle_roundtrip_then_evidence_change_invalidates(self):
         self.generate();path=Path(self.tmp.name)/'bundle.json'
         self.assertEqual(export_bundle(self.engine,path),1);self.assertEqual(len(load_bundle(self.engine,path)),1)
-        self.settings.disconnect();other=Engine(ROOT,Path(self.tmp.name)/'viewer.sqlite',Provider('rules'),False)
+        self.settings.disconnect();other=Engine(ROOT,Path(self.tmp.name)/'viewer.sqlite',Provider('rules'),False,load_seed=False)
         try:
             other.seed_artifacts=load_bundle(other,path)
             self.assertIsNotNone(other.state(self.scope,'teacher','C05')['artifact'])
@@ -100,8 +101,8 @@ class ConfigurationTests(unittest.TestCase):
     def test_fresh_viewer_imports_packaged_facts_without_overwriting_local_scope(self):
         self.engine.demo_update(self.scope,1,'packaged-assessment');self.generate()
         path=Path(self.tmp.name)/'bundle.json';self.assertEqual(export_bundle(self.engine,path),1)
-        viewer=Engine(ROOT,Path(self.tmp.name)/'fresh.sqlite',Provider('rules'),False)
-        existing=Engine(ROOT,Path(self.tmp.name)/'existing.sqlite',Provider('rules'),False)
+        viewer=Engine(ROOT,Path(self.tmp.name)/'fresh.sqlite',Provider('rules'),False,load_seed=False)
+        existing=Engine(ROOT,Path(self.tmp.name)/'existing.sqlite',Provider('rules'),False,load_seed=False)
         try:
             viewer.seed_artifacts=load_bundle(viewer,path,bootstrap=True)
             self.assertEqual(viewer.ensure(self.scope)['revision'],2);self.assertIsNotNone(viewer.state(self.scope,'teacher','C05')['artifact'])
@@ -149,7 +150,7 @@ class ConfigurationHTTPTests(unittest.TestCase):
     def test_config_api_errors_capabilities_and_secret_boundaries(self):
         from agent.http_server import create_server
         with tempfile.TemporaryDirectory() as tmp:
-            server=create_server(ROOT,Path(tmp)/'http.sqlite',0,Provider('rules'),factory)
+            server=create_server(ROOT,Path(tmp)/'http.sqlite',0,Provider('rules'),factory,load_seed=False)
             thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start();base='http://127.0.0.1:'+str(server.server_address[1])
             def post(path,value,headers=None):
                 req=urllib.request.Request(base+'/api/agent/'+path,data=json.dumps(value).encode(),headers={'Content-Type':'application/json',**(headers or {})})

@@ -8,11 +8,13 @@ from .engine import Engine,Conflict
 from .provider import load_env,ProviderError
 from .settings import Settings
 from .bundles import export_bundle,load_bundle
+from .batches import Batches
 
-def create_server(root,db_path=None,port=8765,provider=None,provider_factory=None):
+def create_server(root,db_path=None,port=8765,provider=None,provider_factory=None,load_seed=True):
     root=Path(root).resolve();runtime=root/'.runtime';runtime.mkdir(exist_ok=True)
-    engine=Engine(root,db_path or runtime/'agent.sqlite3',provider=provider)
+    engine=Engine(root,db_path or runtime/'agent.sqlite3',provider=provider,load_seed=load_seed)
     settings=Settings(engine,provider_factory)
+    batches=Batches(engine)
     class Handler(SimpleHTTPRequestHandler):
         def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(root),**kwargs)
         def reply(self,status,value):
@@ -38,6 +40,7 @@ def create_server(root,db_path=None,port=8765,provider=None,provider_factory=Non
                     self.trusted();args=self.args()
                     if path=='/api/agent/health':return self.reply(200,{'available':True,'provider':engine.provider.origin,**settings.status()})
                     if path=='/api/agent/config':return self.reply(200,settings.status())
+                    if path=='/api/agent/batches':return self.reply(200,{'batches':[batches.summary(b) for b in engine.store.all('batch')][-8:]})
                     scope=self.scope(args)
                     if path=='/api/agent/snapshot':return self.reply(200,engine.ensure(scope))
                     if path=='/api/agent/state':return self.reply(200,engine.state(scope,args.get('audience','teacher'),args.get('node_id') or None))
@@ -55,12 +58,19 @@ def create_server(root,db_path=None,port=8765,provider=None,provider_factory=Non
                 self.trusted();body=self.body();path=urlparse(self.path).path
                 if path=='/api/agent/config/test':return self.reply(200,settings.test_and_enable(body))
                 if path=='/api/agent/config/disconnect':return self.reply(200,settings.disconnect())
+                if path=='/api/agent/runtime/reload':
+                    from .runtime_control import reload_generation
+                    return self.reply(200,reload_generation(engine,settings))
                 if path=='/api/agent/bundle/export':
                     with engine.lock:
                         destination=root/'review/model-diagnostics/bundle.json'
                         count=export_bundle(engine,destination);engine.seed_artifacts=load_bundle(engine,destination)
                     return self.reply(200,{'exported_model_diagnoses':count})
                 scope=self.scope(body);audience=body.get('audience','teacher');target=body.get('node_id') or None
+                if path=='/api/agent/batch/start':return self.reply(200,batches.start(body.get('mode','sample'),scope,audience,body.get('max_tasks',8),body.get('token_budget',200000)))
+                if path=='/api/agent/batch/resume':return self.reply(200,batches.resume(body['batch_id']))
+                if path=='/api/agent/batch/pause':return self.reply(200,batches.cancel(body['batch_id']))
+                if path=='/api/agent/batch/review':return self.reply(200,batches.review(body['batch_id'],body.get('review')))
                 if path=='/api/agent/diagnose':result=engine.ensure_diagnosis(scope,audience,target,'retry' if body.get('retry') else 'view')
                 elif path=='/api/agent/ask':result=engine.ask(scope,audience,target,body.get('question'),body.get('snapshot_ref'))
                 elif path=='/api/agent/demo-update':

@@ -13,7 +13,9 @@ def digest(value):
 def ref(snapshot):return {'snapshot_id':snapshot['snapshot_id'],'revision':snapshot['revision']}
 
 class Context:
-    def __init__(self,graph,snapshot,profile,resources,policy,audience,target,previous=None,dependencies=None):
+    def __init__(self,graph,snapshot,profile,resources,policy,audience,target,previous=None,dependencies=None,teaching=None,context_version=3):
+        self.context_version=context_version
+        self.teaching=teaching or {'version':'none','nodes':{}}
         self.graph=graph;self.snapshot=snapshot;self.profile=profile;self.resources=resources;self.policy=policy
         self.audience=audience;self.target=target;self.previous=previous;self.discussion=None;self.nodes={n['id']:n for n in graph['nodes']}
         self.adj={k:[] for k in self.nodes};self.seen=set();self.queries=[];self.trace=[]
@@ -25,6 +27,7 @@ class Context:
         self.seen=set(seeds)
         if target:self.seen|={e['target'] if e['source']==target else e['source'] for e in self.adj[target]}
         else:self.seen|={self.nodes[k]['course_id'] for k in list(self.seen) if self.nodes[k]['level']=='L3_Knowledge'}
+        if context_version>=3 and target and self.nodes[target]['level']=='L3_Knowledge':self.seen|={k for k,n in self.nodes.items() if n.get('course_id')==self.nodes[target]['course_id']}
         self.initial=set(self.seen)
         if dependencies:
             self.seen.update(dependencies['read_nodes'])
@@ -50,19 +53,37 @@ class Context:
             'target_course_objectives':self.nodes[self.target].get('course_objectives',[]) if self.target else [],
             'limitations':['仅使用已给出的事实；未评价不等于薄弱；省略的聚合证据不表示分数失效；不补造关系。']}
     def dependencies(self):return {'read_nodes':sorted(self.seen-self.initial),'queries':copy.deepcopy(self.queries)}
-    def fingerprint(self,generator):
+    def teaching_context(self):
+        ids=[self.target] if self.target else []
+        if self.target:
+            children=[k for k,n in self.nodes.items() if n.get('course_id')==self.target]
+            ids+=children
+            if self.nodes[self.target]['level']=='L1_Ability':ids+=[k for k in sorted(self.seen) if self.nodes[k]['level']=='L2_Course'][:3]
+        return {'version':self.teaching['version'],'provenance':'authored_demo_reference','items':{k:self.teaching['nodes'][k] for k in ids if k in self.teaching['nodes']}}
+    def model_payload(self):
+        from .factual_summary import summary,limitations
+        p=self.payload()
+        return {'subject':p['subject'],'audience':self.audience,'snapshot_ref':p['snapshot_ref'],'evaluation_revision':self.snapshot['revision'],'target_node_id':self.target,
+            'nodes':{k:{'label':v['label'],'level':v['level'],'status':{f:x for f,x in v['status'].items() if f in ('achievement_rate','coverage_rate','learning_state','learning_progress','score_is_provisional','health_color','evidence_granularity')},'total_evidence_count':len(self.snapshot['node_results'][k]['evidence_refs']),'omitted_evidence_count':v['omitted_evidence_count'],
+                'child_knowledge_evaluated':sum(self.snapshot['node_results'][id]['status']['achievement_rate'] is not None for id,n in self.nodes.items() if n.get('course_id')==k) if self.nodes[k]['level']=='L2_Course' else None} for k,v in p['nodes'].items()},
+            'edges':p['edges'],'evidence':[{k:e[k] for k in ['evidence_id','node_id','title','score','kind','sample_count']} for e in p['evidence']],
+            'resources':[{**r,'content_summary':'本地复习任务单，提供自主检查步骤；不含具体试题、标准答案或学生作答。'} for r in p['resources']],'learning_context':p['learning_context'],'focus':p['focus'],
+            'course_objectives':p['target_course_objectives'],'teaching_reference':self.teaching_context(),'discussed_diagnosis':self.discussion,'verified_factual_summary':summary(self),'verified_limitations':limitations(self),
+            'limitations':['所有评价为演示数据；教学参考是建议，不是学生错误记录。','上下文已裁剪；omitted_evidence_count表示证据未展示，不能声称只有一条或没有知识点评价。','achievement_rate是100分制达成度，不是及格人数比例、学习进度或证据覆盖率。']}
+    def fingerprint(self,generator,include_teaching=False):
         p=self.payload();p.pop('snapshot_ref');p['scenario']={k:v for k,v in p['scenario'].items() if k!='as_of'}
         p['graph_ref']=self.graph['graph_ref'];p['policy']=self.policy
         if generator is not None:p['generator']=generator;p['prompt_version']='agent-1'
+        if include_teaching:p['teaching_reference']=self.teaching_context()
         p['queries']=self.queries
         if any(q['tool']=='compare_previous' for q in self.queries):p['previous']={k:self.previous['node_results'][k] for k in sorted(self.seen)} if self.previous else None
         return digest(p)
     def call(self,name,args,replay=False):
         if not isinstance(args,dict):raise ValueError('工具参数必须是对象')
-        expected={'read_node':{'node_id'},'read_neighbors':{'node_id','relation_type'},'read_evidence':{'node_id'},'read_resources':{'node_id'},'compare_previous':set()}
+        expected={'read_node':{'node_id'},'read_neighbors':{'node_id','relation_type'},'read_evidence':{'node_id'},'read_resources':{'node_id'},'read_teaching':{'node_id'},'compare_previous':set()}
         if name not in expected or set(args)!=expected[name]:raise ValueError('不允许的工具或参数')
         if not replay and len(self.trace)>=6:raise ValueError('工具次数超限')
-        original=set(self.seen)
+        original=set(self.seen);original_queries=copy.deepcopy(self.queries)
         try:
             if name=='compare_previous':
                 result={'before':ref(self.previous) if self.previous else None,'after':ref(self.snapshot),
@@ -79,16 +100,16 @@ class Context:
                     wanted=set(self.snapshot['node_results'][nid]['evidence_refs'])
                     self.seen.update(e['node_id'] for e in [e for e in self.snapshot['evidence'] if e['evidence_id'] in wanted and e['node_id'] in self.allowed][:8])
                 self._check();p=self.payload()
-                result={'nodes':p['nodes'],'edges':p['edges']} if name in ('read_node','read_neighbors') else {'evidence':p['evidence']} if name=='read_evidence' else {'resources':p['resources']}
+                related={nid}|{e['target'] if e['source']==nid else e['source'] for e in self.adj[nid] if name=='read_neighbors' and (args['relation_type']=='all' or e['relation_type']==args['relation_type'])}
+                result={'nodes':{k:v for k,v in self.model_payload()['nodes'].items() if k in related},'edges':[e for e in p['edges'] if nid in (e['source'],e['target'])]} if name in ('read_node','read_neighbors') else {'evidence':[e for e in p['evidence'] if e['node_id']==nid or e['evidence_id'] in self.snapshot['node_results'][nid]['evidence_refs']]} if name=='read_evidence' else {'reference':self.teaching['nodes'].get(nid),'provenance':'authored_demo_reference'} if name=='read_teaching' else {'resources':[r for r in p['resources'] if any(x['resource_id']==r['resource_id'] and nid in x['node_ids'] for x in self.resources['resources'])]}
             if {'tool':name,'arguments':args} not in self.queries:self.queries.append({'tool':name,'arguments':copy.deepcopy(args)})
             self._check()
             if not replay:self.trace.append({'tool':name,'arguments':args,'node_count':len(self.seen)})
             return result
-        except BaseException:self.seen=original;raise
+        except BaseException:self.seen=original;self.queries=original_queries;raise
     def validate_output(self,value):
-        from jsonschema import validate
-        from .contracts import OUTPUT
-        validate(value,OUTPUT)
+        from .contracts import OUTPUT_VALIDATOR
+        OUTPUT_VALIDATOR.validate(value)
         if not value['explanation'].strip() or len(value['explanation'])>6000:raise ValueError('解释为空或过长')
         if not set(value['cited_node_ids'])<=self.seen:raise ValueError('引用了未读取节点')
         if not set(value['cited_evidence_ids'])<={e['evidence_id'] for e in self.evidence()}:raise ValueError('引用了未读取证据')

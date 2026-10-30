@@ -1,1 +1,7 @@
-{"bundle_version":"1.0","bundle_file":"bundle.json","entries":0,"real_model_results_available":false}
+{
+  "bundle_version": "2.0",
+  "bundle_file": "bundle.json",
+  "entries": 417,
+  "snapshot_count": 2,
+  "real_model_results_available": true
+}

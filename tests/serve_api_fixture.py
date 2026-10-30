@@ -12,6 +12,7 @@ def transport(payload):
     score=context['nodes'][node]['status']['achievement_rate'];coverage=context['nodes'][node]['status']['coverage_rate']
     output={'explanation':f'浏览器测试传输：当前评价 {score:.2f}，覆盖 {coverage:.0%}。' if score is not None else '浏览器测试传输：当前没有评价。',
         'cited_node_ids':[node],'cited_evidence_ids':[],'resource_ids':[],'limitations':['仅用于浏览器测试，没有调用真实模型。']}
+    output['sections']={'conclusion':output['explanation'],'actions':['对目标知识安排一次短测并记录完整解题过程。'],'verification':'独立复做同类任务并由教师核验步骤与结论。'}
     return {'_request_id':'browser-mock-request','choices':[{'finish_reason':'stop','message':{'content':json.dumps(output,ensure_ascii=False)}}],'usage':{'prompt_tokens':100,'completion_tokens':20}}
 
 def factory(key,model,supplier='openai'):
@@ -20,7 +21,7 @@ def factory(key,model,supplier='openai'):
 
 if __name__=='__main__':
     with tempfile.TemporaryDirectory() as tmp:
-        server=create_server(Path(__file__).resolve().parents[1],Path(tmp)/'browser.sqlite',0,Provider('rules'),factory)
+        server=create_server(Path(__file__).resolve().parents[1],Path(tmp)/'browser.sqlite',0,Provider('rules'),factory,load_seed=False)
         print(f'http://127.0.0.1:{server.server_address[1]}',flush=True)
         try:server.serve_forever()
         except KeyboardInterrupt:pass

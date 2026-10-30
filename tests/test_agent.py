@@ -13,12 +13,12 @@ from agent.http_server import create_server
 
 ROOT=Path(__file__).resolve().parents[1]
 def completion(output):return {'choices':[{'finish_reason':'stop','message':{'role':'assistant','content':json.dumps(output,ensure_ascii=False)}}],'usage':{'prompt_tokens':50,'completion_tokens':30}}
-def output():return {'explanation':'依据当前对象与指定版本的评价解释。','cited_node_ids':['C05'],'cited_evidence_ids':[],'resource_ids':[],'limitations':[]}
+def output():return {'explanation':'依据当前对象与指定版本的评价解释。','sections':{'conclusion':'当前需要结合评价覆盖判断。','actions':['安排一次针对本课程知识点的短测并记录步骤。'],'verification':'通过独立复做与教师核验比较改善情况。'},'cited_node_ids':['C05'],'cited_evidence_ids':[],'resource_ids':[],'limitations':[]}
 
 class AgentTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.path=Path(self.tmp.name)/'agent.sqlite'
-        self.engine=Engine(ROOT,self.path,Provider('rules'),False,allow_rules=True);self.scope=self.engine.scope({'type':'student','id':'DEMO001'},'mixed_evidence')
+        self.engine=Engine(ROOT,self.path,Provider('rules'),False,allow_rules=True,load_seed=False);self.scope=self.engine.scope({'type':'student','id':'DEMO001'},'mixed_evidence')
     def tearDown(self):self.engine.close();self.tmp.cleanup()
     def drain(self):
         for _ in range(50):
@@ -28,7 +28,7 @@ class AgentTests(unittest.TestCase):
         run=self.engine.ensure_diagnosis(self.scope,'teacher','C05')['run'];self.drain()
         artifact=self.engine.state(self.scope,'teacher','C05')['artifact'];self.assertEqual(artifact['origin'],'rules_demo')
         self.assertEqual(self.engine.store.get('agent_run',run['run_id'])['state'],'succeeded')
-        self.engine.close();self.engine=Engine(ROOT,self.path,Provider('rules'),False,allow_rules=True)
+        self.engine.close();self.engine=Engine(ROOT,self.path,Provider('rules'),False,allow_rules=True,load_seed=False)
         self.assertEqual(self.engine.state(self.scope,'teacher','C05')['artifact']['artifact_id'],artifact['artifact_id'])
     def test_javascript_numeric_round_trip_does_not_invalidate_dependencies(self):
         self.assertEqual(digest({'score':74.0,'coverage':1.0}),digest({'coverage':1,'score':74}))
@@ -146,13 +146,13 @@ class AgentTests(unittest.TestCase):
         self.assertEqual(self.engine.state(self.scope,'student','C05')['turns'],[])
     def test_queued_work_recovers_after_restart(self):
         run=self.engine.ensure_diagnosis(self.scope,'teacher','C05')['run'];run['state']='running';self.engine.store.put('agent_run',run['run_id'],run)
-        self.engine.close();self.engine=Engine(ROOT,self.path,Provider('rules'),False,allow_rules=True);self.drain()
+        self.engine.close();self.engine=Engine(ROOT,self.path,Provider('rules'),False,allow_rules=True,load_seed=False);self.drain()
         self.assertEqual(self.engine.store.get('agent_run',run['run_id'])['state'],'succeeded')
 
 class HTTPTests(unittest.TestCase):
     def test_api_and_static_boundaries(self):
         with tempfile.TemporaryDirectory() as tmp:
-            server=create_server(ROOT,Path(tmp)/'http.sqlite',0,Provider('rules'));thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+            server=create_server(ROOT,Path(tmp)/'http.sqlite',0,Provider('rules'),load_seed=False);thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
             base='http://127.0.0.1:'+str(server.server_address[1])
             try:
                 with urllib.request.urlopen(base+'/api/agent/health') as r:self.assertEqual(json.load(r)['provider'],'rules_demo')

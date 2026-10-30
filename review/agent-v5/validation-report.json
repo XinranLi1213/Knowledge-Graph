@@ -1,0 +1,74 @@
+{
+  "status": "passed_with_documented_quality_limits",
+  "real_external_api_tested": true,
+  "provider": "deepseek",
+  "diagnosis_strategy": "teaching-agent-6",
+  "question_strategy": "tutoring-agent-6",
+  "tests": {
+    "python": 45,
+    "node": 13,
+    "api_config_browser": "passed_mock_transport",
+    "real_results_browser": "passed",
+    "offline_portable_results": 417,
+    "preset_contract_checks": "passed"
+  },
+  "release": {
+    "entries": 417,
+    "shared_snapshots": 2,
+    "bytes": 2141870,
+    "initial_successes": 395,
+    "initial_network_failures": 22,
+    "initial_success_rate": 0.947242206235012,
+    "final_successes": 417,
+    "reused_on_retry": 395,
+    "new_successes_on_retry": 22,
+    "initial_model_calls": 437,
+    "retry_model_calls": 28,
+    "initial_tokens": 1594091,
+    "retry_tokens": 122368
+  },
+  "diagnosis_sample_review": {
+    "batch_id": "batch-f50af03ba1314cb7968f73f1be91641f",
+    "mean_score": 4.145833333333333,
+    "review": {
+      "reviewer_type": "assistant_manual_review",
+      "scores": [
+        3.5,
+        4,
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        4,
+        4,
+        4,
+        4,
+        4.5,
+        4.5,
+        4,
+        4.5,
+        4,
+        4,
+        3.5,
+        3.5,
+        4.5,
+        4.5,
+        4,
+        4.5,
+        4,
+        4
+      ],
+      "critical_errors": 0,
+      "notes": "开发助手逐项查看24项真实输出，并将分数、覆盖率、进度、知识点排序与快照核对。事实摘要由程序生成，教学行动均针对节点且提供复测步骤。总体与能力任务仍偏概括，学生自拟综合任务的支架可继续细化，已相应降低评分；没有捏造题目作答或把未评价当薄弱。此评分是开发助手的独立阅读评价，不是教师专家验收，后者仍待进行。"
+    },
+    "teacher_expert_review": "pending"
+  },
+  "followups": {
+    "successful_cases": 9,
+    "assistant_manual_mean": 4.055555555555555,
+    "teacher_expert_review": "pending"
+  },
+  "credential_accessed_or_exported": false,
+  "private_user_conversations_exported": false,
+  "preset_evaluations_modified": false
+}

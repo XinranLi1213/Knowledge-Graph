@@ -1,0 +1,114 @@
+{
+  "binding": {
+    "subject_type": "class",
+    "subject_id": "COMM-DEMO-40",
+    "scenario": "mixed_evidence",
+    "audience": "teacher",
+    "node_id": "C02"
+  },
+  "turn": {
+    "schema_version": "3.0.0",
+    "record_type": "conversation_turn",
+    "turn_id": "turn-47292e89ac534bca962473ad6ac16c1c",
+    "session_id": "8e3d9ed4141da3ca0d5e9055bbbed9dbbf3fba6a9953fa04a8de83db5fbd9828",
+    "scope": {
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "scenario_id": "mixed_evidence"
+    },
+    "audience": "teacher",
+    "target_node_id": "C02",
+    "snapshot_ref": {
+      "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+      "revision": 1
+    },
+    "discussed_artifact_id": null,
+    "question": "这门课需要关注什么？请给出教师可以实际采取的教学措施。",
+    "state": "succeeded",
+    "answer": {
+      "explanation": "针对《模拟电子技术》（C02，快照 class-COMM-DEMO-40-mixed_evidence 修订1）的教师关注要点：达成率 71.280587，黄色（介于黄色线60与绿色线80之间），覆盖率 1.0，学习状态 completed，score_is_provisional=false，来源为模拟预计算。6 个知识点覆盖率均为 1.0 且均为黄色：小信号放大 62.898（belongs_to 权重 0.2，最低且权重最大，建议优先关注）、半导体器件模型 69.32325（0.15）、集成运算放大 71.936（0.15）、放大器调试 73.12725（0.15）、负反馈 75.55325（0.2）、晶体管偏置 76.21575（0.15）。按课程目标分组（目标不参与分数聚合）：原理理解=K01 69.32325/K02 76.21575；分析与设计=K03 62.898/K04 75.55325；实践与验证=K05 71.936/K06 73.12725，三组均为黄色，无绿色组，说明关注点不止单一环节。课程内前置链为 K01→K02→K03→K04→K05→K06，小信号放大的直接前置是晶体管偏置；这只能提示复习与讲授顺序，不能据此断定因果。向外：C02 以 0.15 权重支撑 A01（工程知识，75.747437，黄色），同层 C01（83.632312，0.25）与 C03（82.05235，0.15）为绿色；C02 又是 C05 的前置，但 C05 覆盖率 0.5、灰色（insufficient_coverage）、分数暂定、学习状态 in_progress，故不应把 C05 的低分归因于 C02，也不宜提前判断。教学措施建议（属于由教师决定的可选做法，不改变分数、关系与正式教学计划）：1) 以「小信号放大」为首个复习与课堂重点，同时因其权重 0.2，优先安排例题与作业反馈；2) 依前置链先确认「半导体器件模型」「晶体管偏置」的基础概念与适用条件，再进入小信号放大与负反馈，避免在未确认前置的情况下直接加压；3) 按三个课程目标分组做短周期检查：原理理解（K01/K02）概念辨析题、分析与设计（K03/K04）方案比较题、实践与验证（K05/K06）测试与结果表达任务，用形成性结果（本次快照未提供该粒度证据）替代总结性判断；4) 可参考 RES-C02《模拟电子技术 · 复习任务单》作为复习载体，是否使用由教师决定。关于 discussed_diagnosis：本次上下文为 null，不存在旧解释需比对，matches_answer_version 不适用。局限：全部数据为合成模拟数据（synthetic_demo / simulated_precomputed）与 legacy_class_aggregate 聚合证据，粒度仅为知识聚合，未提供学生个体或题目级证据；「未学/无评价」不等于薄弱，阶段黄色不代表期末必然不及格；本回答不改变任何分数、关系、状态或教学计划。",
+      "cited_node_ids": [
+        "C02",
+        "C02.K01",
+        "C02.K02",
+        "C02.K03",
+        "C02.K04",
+        "C02.K05",
+        "C02.K06",
+        "A01",
+        "C01",
+        "C03",
+        "C05"
+      ],
+      "cited_evidence_ids": [
+        "EV-COMM-DEMO-40-mixed_evidence-C02",
+        "EV-COMM-DEMO-40-mixed_evidence-C02.K01",
+        "EV-COMM-DEMO-40-mixed_evidence-C02.K02",
+        "EV-COMM-DEMO-40-mixed_evidence-C02.K03",
+        "EV-COMM-DEMO-40-mixed_evidence-C02.K04",
+        "EV-COMM-DEMO-40-mixed_evidence-C02.K05",
+        "EV-COMM-DEMO-40-mixed_evidence-C02.K06",
+        "EV-COMM-DEMO-40-mixed_evidence-A01",
+        "EV-COMM-DEMO-40-mixed_evidence-C01",
+        "EV-COMM-DEMO-40-mixed_evidence-C03",
+        "EV-COMM-DEMO-40-mixed_evidence-C05"
+      ],
+      "resource_ids": [
+        "RES-C02"
+      ],
+      "limitations": [
+        "全部为合成模拟数据（synthetic_demo、simulated_precomputed）及 legacy_class_aggregate 聚合证据，证据粒度为知识聚合，缺少学生个体与题目级证据。",
+        "前置链关系仅提示复习与讲授顺序，不能证明小信号放大低分由晶体管偏置导致。",
+        "C05 覆盖率 0.5、灰色（证据不足）、分数暂定，不可将其表现归因于 C02，也不宜提前判断。",
+        "本次 discussed_diagnosis 为 null，无历史解释可比对，matches_answer_version 不适用。",
+        "阶段黄色不代表期末必然不及格；未学或未评价不等于薄弱。",
+        "所提教学措施为可选建议，不改变任何分数、关系、状态或正式教学计划。"
+      ]
+    },
+    "origin": "model",
+    "created_at": "2026-10-30T00:55:01.393427+00:00",
+    "generator": "deepseek:deepseek-flash",
+    "historical": false
+  },
+  "run": {
+    "schema_version": "3.0.0",
+    "record_type": "agent_run",
+    "run_id": "run-4b9b9a9b900e4616ba33efa6dcd9b8ca",
+    "scope": {
+      "subject": {
+        "type": "class",
+        "id": "COMM-DEMO-40"
+      },
+      "scenario_id": "mixed_evidence"
+    },
+    "audience": "teacher",
+    "target_node_id": "C02",
+    "snapshot_ref": {
+      "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+      "revision": 1
+    },
+    "trigger": "question",
+    "state": "succeeded",
+    "mode": "question",
+    "artifact_id": null,
+    "turn_id": "turn-47292e89ac534bca962473ad6ac16c1c",
+    "error": null,
+    "tool_trace": [],
+    "usage": {
+      "model_calls": 1,
+      "input_tokens": 7621,
+      "output_tokens": 1152
+    },
+    "created_at": "2026-10-30T00:55:01.393427+00:00",
+    "updated_at": "2026-10-30T00:55:08.207910+00:00",
+    "generation": {
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "prompt_version": "agent-1",
+      "elapsed_ms": 6625,
+      "request_ids": []
+    }
+  }
+}

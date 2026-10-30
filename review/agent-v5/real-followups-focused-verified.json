@@ -1,0 +1,763 @@
+{
+  "source": "real_configured_service",
+  "cases": [
+    {
+      "case": 2,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C09.K01"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-42743a7bf4104d7ea21485266f6876b9",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-b02bbe9dc12440b394f7736158c832c6",
+        "question": "给我一道C语言整数除法与浮点转换的自测题，写出完整代码和两个要比较的表达式。先不给答案。",
+        "state": "failed",
+        "answer": null,
+        "origin": "model",
+        "created_at": "2026-10-30T02:34:02.319387+00:00",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-53dd1f55863143808a2cd8b76ec5792f",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "failed",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-42743a7bf4104d7ea21485266f6876b9",
+        "error": "cannot import name 'check_answer' from 'agent.exercises' (C:\\Users\\27725\\Documents\\ChatGPT\\Knowlwdge-Graph\\agent\\exercises.py)",
+        "tool_trace": [
+          {
+            "tool": "read_node",
+            "arguments": {
+              "node_id": "C09.K01"
+            },
+            "node_count": 7
+          },
+          {
+            "tool": "read_teaching",
+            "arguments": {
+              "node_id": "C09.K01"
+            },
+            "node_count": 7
+          }
+        ],
+        "usage": {
+          "model_calls": 2,
+          "input_tokens": 13321,
+          "output_tokens": 847
+        },
+        "created_at": "2026-10-30T02:34:02.323524+00:00",
+        "updated_at": "2026-10-30T02:34:19.704896+00:00",
+        "error_code": "invalid_output",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-5",
+          "elapsed_ms": 17313,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "tool_calls",
+            "error_code": null
+          },
+          {
+            "number": 2,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 3,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C09.K02"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-2861061c1547472cbebe7db824a07ded",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K02",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-d6e5453a738d498a94f2bdd236d9a569",
+        "question": "给出刚才那道题的答案，尤其解释第二个表达式为什么会不同。",
+        "state": "failed",
+        "answer": null,
+        "origin": "model",
+        "created_at": "2026-10-30T02:34:20.233061+00:00",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-06d070f1779d463ca53ef1b2654cef2d",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K02",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "failed",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-2861061c1547472cbebe7db824a07ded",
+        "error": "cannot import name 'check_answer' from 'agent.exercises' (C:\\Users\\27725\\Documents\\ChatGPT\\Knowlwdge-Graph\\agent\\exercises.py)",
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6443,
+          "output_tokens": 804
+        },
+        "created_at": "2026-10-30T02:34:20.233061+00:00",
+        "updated_at": "2026-10-30T02:34:28.348777+00:00",
+        "error_code": "invalid_output",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-5",
+          "elapsed_ms": 7921,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 7,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C02.K03"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-8bdcce3f79f346c9ae3d5ce8f5bfa239",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-6a7c268229a54999a4c72bcdef465971",
+        "question": "用一个具体简单例子解释小信号等效分析的步骤，不要复述我的全部得分。",
+        "state": "failed",
+        "answer": null,
+        "origin": "model",
+        "created_at": "2026-10-30T02:34:29.508669+00:00",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-e4668145e86e4aa6bb5a0c3238bf5df7",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "failed",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-8bdcce3f79f346c9ae3d5ce8f5bfa239",
+        "error": "cannot import name 'check_answer' from 'agent.exercises' (C:\\Users\\27725\\Documents\\ChatGPT\\Knowlwdge-Graph\\agent\\exercises.py)",
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 8206,
+          "output_tokens": 876
+        },
+        "created_at": "2026-10-30T02:34:29.509609+00:00",
+        "updated_at": "2026-10-30T02:34:36.926958+00:00",
+        "error_code": "invalid_output",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-5",
+          "elapsed_ms": 7328,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 8,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C02.K03"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-bb4cebbabfc147a1812c9081f1386695",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-6a7c268229a54999a4c72bcdef465971",
+        "question": "给刚才的例子出一道只改变一个条件的变式题，我先自己算，不要给答案。",
+        "state": "failed",
+        "answer": null,
+        "origin": "model",
+        "created_at": "2026-10-30T02:34:37.743753+00:00",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-a92b055f9dee449ab2183bfafdb83b6f",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "failed",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-bb4cebbabfc147a1812c9081f1386695",
+        "error": "cannot import name 'check_answer' from 'agent.exercises' (C:\\Users\\27725\\Documents\\ChatGPT\\Knowlwdge-Graph\\agent\\exercises.py)",
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6767,
+          "output_tokens": 819
+        },
+        "created_at": "2026-10-30T02:34:37.745462+00:00",
+        "updated_at": "2026-10-30T02:34:44.310830+00:00",
+        "error_code": "invalid_output",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-5",
+          "elapsed_ms": 6483,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 2,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C09.K01"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-d41583f52b1743fba99377479b65ea13",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-b02bbe9dc12440b394f7736158c832c6",
+        "question": "给我一道C语言整数除法与浮点转换的自测题，写出完整代码和两个要比较的表达式。先不给答案。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "下面是自测题，完整代码与两个要比较的表达式都在题面里，按你的要求不附答案与结果。\n\n【题面】阅读并运行下面这段 C 程序（C99 及之后标准），先合上电脑，在纸上预测 p、q、r 三个输出，再运行核对。\n\n#include <stdio.h>\nint main(void) {\n    int a = 9, b = 4;\n    int p = a / b;          /* 表达式一 */\n    double q = a / b;       /* 表达式二 */\n    double r = (double)a / b;\n    printf(\"%d %.2f %.2f\\n\", p, q, r);\n    return 0;\n}\n\n要比较的两个表达式就是表达式一 a / b 与表达式二 a / b——它们在源码里看起来一模一样，但被赋给的变量类型不同（一个 int、一个 double）。请围绕“除法执行的那一刻，/ 两侧的操作数是什么类型”来解释它们的结果是否相同。r 作为对照项，说明它和表达式二的区别在哪里。\n\n【必须逐条作答的六项】\n1. 分别写出表达式一、表达式二中的操作数类型与运算结果类型，并说明各自得到的数值。\n2. 判断 p 与 q 的数值是否相等；若不相等，指出差异发生在“除法阶段”还是“赋值时的类型转换阶段”。\n3. 说明 q 与 r 是否相等，并解释 (double)a / b 中强制转换作用在哪个操作数上、使除法变成了什么类型的运算。\n4. 预测 printf 的完整一行输出，注意 %.2f 的小数位显示。\n5. 加写一行 double t = (double)(a / b); 预测 t 的值，并说明它更接近 q 还是更接近 r，理由是什么。\n6. 写一个自检：若某段程序把两个 int 之和 sum 与个数 n（n 不为 0）相除想得到带小数的平均值，应怎样写表达式才能保留小数？给出正确写法并说明写成 (double)(sum / n) 为什么不行。\n\n【条件与限制】b 恒为 4，不涉及除零；9 与 4 均在 int 范围内，不发生有符号溢出；题目只考察整数除法与浮点转换，不涉及浮点精度误差的深入讨论。\n\n【格式要求】第 1、2、3 项各单独成段，先写类型判断再写数值；第 4 项单独一行给出输出；第 5、6 项各写清理由。全部保留纸笔稿，运行结果与预测并列记录，交教师核验——这是检查方式，不是打分标准。",
+          "cited_node_ids": [
+            "C09.K01",
+            "C09.K02"
+          ],
+          "cited_evidence_ids": [],
+          "resource_ids": [
+            "RES-C09"
+          ],
+          "limitations": [
+            "题目依据 C99 及之后的整数除法与类型转换通用规则设计，与你上一轮题目中的同一规则一致；按你的要求本轮不提供答案、计算结果与评分结论。",
+            "复习任务单只提供自主检查步骤，不含具体试题与标准答案；本题不是任务单中的内容。",
+            "本轮为练习设计，不对你的成绩或错因作判断。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:39:43.546643+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-ceb3a58fedbb4107b7172d401cb5e878",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-d41583f52b1743fba99377479b65ea13",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6467,
+          "output_tokens": 748
+        },
+        "created_at": "2026-10-30T02:39:43.546643+00:00",
+        "updated_at": "2026-10-30T02:39:49.878902+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-5",
+          "elapsed_ms": 6219,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 3,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C09.K02"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-e7ef24b0235643d7a956e56ea1bd7399",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K02",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-d6e5453a738d498a94f2bdd236d9a569",
+        "question": "给出刚才那道题的答案，尤其解释第二个表达式为什么会不同。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "先直接回答：第二个表达式 a / b 的结果和第一个其实一样，都是 2，差别不在除法，而在赋值时的类型转换。\n\n关键一句：决定除法怎么算的是「/ 两侧操作数的类型」，不是左边接收变量的类型。a 和 b 都是 int，除法就是整数除法：9/4 得商 2、余 1 被丢掉。这个结果已经产生，之后赋予谁才轮到转换。\n\n逐项答案：\n\n1. 表达式一：操作数 int、int，结果类型 int，值 2。表达式二：操作数仍为 int、int，结果类型 int，值 2；只是先赋值给 double，再转换一次。r：操作数 double、int，int 被提升为 double，结果是浮点除法 9.0/4.0＝2.25。\n\n2. p 与 q 的数值相等，均为 2。差异不在除法阶段，而在赋值时的类型转换阶段——p 得到 int 2，q 把整数 2 转成 double 的 2.0；所以运行时 q 不出现小数 0.25。\n\n3. q 与 r 不相等（2.0 对 2.25）。区别只在强制转换作用在除法之前：b 被写成 (double)b 时 b 变成 double，/ 就变成浮点除法。所以要让除法保留小数，必须让「至少一个操作数在除法前就是浮点类型」，例如 (double)a / b 或 a / (double)b。\n\n4. printf 输出：2 2.00 2.25\n\n5. double t = (double)(a / b); 先算括号里的 a / b（int、int，得 2），再转成 double，所以 t = 2.0，更接近 q（2.0），不是 r（2.25）。这一项最能暴露「什么时候转换」的差别：加括号只改变转换发生的时机，不改变括号里的运算类型。\n\n6. 想求 sum 与 n 带小数的平均值，正确写法：double avg = (double)sum / n;（或 sum * 1.0 / n）。写成 (double)(sum / n) 不行，因为括号先做了整数除法，小数部分在转 double 之前已经丢失。\n\n再补一个易错点，针对上一个自测题里的 t 与 q、r：直觉上「赋给 double 就该有小数」是常见误解，实际上同一段 a / b 在不同上下文里结果完全相同，变化只会在右侧写明了转换时发生。\n\n一个可独立执行的自检：把 b 改成 5，重新预测 p、q、r 和 t。按 C99 及之后的规则：整数除法向零截断，p=1、q=1.0、r=1.8、t=1.0。如果你预测 p=1 而 q=1.8，说明把转换时机提前到了除法之前，正好需要回看第 5 项。全部预测写完再实际运行核对，把预测与运行结果并列记录，交教师核验——这是检查方式，不是打分标准。",
+          "cited_node_ids": [
+            "C09.K01",
+            "C09.K02"
+          ],
+          "cited_evidence_ids": [],
+          "resource_ids": [
+            "RES-C09"
+          ],
+          "limitations": [
+            "本题与答案依据 C99 及之后的整数除法截断与类型转换通用规则，教材若按早期实现可能对负数取整有说明差异；本题所有数据为正，不涉及该边界。",
+            "复习任务单只提供自主检查步骤，不含具体试题与标准答案；题目与答案由我按通用规则设计，不是任务单内容。",
+            "本轮为题目讲解，不对你的成绩或错因作判断。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:39:50.485955+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-07fb896248894658b08673ecae846528",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K02",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-e7ef24b0235643d7a956e56ea1bd7399",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6408,
+          "output_tokens": 845
+        },
+        "created_at": "2026-10-30T02:39:50.486956+00:00",
+        "updated_at": "2026-10-30T02:39:56.803332+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-5",
+          "elapsed_ms": 6235,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 7,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C02.K03"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-5ac8038506a54ed7940ff78968eaf07b",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-6a7c268229a54999a4c72bcdef465971",
+        "question": "用一个具体简单例子解释小信号等效分析的步骤，不要复述我的全部得分。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "小信号等效分析的基本步骤：先把直流和交流分开，直流用来确定静态工作点，交流只用来计算增益；接着把晶体管换成小信号模型（b-e 之间是 rπ，c-e 之间是受控电流源 βib），放大电路就变成一个纯线性电路。之后按四步走：定 Q 点 → 求 rπ → 画交流等效 → 算增益。\n\n用一个已核验的算例走一遍：NPN 固定偏置共射电路，发射极接地，VCC=12V，RB=560kΩ 从 VCC 接基极，RC=2kΩ 从 VCC 接集电极，RL=10kΩ 经耦合电容接输出，β=100，VBE=0.7V，VT=26mV，忽略基区体电阻与输出电阻。\n\n第一步：直流通路（耦合电容开路，输入置零）。IBQ=(12−0.7)/560k≈20.2μA，ICQ=βIBQ≈2.02mA，VCEQ=12−ICQ·2k≈7.96V。检查 VC≈7.96V > VB=0.7V，集电结反偏，确实在放大区；若这条不成立，线性小信号等效就不适用，必须先改偏置。\n\n第二步：rπ=βVT/ICQ=100×26mV/2.02mA≈1288Ω。\n\n第三步：画交流等效。直流电源对交流是地，耦合电容中频短路，于是 RB 从基极接地、RC 从集电极接电源地、RL 从集电极接地；晶体管换为 rπ 与 βib。注意 RB 也在交流输入通路中（并接在 b 与地之间），但理想基极电压源输入时，它只加载于输入、不显含在增益公式里。\n\n第四步：RC∥RL=2k∥10k≈1.667kΩ，Av=−β(RC∥RL)/rπ≈−100×1667/1288≈−129.3，负号表示中频反相。\n\n第五步：验算近似条件。输入基极峰值0.5mV 远小于 VT=26mV，线性化成立；|Av|×0.5mV≈65mV，相对于 VCEQ≈7.96V 的静态裕量很小，输出不削顶。\n\n一次可执行的自检：只把 RL 由 10k 改为 5kΩ，其余不动。RL 经耦合电容接入，不改变直流工作点，所以 IBQ、ICQ、VCEQ、rπ 全不变；只有并联值变为 2k∥5k≈1.429kΩ，Av≈−100×1429/1288≈−110.9。若你算出直流也变了，说明把 RL 误当成直流通路的一部分。",
+          "cited_node_ids": [
+            "C02.K03",
+            "C02.K02",
+            "C01.K04"
+          ],
+          "cited_evidence_ids": [],
+          "resource_ids": [
+            "RES-C02"
+          ],
+          "limitations": [
+            "讲解中的数值来自已核验的参考算例，不是对你具体作答的评价，也不能据此认定你在哪一步出错。",
+            "结论在给定理想模型下成立（忽略基区体电阻与输出电阻，VT 取 26mV）；实际器件参数不同时需要重新核对近似条件和工作区。"
+          ],
+          "sections": null
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:39:57.399868+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-27266d0d1a64489ea89b80f536525817",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-5ac8038506a54ed7940ff78968eaf07b",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 8277,
+          "output_tokens": 778
+        },
+        "created_at": "2026-10-30T02:39:57.400876+00:00",
+        "updated_at": "2026-10-30T02:40:01.706300+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-5",
+          "elapsed_ms": 4202,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    },
+    {
+      "case": 8,
+      "binding": {
+        "subject_type": "student",
+        "subject_id": "DEMO001",
+        "audience": "student",
+        "scenario": "mixed_evidence",
+        "node_id": "C02.K03"
+      },
+      "turn": {
+        "schema_version": "3.0.0",
+        "record_type": "conversation_turn",
+        "turn_id": "turn-6238bcd46d5d49ab95ee723379940308",
+        "session_id": "94b11e3088a999b1230a8d255818292f1bb6048a30db02ecf0cbd59daff881ad",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "discussed_artifact_id": "diag-6a7c268229a54999a4c72bcdef465971",
+        "question": "给刚才的例子出一道只改变一个条件的变式题，我先自己算，不要给答案。",
+        "state": "succeeded",
+        "answer": {
+          "explanation": "这次把输入信号幅度作为唯一改动条件：基极对地小信号峰值由 0.5mV 改为 5mV，其余参数（含 RB=560kΩ、RC=2kΩ、RL=10kΩ，以及 β=100、VBE=0.7V、VT=26mV）全部取自前面已核验的共射算例，保持不变。题面与要求如下，按你的要求不附答案。\n\n【题面】NPN 固定偏置共射放大电路：发射极接地，VCC=12V，RB=560kΩ 从 VCC 接基极，RC=2kΩ 从 VCC 接集电极；RL=10kΩ 经耦合电容接输出（直流开路、中频交流短路）。β=100，VBE=0.7V，VT=26mV，忽略基区体电阻 rbb' 与输出电阻 ro。输入为基极对地峰值 5mV 的小信号（这是相对原算例唯一的改动）。\n\n【逐条作答的六步】\n1. 直流通路：耦合电容开路、输入置零，用 IBQ=(VCC−VBE)/RB 求 IBQ、ICQ=βIBQ、VCEQ=VCC−ICQ·RC，写清单位。\n2. 工作区检查：比较 VC 与 VB，说明集电结是否反偏、是否在放大区；若不在，明确写“线性小信号等效不适用”并说明怎样调整偏置才能回到放大区。\n3. 求 rπ=βVT/ICQ，写单位，并说明它与原算例相比是否变化、为什么。\n4. 画交流等效：说明直流电源、耦合电容、RB、RC、RL 各如何处理，晶体管替换成哪两部分；写清 RB 是否出现在增益公式里、为什么。\n5. 算中频电压增益 Av=−β(RC∥RL)/rπ，先算并联值再代公式，保留负号并解释其含义。\n6. 验算近似条件（本变式的重点）：把输入峰值 5mV 与 VT=26mV 比较，判断小信号线性化是否仍成立；再用 |Av|×5mV 与静态裕量（如 VCEQ 与晶体管饱和压降之间的余量）比较，判断输出是否可能削顶。若判断为可能削顶，明确写出“此时按线性算出的增益只能作为理想值，实际输出受电源轨限制”和减小输入或改变偏置的方向。\n\n【对比一问】与原输入 0.5mV 的情形相比，IBQ、ICQ、VCEQ、rπ、Av 这五项是变大、变小还是不变？逐项给出理由，并指出哪一项真正因输入幅度改变而受影响、哪一项完全不受影响。\n\n【格式要求】每步先写公式、再代入数值、最后写结果与单位；工作区检查和近似条件验算各单独成段，不能只给最终增益。先自己算完再核对，保留纸笔稿交教师核验——这是检查方式，不是打分标准。\n\n提示（不含答案）：10 倍于原来的输入幅度，可能让“小信号”这个前提本身变得可疑，注意区分“Q 点与 rπ 会不会变”和“线性结论还成不成立”这两件事。",
+          "sections": null,
+          "cited_node_ids": [
+            "C02.K03",
+            "C02.K02",
+            "C01.K04"
+          ],
+          "cited_evidence_ids": [],
+          "resource_ids": [
+            "RES-C02"
+          ],
+          "limitations": [
+            "本题依据前面已核验的共射算例，仅把输入幅度改为 5mV 而设计，不含答案与结果；未核对你的实际作答，也不对你的成绩或错因作判断。",
+            "复习任务单只提供自主检查步骤，不含具体试题与标准答案；本题不是任务单中的内容。",
+            "结论仅在给定理想模型（忽略基区体电阻与输出电阻，VT=26mV）下讨论。"
+          ]
+        },
+        "origin": "model",
+        "created_at": "2026-10-30T02:40:02.154286+00:00",
+        "generator": "deepseek:deepseek-flash",
+        "historical": false
+      },
+      "run": {
+        "schema_version": "3.0.0",
+        "record_type": "agent_run",
+        "run_id": "run-16a19c6f37e5498d93d847df0680ed70",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "trigger": "question",
+        "state": "succeeded",
+        "mode": "question",
+        "artifact_id": null,
+        "turn_id": "turn-6238bcd46d5d49ab95ee723379940308",
+        "error": null,
+        "tool_trace": [],
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6797,
+          "output_tokens": 900
+        },
+        "created_at": "2026-10-30T02:40:02.155477+00:00",
+        "updated_at": "2026-10-30T02:40:08.110166+00:00",
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "tutoring-agent-5",
+          "elapsed_ms": 5875,
+          "request_ids": []
+        },
+        "attempts": [
+          {
+            "number": 1,
+            "output_cap": 2600,
+            "finish_reason": "stop",
+            "error_code": null
+          }
+        ]
+      }
+    }
+  ]
+}

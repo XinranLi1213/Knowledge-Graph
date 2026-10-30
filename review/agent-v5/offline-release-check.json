@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "real_model_artifacts": 417,
+  "external_calls_during_validation": 0,
+  "can_ask_without_key": false,
+  "scopes": [
+    {
+      "subject_type": "class",
+      "subject_id": "COMM-DEMO-40",
+      "audience": "teacher",
+      "scenario": "mixed_evidence",
+      "valid_model_diagnoses": 139
+    },
+    {
+      "subject_type": "student",
+      "subject_id": "DEMO001",
+      "audience": "teacher",
+      "scenario": "mixed_evidence",
+      "valid_model_diagnoses": 139
+    },
+    {
+      "subject_type": "student",
+      "subject_id": "DEMO001",
+      "audience": "student",
+      "scenario": "mixed_evidence",
+      "valid_model_diagnoses": 139
+    }
+  ]
+}

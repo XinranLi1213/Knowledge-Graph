@@ -13,6 +13,7 @@ SCOPE=obj({'subject':SUB,'scenario_id':S})
 def record(kind,props):return obj({'schema_version':{'const':'3.0.0'},'record_type':{'const':kind},**props})
 TRACE=obj({'tool':S,'arguments':{'type':'object'},'node_count':{'type':'integer','minimum':0}})
 OUTPUT=obj({'explanation':S,'cited_node_ids':arr(S),'cited_evidence_ids':arr(S),'resource_ids':arr(S),'limitations':arr(S)})
+OUTPUT['properties']['sections']={'anyOf':[obj({'conclusion':S,'actions':arr(S),'verification':S}),{'type':'null'}]}
 SCHEMAS={
  'evaluation_changed':record('evaluation_changed',{'event_id':S,'scope':SCOPE,'before':REF,'after':REF,
   'request_hash':S,'changes':arr(obj({'node_id':S,'field':S,'before':{},'after':{}})),
@@ -35,9 +36,12 @@ SCHEMAS={
 # Optional extensions preserve existing v3 records; the fact fingerprint is independent of credentials/model.
 GENERATION=obj({'provider':S,'model':S,'prompt_version':S,'elapsed_ms':{'type':'integer','minimum':0},'request_ids':arr(S)})
 SCHEMAS['diagnostic_artifact']['properties'].update(facts_fingerprint=S,generation=GENERATION)
+SCHEMAS['diagnostic_artifact']['properties'].update(context_version={'enum':[1,2,3]},quality={'type':'object'})
 SCHEMAS['agent_run']['properties'].update(generation=GENERATION,error_code=NULLS)
+SCHEMAS['agent_run']['properties']['attempts']={'type':'array','items':{'type':'object'}}
 SCHEMAS['conversation_turn']['properties'].update(generator=S)
 VALIDATORS={k:Draft202012Validator(v,format_checker=FormatChecker()) for k,v in SCHEMAS.items()}
+OUTPUT_VALIDATOR=Draft202012Validator(OUTPUT)
 def validate(record):VALIDATORS[record['record_type']].validate(record)
 def write_schemas(root):
     root=Path(root);root.mkdir(parents=True,exist_ok=True)

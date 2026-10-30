@@ -1,0 +1,4452 @@
+{
+  "batch": {
+    "batch_id": "batch-f50af03ba1314cb7968f73f1be91641f",
+    "mode": "sample",
+    "state": "completed",
+    "prompt_version": "teaching-agent-6",
+    "provider": "deepseek:deepseek-flash",
+    "cursor": 24,
+    "results": [
+      {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": null,
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-cd7ce8eb2d29445b83bd0be2e567e055",
+        "run_id": "run-8221a635cc51409486265987fdc5d662",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6706,
+          "output_tokens": 357
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "A01",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-cbfa8c7b087b4c7fb646c0e8802369f8",
+        "run_id": "run-b09fa0f325764a54838936e94316df6a",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 4187,
+          "output_tokens": 355
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C01",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-aaed71c3b25d455ba2cbc4cb1afcf261",
+        "run_id": "run-982ee4f9849143ae8ca3015b2d2f6974",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5374,
+          "output_tokens": 359
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-efb57872c83e4654943a2b728f0f2533",
+        "run_id": "run-1606f962459944b2bf769c77384f339a",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5650,
+          "output_tokens": 372
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C05",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-cde4f83c48eb472990df3c85069bac6a",
+        "run_id": "run-c843017435c642d8a37beee2ad8e9e1f",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5339,
+          "output_tokens": 373
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-2ec9248c2f484f5aaffecf3716802854",
+        "run_id": "run-bd6bdb8284f34a3897f2932cefb73787",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 4096,
+          "output_tokens": 324
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C05.K04",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-a9ef007d6bed4c9bace9b475a9763548",
+        "run_id": "run-6e60ea8c22ea4985a4dc92a26f177853",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3597,
+          "output_tokens": 281
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-e100cdca970d4d38bef751781805d481",
+        "run_id": "run-db9cf49f0da54765b8cb9311d47c12a7",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3784,
+          "output_tokens": 265
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": null,
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-ac4df514a75449948feb73f9f4bf46ba",
+        "run_id": "run-d5dd94ffdd4d425bac290201ece61dab",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6152,
+          "output_tokens": 291
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "A01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-29dd51c752ac4c15a53914ead422d6bd",
+        "run_id": "run-363b3f8eb0514829a7c775909559e722",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3831,
+          "output_tokens": 313
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-95b843616b9145f2bdabacf892d8e649",
+        "run_id": "run-446dbcc3498e458ca8c88cf53a611fd1",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5100,
+          "output_tokens": 259
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-b2bce44f5d4d49c18808b318399e4e5e",
+        "run_id": "run-739c427b5f6e41609c23e46ebcfe9d05",
+        "usage": {
+          "model_calls": 2,
+          "input_tokens": 10988,
+          "output_tokens": 356
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C05",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-7b74bb0c73d34cbf99219a333b8edc1b",
+        "run_id": "run-e4cbce6414cd4347991e6f5af56cf5ec",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5090,
+          "output_tokens": 375
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-202f9831149f4cdcb5af37bd0ca95d78",
+        "run_id": "run-886a105722e548adb0396089e554071f",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 4009,
+          "output_tokens": 318
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C05.K04",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-5bd2c9a62fc54610b03f6712e9fddef2",
+        "run_id": "run-6912f1c6987a4cb990508c0f23feda15",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3539,
+          "output_tokens": 289
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-ce0210b191c1483dafa8c9f3795f09de",
+        "run_id": "run-1f92fc200c294a778e14d729172b13d8",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3711,
+          "output_tokens": 227
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": null,
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-d0ebbcb48bcc4a9e83bd1dc2801707fb",
+        "run_id": "run-b576ddce135e4be89bbc040a3d9cbf37",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6151,
+          "output_tokens": 343
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "A01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-2d0ca1bba94a4a98b318dca4abd1dced",
+        "run_id": "run-20ba3f6d79664457ac41578db7f92061",
+        "usage": {
+          "model_calls": 2,
+          "input_tokens": 8828,
+          "output_tokens": 378
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-9cffca8ba98d44bba4643611fe224d5a",
+        "run_id": "run-52261c8648814f55aceb32d6697bf762",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5099,
+          "output_tokens": 314
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-287931ef06ec46c2b8e4044156a33ef0",
+        "run_id": "run-f3d0d81284954852a01bad1d3b55060d",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5317,
+          "output_tokens": 316
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C05",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-bd18dc3f81974e14b387f4cd045cdc66",
+        "run_id": "run-27b5ad979a5a44c7a9eae98731fa448e",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5089,
+          "output_tokens": 266
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-6a7c268229a54999a4c72bcdef465971",
+        "run_id": "run-a1883e6e351e478dba1c90e19f905044",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 4008,
+          "output_tokens": 262
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C05.K04",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-a1a0184aee394fc0bad379dfa7baa661",
+        "run_id": "run-7d44fa409e344e32ab3e5c5b9bafcfd8",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3538,
+          "output_tokens": 239
+        },
+        "error_code": null,
+        "error": null
+      },
+      {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-b02bbe9dc12440b394f7736158c832c6",
+        "run_id": "run-4afc1575095c4b6cbf954c25a4062c95",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3710,
+          "output_tokens": 250
+        },
+        "error_code": null,
+        "error": null
+      }
+    ],
+    "max_tasks": 24,
+    "token_budget": 500000,
+    "tokens_used": 130375,
+    "calls_used": 26,
+    "reason": null,
+    "created_at": "2026-10-30T01:28:48.383877+00:00",
+    "updated_at": "2026-10-30T01:29:57.522159+00:00",
+    "total_tasks": 24
+  },
+  "records": [
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": null,
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-cd7ce8eb2d29445b83bd0be2e567e055",
+        "run_id": "run-8221a635cc51409486265987fdc5d662",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6706,
+          "output_tokens": 357
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-cd7ce8eb2d29445b83bd0be2e567e055",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": null,
+        "generated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "ab79664dcf779e281e2e2cfacdf6ce62815bf55c1d157f46170a07c93d8cfadc",
+        "facts_fingerprint": "5d1b11af03caf21bbb3b21dabdd9d1c0dfec10732daf8bdc9614c84ee7c623c8",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 3062,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "当前优先核查：复杂工程问题研究能力（58.3分）、通信电子线路（49.7分）、离散傅里叶变换（45.0分）。未评价项不作为薄弱结论。",
+          "cited_node_ids": [
+            "A04",
+            "C05",
+            "C05.K01",
+            "C05.K03",
+            "C06",
+            "C06.K03",
+            "C09.K06",
+            "C01.K04"
+          ],
+          "cited_evidence_ids": [
+            "EV-COMM-DEMO-40-mixed_evidence-A04",
+            "EV-COMM-DEMO-40-mixed_evidence-C05",
+            "EV-COMM-DEMO-40-mixed_evidence-C05.K01",
+            "EV-COMM-DEMO-40-mixed_evidence-C05.K03",
+            "EV-COMM-DEMO-40-mixed_evidence-C06.K03"
+          ],
+          "resource_ids": [
+            "RES-C05",
+            "RES-C06",
+            "RES-C09"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "班级统计不能用于判断某个学生的表现。"
+          ],
+          "sections": {
+            "conclusion": "当前优先核查：复杂工程问题研究能力（58.3分）、通信电子线路（49.7分）、离散傅里叶变换（45.0分）。未评价项不作为薄弱结论。",
+            "actions": [
+              "用一次课梳理LC谐振与功率放大的等效分析步骤，配2道小练当堂订正。",
+              "针对离散傅里叶变换做20分钟概念短测，按结果分组安排重讲或迁移任务。"
+            ],
+            "verification": "课后回收短测与订正记录，看独立完成率和复测提升幅度，判断是否需再补讲。"
+          }
+        },
+        "created_at": "2026-10-30T01:28:51.505778+00:00"
+      },
+      "facts": {
+        "A04": {
+          "achievement_rate": 58.332132,
+          "health_color": "grey",
+          "coverage_rate": 0.4,
+          "learning_state": "in_progress",
+          "grey_reason": "insufficient_coverage",
+          "evidence_granularity": "course_aggregate",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": true,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": null
+        },
+        "C05": {
+          "achievement_rate": 49.650575,
+          "health_color": "grey",
+          "coverage_rate": 0.5,
+          "learning_state": "in_progress",
+          "grey_reason": "insufficient_coverage",
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": true,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 0.6
+        },
+        "C05.K01": {
+          "achievement_rate": 47.4645,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C05.K03": {
+          "achievement_rate": 46.4285,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C06": {
+          "achievement_rate": 52.414263,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C06.K03": {
+          "achievement_rate": 44.9505,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C09.K06": {
+          "achievement_rate": 89.5725,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C01.K04": {
+          "achievement_rate": 88.41925,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "A01",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-cbfa8c7b087b4c7fb646c0e8802369f8",
+        "run_id": "run-b09fa0f325764a54838936e94316df6a",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 4187,
+          "output_tokens": 355
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-cbfa8c7b087b4c7fb646c0e8802369f8",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "A01",
+        "generated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "bc3e0c33c8695ffdffe5ef50c2c7834656533039bec6d8c636d8058a668cdd98",
+        "facts_fingerprint": "84a22a6b9ea230c5179a8c5c01979b94872243c283220bf7dc7c87e92fabe889",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 3156,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "工程知识达成度75.75分，评价覆盖100%。能力由课程支撑聚合，需结合课程任务与证据覆盖理解。",
+          "cited_node_ids": [
+            "A01",
+            "C01",
+            "C02",
+            "C03",
+            "C04",
+            "C07"
+          ],
+          "cited_evidence_ids": [
+            "EV-COMM-DEMO-40-mixed_evidence-A01",
+            "EV-COMM-DEMO-40-mixed_evidence-C01",
+            "EV-COMM-DEMO-40-mixed_evidence-C04"
+          ],
+          "resource_ids": [
+            "RES-C01",
+            "RES-C04",
+            "RES-C07"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "班级统计不能用于判断某个学生的表现。"
+          ],
+          "sections": {
+            "conclusion": "工程知识达成度75.75分，评价覆盖100%。能力由课程支撑聚合，需结合课程任务与证据覆盖理解。",
+            "actions": [
+              "布置跨课程综合任务：用电路与信号课程方法完成一次建模、计算与验证，提交过程记录。",
+              "按电路、信号的复习任务单设自检清单，记录关键步骤的完成情况，作为细化证据。"
+            ],
+            "verification": "用量规核验过程、结果与反思，比较任务前后表现；对未展开的课程总评项另设短测补证。"
+          }
+        },
+        "created_at": "2026-10-30T01:28:54.736477+00:00"
+      },
+      "facts": {
+        "A01": {
+          "achievement_rate": 75.747437,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "course_aggregate",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": null
+        },
+        "C01": {
+          "achievement_rate": 83.632312,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C02": {
+          "achievement_rate": 71.280587,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C03": {
+          "achievement_rate": 82.05235,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C04": {
+          "achievement_rate": 68.757675,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C07": {
+          "achievement_rate": 73.25,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "course_total",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "course_total",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C01",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-aaed71c3b25d455ba2cbc4cb1afcf261",
+        "run_id": "run-982ee4f9849143ae8ca3015b2d2f6974",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5374,
+          "output_tokens": 359
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-aaed71c3b25d455ba2cbc4cb1afcf261",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C01",
+        "generated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "39632ec12a29b327889ce5668f66010563aa69dd10e08010fd8942404eafeaf3",
+        "facts_fingerprint": "af431d7e13b688d28816a117fccd625763f1517b614d3381d0e3fa0bfc909bee",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2639,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "电路分析达成度83.63分，评价覆盖100%。已测知识点中相对靠后的是节点电压法、电路变量与参考方向。",
+          "sections": {
+            "conclusion": "电路分析达成度83.63分，评价覆盖100%。已测知识点中相对靠后的是节点电压法、电路变量与参考方向。",
+            "actions": [
+              "以节点电压法为主线：先写含受控源网络方程，核对参考节点与独立方程数，再对照电路变量与参考方向补漏。",
+              "布置一次短测：用两种独立方法求同一电阻网络端口电压，保存推导与复做记录，用于定位困难。"
+            ],
+            "verification": "比较短测独立完成率与改变条件后的复测表现，记录仍出错的环节，再由教师核验，不用分数直接推断错因。"
+          },
+          "cited_node_ids": [
+            "C01",
+            "C01.K03",
+            "C01.K01",
+            "C01.K02"
+          ],
+          "cited_evidence_ids": [
+            "EV-COMM-DEMO-40-mixed_evidence-C01",
+            "EV-COMM-DEMO-40-mixed_evidence-C01.K03",
+            "EV-COMM-DEMO-40-mixed_evidence-C01.K01"
+          ],
+          "resource_ids": [
+            "RES-C01"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "班级统计不能用于判断某个学生的表现。"
+          ]
+        },
+        "created_at": "2026-10-30T01:28:57.481738+00:00"
+      },
+      "facts": {
+        "C01": {
+          "achievement_rate": 83.632312,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C01.K03": {
+          "achievement_rate": 74.7545,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C01.K01": {
+          "achievement_rate": 80.38125,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C01.K02": {
+          "achievement_rate": 86.42225,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-efb57872c83e4654943a2b728f0f2533",
+        "run_id": "run-1606f962459944b2bf769c77384f339a",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5650,
+          "output_tokens": 372
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-efb57872c83e4654943a2b728f0f2533",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C02",
+        "generated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "2e3d8e4859d2e7936204456e4b3ecbc2a283c2df84064411fc83a40b6aa57f8f",
+        "facts_fingerprint": "04f00dc0734e14e9c13fb031dabf82db44bac7617d3265f89c65040edaf73b6f",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2797,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "模拟电子技术达成度71.28分，评价覆盖100%。已测知识点中相对靠后的是小信号放大、半导体器件模型。",
+          "cited_node_ids": [
+            "C02",
+            "C02.K03",
+            "C02.K01",
+            "C02.K02"
+          ],
+          "cited_evidence_ids": [
+            "EV-COMM-DEMO-40-mixed_evidence-C02",
+            "EV-COMM-DEMO-40-mixed_evidence-C02.K03",
+            "EV-COMM-DEMO-40-mixed_evidence-C02.K01",
+            "EV-COMM-DEMO-40-mixed_evidence-C02.K02"
+          ],
+          "resource_ids": [
+            "RES-C02"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "班级统计不能用于判断某个学生的表现。"
+          ],
+          "sections": {
+            "conclusion": "模拟电子技术达成度71.28分，评价覆盖100%。已测知识点中相对靠后的是小信号放大、半导体器件模型。",
+            "actions": [
+              "先复习静态工作点与小信号等效电路，布置“先算Q点再求增益”短测，记录推导过程。",
+              "再复习二极管与三极管简化模型适用条件，布置工作状态判断短测，改变条件复做。"
+            ],
+            "verification": "比较两次短测独立完成情况与条件变更后的复测表现，积累过程证据用于定位困难环节，不据此改分。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:00.452281+00:00"
+      },
+      "facts": {
+        "C02": {
+          "achievement_rate": 71.280587,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C02.K03": {
+          "achievement_rate": 62.898,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C02.K01": {
+          "achievement_rate": 69.32325,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C02.K02": {
+          "achievement_rate": 76.21575,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C05",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-cde4f83c48eb472990df3c85069bac6a",
+        "run_id": "run-c843017435c642d8a37beee2ad8e9e1f",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5339,
+          "output_tokens": 373
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-cde4f83c48eb472990df3c85069bac6a",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C05",
+        "generated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "2a64feece36d6ee261e45e67fb0e1fede3970582817bb329b21d6b8b49fcc304",
+        "facts_fingerprint": "b734251e4735877194e5f844a2693628509ce2ae52d17faaa3f6ebfafc66fb48",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2922,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "通信电子线路已评价部分达成度49.65分，评价覆盖50%。这是阶段性结果。已测知识点中相对靠后的是功率放大、LC谐振。",
+          "cited_node_ids": [
+            "C05",
+            "C05.K01",
+            "C05.K03",
+            "C05.K02"
+          ],
+          "cited_evidence_ids": [
+            "EV-COMM-DEMO-40-mixed_evidence-C05",
+            "EV-COMM-DEMO-40-mixed_evidence-C05.K01",
+            "EV-COMM-DEMO-40-mixed_evidence-C05.K03"
+          ],
+          "resource_ids": [
+            "RES-C05"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "班级统计不能用于判断某个学生的表现。",
+            "阶段性分数仅反映已评价部分。"
+          ],
+          "sections": {
+            "conclusion": "通信电子线路已评价部分达成度49.65分，评价覆盖50%。这是阶段性结果。已测知识点中相对靠后的是功率放大、LC谐振。",
+            "actions": [
+              "按LC谐振→高频小信号放大→功率放大顺序复习，用品质因数与带宽、等效电路、效率与失真三组短测随堂检查。",
+              "参照本课复习任务单的自主检查步骤，让学生提交推导与测量记录，教师据过程定位困难。"
+            ],
+            "verification": "一周后用同类型短题复测，比较三组知识的独立完成与条件变更解释情况，据此调整后续节奏。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:03.458626+00:00"
+      },
+      "facts": {
+        "C05": {
+          "achievement_rate": 49.650575,
+          "health_color": "grey",
+          "coverage_rate": 0.5,
+          "learning_state": "in_progress",
+          "grey_reason": "insufficient_coverage",
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": true,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 0.6
+        },
+        "C05.K01": {
+          "achievement_rate": 47.4645,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C05.K03": {
+          "achievement_rate": 46.4285,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C05.K02": {
+          "achievement_rate": 56.13275,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-2ec9248c2f484f5aaffecf3716802854",
+        "run_id": "run-bd6bdb8284f34a3897f2932cefb73787",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 4096,
+          "output_tokens": 324
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-2ec9248c2f484f5aaffecf3716802854",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C02.K03",
+        "generated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "3561cb2ce4142b5deb2cc06f0372f5a7fb83052f8c7080088610a54fb2c2828c",
+        "facts_fingerprint": "75027a2a546235db0b60dbc0083540aada2c5565b301f120051aad563595c97b",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2500,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "小信号放大达成度62.90分，评价覆盖100%。当前以巩固与验证为主，得分不能证明具体错因。",
+          "cited_node_ids": [
+            "C02.K03",
+            "C02.K02",
+            "C01.K04",
+            "C02.K04"
+          ],
+          "cited_evidence_ids": [
+            "EV-COMM-DEMO-40-mixed_evidence-C02.K03"
+          ],
+          "resource_ids": [
+            "RES-C02",
+            "RES-C01"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "班级统计不能用于判断某个学生的表现。"
+          ],
+          "sections": {
+            "conclusion": "小信号放大达成度62.90分，评价覆盖100%。当前以巩固与验证为主，得分不能证明具体错因。",
+            "actions": [
+              "用同一放大电路做三步板演：定静态工作点、画小信号等效电路、算电压增益，当堂收集推导记录。",
+              "改变一个元件参数重做增益计算并解释差异，按“建模—计算—说法一致”三项逐份标注。"
+            ],
+            "verification": "用一份新参数放大题独立限时完成，对照三步记录判分，看环节失分是否集中，再定复讲内容。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:06.015074+00:00"
+      },
+      "facts": {
+        "C02.K03": {
+          "achievement_rate": 62.898,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C02.K02": {
+          "achievement_rate": 76.21575,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C01.K04": {
+          "achievement_rate": 88.41925,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C02.K04": {
+          "achievement_rate": 75.55325,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C05.K04",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-a9ef007d6bed4c9bace9b475a9763548",
+        "run_id": "run-6e60ea8c22ea4985a4dc92a26f177853",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3597,
+          "output_tokens": 281
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-a9ef007d6bed4c9bace9b475a9763548",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C05.K04",
+        "generated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "e3dbe1405a05299b191ab9469d65236b89d58d0fd39b8972b3eb4d926eb6b432",
+        "facts_fingerprint": "e5687d4323c09757a63ace8af7b9f2d4c3f48bede0398c41cde17bac52abbeab",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2531,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "振荡器正在学习，尚无本节点测评，先建立评价基线。",
+          "cited_node_ids": [
+            "C05.K04",
+            "C05.K03",
+            "C05.K05"
+          ],
+          "cited_evidence_ids": [],
+          "resource_ids": [
+            "RES-C05"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "班级统计不能用于判断某个学生的表现。",
+            "本节点没有该粒度评价，建议是学习准备或测评安排。"
+          ],
+          "sections": {
+            "conclusion": "振荡器正在学习，尚无本节点测评，先建立评价基线。",
+            "actions": [
+              "按复习任务单做振荡起振与稳幅条件自检，要求留下推导与说明记录，作为起点材料。",
+              "布置一次振荡器短测：判断起振、分析环路幅相、改变一个条件复做，收过程记录。"
+            ],
+            "verification": "依据短测与记录核对能否独立完成并解释条件变化下的结果差异，再决定复测或补充讲解。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:08.614177+00:00"
+      },
+      "facts": {
+        "C05.K04": {
+          "achievement_rate": null,
+          "health_color": "grey",
+          "coverage_rate": 0.0,
+          "learning_state": "in_progress",
+          "grey_reason": "no_evidence",
+          "evidence_granularity": "none",
+          "sample_count": 0,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "none",
+          "learning_progress": 0.5
+        },
+        "C05.K03": {
+          "achievement_rate": 46.4285,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C05.K05": {
+          "achievement_rate": null,
+          "health_color": "grey",
+          "coverage_rate": 0.0,
+          "learning_state": "not_started",
+          "grey_reason": "not_started",
+          "evidence_granularity": "none",
+          "sample_count": 0,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "none",
+          "learning_progress": 0.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-e100cdca970d4d38bef751781805d481",
+        "run_id": "run-db9cf49f0da54765b8cb9311d47c12a7",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3784,
+          "output_tokens": 265
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-e100cdca970d4d38bef751781805d481",
+        "scope": {
+          "subject": {
+            "type": "class",
+            "id": "COMM-DEMO-40"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C09.K01",
+        "generated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "class-COMM-DEMO-40-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "cbdf71d55f79689fa0801a2587aeca5aa70884a0d86ff983322ea0f233163fed",
+        "facts_fingerprint": "72d02853e7162e2d2d99703d8d7d076ac5dded190adc460b47646c576d1ef34f",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2172,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "数据类型达成度81.54分，评价覆盖100%。当前以迁移应用与巩固为主，得分不能证明具体错因。",
+          "cited_node_ids": [
+            "C09.K01",
+            "C09.K02",
+            "C09.K05"
+          ],
+          "cited_evidence_ids": [
+            "EV-COMM-DEMO-40-mixed_evidence-C09.K01"
+          ],
+          "resource_ids": [
+            "RES-C09"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "班级统计不能用于判断某个学生的表现。"
+          ],
+          "sections": {
+            "conclusion": "数据类型达成度81.54分，评价覆盖100%。当前以迁移应用与巩固为主，得分不能证明具体错因。",
+            "actions": [
+              "用复习任务单组织类型转换与边界值练习，要求跟踪中间结果并写解释。",
+              "改变一个条件复做同一任务，比较整数与浮点结果差异并说明原因。"
+            ],
+            "verification": "教师查看推导与运行记录，依据复做结果判断类型转换理解是否稳定。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:10.974104+00:00"
+      },
+      "facts": {
+        "C09.K01": {
+          "achievement_rate": 81.5425,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C09.K02": {
+          "achievement_rate": 88.295,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C09.K05": {
+          "achievement_rate": 84.209,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 40,
+          "expected_count": 40,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": null,
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-ac4df514a75449948feb73f9f4bf46ba",
+        "run_id": "run-d5dd94ffdd4d425bac290201ece61dab",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6152,
+          "output_tokens": 291
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-ac4df514a75449948feb73f9f4bf46ba",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": null,
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "0c056238de103950140f05bf3d343af5685dc5ad089abf25fd0d29ee5c0c8216",
+        "facts_fingerprint": "c73640b25714764f0b3c898ef796b8b130449da9ae1c2cf7bbb9c897f1032cf6",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2797,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "当前优先核查：复杂工程问题研究能力（55.4分）、通信电子线路（53.2分）、离散傅里叶变换（41.8分）。未评价项不作为薄弱结论。",
+          "sections": {
+            "conclusion": "当前优先核查：复杂工程问题研究能力（55.4分）、通信电子线路（53.2分）、离散傅里叶变换（41.8分）。未评价项不作为薄弱结论。",
+            "actions": [
+              "针对离散傅里叶变换（41.8分）与离散时间信号（41.9分），安排一次限时小测，记录推导步骤与错误位置。",
+              "用数字信号处理复习任务单给出自检清单，每次辅导后完成约3题迁移练习，并口头复述思路。"
+            ],
+            "verification": "两周后复测离散傅里叶变换与离散时间信号各1次，对照步骤记录与得分变化，判断是否延续讲解。"
+          },
+          "cited_node_ids": [
+            "A04",
+            "C05",
+            "C06",
+            "C06.K03",
+            "C06.K01",
+            "C06",
+            "A01",
+            "A02"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C06.K03",
+            "EV-DEMO001-mixed_evidence-C06.K01"
+          ],
+          "resource_ids": [
+            "RES-C06",
+            "RES-C05"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ]
+        },
+        "created_at": "2026-10-30T01:29:13.933801+00:00"
+      },
+      "facts": {
+        "A04": {
+          "achievement_rate": 55.4415,
+          "health_color": "grey",
+          "coverage_rate": 0.4,
+          "learning_state": "in_progress",
+          "grey_reason": "insufficient_coverage",
+          "evidence_granularity": "course_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": true,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": null
+        },
+        "C05": {
+          "achievement_rate": 53.17,
+          "health_color": "grey",
+          "coverage_rate": 0.5,
+          "learning_state": "in_progress",
+          "grey_reason": "insufficient_coverage",
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": true,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 0.6
+        },
+        "C06": {
+          "achievement_rate": 48.383,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C06.K03": {
+          "achievement_rate": 41.77,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C06.K01": {
+          "achievement_rate": 41.92,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "A01": {
+          "achievement_rate": 76.488325,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "course_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": null
+        },
+        "A02": {
+          "achievement_rate": 60.395139,
+          "health_color": "yellow",
+          "coverage_rate": 0.9,
+          "learning_state": "in_progress",
+          "grey_reason": null,
+          "evidence_granularity": "course_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": true,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": null
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "A01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-29dd51c752ac4c15a53914ead422d6bd",
+        "run_id": "run-363b3f8eb0514829a7c775909559e722",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3831,
+          "output_tokens": 313
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-29dd51c752ac4c15a53914ead422d6bd",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "A01",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "8ac735a1986f05e44491e5a9d261ad2dd8821ecdcdbcbf01208ca624a0b01917",
+        "facts_fingerprint": "9ca1008fc68ea219fbebd08e0945bd72992fb05f66a43d0b3f6d1421b88de294",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2796,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "工程知识达成度76.49分，评价覆盖100%。能力由课程支撑聚合，需结合课程任务与证据覆盖理解。",
+          "sections": {
+            "conclusion": "工程知识达成度76.49分，评价覆盖100%。能力由课程支撑聚合，需结合课程任务与证据覆盖理解。",
+            "actions": [
+              "围绕电路分析开展一次综合设计任务：给出电路或信号处理小课题，要求写分析过程、仿真或测量验证和结论。",
+              "对电磁场与电磁波本课仅有课程总分的部分，先用短测和过程记录补齐知识点证据，再定位需强化环节。"
+            ],
+            "verification": "用量规分别评过程记录与结论准确性；对比任务前后独立完成情况，低覆盖课程另记复测结果。"
+          },
+          "cited_node_ids": [
+            "A01",
+            "C01",
+            "C04",
+            "C07",
+            "A02"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C07"
+          ],
+          "resource_ids": [
+            "RES-C01",
+            "RES-C04",
+            "RES-C07"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ]
+        },
+        "created_at": "2026-10-30T01:29:16.912286+00:00"
+      },
+      "facts": {
+        "A01": {
+          "achievement_rate": 76.488325,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "course_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": null
+        },
+        "C01": {
+          "achievement_rate": 86.5195,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C04": {
+          "achievement_rate": 72.7715,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C07": {
+          "achievement_rate": 68.0,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "course_total",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "course_total",
+          "learning_progress": 1.0
+        },
+        "A02": {
+          "achievement_rate": 60.395139,
+          "health_color": "yellow",
+          "coverage_rate": 0.9,
+          "learning_state": "in_progress",
+          "grey_reason": null,
+          "evidence_granularity": "course_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": true,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": null
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-95b843616b9145f2bdabacf892d8e649",
+        "run_id": "run-446dbcc3498e458ca8c88cf53a611fd1",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5100,
+          "output_tokens": 259
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-95b843616b9145f2bdabacf892d8e649",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C01",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "3eab5279060c354ef84e0955a1ace408b251f9bb6dd7dc567ebd6f36bdc17ea1",
+        "facts_fingerprint": "500098ee10748b1b3c275b1ca31d02f7bef9de404c8b6a152a99d9378d3b564b",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2468,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "电路分析达成度86.52分，评价覆盖100%。已测知识点中相对靠后的是电路变量与参考方向、戴维南等效。",
+          "sections": {
+            "conclusion": "电路分析达成度86.52分，评价覆盖100%。已测知识点中相对靠后的是电路变量与参考方向、戴维南等效。",
+            "actions": [
+              "先用参考方向任务短测：同一支路标电压电流方向并解释负号；再测戴维南等效：求开路电压与等效电阻并用负载验证。",
+              "按先参考方向、后戴维南的顺序各配10分钟练习，每周90分钟内完成，记录推导过程供教师核验。"
+            ],
+            "verification": "两次短测独立完成，改一条件复做，比较前后结果与对负号、等效电阻的解释。"
+          },
+          "cited_node_ids": [
+            "C01",
+            "C01.K01",
+            "C01.K04"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C01.K01",
+            "EV-DEMO001-mixed_evidence-C01.K04"
+          ],
+          "resource_ids": [
+            "RES-C01"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ]
+        },
+        "created_at": "2026-10-30T01:29:19.463259+00:00"
+      },
+      "facts": {
+        "C01": {
+          "achievement_rate": 86.5195,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C01.K01": {
+          "achievement_rate": 72.71,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C01.K04": {
+          "achievement_rate": 81.86,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-b2bce44f5d4d49c18808b318399e4e5e",
+        "run_id": "run-739c427b5f6e41609c23e46ebcfe9d05",
+        "usage": {
+          "model_calls": 2,
+          "input_tokens": 10988,
+          "output_tokens": 356
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-b2bce44f5d4d49c18808b318399e4e5e",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C02",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "2bd27eb078d09e30892d88b400a82608784cdc0d4a027e42f962fd11e8b12d69",
+        "facts_fingerprint": "5951679145c295a96a442af5e7346d2928987d39986f34907acf5f43e19efd0f",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 3891,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": [
+            {
+              "tool": "read_teaching",
+              "arguments": {
+                "node_id": "C02.K03"
+              }
+            },
+            {
+              "tool": "read_teaching",
+              "arguments": {
+                "node_id": "C02.K06"
+              }
+            },
+            {
+              "tool": "read_resources",
+              "arguments": {
+                "node_id": "C02"
+              }
+            }
+          ]
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "模拟电子技术达成度75.35分，评价覆盖100%。已测知识点中相对靠后的是小信号放大、放大器调试。",
+          "cited_node_ids": [
+            "C02",
+            "C02.K03",
+            "C02.K06",
+            "C02.K02"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C02.K03",
+            "EV-DEMO001-mixed_evidence-C02.K06"
+          ],
+          "resource_ids": [
+            "RES-C02"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ],
+          "sections": {
+            "conclusion": "模拟电子技术达成度75.35分，评价覆盖100%。已测知识点中相对靠后的是小信号放大、放大器调试。",
+            "actions": [
+              "按“静态工作点→小信号等效电路→电压增益”复习小信号放大，做1题并保留推导记录。",
+              "按“电源→静态偏置→输入输出波形”排查失真调试，用低电压仿真复做并解释差异。"
+            ],
+            "verification": "两次独立短测各改变一个条件复做，教师核验推导与解释；仅作观测前后表现，不改分。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:23.459575+00:00"
+      },
+      "facts": {
+        "C02": {
+          "achievement_rate": 75.351,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C02.K03": {
+          "achievement_rate": 57.32,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C02.K06": {
+          "achievement_rate": 70.13,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C02.K02": {
+          "achievement_rate": 95.11,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C05",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-7b74bb0c73d34cbf99219a333b8edc1b",
+        "run_id": "run-e4cbce6414cd4347991e6f5af56cf5ec",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5090,
+          "output_tokens": 375
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-7b74bb0c73d34cbf99219a333b8edc1b",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C05",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "5d5d6eaf07195beafc037a7597b9c9b8a3d55b5763d9d50b0952aa6b038320ac",
+        "facts_fingerprint": "a155ee48a40d6a90f090a2571e2e82eb55487d1f8bbbc737ac469bd80c3667d1",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2983,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "通信电子线路已评价部分达成度53.17分，评价覆盖50%。这是阶段性结果。已测知识点中相对靠后的是LC谐振、功率放大。",
+          "cited_node_ids": [
+            "C05",
+            "C05.K01",
+            "C05.K02",
+            "C05.K03",
+            "C05.K04"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C05.K01",
+            "EV-DEMO001-mixed_evidence-C05.K02",
+            "EV-DEMO001-mixed_evidence-C05.K03"
+          ],
+          "resource_ids": [
+            "RES-C05"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "阶段性分数仅反映已评价部分。"
+          ],
+          "sections": {
+            "conclusion": "通信电子线路已评价部分达成度53.17分，评价覆盖50%。这是阶段性结果。已测知识点中相对靠后的是LC谐振、功率放大。",
+            "actions": [
+              "按LC谐振→功率放大顺序复习：先解释谐振频率、品质因数与带宽关系并画扫频曲线，再比较功放效率与失真波形；每次留推导记录。",
+              "预学振荡器：对照任务单自查起振与稳幅条件，用一道起振判断小题试做并写判断理由，暂不涉及调幅与混频。"
+            ],
+            "verification": "用同一条件重做并改变一个条件复做，由教师按推导与波形判读是否稳定；对照复测结果，暂不据此改分。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:26.525134+00:00"
+      },
+      "facts": {
+        "C05": {
+          "achievement_rate": 53.17,
+          "health_color": "grey",
+          "coverage_rate": 0.5,
+          "learning_state": "in_progress",
+          "grey_reason": "insufficient_coverage",
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": true,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 0.6
+        },
+        "C05.K01": {
+          "achievement_rate": 48.7,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C05.K02": {
+          "achievement_rate": 57.56,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C05.K03": {
+          "achievement_rate": 53.23,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C05.K04": {
+          "achievement_rate": null,
+          "health_color": "grey",
+          "coverage_rate": 0.0,
+          "learning_state": "in_progress",
+          "grey_reason": "no_evidence",
+          "evidence_granularity": "none",
+          "sample_count": 0,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "none",
+          "learning_progress": 0.5
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-202f9831149f4cdcb5af37bd0ca95d78",
+        "run_id": "run-886a105722e548adb0396089e554071f",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 4009,
+          "output_tokens": 318
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-202f9831149f4cdcb5af37bd0ca95d78",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C02.K03",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "50c8ab4d76fd2b5858ff19732d6c535a2095bd48d60eb12c68d4fd8d36b2f7ba",
+        "facts_fingerprint": "180e056dd9c88ecd4cae40599e87dc806d43fd873010926bb623f4b494b080b4",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2593,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "小信号放大达成度57.32分，评价覆盖100%。当前以优先复核为主，得分不能证明具体错因。",
+          "cited_node_ids": [
+            "C02.K03",
+            "C02.K02",
+            "C01.K04",
+            "C02.K04"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C02.K03"
+          ],
+          "resource_ids": [
+            "RES-C01",
+            "RES-C02"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ],
+          "sections": {
+            "conclusion": "小信号放大达成度57.32分，评价覆盖100%。当前以优先复核为主，得分不能证明具体错因。",
+            "actions": [
+              "用一道共射放大任务，要求先写静态工作点、再画小信号等效电路并算增益，保留推导稿。",
+              "安排一次限时短测，覆盖静态工作点、等效电路与增益计算，逐项记录卡点。"
+            ],
+            "verification": "一周后同难度变式题独立复测，比较静态工作点、等效电路、增益三步的正确率变化；改变一个条件复做并解释差异。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:29.198388+00:00"
+      },
+      "facts": {
+        "C02.K03": {
+          "achievement_rate": 57.32,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C02.K02": {
+          "achievement_rate": 95.11,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C01.K04": {
+          "achievement_rate": 81.86,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C02.K04": {
+          "achievement_rate": 70.3,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C05.K04",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-5bd2c9a62fc54610b03f6712e9fddef2",
+        "run_id": "run-6912f1c6987a4cb990508c0f23feda15",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3539,
+          "output_tokens": 289
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-5bd2c9a62fc54610b03f6712e9fddef2",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C05.K04",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "1f2eab721b6b7a8ce91ca1156542de8235a25e05d3e2cf0fee31b6e21097535e",
+        "facts_fingerprint": "a6e5c3173eb2f4f09c43491cfdf67f24c5a05a4e280ab8ada12532dff0e408b4",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2593,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "振荡器正在学习，尚无本节点测评，先建立评价基线。",
+          "cited_node_ids": [
+            "C05.K04",
+            "C05.K03",
+            "C05.K01"
+          ],
+          "cited_evidence_ids": [],
+          "resource_ids": [
+            "RES-C05"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "本节点没有该粒度评价，建议是学习准备或测评安排。"
+          ],
+          "sections": {
+            "conclusion": "振荡器正在学习，尚无本节点测评，先建立评价基线。",
+            "actions": [
+              "用任务单自主检查起振与稳幅条件，完成一次无参考的条件改动推导记录。",
+              "安排一次振荡器短测，记录起振判断与幅相变化的推理过程，作为基线证据。"
+            ],
+            "verification": "教师核验推导记录与短测中条件改动后的解释是否自洽；若起振判断不稳，再回顾上一环节的功率放大与谐振基础。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:31.889437+00:00"
+      },
+      "facts": {
+        "C05.K04": {
+          "achievement_rate": null,
+          "health_color": "grey",
+          "coverage_rate": 0.0,
+          "learning_state": "in_progress",
+          "grey_reason": "no_evidence",
+          "evidence_granularity": "none",
+          "sample_count": 0,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "none",
+          "learning_progress": 0.5
+        },
+        "C05.K03": {
+          "achievement_rate": 53.23,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C05.K01": {
+          "achievement_rate": 48.7,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-ce0210b191c1483dafa8c9f3795f09de",
+        "run_id": "run-1f92fc200c294a778e14d729172b13d8",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3711,
+          "output_tokens": 227
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-ce0210b191c1483dafa8c9f3795f09de",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "teacher",
+        "target_node_id": "C09.K01",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "bd02228ade2be9a6850dfba9fbbb7ef1c54be92d2dd01c7d1de6c072c482a15c",
+        "facts_fingerprint": "f4597dacb6f64f602479d362296e12147e73df0361dc760354640336c014aafe",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2250,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "数据类型达成度80.95分，评价覆盖100%。当前以迁移应用与巩固为主，得分不能证明具体错因。",
+          "cited_node_ids": [
+            "C09.K01",
+            "C09.K02",
+            "C09.K03"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C09.K01"
+          ],
+          "resource_ids": [
+            "RES-C09"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ],
+          "sections": {
+            "conclusion": "数据类型达成度80.95分，评价覆盖100%。当前以迁移应用与巩固为主，得分不能证明具体错因。",
+            "actions": [
+              "布置3题类型转换与边界值小练：含溢出、浮点精度各一题，要求写出类型推导过程。",
+              "用同一任务改一个条件（如int改float）重做，并对比输出差异，记录说明。"
+            ],
+            "verification": "教师核验推导记录与两次运行结果的解释；能独立说清差异即达标，否则就具体环节再练习。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:34.208087+00:00"
+      },
+      "facts": {
+        "C09.K01": {
+          "achievement_rate": 80.95,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C09.K02": {
+          "achievement_rate": 82.21,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C09.K03": {
+          "achievement_rate": 68.94,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": null,
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-d0ebbcb48bcc4a9e83bd1dc2801707fb",
+        "run_id": "run-b576ddce135e4be89bbc040a3d9cbf37",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 6151,
+          "output_tokens": 343
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-d0ebbcb48bcc4a9e83bd1dc2801707fb",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": null,
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "ec57615f953001f154cabd8583cf8b908a5fcd5e3f57dc416db47869bf135040",
+        "facts_fingerprint": "8f4d0a2f4cefb07983c257fb1becf6f7a334e228be0a4e86a2d4d95f413b7902",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 3046,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "当前优先核查：复杂工程问题研究能力（55.4分）、通信电子线路（53.2分）、离散傅里叶变换（41.8分）。未评价项不作为薄弱结论。",
+          "cited_node_ids": [
+            "C06.K03",
+            "C06.K01",
+            "C06",
+            "C01.K05",
+            "C09.K04",
+            "C11.K02"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C06.K03",
+            "EV-DEMO001-mixed_evidence-C06.K01",
+            "EV-DEMO001-mixed_evidence-C01.K05",
+            "EV-DEMO001-mixed_evidence-C09.K04",
+            "EV-DEMO001-mixed_evidence-C11.K02"
+          ],
+          "resource_ids": [
+            "RES-C06",
+            "RES-C09"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ],
+          "sections": {
+            "conclusion": "当前优先核查：复杂工程问题研究能力（55.4分）、通信电子线路（53.2分）、离散傅里叶变换（41.8分）。未评价项不作为薄弱结论。",
+            "actions": [
+              "用数字信号处理任务单自查：各写3道离散信号与DFT小题（长度换算、周期判断），限时20分钟并标注卡点步骤。",
+              "以C语言函数与嵌入式外设驱动的高分经验，各做一题迁移到信号处理编程小任务，记录思路对照。"
+            ],
+            "verification": "两周后重做同类型DFT与离散信号题，独立正确率提升且卡点步骤减少即达标；否则带步骤记录追问。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:37.387098+00:00"
+      },
+      "facts": {
+        "C06.K03": {
+          "achievement_rate": 41.77,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C06.K01": {
+          "achievement_rate": 41.92,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C06": {
+          "achievement_rate": 48.383,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C01.K05": {
+          "achievement_rate": 100,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C09.K04": {
+          "achievement_rate": 97.93,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C11.K02": {
+          "achievement_rate": 97.64,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "A01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-2d0ca1bba94a4a98b318dca4abd1dced",
+        "run_id": "run-20ba3f6d79664457ac41578db7f92061",
+        "usage": {
+          "model_calls": 2,
+          "input_tokens": 8828,
+          "output_tokens": 378
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-2d0ca1bba94a4a98b318dca4abd1dced",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "A01",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "e4323511fe438d80e126445d83c35c800e85e99e43ff5ab82eb297784d737984",
+        "facts_fingerprint": "146fbe040cbec02ef4824b393fa6a7b5949ec730ee7b9daeabd47e3f00cdc3be",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 3593,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": [
+            {
+              "tool": "read_neighbors",
+              "arguments": {
+                "node_id": "A01",
+                "relation_type": "supports"
+              }
+            },
+            {
+              "tool": "read_teaching",
+              "arguments": {
+                "node_id": "A01"
+              }
+            }
+          ]
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "工程知识达成度76.49分，评价覆盖100%。能力由课程支撑聚合，需结合课程任务与证据覆盖理解。",
+          "sections": {
+            "conclusion": "工程知识达成度76.49分，评价覆盖100%。能力由课程支撑聚合，需结合课程任务与证据覆盖理解。",
+            "actions": [
+              "用90分钟做一次综合任务：从信号与系统、电路分析各选一知识点，写分析—计算—验证全过程，按量规自评。",
+              "电磁场与电磁波暂无知识点评价，先做一次限时自测并记录过程，作为待补证据而非能力缺失认定。"
+            ],
+            "verification": "对照量规核查过程与结果，一周后重做同类任务，比较独立完成与自评差异。"
+          },
+          "cited_node_ids": [
+            "A01",
+            "C01",
+            "C04",
+            "C07"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C07"
+          ],
+          "resource_ids": [
+            "RES-C01",
+            "RES-C04",
+            "RES-C07"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ]
+        },
+        "created_at": "2026-10-30T01:29:41.075142+00:00"
+      },
+      "facts": {
+        "A01": {
+          "achievement_rate": 76.488325,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "course_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": null
+        },
+        "C01": {
+          "achievement_rate": 86.5195,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C04": {
+          "achievement_rate": 72.7715,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C07": {
+          "achievement_rate": 68.0,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "course_total",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "course_total",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-9cffca8ba98d44bba4643611fe224d5a",
+        "run_id": "run-52261c8648814f55aceb32d6697bf762",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5099,
+          "output_tokens": 314
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-9cffca8ba98d44bba4643611fe224d5a",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C01",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "e61549b849cd93f1baac7562a94ae2ae9cec93fcfdc479a8ea53c7dd513bf6b7",
+        "facts_fingerprint": "bd709e0e2322bef3f12a57ad64767e2296464fc52afeda66321f1f6f30597c3d",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 3000,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "电路分析达成度86.52分，评价覆盖100%。已测知识点中相对靠后的是电路变量与参考方向、戴维南等效。",
+          "cited_node_ids": [
+            "C01",
+            "C01.K01",
+            "C01.K04"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C01.K01",
+            "EV-DEMO001-mixed_evidence-C01.K04"
+          ],
+          "resource_ids": [
+            "RES-C01"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ],
+          "sections": {
+            "conclusion": "电路分析达成度86.52分，评价覆盖100%。已测知识点中相对靠后的是电路变量与参考方向、戴维南等效。",
+            "actions": [
+              "先复做参考方向：同一支路标电压电流方向，写解并解释负号，再用任务单自查。",
+              "再做戴维南等效：含源一端口求开路电压与等效电阻，接负载验证并改变条件复做。"
+            ],
+            "verification": "各做1次独立短测并留推导，对比复做前后是否一致；仍不一致的记录具体步骤，交教师核验。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:44.144963+00:00"
+      },
+      "facts": {
+        "C01": {
+          "achievement_rate": 86.5195,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C01.K01": {
+          "achievement_rate": 72.71,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C01.K04": {
+          "achievement_rate": 81.86,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C02",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-287931ef06ec46c2b8e4044156a33ef0",
+        "run_id": "run-f3d0d81284954852a01bad1d3b55060d",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5317,
+          "output_tokens": 316
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-287931ef06ec46c2b8e4044156a33ef0",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "148faf8ea8e59c4f1af2802bfc9dd036d0db0162b308f6144509065b36ba6fea",
+        "facts_fingerprint": "a085eccd200df8d5c532f0b109bf9f4da96986e9cef351b05c63774f5079437b",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2828,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "模拟电子技术达成度75.35分，评价覆盖100%。已测知识点中相对靠后的是小信号放大、放大器调试。",
+          "sections": {
+            "conclusion": "模拟电子技术达成度75.35分，评价覆盖100%。已测知识点中相对靠后的是小信号放大、放大器调试。",
+            "actions": [
+              "复习小信号放大：先算静态工作点，再画等效电路求增益，改变一个条件复做并写差异。",
+              "复习放大器调试：按电源、偏置、波形顺序在低压仿真中排查失真并记录过程。"
+            ],
+            "verification": "各做一次独立短测，完成后隔一天改条件复测，比较增益计算与失真定位过程，由教师核验。"
+          },
+          "cited_node_ids": [
+            "C02",
+            "C02.K03",
+            "C02.K06",
+            "C02.K04"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C02.K03",
+            "EV-DEMO001-mixed_evidence-C02.K06"
+          ],
+          "resource_ids": [
+            "RES-C02"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ]
+        },
+        "created_at": "2026-10-30T01:29:47.213336+00:00"
+      },
+      "facts": {
+        "C02": {
+          "achievement_rate": 75.351,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 1.0
+        },
+        "C02.K03": {
+          "achievement_rate": 57.32,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C02.K06": {
+          "achievement_rate": 70.13,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C02.K04": {
+          "achievement_rate": 70.3,
+          "health_color": "yellow",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C05",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-bd18dc3f81974e14b387f4cd045cdc66",
+        "run_id": "run-27b5ad979a5a44c7a9eae98731fa448e",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 5089,
+          "output_tokens": 266
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-bd18dc3f81974e14b387f4cd045cdc66",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C05",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "c5fcbe6723841930f653a9cd0113177953a001add9e5df6684d8754cd26b3969",
+        "facts_fingerprint": "6f9301d71101d84ed9def3b6d47bed94fd2e8170e86ceb55e32125c3d2d19023",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2312,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "通信电子线路已评价部分达成度53.17分，评价覆盖50%。这是阶段性结果。已测知识点中相对靠后的是LC谐振、功率放大。",
+          "cited_node_ids": [
+            "C05",
+            "C05.K01",
+            "C05.K03",
+            "C05.K02"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C05.K01",
+            "EV-DEMO001-mixed_evidence-C05.K03"
+          ],
+          "resource_ids": [
+            "RES-C05",
+            "RES-C02"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "阶段性分数仅反映已评价部分。"
+          ],
+          "sections": {
+            "conclusion": "通信电子线路已评价部分达成度53.17分，评价覆盖50%。这是阶段性结果。已测知识点中相对靠后的是LC谐振、功率放大。",
+            "actions": [
+              "按任务单通信电子线路流程复述LC谐振f0、Q与带宽关系，自绘扫频曲线并改变一个参数解释差异。",
+              "对功率放大比较不同工作状态的效率与失真，自拟一段波形分析并记录推导过程。"
+            ],
+            "verification": "两步各保留书面推导与曲线记录，完成后独立复测一次；对比前后结果差异，请教师核验。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:49.688572+00:00"
+      },
+      "facts": {
+        "C05": {
+          "achievement_rate": 53.17,
+          "health_color": "grey",
+          "coverage_rate": 0.5,
+          "learning_state": "in_progress",
+          "grey_reason": "insufficient_coverage",
+          "evidence_granularity": "knowledge_aggregate",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": true,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "weighted_inputs",
+          "learning_progress": 0.6
+        },
+        "C05.K01": {
+          "achievement_rate": 48.7,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C05.K03": {
+          "achievement_rate": 53.23,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C05.K02": {
+          "achievement_rate": 57.56,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C02.K03",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-6a7c268229a54999a4c72bcdef465971",
+        "run_id": "run-a1883e6e351e478dba1c90e19f905044",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 4008,
+          "output_tokens": 262
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-6a7c268229a54999a4c72bcdef465971",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C02.K03",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "da19a800791e5cbc9777b1c3f6a32fad42ac3d97a880832e24c13223f428cac7",
+        "facts_fingerprint": "28686fc5d32ebbd7f4ff14754464e2c55ba85b9d3902a0e9e7f6f28644237ffd",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2625,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "小信号放大达成度57.32分，评价覆盖100%。当前以优先复核为主，得分不能证明具体错因。",
+          "sections": {
+            "conclusion": "小信号放大达成度57.32分，评价覆盖100%。当前以优先复核为主，得分不能证明具体错因。",
+            "actions": [
+              "用20分钟做一次放大电路自测：先写静态工作点，再画小信号等效电路，逐步算出电压增益并标注每步依据。",
+              "改动一个元件参数重算增益，对比两次结果，把差异原因写成三句话，提交给教师核验。"
+            ],
+            "verification": "一周后不看笔记独立重做同类题，若两步推导与增益计算均正确并能说明参数变化影响，即可转入后续负反馈内容。"
+          },
+          "cited_node_ids": [
+            "C02.K03",
+            "C02.K02",
+            "C01.K04"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C02.K03"
+          ],
+          "resource_ids": [
+            "RES-C02"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ]
+        },
+        "created_at": "2026-10-30T01:29:52.438207+00:00"
+      },
+      "facts": {
+        "C02.K03": {
+          "achievement_rate": 57.32,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C02.K02": {
+          "achievement_rate": 95.11,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C01.K04": {
+          "achievement_rate": 81.86,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C05.K04",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-a1a0184aee394fc0bad379dfa7baa661",
+        "run_id": "run-7d44fa409e344e32ab3e5c5b9bafcfd8",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3538,
+          "output_tokens": 239
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-a1a0184aee394fc0bad379dfa7baa661",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C05.K04",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "03e4789a9024c610378f539c9726df1f2fecf4ef18fc88b73152a3f9112311b2",
+        "facts_fingerprint": "a7fd94e5d538f687c4afbb731cf7a3b7fe98d8d0a6d5c7911110707af9f0fadd",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2375,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "振荡器正在学习，尚无本节点测评，先建立评价基线。",
+          "sections": {
+            "conclusion": "振荡器正在学习，尚无本节点测评，先建立评价基线。",
+            "actions": [
+              "按任务单自查起振条件与稳幅条件，写出环路幅相变化推导，保留书面记录作为基线材料。",
+              "改变一个电路条件（如反馈量或负载）重做推演，记录并解释结果差异，约用两次90分钟。"
+            ],
+            "verification": "一周后独立复做推演，不看原稿，能说明两条件差异且步骤完整即进入调幅与检波学习准备。"
+          },
+          "cited_node_ids": [
+            "C05.K04",
+            "C05.K03"
+          ],
+          "cited_evidence_ids": [],
+          "resource_ids": [
+            "RES-C05"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。",
+            "本节点没有该粒度评价，建议是学习准备或测评安排。"
+          ]
+        },
+        "created_at": "2026-10-30T01:29:54.905198+00:00"
+      },
+      "facts": {
+        "C05.K04": {
+          "achievement_rate": null,
+          "health_color": "grey",
+          "coverage_rate": 0.0,
+          "learning_state": "in_progress",
+          "grey_reason": "no_evidence",
+          "evidence_granularity": "none",
+          "sample_count": 0,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "none",
+          "learning_progress": 0.5
+        },
+        "C05.K03": {
+          "achievement_rate": 53.23,
+          "health_color": "red",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    },
+    {
+      "task": {
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "node_id": "C09.K01",
+        "snapshot_ref": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "state": "succeeded",
+        "artifact_id": "diag-b02bbe9dc12440b394f7736158c832c6",
+        "run_id": "run-4afc1575095c4b6cbf954c25a4062c95",
+        "usage": {
+          "model_calls": 1,
+          "input_tokens": 3710,
+          "output_tokens": 250
+        },
+        "error_code": null,
+        "error": null
+      },
+      "artifact": {
+        "schema_version": "3.0.0",
+        "record_type": "diagnostic_artifact",
+        "artifact_id": "diag-b02bbe9dc12440b394f7736158c832c6",
+        "scope": {
+          "subject": {
+            "type": "student",
+            "id": "DEMO001"
+          },
+          "scenario_id": "mixed_evidence"
+        },
+        "audience": "student",
+        "target_node_id": "C09.K01",
+        "generated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "validated_against": {
+          "snapshot_id": "student-DEMO001-mixed_evidence",
+          "revision": 1
+        },
+        "fingerprint": "55f679e384b59550640a2c8dd6782badb5b1ca81f9d4706f3d33c14b804f5fa4",
+        "facts_fingerprint": "f1ec406762d46fbc0f6f2f2c26c80a032be39101b2f50af0c5edc8651e5906c9",
+        "context_version": 2,
+        "quality": {
+          "structure_valid": true,
+          "human_review": "pending"
+        },
+        "generation": {
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "prompt_version": "teaching-agent-6",
+          "elapsed_ms": 2406,
+          "request_ids": []
+        },
+        "dependencies": {
+          "read_nodes": [],
+          "queries": []
+        },
+        "validity": "fresh",
+        "publication": "active",
+        "origin": "model",
+        "output": {
+          "explanation": "数据类型达成度80.95分，评价覆盖100%。当前以迁移应用与巩固为主，得分不能证明具体错因。",
+          "cited_node_ids": [
+            "C09.K01",
+            "C09.K02"
+          ],
+          "cited_evidence_ids": [
+            "EV-DEMO001-mixed_evidence-C09.K01"
+          ],
+          "resource_ids": [
+            "RES-C09"
+          ],
+          "limitations": [
+            "演示评价用于教学建议，缺少具体作答过程，不能据分数认定错因。"
+          ],
+          "sections": {
+            "conclusion": "数据类型达成度80.95分，评价覆盖100%。当前以迁移应用与巩固为主，得分不能证明具体错因。",
+            "actions": [
+              "围绕数据类型设计3组小任务：跟踪类型转换与边界值，比较整数和浮点计算差异，写清每步推导。",
+              "把同一任务与程序控制结合，改为循环中反复读取计算，记录结果并解释差异。"
+            ],
+            "verification": "完成上述任务后改变一个条件复做，由教师核验代码与推导记录，比较两次结果差异是否解释正确。"
+          }
+        },
+        "created_at": "2026-10-30T01:29:57.386333+00:00"
+      },
+      "facts": {
+        "C09.K01": {
+          "achievement_rate": 80.95,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        },
+        "C09.K02": {
+          "achievement_rate": 82.21,
+          "health_color": "green",
+          "coverage_rate": 1.0,
+          "learning_state": "completed",
+          "grey_reason": null,
+          "evidence_granularity": "knowledge_assessment",
+          "sample_count": 1,
+          "expected_count": 1,
+          "score_is_provisional": false,
+          "score_provenance": "simulated_precomputed",
+          "aggregation_basis": "knowledge_assessment",
+          "learning_progress": 1.0
+        }
+      }
+    }
+  ]
+}

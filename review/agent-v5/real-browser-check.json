@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "source": "packaged_real_model_artifacts",
+  "external_calls": 0,
+  "checks": [
+    "teacher course result",
+    "student knowledge result",
+    "no-key question disabled and backend rejection",
+    "390px no overflow",
+    "no page errors"
+  ]
+}
