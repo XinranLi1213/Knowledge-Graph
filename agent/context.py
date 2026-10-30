@@ -52,7 +52,8 @@ class Context:
     def dependencies(self):return {'read_nodes':sorted(self.seen-self.initial),'queries':copy.deepcopy(self.queries)}
     def fingerprint(self,generator):
         p=self.payload();p.pop('snapshot_ref');p['scenario']={k:v for k,v in p['scenario'].items() if k!='as_of'}
-        p['graph_ref']=self.graph['graph_ref'];p['policy']=self.policy;p['generator']=generator;p['prompt_version']='agent-1'
+        p['graph_ref']=self.graph['graph_ref'];p['policy']=self.policy
+        if generator is not None:p['generator']=generator;p['prompt_version']='agent-1'
         p['queries']=self.queries
         if any(q['tool']=='compare_previous' for q in self.queries):p['previous']={k:self.previous['node_results'][k] for k in sorted(self.seen)} if self.previous else None
         return digest(p)

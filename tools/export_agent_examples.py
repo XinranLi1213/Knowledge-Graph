@@ -14,7 +14,7 @@ def main():
     folder=ROOT/'review/agent-v3';write_schemas(folder/'contracts')
     destination=folder/'examples';destination.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory() as tmp:
-        engine=Engine(ROOT,Path(tmp)/'examples.sqlite3',Provider('rules'),False)
+        engine=Engine(ROOT,Path(tmp)/'examples.sqlite3',Provider('rules'),False,allow_rules=True)
         try:
             scope=engine.scope({'type':'student','id':'DEMO001'},'mixed_evidence')
             update=engine.demo_update(scope,1,'example-C05-supplement-1')

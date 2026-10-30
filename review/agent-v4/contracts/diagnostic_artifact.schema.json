@@ -1,0 +1,261 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "3.0.0"
+    },
+    "record_type": {
+      "const": "diagnostic_artifact"
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "subject": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "enum": [
+                "student",
+                "class"
+              ]
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "type",
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "scenario_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "subject",
+        "scenario_id"
+      ],
+      "additionalProperties": false
+    },
+    "audience": {
+      "enum": [
+        "teacher",
+        "student"
+      ]
+    },
+    "target_node_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "generated_against": {
+      "type": "object",
+      "properties": {
+        "snapshot_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "revision"
+      ],
+      "additionalProperties": false
+    },
+    "validated_against": {
+      "type": "object",
+      "properties": {
+        "snapshot_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "revision"
+      ],
+      "additionalProperties": false
+    },
+    "fingerprint": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dependencies": {
+      "type": "object",
+      "properties": {
+        "read_nodes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "queries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "tool": {
+                "type": "string",
+                "minLength": 1
+              },
+              "arguments": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "tool",
+              "arguments"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "read_nodes",
+        "queries"
+      ],
+      "additionalProperties": false
+    },
+    "validity": {
+      "enum": [
+        "fresh",
+        "historical"
+      ]
+    },
+    "publication": {
+      "const": "active"
+    },
+    "origin": {
+      "enum": [
+        "rules_demo",
+        "model"
+      ]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "explanation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cited_node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "cited_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "resource_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "explanation",
+        "cited_node_ids",
+        "cited_evidence_ids",
+        "resource_ids",
+        "limitations"
+      ],
+      "additionalProperties": false
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "facts_fingerprint": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generation": {
+      "type": "object",
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompt_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "elapsed_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "request_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "provider",
+        "model",
+        "prompt_version",
+        "elapsed_ms",
+        "request_ids"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "record_type",
+    "artifact_id",
+    "scope",
+    "audience",
+    "target_node_id",
+    "generated_against",
+    "validated_against",
+    "fingerprint",
+    "dependencies",
+    "validity",
+    "publication",
+    "origin",
+    "output",
+    "created_at"
+  ],
+  "additionalProperties": false
+}

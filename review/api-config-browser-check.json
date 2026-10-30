@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "transport": "mock_only",
+  "real_model_called": false,
+  "checks": [
+    "readonly capabilities and backend rejection",
+    "settings within existing drawer",
+    "password cleared and no browser storage",
+    "test then enable",
+    "bad key preserves prior configuration",
+    "diagnose and follow up",
+    "new evaluation/historical answer",
+    "disconnect preserves model result",
+    "graph coordinates and zoom unchanged",
+    "390px settings/no overflow",
+    "no page errors"
+  ]
+}

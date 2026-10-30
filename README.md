@@ -1,6 +1,6 @@
 # 电子信息工程（培养方案图谱演示）
 
-HTML / CSS / JavaScript + 本地D3 7.9.0，配合Python本地诊断服务。无需npm安装或构建。当前默认使用明确标注的规则演示；可配置真实模型适配器。
+HTML / CSS / JavaScript + 本地D3 7.9.0，配合Python本地诊断服务。无需npm安装或构建。默认只读浏览；可在智能助手内配置OpenAI API，启用生成与追问。
 
 在项目目录启动：
 
@@ -19,31 +19,34 @@ python tools/serve.py
 
 灰色且阶段性低于60分的节点保留橙色虚线描边；只有课程总分时不反推知识点分数。切换对象/角色/场景保留布局和缩放。当前身份选择仅供演示，没有正式登录或正式建议候选采纳功能。
 
-右下角“智能助手”支持自动诊断与继续追问。选中节点后自动绑定对象、角色、节点和评价版本；右侧节点面板同步显示诊断。教师在个人mixed_evidence场景选中C05，可点击“模拟C05补测”：程序更新事实并聚合，新解释异步生成。原回答保留历史版本标记，下一问默认最新评价。无关变化可复用已重新验证的解释，诊断刷新保留画布位置与缩放。
+右下角“智能助手”标题栏有“API 设置”，在同一抽屉内切换设置页，不改变画布。输入账户可用的模型名称与密钥，点击“测试并启用”；该操作发送DEMO001/C05演示上下文，验证结构化输出并产生少量API用量。配置只存在当前服务内存，重启清除，作用于本机服务所有模拟角色。密码提交后清空，不回填、不写浏览器存储。启动配置仍可通过.env提供。
 
-运行快照、事件、解释、任务和对话保存在.runtime/agent.sqlite3；重启保留，原预置JSON不被修改。个人补测不自动重写预置班均。启动参数与完整快照提交接口见[运行协议](review/agent-v3/运行协议与接口.md)。服务仅监听本机；演示角色选择不能充当正式多用户鉴权。
+未配置时可以看原静态数据和已有模型诊断，不能继续追问或重新生成。配置后可点击“生成诊断”与发送问题。浏览已有结果或点击新节点本身不产生模型费用。选中节点自动绑定对象、角色、节点和评价版本；评价更新时，有API才按依赖异步刷新。旧回答保留历史版本标记；移除密钥或换模型不会使仍匹配事实的诊断失效。教师个人mixed_evidence场景可“模拟C05补测”，无API时只更新事实并将受影响诊断标旧。
 
-接入真实模型：将.env.example复制为.env，设置AGENT_PROVIDER=openai、OPENAI_API_KEY、AGENT_MODEL后重启。适配器使用OpenAI结构化输出与有限只读工具；密钥只在服务端。本次未配置密钥，没有发起真实模型请求；已验证的是规则闭环及模型模拟传输。显式模型模式失败会显示失败，不悄悄切换成规则回答。
+运行快照、事件、解释、任务和对话保存在.runtime/agent.sqlite3；重启保留，原预置JSON不被修改。API设置中的“保存为静态成果”将有效模型诊断及必要评价/来源记录导出到review/model-diagnostics，供无密钥的其他本地安装浏览，不含私人对话或密钥。个人补测不自动重写预置班均。当前接口见[运行协议](review/agent-v4/运行协议与验收.md)。服务仅监听本机；演示角色选择不能充当正式多用户鉴权。
+
+也可将.env.example复制为.env，设置AGENT_PROVIDER=openai、OPENAI_API_KEY、AGENT_MODEL后重启；界面会标为“尚未测试”，可留空密钥测试现有配置。本次环境没有密钥，未发起真实模型请求、未制作真实模型成果；成果清单如实为空。已验证的是完整模拟传输与只读闭环。真实调用失败会显示错误，不切换成规则回答。
 
 校验：
 
 ```powershell
 node --test tests/graph.test.js tests/personalization.test.js
-python -m unittest discover -s tests -p test_agent.py -v
+python -m unittest discover -s tests -p 'test_*.py' -v
 python tools/verify_review_data.py
 python tools/verify_personalization_review.py --allow-frontend-changes
-node tools/browser_agent.cjs
+node tools/browser_api_config.cjs
+python tools/model_diagnostics.py validate
 ```
 
 Python数据校验需要jsonschema。离线重新制作数据可运行tools/build_review_data.py（依赖原截图目录），仅用于维护预设文件，不是应用运行步骤。
 
-tools/browser_agent.cjs自启隔离临时服务与数据库，强制使用规则演示并在结束后关闭服务，验证自动诊断、补测更新、版本绑定和桌面/手机抽屉。tools/browser_personalization.cjs覆盖既有个性化界面，运行前先启动本地服务。两者使用本机Codex运行时的Playwright及本机Chrome；其他机器需相应调整路径。tools/browser_check.cjs是v0.1班级界面的历史脚本。
+tools/browser_api_config.cjs自启隔离服务和临时数据库，使用模拟模型传输，验证设置、追问、补测、断开与手机界面；结束后关闭服务，不调用外部模型。tools/browser_agent.cjs保留为同一检查的兼容入口，v0.3规则追问脚本可从Git旧版本查看。tools/browser_personalization.cjs覆盖既有个性化界面，运行前先启动本地服务。浏览器检查依赖本机Codex运行时的Playwright及本机Chrome；其他机器需相应调整路径。
 
-新增四类契约、执行方案和验收记录见[agent-v3](review/agent-v3/README.md)；D3许可证见vendor/D3-LICENSE。本轮未部署线上站点。
+API配置、契约扩展和验收见[agent-v4](review/agent-v4/运行协议与验收.md)；先前四类契约见[agent-v3](review/agent-v3/README.md)。D3许可证见vendor/D3-LICENSE。本轮未部署线上站点。
 
 ## Git 版本管理
 
-当前项目使用本地Git管理，班级基线标记为 `v0.1.0`，个性化图谱版本标记为 `v0.2.0`，事件驱动诊断版本为 `v0.3.0`。代码、预置数据、审查文档及界面截图均保存；运行库、依赖目录、缓存和环境密钥文件不纳入版本。
+当前项目使用本地Git管理，班级基线 `v0.1.0`，个性化图谱 `v0.2.0`，事件诊断 `v0.3.0`，API设置与静态成果 `v0.4.0`。运行库、依赖目录、缓存和环境密钥文件不纳入版本。
 
 每次修改后，可检查差异并保存一个版本：
 

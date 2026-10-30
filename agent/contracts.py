@@ -32,6 +32,11 @@ SCHEMAS={
   'target_node_id':NULLS,'snapshot_ref':REF,'discussed_artifact_id':NULLS,'question':S,
   'state':{'enum':['queued','running','succeeded','failed']},'answer':{'anyOf':[OUTPUT,{'type':'null'}]},
   'origin':{'enum':['rules_demo','model']},'created_at':S})}
+# Optional extensions preserve existing v3 records; the fact fingerprint is independent of credentials/model.
+GENERATION=obj({'provider':S,'model':S,'prompt_version':S,'elapsed_ms':{'type':'integer','minimum':0},'request_ids':arr(S)})
+SCHEMAS['diagnostic_artifact']['properties'].update(facts_fingerprint=S,generation=GENERATION)
+SCHEMAS['agent_run']['properties'].update(generation=GENERATION,error_code=NULLS)
+SCHEMAS['conversation_turn']['properties'].update(generator=S)
 VALIDATORS={k:Draft202012Validator(v,format_checker=FormatChecker()) for k,v in SCHEMAS.items()}
 def validate(record):VALIDATORS[record['record_type']].validate(record)
 def write_schemas(root):

@@ -1,0 +1,42 @@
+const {createRequire}=require('node:module'),path=require('node:path'),fs=require('node:fs'),assert=require('node:assert/strict'),{spawn}=require('node:child_process');
+const {chromium}=createRequire(path.join(path.dirname(process.execPath),'..','node_modules','runtime.js'))('playwright');
+(async()=>{
+ const server=spawn('python',['tests/serve_api_fixture.py'],{windowsHide:true,stdio:['ignore','pipe','pipe']});let browser;
+ try{
+  const url=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('fixture startup timeout')),15000);server.stdout.on('data',b=>{const m=b.toString().match(/http:\/\/127\.0\.0\.1:\d+/);if(m){clearTimeout(timer);resolve(m[0]);}});server.on('exit',c=>{clearTimeout(timer);reject(Error('fixture exit '+c));});});
+  browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--disable-gpu']});
+  const page=await browser.newPage({viewport:{width:1512,height:982}}),errors=[];page.on('pageerror',e=>errors.push(String(e)));
+  await page.goto(url);await page.locator('#enter-teacher').click();await page.locator('#loading').waitFor({state:'hidden'});
+  await page.selectOption('#person','DEMO001');await page.locator('#loading').waitFor({state:'hidden'});await page.locator('[data-mode="diagnosis"]').click();
+  await page.locator('#search').fill('通信电子线路');await page.locator('#search-results button').first().click();await page.waitForTimeout(500);
+  await page.locator('#agent-toggle').click();await page.waitForFunction(()=>document.querySelector('#agent-mode').textContent.includes('只读'));
+  assert.ok(await page.locator('#agent-send').isDisabled());assert.ok(await page.locator('#agent-retry').isDisabled());
+  const pos=await page.locator('[data-node-id="C05"]').getAttribute('transform'),zoom=await page.locator('#graph > g').getAttribute('transform');
+  await page.locator('#agent-settings-open').click();assert.equal(await page.locator('#agent-key-input').getAttribute('type'),'password');
+  await page.locator('#agent-model-input').fill('test-model');await page.locator('#agent-key-input').fill('test-key');
+  await page.screenshot({path:'review/api-settings-desktop.png',fullPage:true});
+  await page.locator('#agent-test-enable').click();await page.waitForFunction(()=>document.querySelector('#agent-settings-status').textContent.includes('连接成功'));
+  assert.equal(await page.locator('#agent-key-input').inputValue(),'');assert.ok(!(await page.content()).includes('test-key'));
+  assert.equal(await page.locator('[data-node-id="C05"]').getAttribute('transform'),pos);assert.equal(await page.locator('#graph > g').getAttribute('transform'),zoom);
+  await page.locator('#agent-settings-back').click();await page.locator('#agent-retry').click();
+  await page.waitForFunction(()=>document.querySelector('#agent-diagnostic').textContent.includes('53.17'));
+  await page.locator('#agent-question').fill('为什么这门课需要关注？');await page.locator('#agent-send').click();await page.waitForFunction(()=>document.querySelector('#agent-messages').textContent.includes('浏览器测试传输'));
+  await page.locator('#agent-demo').click();await page.waitForFunction(()=>document.querySelector('#agent-context').textContent.includes('r2'));
+  await page.waitForFunction(()=>document.querySelector('#agent-diagnostic').textContent.includes('59.12'));
+  assert.match(await page.locator('#agent-messages').innerText(),/历史评价/);
+  await page.locator('#agent-settings-open').click();await page.locator('#agent-key-input').fill('bad-key');await page.locator('#agent-test-enable').click();
+  await page.waitForFunction(()=>document.querySelector('#agent-settings-status').textContent.includes('密钥无效'));
+  assert.equal(await page.locator('#agent-key-input').inputValue(),'');
+  await page.locator('#agent-disconnect').click();await page.waitForFunction(()=>document.querySelector('#agent-settings-status').textContent.includes('已断开'));
+  await page.locator('#agent-settings-back').click();await page.waitForFunction(()=>document.querySelector('#agent-send').disabled);
+  assert.match(await page.locator('#agent-diagnostic').innerText(),/59.12/);
+  assert.equal(await page.evaluate(async()=>{const r=await fetch('/api/agent/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:'绕过前端'})});return r.status;}),403);
+  assert.equal(await page.locator('[data-node-id="C05"]').getAttribute('transform'),pos);assert.equal(await page.locator('#graph > g').getAttribute('transform'),zoom);
+  await page.screenshot({path:'review/api-readonly-result.png',fullPage:true});
+  await page.setViewportSize({width:390,height:844});await page.locator('#agent-settings-open').click();await page.screenshot({path:'review/api-settings-mobile.png',fullPage:true});
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);
+  await page.locator('#agent-settings-back').click();await page.locator('#agent-close').click();assert.ok(await page.locator('#agent-console').isHidden());assert.deepEqual(errors,[]);
+  fs.writeFileSync('review/api-config-browser-check.json',JSON.stringify({status:'passed',transport:'mock_only',real_model_called:false,checks:['readonly capabilities and backend rejection','settings within existing drawer','password cleared and no browser storage','test then enable','bad key preserves prior configuration','diagnose and follow up','new evaluation/historical answer','disconnect preserves model result','graph coordinates and zoom unchanged','390px settings/no overflow','no page errors']},null,2));
+  console.log('API configuration browser checks passed (mock transport, no external API)');
+ }finally{if(browser)await browser.close();server.kill();}
+})().catch(e=>{console.error(e);process.exit(1)});

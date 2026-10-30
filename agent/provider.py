@@ -2,7 +2,11 @@ import copy
 import json
 import os
 import urllib.request
+import urllib.error
 from .contracts import OUTPUT
+
+class ProviderError(RuntimeError):
+    def __init__(self,code,message):super().__init__(message);self.code=code
 
 def load_env(path):
     if not path.is_file():return
@@ -13,7 +17,9 @@ def load_env(path):
 
 class Provider:
     def __init__(self,mode=None,key=None,model=None,transport=None):
-        self.mode=mode or os.getenv('AGENT_PROVIDER','rules');self.key=key or os.getenv('OPENAI_API_KEY');self.model=model or os.getenv('AGENT_MODEL')
+        self.mode=mode or os.getenv('AGENT_PROVIDER','rules')
+        self.key=(key or os.getenv('OPENAI_API_KEY')) if self.mode=='openai' else None
+        self.model=(model or os.getenv('AGENT_MODEL')) if self.mode=='openai' else None
         self.transport=transport or self._request
         if self.mode not in ('rules','openai'):raise ValueError('AGENT_PROVIDER只支持rules或openai')
         if self.mode=='openai' and (not self.key or not self.model):raise ValueError('OpenAI模式需要OPENAI_API_KEY和AGENT_MODEL')
@@ -24,11 +30,16 @@ class Provider:
     def _request(self,payload):
         request=urllib.request.Request('https://api.openai.com/v1/chat/completions',data=json.dumps(payload).encode(),headers={'Content-Type':'application/json','Authorization':'Bearer '+self.key})
         try:
-            with urllib.request.urlopen(request,timeout=45) as response:return json.load(response)
-        except Exception as error:raise RuntimeError('模型服务请求失败；请检查配置或网络后重试') from error
+            with urllib.request.urlopen(request,timeout=45) as response:
+                value=json.load(response);value['_request_id']=response.headers.get('x-request-id');return value
+        except urllib.error.HTTPError as error:
+            code={401:'authentication',403:'permission',404:'model_not_found',429:'rate_limit'}.get(error.code,'provider_http')
+            raise ProviderError(code,{'authentication':'密钥无效，请检查API Key。','permission':'当前账户无访问权限。','model_not_found':'模型不可用，请检查模型名称。','rate_limit':'额度或速率受限，请稍后重试。'}.get(code,'模型服务返回错误，请稍后重试。')) from None
+        except Exception:raise ProviderError('network','模型服务连接失败，请检查网络后重试。') from None
     def generate(self,ctx,question=None,history=None):
         usage={'model_calls':0,'input_tokens':0,'output_tokens':0}
         ctx.usage=usage
+        ctx.request_ids=[]
         if self.mode=='rules':return self.rules(ctx,question),usage
         schema=copy.deepcopy(OUTPUT);schema['properties']['explanation']={'type':'string'}
         for field in ['cited_node_ids','cited_evidence_ids','resource_ids','limitations']:schema['properties'][field]['items']={'type':'string'}
@@ -45,6 +56,7 @@ class Provider:
             response=self.transport({'model':self.model,'messages':messages,'tools':tools,'parallel_tool_calls':False,
                 'max_completion_tokens':max(128,min(4000,int(os.getenv('AGENT_MAX_OUTPUT_TOKENS','1400')))),
                 'response_format':{'type':'json_schema','json_schema':{'name':'diagnostic_output','strict':True,'schema':schema}}})
+            if response.get('_request_id'):ctx.request_ids.append(str(response['_request_id'])[:200])
             u=response.get('usage',{});usage['input_tokens']+=u.get('prompt_tokens',0);usage['output_tokens']+=u.get('completion_tokens',0)
             choice=response['choices'][0];message=choice['message']
             if message.get('refusal') or choice.get('finish_reason') in ('length','content_filter'):raise ValueError('模型拒绝或输出不完整')

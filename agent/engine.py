@@ -5,6 +5,7 @@ import json
 import math
 import threading
 import uuid
+import time
 from jsonschema import Draft202012Validator
 from .storage import Store
 from .context import Context,digest,ref
@@ -18,7 +19,8 @@ def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
 class Conflict(ValueError):pass
 
 class Engine:
-    def __init__(self,root,db_path,provider=None,start_worker=True):
+    def __init__(self,root,db_path,provider=None,start_worker=True,allow_rules=False):
+        self.allow_rules=allow_rules;self.seed_artifacts=[]
         self.root=Path(root);self.data=self.root/'review'/'personalization-v2';self.provider=provider or Provider()
         self.graph=read(self.data/'data/graph.json');self.registry=read(self.data/'data/students.json');self.resources=read(self.data/'data/resources.json');self.policy=read(self.data/'data/evaluation-policy.json')
         self.manifest=read(self.data/'manifest.json');self.nodes={n['id']:n for n in self.graph['nodes']}
@@ -26,6 +28,8 @@ class Engine:
         self.incoming={k:[e for e in self.graph['edges'] if e['target']==k and e['aggregation_weight'] is not None] for k in self.nodes}
         self.snapshot_schema=read(self.data/'contracts/contract.schema.json');self.snapshot_validator=Draft202012Validator({'$ref':'#/$defs/snapshot','$defs':self.snapshot_schema['$defs']})
         self.store=Store(db_path);self.lock=self.store.lock;self.wake=threading.Event();self.stopping=False
+        from .bundles import load_bundle
+        self.seed_artifacts=load_bundle(self,self.root/'review/model-diagnostics/bundle.json',bootstrap=True)
         for run in self.store.all('agent_run'):
             if run['state']=='running':run['state']='queued';run['updated_at']=now();self.store.put('agent_run',run['run_id'],run)
         self.worker=threading.Thread(target=self._worker,daemon=True,name='teaching-agent')
@@ -53,12 +57,25 @@ class Engine:
         return Context(self.graph,snap,self.profiles.get(scope['subject']['id'],{}),self.resources,self.policy,audience,target,previous,dependencies)
     def dkey(self,scope,audience,target):return 'diagnosis:'+self.key(scope)+':'+audience+':'+(target or '@overview')
     def artifact(self,scope,audience,target):
-        pointer=self.store.pointer(self.dkey(scope,audience,target));return self.store.get('diagnostic_artifact',pointer['id']) if pointer else None
+        pointer=self.store.pointer(self.dkey(scope,audience,target))
+        runtime=self.store.get('diagnostic_artifact',pointer['id']) if pointer else None
+        candidates=([runtime] if runtime else [])+[a for a in reversed(self.seed_artifacts) if a['scope']==scope and a['audience']==audience and a['target_node_id']==target]
+        for a in candidates:
+            if self.matches(a,self.ensure(scope)):return a
+        return candidates[0] if candidates else None
+    def matches(self,artifact,snapshot):
+        try:
+            ctx=self.context(artifact['scope'],artifact['audience'],artifact['target_node_id'],snapshot,artifact['dependencies'])
+            if artifact.get('facts_fingerprint'):return ctx.fingerprint(None)==artifact['facts_fingerprint']
+            return ctx.fingerprint(self.provider.identity)==artifact['fingerprint']
+        except (ValueError,KeyError):return False
+    def capabilities(self):
+        enabled=self.provider.mode=='openai'
+        return {'can_read':True,'can_ask':enabled,'can_regenerate':enabled,'configured':enabled,'model':self.provider.model if enabled else None}
     def fresh_artifact(self,scope,audience,target,snapshot=None):
         snap=snapshot or self.ensure(scope);old=self.artifact(scope,audience,target)
         if not old:return None
-        try:ctx=self.context(scope,audience,target,snap,old['dependencies']);same=ctx.fingerprint(self.provider.identity)==old['fingerprint']
-        except ValueError:same=False
+        same=self.matches(old,snap)
         if not same:return None
         if old['validated_against']!=ref(snap):
             old={**old,'artifact_id':uid('diag'),'validated_against':ref(snap),'created_at':now(),'validity':'fresh'}
@@ -68,6 +85,10 @@ class Engine:
         with self.lock:
             snap=self.ensure(scope);fresh=self.fresh_artifact(scope,audience,target,snap)
             if fresh and trigger!='retry':return {'artifact':fresh,'run':None}
+            if trigger=='view' and not self.allow_rules:return {'artifact':None,'run':None}
+            if self.provider.mode!='openai' and not self.allow_rules:
+                if trigger=='retry':raise PermissionError('配置API后可重新诊断')
+                return {'artifact':None,'run':None}
             jobkey='job:'+self.dkey(scope,audience,target)+':'+str(snap['revision'])
             existing=self.store.pointer(jobkey)
             if existing:
@@ -83,6 +104,7 @@ class Engine:
         run=record('agent_run',run_id=uid('run'),scope=scope,audience=audience,target_node_id=target,snapshot_ref=ref(snapshot),trigger=trigger,state='queued',mode=mode,artifact_id=None,turn_id=turn_id,error=None,tool_trace=[],usage={'model_calls':0,'input_tokens':0,'output_tokens':0},created_at=now(),updated_at=now())
         self.store.put('agent_run',run['run_id'],run);return run
     def ask(self,scope,audience,target,question,requested_ref=None):
+        if self.provider.mode!='openai' and not self.allow_rules:raise PermissionError('配置API后可继续追问')
         if not isinstance(question,str) or not question.strip() or len(question)>2000:raise ValueError('问题长度须为1–2000字符')
         with self.lock:
             latest=self.ensure(scope);snap=latest
@@ -104,7 +126,7 @@ class Engine:
             turns=[t for t in self.store.all('conversation_turn') if t['scope']==scope and t['audience']==audience and t['target_node_id']==target]
             return {'snapshot_ref':ref(snap),'artifact':artifact,'historical_artifact':{**old,'validity':'historical'} if old and not artifact else None,
                 'runs':runs[-8:],'turns':[{**t,'historical':t['snapshot_ref']!=ref(snap)} for t in turns[-12:]],
-                'provider':self.provider.origin,'model':self.provider.model if self.provider.mode=='openai' else None,
+                'provider':self.provider.origin,'model':self.provider.model if self.provider.mode=='openai' else None,'capabilities':self.capabilities(),
                 'events':[{k:e[k] for k in ['event_id','before','after','affected_node_ids','created_at']} for e in self.store.all('evaluation_changed') if e['scope']==scope][-6:]}
     def _validate_snapshot(self,new,current):
         self.snapshot_validator.validate(new)
@@ -233,9 +255,9 @@ class Engine:
             summary['strength_node_ids']=sorted([nid for nid in known if new['node_results'][nid]['status']['health_color']=='green'],key=lambda k:-new['node_results'][k]['status']['achievement_rate'])[:5]
             summary['provisional_low_node_ids']=[nid for nid in known if new['node_results'][nid]['status']['score_is_provisional'] and new['node_results'][nid]['status']['achievement_rate']<60]
             return self.submit(scope,new,base_revision,event_id,request_hash)
-    def process_one(self):
+    def process_one(self,run_id=None):
         with self.lock:
-            queued=[r for r in self.store.all('agent_run') if r['state']=='queued']
+            queued=[r for r in self.store.all('agent_run') if r['state']=='queued' and (run_id is None or r['run_id']==run_id)]
             run=min(queued,key=lambda r:({'question':0,'view':1,'retry':1,'evaluation_changed':2}[r['trigger']],r['created_at'])) if queued else None
             if not run:return False
             latest=self.ensure(run['scope'])
@@ -243,34 +265,45 @@ class Engine:
                 run.update(state='superseded',updated_at=now());self.store.put('agent_run',run['run_id'],run);return True
             snap=self.store.get('snapshot',run['snapshot_ref']['snapshot_id'],run['snapshot_ref']['revision'])
             ctx=self.context(run['scope'],run['audience'],run['target_node_id'],snap)
+            provider=self.provider
+            if provider.mode!='openai' and not self.allow_rules:
+                run.update(state='failed',error='API已断开，请配置后重试',error_code='not_configured',updated_at=now());self.store.put('agent_run',run['run_id'],run)
+                if run['turn_id']:
+                    abandoned=self.store.get('conversation_turn',run['turn_id']);abandoned['state']='failed';self.store.put('conversation_turn',abandoned['turn_id'],abandoned)
+                return True
             turn=self.store.get('conversation_turn',run['turn_id']) if run['turn_id'] else None
             if turn and turn['discussed_artifact_id']:
                 discussed=self.store.get('diagnostic_artifact',turn['discussed_artifact_id'])
+                if not discussed:discussed=next((a for a in self.seed_artifacts if a['artifact_id']==turn['discussed_artifact_id']),None)
                 if discussed and discussed['scope']==run['scope'] and discussed['audience']==run['audience'] and discussed['target_node_id']==run['target_node_id']:
                     ctx.discussion={'artifact_id':discussed['artifact_id'],'generated_against':discussed['generated_against'],'validated_against':discussed['validated_against'],
                         'matches_answer_version':discussed['validated_against']==ref(snap),'origin':discussed['origin'],'explanation':discussed['output']['explanation'][:2000]}
             history=[{'question':t['question'][:400],'answer':t['answer']['explanation'][:800],'snapshot_ref':t['snapshot_ref']} for t in self.store.all('conversation_turn') if turn and t['session_id']==turn['session_id'] and t['state']=='succeeded'][-4:]
             run.update(state='running',updated_at=now());self.store.put('agent_run',run['run_id'],run)
             if turn:turn['state']='running';self.store.put('conversation_turn',turn['turn_id'],turn)
+        started=time.monotonic()
+        def generation():return {'provider':provider.mode,'model':provider.model if provider.mode=='openai' else 'rules-v1','prompt_version':'agent-1','elapsed_ms':int((time.monotonic()-started)*1000),'request_ids':getattr(ctx,'request_ids',[])}
         try:
-            output,usage=self.provider.generate(ctx,turn['question'] if turn else None,history)
+            output,usage=provider.generate(ctx,turn['question'] if turn else None,history)
             ctx.validate_output(output)
+            generation_info=generation()
             with self.lock:
                 if self.stopping:return True
                 latest=self.ensure(run['scope']);current_ctx=self.context(run['scope'],run['audience'],run['target_node_id'],latest,ctx.dependencies())
-                valid=ctx.fingerprint(self.provider.identity)==current_ctx.fingerprint(self.provider.identity)
-                run.update(state='succeeded' if turn or valid else 'superseded',usage=usage,tool_trace=ctx.trace,updated_at=now())
+                ctx.discussion=None
+                valid=ctx.fingerprint(None)==current_ctx.fingerprint(None)
+                run.update(state='succeeded' if turn or valid else 'superseded',usage=usage,tool_trace=ctx.trace,updated_at=now(),generation=generation_info)
                 if turn:
-                    turn.update(state='succeeded',answer=output);self.store.put('conversation_turn',turn['turn_id'],turn)
+                    turn.update(state='succeeded',answer=output,origin=provider.origin,generator=provider.identity);self.store.put('conversation_turn',turn['turn_id'],turn)
                 else:
-                    artifact=record('diagnostic_artifact',artifact_id=uid('diag'),scope=run['scope'],audience=run['audience'],target_node_id=run['target_node_id'],generated_against=ref(snap),validated_against=ref(latest) if valid else ref(snap),fingerprint=ctx.fingerprint(self.provider.identity),dependencies=ctx.dependencies(),validity='fresh' if valid else 'historical',publication='active',origin=self.provider.origin,output=output,created_at=now())
+                    artifact=record('diagnostic_artifact',artifact_id=uid('diag'),scope=run['scope'],audience=run['audience'],target_node_id=run['target_node_id'],generated_against=ref(snap),validated_against=ref(latest) if valid else ref(snap),fingerprint=ctx.fingerprint(provider.identity),facts_fingerprint=ctx.fingerprint(None),generation=generation_info,dependencies=ctx.dependencies(),validity='fresh' if valid else 'historical',publication='active',origin=provider.origin,output=output,created_at=now())
                     self.store.put('diagnostic_artifact',artifact['artifact_id'],artifact);run['artifact_id']=artifact['artifact_id']
                     if valid:self.store.pointer(self.dkey(run['scope'],run['audience'],run['target_node_id']),{'id':artifact['artifact_id']})
                 self.store.put('agent_run',run['run_id'],run)
         except Exception as error:
             with self.lock:
                 if self.stopping:return True
-                run.update(state='failed',error=str(error)[:240],tool_trace=ctx.trace,usage=getattr(ctx,'usage',run['usage']),updated_at=now());self.store.put('agent_run',run['run_id'],run)
+                run.update(state='failed',error=str(error)[:240],error_code=getattr(error,'code','invalid_output'),generation=generation(),tool_trace=ctx.trace,usage=getattr(ctx,'usage',run['usage']),updated_at=now());self.store.put('agent_run',run['run_id'],run)
                 if turn:turn.update(state='failed');self.store.put('conversation_turn',turn['turn_id'],turn)
         return True
     def _worker(self):

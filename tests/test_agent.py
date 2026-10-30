@@ -18,7 +18,7 @@ def output():return {'explanation':'依据当前对象与指定版本的评价�
 class AgentTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.path=Path(self.tmp.name)/'agent.sqlite'
-        self.engine=Engine(ROOT,self.path,Provider('rules'),False);self.scope=self.engine.scope({'type':'student','id':'DEMO001'},'mixed_evidence')
+        self.engine=Engine(ROOT,self.path,Provider('rules'),False,allow_rules=True);self.scope=self.engine.scope({'type':'student','id':'DEMO001'},'mixed_evidence')
     def tearDown(self):self.engine.close();self.tmp.cleanup()
     def drain(self):
         for _ in range(50):
@@ -28,7 +28,7 @@ class AgentTests(unittest.TestCase):
         run=self.engine.ensure_diagnosis(self.scope,'teacher','C05')['run'];self.drain()
         artifact=self.engine.state(self.scope,'teacher','C05')['artifact'];self.assertEqual(artifact['origin'],'rules_demo')
         self.assertEqual(self.engine.store.get('agent_run',run['run_id'])['state'],'succeeded')
-        self.engine.close();self.engine=Engine(ROOT,self.path,Provider('rules'),False)
+        self.engine.close();self.engine=Engine(ROOT,self.path,Provider('rules'),False,allow_rules=True)
         self.assertEqual(self.engine.state(self.scope,'teacher','C05')['artifact']['artifact_id'],artifact['artifact_id'])
     def test_javascript_numeric_round_trip_does_not_invalidate_dependencies(self):
         self.assertEqual(digest({'score':74.0,'coverage':1.0}),digest({'coverage':1,'score':74}))
@@ -146,7 +146,7 @@ class AgentTests(unittest.TestCase):
         self.assertEqual(self.engine.state(self.scope,'student','C05')['turns'],[])
     def test_queued_work_recovers_after_restart(self):
         run=self.engine.ensure_diagnosis(self.scope,'teacher','C05')['run'];run['state']='running';self.engine.store.put('agent_run',run['run_id'],run)
-        self.engine.close();self.engine=Engine(ROOT,self.path,Provider('rules'),False);self.drain()
+        self.engine.close();self.engine=Engine(ROOT,self.path,Provider('rules'),False,allow_rules=True);self.drain()
         self.assertEqual(self.engine.store.get('agent_run',run['run_id'])['state'],'succeeded')
 
 class HTTPTests(unittest.TestCase):
