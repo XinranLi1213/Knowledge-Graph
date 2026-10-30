@@ -70,7 +70,7 @@ class Engine:
             return ctx.fingerprint(self.provider.identity)==artifact['fingerprint']
         except (ValueError,KeyError):return False
     def capabilities(self):
-        enabled=self.provider.mode=='openai'
+        enabled=self.provider.origin=='model'
         return {'can_read':True,'can_ask':enabled,'can_regenerate':enabled,'configured':enabled,'model':self.provider.model if enabled else None}
     def fresh_artifact(self,scope,audience,target,snapshot=None):
         snap=snapshot or self.ensure(scope);old=self.artifact(scope,audience,target)
@@ -86,7 +86,7 @@ class Engine:
             snap=self.ensure(scope);fresh=self.fresh_artifact(scope,audience,target,snap)
             if fresh and trigger!='retry':return {'artifact':fresh,'run':None}
             if trigger=='view' and not self.allow_rules:return {'artifact':None,'run':None}
-            if self.provider.mode!='openai' and not self.allow_rules:
+            if self.provider.origin!='model' and not self.allow_rules:
                 if trigger=='retry':raise PermissionError('配置API后可重新诊断')
                 return {'artifact':None,'run':None}
             jobkey='job:'+self.dkey(scope,audience,target)+':'+str(snap['revision'])
@@ -104,7 +104,7 @@ class Engine:
         run=record('agent_run',run_id=uid('run'),scope=scope,audience=audience,target_node_id=target,snapshot_ref=ref(snapshot),trigger=trigger,state='queued',mode=mode,artifact_id=None,turn_id=turn_id,error=None,tool_trace=[],usage={'model_calls':0,'input_tokens':0,'output_tokens':0},created_at=now(),updated_at=now())
         self.store.put('agent_run',run['run_id'],run);return run
     def ask(self,scope,audience,target,question,requested_ref=None):
-        if self.provider.mode!='openai' and not self.allow_rules:raise PermissionError('配置API后可继续追问')
+        if self.provider.origin!='model' and not self.allow_rules:raise PermissionError('配置API后可继续追问')
         if not isinstance(question,str) or not question.strip() or len(question)>2000:raise ValueError('问题长度须为1–2000字符')
         with self.lock:
             latest=self.ensure(scope);snap=latest
@@ -126,7 +126,7 @@ class Engine:
             turns=[t for t in self.store.all('conversation_turn') if t['scope']==scope and t['audience']==audience and t['target_node_id']==target]
             return {'snapshot_ref':ref(snap),'artifact':artifact,'historical_artifact':{**old,'validity':'historical'} if old and not artifact else None,
                 'runs':runs[-8:],'turns':[{**t,'historical':t['snapshot_ref']!=ref(snap)} for t in turns[-12:]],
-                'provider':self.provider.origin,'model':self.provider.model if self.provider.mode=='openai' else None,'capabilities':self.capabilities(),
+                'provider':self.provider.origin,'model':self.provider.model if self.provider.origin=='model' else None,'capabilities':self.capabilities(),
                 'events':[{k:e[k] for k in ['event_id','before','after','affected_node_ids','created_at']} for e in self.store.all('evaluation_changed') if e['scope']==scope][-6:]}
     def _validate_snapshot(self,new,current):
         self.snapshot_validator.validate(new)
@@ -266,7 +266,7 @@ class Engine:
             snap=self.store.get('snapshot',run['snapshot_ref']['snapshot_id'],run['snapshot_ref']['revision'])
             ctx=self.context(run['scope'],run['audience'],run['target_node_id'],snap)
             provider=self.provider
-            if provider.mode!='openai' and not self.allow_rules:
+            if provider.origin!='model' and not self.allow_rules:
                 run.update(state='failed',error='API已断开，请配置后重试',error_code='not_configured',updated_at=now());self.store.put('agent_run',run['run_id'],run)
                 if run['turn_id']:
                     abandoned=self.store.get('conversation_turn',run['turn_id']);abandoned['state']='failed';self.store.put('conversation_turn',abandoned['turn_id'],abandoned)
@@ -282,7 +282,7 @@ class Engine:
             run.update(state='running',updated_at=now());self.store.put('agent_run',run['run_id'],run)
             if turn:turn['state']='running';self.store.put('conversation_turn',turn['turn_id'],turn)
         started=time.monotonic()
-        def generation():return {'provider':provider.mode,'model':provider.model if provider.mode=='openai' else 'rules-v1','prompt_version':'agent-1','elapsed_ms':int((time.monotonic()-started)*1000),'request_ids':getattr(ctx,'request_ids',[])}
+        def generation():return {'provider':provider.mode,'model':provider.model if provider.origin=='model' else 'rules-v1','prompt_version':'agent-1','elapsed_ms':int((time.monotonic()-started)*1000),'request_ids':getattr(ctx,'request_ids',[])}
         try:
             output,usage=provider.generate(ctx,turn['question'] if turn else None,history)
             ctx.validate_output(output)

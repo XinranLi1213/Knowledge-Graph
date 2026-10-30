@@ -6,6 +6,8 @@ import threading
 import unittest
 import urllib.request
 import urllib.error
+import os
+from unittest.mock import patch,MagicMock
 from agent.engine import Engine
 from agent.provider import Provider,ProviderError
 from agent.settings import Settings
@@ -19,11 +21,11 @@ def transport(payload):
     output={'explanation':'测试传输生成的诊断：仅用于自动化测试。','cited_node_ids':[node],'cited_evidence_ids':[],'resource_ids':[],'limitations':['自动化测试数据，不是真实外部模型成果。']}
     return {'_request_id':'mock-request-1','choices':[{'finish_reason':'stop','message':{'content':json.dumps(output,ensure_ascii=False)}}],'usage':{'prompt_tokens':100,'completion_tokens':30}}
 
-def factory(key,model):
+def factory(key,model,supplier='openai'):
     if key=='bad-key':
         def fail(_):raise ProviderError('authentication','密钥无效，请检查API Key。')
-        return Provider('openai',key,model,fail)
-    return Provider('openai',key,model,transport)
+        return Provider(supplier,key,model,fail)
+    return Provider(supplier,key,model,transport)
 
 class ConfigurationTests(unittest.TestCase):
     def setUp(self):
@@ -48,9 +50,9 @@ class ConfigurationTests(unittest.TestCase):
         self.assertEqual(self.engine.provider.model,'test-model')
     def test_disconnect_during_test_prevents_late_activation(self):
         gate=threading.Event();started=threading.Event();failures=[]
-        def delayed_factory(key,model):
+        def delayed_factory(key,model,supplier='openai'):
             def delayed(payload):started.set();gate.wait(3);return transport(payload)
-            return Provider('openai',key,model,delayed)
+            return Provider(supplier,key,model,delayed)
         self.settings.factory=delayed_factory
         def work():
             try:self.settings.test_and_enable({'api_key':'test-key','model':'test-model'})
@@ -107,6 +109,41 @@ class ConfigurationTests(unittest.TestCase):
             existing.seed_artifacts=load_bundle(existing,path,bootstrap=True)
             self.assertEqual(existing.ensure(self.scope)['revision'],1);self.assertIsNone(existing.state(self.scope,'teacher','C05')['artifact'])
         finally:viewer.close();existing.close()
+    def test_switch_to_deepseek_requires_own_key_and_preserves_saved_diagnosis(self):
+        self.generate();old=self.engine.fresh_artifact(self.scope,'teacher','C05')
+        with self.assertRaises(ValueError):self.settings.test_and_enable({'supplier':'deepseek','model':'deepseek-flash','api_key':''})
+        result=self.settings.test_and_enable({'supplier':'deepseek','model':'deepseek-flash','api_key':'deepseek-test-key'})
+        self.assertEqual(result['supplier'],'deepseek');self.assertTrue(result['can_ask'])
+        self.assertEqual(old['artifact_id'],self.engine.fresh_artifact(self.scope,'teacher','C05')['artifact_id'])
+        run=self.engine.ensure_diagnosis(self.scope,'teacher','C05','retry')['run'];self.engine.process_one(run['run_id'])
+        self.assertEqual(self.engine.fresh_artifact(self.scope,'teacher','C05')['generation']['provider'],'deepseek')
+        question=self.engine.ask(self.scope,'teacher','C05','为什么？');self.engine.process_one(question['run']['run_id'])
+        self.assertEqual(self.engine.state(self.scope,'teacher','C05')['turns'][-1]['generator'],'deepseek:deepseek-flash')
+    def test_deepseek_json_and_tool_payload_then_schema_validation(self):
+        payloads=[]
+        def deepseek(payload):
+            payloads.append(copy.deepcopy(payload))
+            if len(payloads)==1:return {'choices':[{'finish_reason':'tool_calls','message':{'role':'assistant','content':None,'reasoning_content':'must not replay','tool_calls':[{'id':'ds-call','type':'function','function':{'name':'read_evidence','arguments':'{"node_id":"C05"}'}}]}}]}
+            return transport(payload)
+        ctx=self.engine.context(self.scope,'teacher','C05');provider=Provider('deepseek','test-key','deepseek-flash',deepseek)
+        result,usage=provider.generate(ctx,'为什么？')
+        self.assertEqual(usage['model_calls'],2);self.assertEqual(payloads[0]['response_format'],{'type':'json_object'})
+        self.assertEqual(payloads[0]['thinking'],{'type':'disabled'});self.assertIn('max_tokens',payloads[0]);self.assertNotIn('max_completion_tokens',payloads[0])
+        self.assertTrue(all('strict' not in t['function'] for t in payloads[0]['tools']));self.assertIn('JSON Schema',payloads[0]['messages'][0]['content'])
+        self.assertNotIn('reasoning_content',payloads[1]['messages'][-2]);self.assertEqual(result['cited_node_ids'],['C05'])
+        bad=transport(payloads[0]);bad['choices'][0]['message']['content']='{"explanation":"bad"}'
+        with self.assertRaises(Exception):Provider('deepseek','test-key','deepseek-flash',lambda _:bad).generate(self.engine.context(self.scope,'teacher','C05'))
+    def test_supplier_endpoint_and_credentials_do_not_cross(self):
+        for supplier,endpoint in [('deepseek','https://api.deepseek.com/chat/completions'),('openai','https://api.openai.com/v1/chat/completions')]:
+            response=MagicMock();response.__enter__.return_value=response;response.read.return_value=b'{}';response.headers={}
+            with patch('agent.provider.urllib.request.urlopen',return_value=response) as request:
+                Provider(supplier,'supplier-specific-key','model')._request({'model':'model'})
+                sent=request.call_args.args[0];self.assertEqual(sent.full_url,endpoint);self.assertEqual(sent.get_header('Authorization'),'Bearer supplier-specific-key')
+    def test_deepseek_environment_uses_separate_key_and_default_model(self):
+        with patch.dict(os.environ,{'AGENT_PROVIDER':'deepseek','DEEPSEEK_API_KEY':'ds-test-key','OPENAI_API_KEY':'oa-test-key'},clear=True):
+            provider=Provider();self.assertEqual(provider.key,'ds-test-key');self.assertEqual(provider.model,'deepseek-flash')
+            del os.environ['DEEPSEEK_API_KEY']
+            with self.assertRaises(ValueError):Provider()
 
 class ConfigurationHTTPTests(unittest.TestCase):
     def test_config_api_errors_capabilities_and_secret_boundaries(self):

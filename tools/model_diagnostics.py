@@ -23,7 +23,7 @@ def main():
         (folder/'bundle.schema.json').write_text(json.dumps(BUNDLE_SCHEMA,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');return
     load_env(ROOT/'.env');Path(args.db).parent.mkdir(parents=True,exist_ok=True)
     provider=Provider() if args.action=='generate' else Provider('rules')
-    if args.action=='generate' and provider.mode!='openai':raise SystemExit('未配置API；没有调用模型、没有生成模型成果。')
+    if args.action=='generate' and provider.origin!='model':raise SystemExit('未配置API；没有调用模型、没有生成模型成果。')
     engine=Engine(ROOT,args.db,provider,False)
     try:
         if args.action=='generate':

@@ -14,9 +14,9 @@ def transport(payload):
         'cited_node_ids':[node],'cited_evidence_ids':[],'resource_ids':[],'limitations':['仅用于浏览器测试，没有调用真实模型。']}
     return {'_request_id':'browser-mock-request','choices':[{'finish_reason':'stop','message':{'content':json.dumps(output,ensure_ascii=False)}}],'usage':{'prompt_tokens':100,'completion_tokens':20}}
 
-def factory(key,model):
+def factory(key,model,supplier='openai'):
     def fail(_):raise ProviderError('authentication','密钥无效，请检查API Key。')
-    return Provider('openai',key,model,fail if key=='bad-key' else transport)
+    return Provider(supplier,key,model,fail if key=='bad-key' else transport)
 
 if __name__=='__main__':
     with tempfile.TemporaryDirectory() as tmp:

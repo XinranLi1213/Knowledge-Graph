@@ -9,6 +9,10 @@ export class AgentConsole{
   $('#agent-close').onclick=()=>{$('#agent-console').hidden=true;$('#agent-toggle').setAttribute('aria-expanded','false');};
   $('.agent-head').insertAdjacentHTML('beforeend','<button id="agent-settings-open" aria-label="API设置">API 设置</button>');
   $('#agent-console').insertAdjacentHTML('beforeend',`<section id="agent-settings" hidden><button id="agent-settings-back">← 返回诊断</button><h3>API 设置</h3><p class="subtle">用于当前本机服务 · OpenAI</p><form id="agent-settings-form"><label>模型名称<input id="agent-model-input" required maxlength="120" placeholder="填写账户可用的模型名称" autocomplete="off"></label><label>API Key<input id="agent-key-input" type="password" maxlength="1024" placeholder="输入密钥，或留空沿用当前配置" autocomplete="new-password" spellcheck="false"></label><p class="subtle">密钥仅保存在服务内存，重启后清除；不写入浏览器存储。连接测试会发送演示上下文并产生少量API用量。</p><p id="agent-settings-status" role="status"></p><div class="agent-settings-actions"><button id="agent-test-enable" type="submit">测试并启用</button><button id="agent-disconnect" type="button">断开 API</button></div></form></section>`);
+  $('#agent-settings .subtle').textContent='用于当前本机服务';
+  $('#agent-settings-form').insertAdjacentHTML('afterbegin','<label>API 供应商<select id="agent-supplier"><option value="deepseek">DeepSeek</option><option value="openai">OpenAI</option></select></label><p id="agent-endpoint" class="subtle"></p>');
+  $('#agent-model-input').setAttribute('list','agent-model-options');$('#agent-model-input').insertAdjacentHTML('afterend','<datalist id="agent-model-options"></datalist>');
+  $('#agent-supplier').onchange=()=>this.selectSupplier(true);
   $('#agent-settings-open').onclick=()=>this.openSettings();
   $('#agent-settings-back').onclick=()=>{$('#agent-settings').hidden=true;$('#agent-console').classList.remove('settings-open');};
   $('#agent-settings-form').onsubmit=e=>{e.preventDefault();this.configure();};$('#agent-disconnect').onclick=()=>this.disconnect();
@@ -21,15 +25,23 @@ export class AgentConsole{
  }
  async openSettings(){
   $('#agent-settings').hidden=false;$('#agent-console').classList.add('settings-open');$('#agent-key-input').value='';
-  try{const value=await this.api('config');$('#agent-model-input').value=value.model||'';$('#agent-settings-status').textContent=value.configured?`已配置 ${value.model}${value.verified?' · 连接已验证':' · 尚未测试'}`:'未配置 · 可浏览已保存诊断';}
+  try{const value=await this.api('config');this.providers=value.providers||[];$('#agent-supplier').value=value.supplier||'deepseek';this.selectSupplier(false);$('#agent-model-input').value=value.model||this.providers.find(p=>p.id===$('#agent-supplier').value)?.default_model||'';$('#agent-settings-status').textContent=value.configured?`已配置 ${value.supplier} · ${value.model}${value.verified?' · 连接已验证':' · 尚未测试'}`:'未配置 · 可浏览已保存诊断';}
   catch(e){$('#agent-settings-status').textContent=e.message;}
+ }
+ selectSupplier(changed){
+  const item=this.providers?.find(p=>p.id===$('#agent-supplier').value);
+  $('#agent-key-input').value='';$('#agent-endpoint').textContent=item?item.endpoint:'';
+  $('#agent-model-options').innerHTML=(item?.models||[]).map(m=>`<option value="${esc(m)}"></option>`).join('');
+  if(changed){$('#agent-model-input').value=item?.default_model||'';$('#agent-settings-status').textContent='待测试 · 切换供应商后请填写对应密钥';}
+  $('#agent-model-input').placeholder=item?.default_model||'填写账户可用的模型名称';
  }
  async configure(){
   $('#agent-test-enable').disabled=true;$('#agent-disconnect').disabled=true;
-  const body={model:$('#agent-model-input').value.trim(),api_key:$('#agent-key-input').value.trim()};$('#agent-key-input').value='';
+  const body={supplier:$('#agent-supplier').value,model:$('#agent-model-input').value.trim(),api_key:$('#agent-key-input').value.trim()};$('#agent-key-input').value='';
+  $('#agent-supplier').disabled=true;$('#agent-model-input').disabled=true;
   $('#agent-settings-status').textContent='正在验证连接与结构化输出…';
-  try{const value=await this.api('config/test',body);$('#agent-settings-status').textContent=`连接成功 · ${value.model} · 可继续追问`;await this.poll();}
-  catch(e){$('#agent-settings-status').textContent=e.message;}finally{body.api_key='';$('#agent-test-enable').disabled=false;$('#agent-disconnect').disabled=false;}
+  try{const value=await this.api('config/test',body);$('#agent-settings-status').textContent=`连接成功 · ${value.supplier} · ${value.model} · 可继续追问`;await this.poll();}
+  catch(e){$('#agent-settings-status').textContent=e.message+' 当前配置未更改。';}finally{body.api_key='';$('#agent-test-enable').disabled=false;$('#agent-disconnect').disabled=false;$('#agent-supplier').disabled=false;$('#agent-model-input').disabled=false;}
  }
  async disconnect(){try{await this.api('config/disconnect',{});$('#agent-key-input').value='';$('#agent-settings-status').textContent='已断开 · 已保存诊断仍可浏览';await this.poll();}catch(e){$('#agent-settings-status').textContent=e.message;}}
  binding(){const b=this.bound;return {subject_type:b.view.subject.type,subject_id:b.view.subject.id,scenario:b.view.scenario,audience:b.view.role,node_id:b.node||''};}

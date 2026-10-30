@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-30",
+  "version": "v0.4.1",
+  "providers": ["deepseek", "openai"],
+  "backend_tests": 30,
+  "frontend_tests": 13,
+  "browser_report": "api-config-browser-check.json",
+  "transport_tests": "mock_only",
+  "real_deepseek_api_tested": false,
+  "deepseek_credential_available": false,
+  "model_results_fabricated": false
+}

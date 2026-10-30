@@ -13,9 +13,15 @@ const {chromium}=createRequire(path.join(path.dirname(process.execPath),'..','no
   assert.ok(await page.locator('#agent-send').isDisabled());assert.ok(await page.locator('#agent-retry').isDisabled());
   const pos=await page.locator('[data-node-id="C05"]').getAttribute('transform'),zoom=await page.locator('#graph > g').getAttribute('transform');
   await page.locator('#agent-settings-open').click();assert.equal(await page.locator('#agent-key-input').getAttribute('type'),'password');
-  await page.locator('#agent-model-input').fill('test-model');await page.locator('#agent-key-input').fill('test-key');
+  assert.equal(await page.locator('#agent-supplier').inputValue(),'deepseek');
+  assert.equal(await page.locator('#agent-model-input').inputValue(),'deepseek-flash');
+  await page.locator('#agent-key-input').fill('not-retained');await page.selectOption('#agent-supplier','openai');
+  assert.equal(await page.locator('#agent-key-input').inputValue(),'');assert.match(await page.locator('#agent-endpoint').innerText(),/api.openai.com/);
+  await page.selectOption('#agent-supplier','deepseek');assert.match(await page.locator('#agent-endpoint').innerText(),/api.deepseek.com/);
+  await page.locator('#agent-key-input').fill('test-key');
   await page.screenshot({path:'review/api-settings-desktop.png',fullPage:true});
   await page.locator('#agent-test-enable').click();await page.waitForFunction(()=>document.querySelector('#agent-settings-status').textContent.includes('连接成功'));
+  assert.match(await page.locator('#agent-settings-status').innerText(),/deepseek/);
   assert.equal(await page.locator('#agent-key-input').inputValue(),'');assert.ok(!(await page.content()).includes('test-key'));
   assert.equal(await page.locator('[data-node-id="C05"]').getAttribute('transform'),pos);assert.equal(await page.locator('#graph > g').getAttribute('transform'),zoom);
   await page.locator('#agent-settings-back').click();await page.locator('#agent-retry').click();
@@ -36,7 +42,7 @@ const {chromium}=createRequire(path.join(path.dirname(process.execPath),'..','no
   await page.setViewportSize({width:390,height:844});await page.locator('#agent-settings-open').click();await page.screenshot({path:'review/api-settings-mobile.png',fullPage:true});
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);
   await page.locator('#agent-settings-back').click();await page.locator('#agent-close').click();assert.ok(await page.locator('#agent-console').isHidden());assert.deepEqual(errors,[]);
-  fs.writeFileSync('review/api-config-browser-check.json',JSON.stringify({status:'passed',transport:'mock_only',real_model_called:false,checks:['readonly capabilities and backend rejection','settings within existing drawer','password cleared and no browser storage','test then enable','bad key preserves prior configuration','diagnose and follow up','new evaluation/historical answer','disconnect preserves model result','graph coordinates and zoom unchanged','390px settings/no overflow','no page errors']},null,2));
+  fs.writeFileSync('review/api-config-browser-check.json',JSON.stringify({status:'passed',transport:'mock_only',real_model_called:false,checks:['readonly capabilities and backend rejection','settings within existing drawer','DeepSeek/OpenAI supplier switch and key clearing','DeepSeek default model and official endpoint','password cleared and no browser storage','test then enable DeepSeek','bad key preserves prior configuration','diagnose and follow up','new evaluation/historical answer','disconnect preserves model result','graph coordinates and zoom unchanged','390px settings/no overflow','no page errors']},null,2));
   console.log('API configuration browser checks passed (mock transport, no external API)');
  }finally{if(browser)await browser.close();server.kill();}
 })().catch(e=>{console.error(e);process.exit(1)});

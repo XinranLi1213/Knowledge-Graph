@@ -5,8 +5,10 @@
   "checks": [
     "readonly capabilities and backend rejection",
     "settings within existing drawer",
+    "DeepSeek/OpenAI supplier switch and key clearing",
+    "DeepSeek default model and official endpoint",
     "password cleared and no browser storage",
-    "test then enable",
+    "test then enable DeepSeek",
     "bad key preserves prior configuration",
     "diagnose and follow up",
     "new evaluation/historical answer",
